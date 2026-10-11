@@ -74,9 +74,10 @@ test('an API description feeds retrieval without adding fixed work labels or scr
  assert.equal(p.features.length,0);assert.ok(!p.documents[0].text.includes('alert'));
  assert.equal(searchPlaces([p],{query:'поработать с ноутбуком',today}).results.length,1);
 });
-test('the real screenshot filters return work cafes instead of an empty state',()=>{
+test('the screenshot filters use researched prices and keep an affordable work example',()=>{
  const places=JSON.parse(fs.readFileSync(new URL('../dist/places.json',import.meta.url))).places;
  const r=searchPlaces(places,{query:'Поработать с ноутбуком в кафе или библиотеке',mood:'calm',category:'cafe',budget:1000,city:'Санкт-Петербург',today});
- assert.ok(r.alternatives.some(x=>x.place.title==='Coffee 3'));
+ assert.ok(![...r.results,...r.alternatives].some(x=>x.place.title==='Coffee 3'));
+ assert.equal(r.alternatives.find(x=>x.place.title==='Бэнч').price.amount,290);
  assert.ok(r.alternatives.some(x=>x.place.title==='Бэнч'));
 });

@@ -1,0 +1,797 @@
+{
+  "checked_at": "2026-10-11T00:00:00+00:00",
+  "patches": [
+    {
+      "id": "seed:coffee3",
+      "prices": [
+        {
+          "amount": 2000,
+          "currency": "RUB",
+          "scope": "visit",
+          "kind": "average_check",
+          "label": "Средний чек, опубликованный заведением",
+          "source_url": "https://cafecoffee3.ru/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "note": "Это ориентир по заказу, а не минимальный расход и не предел стоимости."
+        }
+      ]
+    },
+    {
+      "id": "seed:bench",
+      "prices": [
+        {
+          "amount": 290,
+          "currency": "RUB",
+          "scope": "visit",
+          "kind": "menu_order",
+          "label": "Капучино 190 мл",
+          "source_url": "https://benchplace.ru/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "note": "Цена одного напитка. Еда, дополнительные заказы и участие в событиях оплачиваются отдельно."
+        }
+      ],
+      "offers": [
+        {
+          "id": "bench-meetups",
+          "title": "Митапы и клубные встречи",
+          "description": "Кофейня публикует IT-митапы и встречи сообщества. Дату и правила присоединения уточни в актуальной афише.",
+          "activities": [
+            "meetups"
+          ],
+          "format": "open_group",
+          "source_url": "https://benchplace.ru/",
+          "booking_url": "https://benchplace.ru/#events",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "price": null,
+          "schedule_note": "Регулярные встречи · дата в афише"
+        },
+        {
+          "id": "bench-books",
+          "title": "Книжный клуб",
+          "description": "Совместное обсуждение прочитанного в кофейне. Проверяй актуальную книгу, дату и запись; пример расписания на сайте не является подтверждённой датой.",
+          "activities": [
+            "book_club"
+          ],
+          "format": "open_group",
+          "source_url": "https://benchplace.ru/",
+          "booking_url": "https://benchplace.ru/#events",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "price": null
+        },
+        {
+          "id": "bench-speaking",
+          "title": "Разговорный английский",
+          "description": "Разговорный клуб: общение на английском в группе. Уровень, дату и цену уточни в афише.",
+          "activities": [
+            "speaking_club",
+            "english_club"
+          ],
+          "format": "open_group",
+          "source_url": "https://benchplace.ru/",
+          "booking_url": "https://benchplace.ru/#events",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "price": null
+        }
+      ]
+    },
+    {
+      "id": "seed:coffee3",
+      "social_feature_pending": true
+    },
+    {
+      "id": "seed:gaga",
+      "prices": [
+        {
+          "amount": 1150,
+          "currency": "RUB",
+          "scope": "visit",
+          "kind": "day_cap",
+          "label": "Максимальный стоп-чек обычного посещения",
+          "source_url": "https://playloftgaga.ru/tariffs/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "note": "В будни стоп-чек 950 ₽, в выходные 1150 ₽. Отдельные события могут иметь свой билет."
+        },
+        {
+          "amount": 950,
+          "currency": "RUB",
+          "scope": "visit",
+          "kind": "day_cap",
+          "label": "Будний стоп-чек",
+          "source_url": "https://playloftgaga.ru/tariffs/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "visit_day": "weekday"
+        }
+      ],
+      "offers": [
+        {
+          "id": "gaga-dnd-20261012",
+          "title": "D&D и Pathfinder для начинающих",
+          "description": "Открытая ролевая игра для новичков. Запись и наличие мест проверь у организатора.",
+          "activities": [
+            "board_games",
+            "rpg"
+          ],
+          "format": "open_group",
+          "source_url": "https://playloftgaga.ru/events/dungeons-dragons-i-pathfinder-dlya-nachinayushhih-2-2/",
+          "booking_url": "https://playloftgaga.ru/events/dungeons-dragons-i-pathfinder-dlya-nachinayushhih-2-2/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "price": {
+            "amount": 1100,
+            "currency": "RUB",
+            "scope": "visit",
+            "kind": "admission",
+            "label": "D&D и Pathfinder для начинающих",
+            "source_url": "https://playloftgaga.ru/events/dungeons-dragons-i-pathfinder-dlya-nachinayushhih-2-2/",
+            "checked_at": "2026-10-11T00:00:00+00:00"
+          },
+          "starts_at": "2026-10-12T19:00:00+03:00",
+          "ends_at": "2026-10-12T19:00:00+03:00"
+        },
+        {
+          "id": "gaga-boardgames",
+          "title": "Открытые игротеки",
+          "description": "В афише есть общие игротеки и обучающие партии. Можно присоединиться к другим участникам, дату выбирай в расписании.",
+          "activities": [
+            "board_games"
+          ],
+          "format": "open_group",
+          "source_url": "https://playloftgaga.ru/",
+          "booking_url": "https://playloftgaga.ru/events/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "price": null,
+          "price_note": "Обычно 4,5 ₽ в минуту; отдельные игры имеют свой билет."
+        },
+        {
+          "id": "gaga-books",
+          "title": "Литературный клуб «Человек Читающий»",
+          "description": "Обсуждение книг в лофте с другими читателями. Участие по поминутному тарифу; итог зависит от продолжительности.",
+          "activities": [
+            "book_club"
+          ],
+          "format": "open_group",
+          "source_url": "https://playloftgaga.ru/events/",
+          "booking_url": "https://playloftgaga.ru/events/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "price": null,
+          "starts_at": "2026-10-16T19:30:00+03:00",
+          "ends_at": "2026-10-16T19:30:00+03:00",
+          "price_note": "4,5 ₽ в минуту, стоимость всей встречи не опубликована."
+        }
+      ]
+    },
+    {
+      "id": "seed:learning-group",
+      "offers": [
+        {
+          "id": "learning-speaking",
+          "title": "Разговорный клуб с носителем",
+          "description": "Практика английского в группе: разговоры, игры и совместные занятия. Локацию и уровень выбирай для конкретной встречи.",
+          "activities": [
+            "speaking_club",
+            "english_club"
+          ],
+          "format": "open_group",
+          "source_url": "https://learning-group.ru/speaking-clubs",
+          "booking_url": "https://szn.learning-group.ru/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "price": null,
+          "requirements": "Проверь подходящий уровень английского и адрес выбранной встречи."
+        }
+      ]
+    },
+    {
+      "id": "seed:benua",
+      "photos": [
+        {
+          "id": "commons:Сад Бенуа, пруд с островом03.jpg",
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/%D0%A1%D0%B0%D0%B4_%D0%91%D0%B5%D0%BD%D1%83%D0%B0%2C_%D0%BF%D1%80%D1%83%D0%B4_%D1%81_%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B2%D0%BE%D0%BC03.jpg/960px-%D0%A1%D0%B0%D0%B4_%D0%91%D0%B5%D0%BD%D1%83%D0%B0%2C_%D0%BF%D1%80%D1%83%D0%B4_%D1%81_%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B2%D0%BE%D0%BC03.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:%D0%A1%D0%B0%D0%B4_%D0%91%D0%B5%D0%BD%D1%83%D0%B0%2C_%D0%BF%D1%80%D1%83%D0%B4_%D1%81_%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B2%D0%BE%D0%BC03.jpg",
+          "author": "Екатерина Борисова",
+          "license": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "caption": "Пруд в Саду Бенуа; архивное фото",
+          "alt": "Пруд в Саду Бенуа; архивное фото",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "taken_year": "2018"
+        }
+      ]
+    },
+    {
+      "id": "seed:brusnitsyn",
+      "photos": [
+        {
+          "id": "commons:Культурный квартал Брусницын 02.jpg",
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/%D0%9A%D1%83%D0%BB%D1%8C%D1%82%D1%83%D1%80%D0%BD%D1%8B%D0%B9_%D0%BA%D0%B2%D0%B0%D1%80%D1%82%D0%B0%D0%BB_%D0%91%D1%80%D1%83%D1%81%D0%BD%D0%B8%D1%86%D1%8B%D0%BD_02.jpg/960px-%D0%9A%D1%83%D0%BB%D1%8C%D1%82%D1%83%D1%80%D0%BD%D1%8B%D0%B9_%D0%BA%D0%B2%D0%B0%D1%80%D1%82%D0%B0%D0%BB_%D0%91%D1%80%D1%83%D1%81%D0%BD%D0%B8%D1%86%D1%8B%D0%BD_02.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:%D0%9A%D1%83%D0%BB%D1%8C%D1%82%D1%83%D1%80%D0%BD%D1%8B%D0%B9_%D0%BA%D0%B2%D0%B0%D1%80%D1%82%D0%B0%D0%BB_%D0%91%D1%80%D1%83%D1%81%D0%BD%D0%B8%D1%86%D1%8B%D0%BD_02.jpg",
+          "author": "Anastasiya Lvova",
+          "license": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "caption": "Культурный квартал Брусницын; фото 2024 года",
+          "alt": "Культурный квартал Брусницын; фото 2024 года",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "taken_year": "2024"
+        }
+      ]
+    },
+    {
+      "id": "seed:iva-orangery",
+      "photos": [
+        {
+          "id": "commons:Пальмовая оранжерея (Таврический сад).jpg",
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/%D0%9F%D0%B0%D0%BB%D1%8C%D0%BC%D0%BE%D0%B2%D0%B0%D1%8F_%D0%BE%D1%80%D0%B0%D0%BD%D0%B6%D0%B5%D1%80%D0%B5%D1%8F_(%D0%A2%D0%B0%D0%B2%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%B0%D0%B4).jpg/960px-%D0%9F%D0%B0%D0%BB%D1%8C%D0%BC%D0%BE%D0%B2%D0%B0%D1%8F_%D0%BE%D1%80%D0%B0%D0%BD%D0%B6%D0%B5%D1%80%D0%B5%D1%8F_(%D0%A2%D0%B0%D0%B2%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%B0%D0%B4).jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:%D0%9F%D0%B0%D0%BB%D1%8C%D0%BC%D0%BE%D0%B2%D0%B0%D1%8F_%D0%BE%D1%80%D0%B0%D0%BD%D0%B6%D0%B5%D1%80%D0%B5%D1%8F_(%D0%A2%D0%B0%D0%B2%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%B0%D0%B4).jpg",
+          "author": "Екатерина Борисова",
+          "license": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "caption": "Здание оранжереи, где находится кофейня; не интерьер кафе",
+          "alt": "Здание оранжереи, где находится кофейня; не интерьер кафе",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "taken_year": "2022"
+        }
+      ]
+    }
+  ],
+  "added_places": [
+    {
+      "id": "research:keramishnaya",
+      "title": "Керамишная",
+      "address": "улица Коломенская, 14, 13Н, мансарда",
+      "city": "Санкт-Петербург",
+      "category": "activity",
+      "lat": null,
+      "lon": null,
+      "sources": [
+        {
+          "url": "https://keramishnaya.ru/mk",
+          "label": "Организатор",
+          "kind": "official",
+          "retrieved_at": "2026-10-11T00:00:00+00:00",
+          "license": "Fact-only reference; original summary"
+        }
+      ],
+      "features": [],
+      "documents": [],
+      "notes": "Мастерская проводит общие группы по лепке и гончарному кругу. В группе к тебе могут присоединиться другие люди; индивидуальное свидание — отдельный формат.",
+      "offers": [
+        {
+          "id": "keramishnaya-hand",
+          "title": "Лепка в общей группе",
+          "description": "Сделай предмет из глины в общей группе. Можно записаться одному, к занятию присоединяются другие участники.",
+          "activities": [
+            "workshops",
+            "pottery"
+          ],
+          "format": "open_group",
+          "source_url": "https://keramishnaya.ru/mk",
+          "booking_url": "https://keramishnaya.ru/mk",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "price": {
+            "amount": 3000,
+            "currency": "RUB",
+            "scope": "visit",
+            "kind": "admission",
+            "label": "Лепка в общей группе",
+            "source_url": "https://keramishnaya.ru/mk",
+            "checked_at": "2026-10-11T00:00:00+00:00"
+          }
+        },
+        {
+          "id": "keramishnaya-wheel",
+          "title": "Гончарный круг в общей группе",
+          "description": "Гончарный мастер-класс в общей группе с поддержкой мастера; точное время выбирай при записи.",
+          "activities": [
+            "workshops",
+            "pottery"
+          ],
+          "format": "open_group",
+          "source_url": "https://keramishnaya.ru/mk",
+          "booking_url": "https://keramishnaya.ru/mk",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "price": {
+            "amount": 3500,
+            "currency": "RUB",
+            "scope": "visit",
+            "kind": "admission",
+            "label": "Гончарный круг в общей группе",
+            "source_url": "https://keramishnaya.ru/mk",
+            "checked_at": "2026-10-11T00:00:00+00:00"
+          }
+        },
+        {
+          "id": "keramishnaya-date",
+          "title": "Индивидуальное гончарное свидание",
+          "description": "Отдельный мастер-класс для вашей пары, без знакомства с общей группой.",
+          "activities": [
+            "workshops",
+            "pottery"
+          ],
+          "format": "private",
+          "source_url": "https://keramishnaya.ru/mk",
+          "booking_url": "https://keramishnaya.ru/mk",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "price": null,
+          "price_note": "7500 ₽ за двоих без вина и закусок; это не цена за одного."
+        }
+      ],
+      "prices": [],
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false
+    },
+    {
+      "id": "research:biskuit",
+      "title": "Бисквит · студия керамики",
+      "address": "Зверинская улица, 13/5",
+      "city": "Санкт-Петербург",
+      "category": "activity",
+      "lat": null,
+      "lon": null,
+      "sources": [
+        {
+          "url": "https://biskuit.ru/club",
+          "label": "Организатор",
+          "kind": "official",
+          "retrieved_at": "2026-10-11T00:00:00+00:00",
+          "license": "Fact-only reference; original summary"
+        }
+      ],
+      "features": [],
+      "documents": [],
+      "notes": "У студии есть клуб с общими занятиями и обменом опытом. Для участия нужен хотя бы небольшой опыт керамики; мастер-классы для новичков выбираются отдельно.",
+      "offers": [
+        {
+          "id": "biskuit-club",
+          "title": "Клуб керамистов",
+          "description": "Групповое занятие: лепка, круг или роспись и общение с другими керамистами. Разовое посещение длится три часа.",
+          "activities": [
+            "pottery"
+          ],
+          "format": "open_group",
+          "source_url": "https://biskuit.ru/club",
+          "booking_url": "https://n391797.yclients.com/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "price": {
+            "amount": 2500,
+            "currency": "RUB",
+            "scope": "visit",
+            "kind": "admission",
+            "label": "Клуб керамистов",
+            "source_url": "https://biskuit.ru/club",
+            "checked_at": "2026-10-11T00:00:00+00:00"
+          },
+          "requirements": "Нужен минимальный опыт керамики; клуб не обучает с нуля."
+        }
+      ],
+      "prices": [],
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false
+    },
+    {
+      "id": "research:artista-nekrasova",
+      "title": "Артиста · Некрасова",
+      "address": "улица Некрасова, 60",
+      "city": "Санкт-Петербург",
+      "category": "activity",
+      "lat": null,
+      "lon": null,
+      "sources": [
+        {
+          "url": "https://artistastudio.ru/paint/mk",
+          "label": "Организатор",
+          "kind": "official",
+          "retrieved_at": "2026-10-11T00:00:00+00:00",
+          "license": "Fact-only reference; original summary"
+        }
+      ],
+      "features": [],
+      "documents": [],
+      "notes": "Ежедневные групповые мастер-классы по живописи для начинающих. Можно прийти без опыта; материалы входят в выбранную программу.",
+      "offers": [
+        {
+          "id": "artista-nekrasova-painting",
+          "title": "Картина за три часа",
+          "description": "Групповой мастер-класс по рисованию с художником. Выбери технику, дату и этот филиал при записи.",
+          "activities": [
+            "workshops",
+            "painting"
+          ],
+          "format": "open_group",
+          "source_url": "https://artistastudio.ru/paint/mk",
+          "booking_url": "https://artistastudio.ru/paint/mk",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "price": null,
+          "requirements": "Выбирай нужный филиал и проверь цену выбранной техники в расписании."
+        }
+      ],
+      "prices": [],
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false
+    },
+    {
+      "id": "research:artista-tuchkov",
+      "title": "Артиста · Тучков",
+      "address": "Тучков переулок, 11/5",
+      "city": "Санкт-Петербург",
+      "category": "activity",
+      "lat": null,
+      "lon": null,
+      "sources": [
+        {
+          "url": "https://artistastudio.ru/paint/mk",
+          "label": "Организатор",
+          "kind": "official",
+          "retrieved_at": "2026-10-11T00:00:00+00:00",
+          "license": "Fact-only reference; original summary"
+        }
+      ],
+      "features": [],
+      "documents": [],
+      "notes": "Ежедневные групповые мастер-классы по живописи для начинающих. Можно прийти без опыта; материалы входят в выбранную программу.",
+      "offers": [
+        {
+          "id": "artista-tuchkov-painting",
+          "title": "Картина за три часа",
+          "description": "Групповой мастер-класс по рисованию с художником. Выбери технику, дату и этот филиал при записи.",
+          "activities": [
+            "workshops",
+            "painting"
+          ],
+          "format": "open_group",
+          "source_url": "https://artistastudio.ru/paint/mk",
+          "booking_url": "https://artistastudio.ru/paint/mk",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "price": null,
+          "requirements": "Выбирай нужный филиал и проверь цену выбранной техники в расписании."
+        }
+      ],
+      "prices": [],
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false
+    },
+    {
+      "id": "research:pottery1-kima",
+      "title": "Гончарная студия №1 · Кима",
+      "address": "проспект Кима, 6, 2-й этаж, 257",
+      "city": "Санкт-Петербург",
+      "category": "activity",
+      "lat": null,
+      "lon": null,
+      "sources": [
+        {
+          "url": "https://goncharnaya-masterskaya.ru/uslugi-i-ceni/",
+          "label": "Организатор",
+          "kind": "official",
+          "retrieved_at": "2026-10-11T00:00:00+00:00",
+          "license": "Fact-only reference; original summary"
+        }
+      ],
+      "features": [],
+      "documents": [],
+      "notes": "Разовые занятия для взрослых и детей. На сайте есть базовый мастер-класс за 1800 ₽; формат общей группы нужно уточнять. Частные праздники проходят только своей компанией.",
+      "offers": [
+        {
+          "id": "pottery1-kima-basic",
+          "title": "Базовый мастер-класс по керамике",
+          "description": "Лепка или гончарный круг с обжигом, 1,5 часа. Роспись и глазирование требуют отдельного занятия.",
+          "activities": [
+            "workshops",
+            "pottery"
+          ],
+          "format": "unknown",
+          "source_url": "https://goncharnaya-masterskaya.ru/uslugi-i-ceni/",
+          "booking_url": "https://goncharnaya-masterskaya.ru/uslugi-i-ceni/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "price": {
+            "amount": 1800,
+            "currency": "RUB",
+            "scope": "visit",
+            "kind": "admission",
+            "label": "Базовый мастер-класс по керамике",
+            "source_url": "https://goncharnaya-masterskaya.ru/uslugi-i-ceni/",
+            "checked_at": "2026-10-11T00:00:00+00:00"
+          },
+          "requirements": "Общий или индивидуальный формат уточни при записи."
+        }
+      ],
+      "prices": [],
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false
+    },
+    {
+      "id": "research:pottery1-nevsky",
+      "title": "Гончарная студия №1 · Невский",
+      "address": "Невский проспект, 32–34, во дворе",
+      "city": "Санкт-Петербург",
+      "category": "activity",
+      "lat": null,
+      "lon": null,
+      "sources": [
+        {
+          "url": "https://goncharnaya-masterskaya.ru/uslugi-i-ceni/",
+          "label": "Организатор",
+          "kind": "official",
+          "retrieved_at": "2026-10-11T00:00:00+00:00",
+          "license": "Fact-only reference; original summary"
+        }
+      ],
+      "features": [],
+      "documents": [],
+      "notes": "Разовые занятия для взрослых и детей. На сайте есть базовый мастер-класс за 1800 ₽; формат общей группы нужно уточнять. Частные праздники проходят только своей компанией.",
+      "offers": [
+        {
+          "id": "pottery1-nevsky-basic",
+          "title": "Базовый мастер-класс по керамике",
+          "description": "Лепка или гончарный круг с обжигом, 1,5 часа. Роспись и глазирование требуют отдельного занятия.",
+          "activities": [
+            "workshops",
+            "pottery"
+          ],
+          "format": "unknown",
+          "source_url": "https://goncharnaya-masterskaya.ru/uslugi-i-ceni/",
+          "booking_url": "https://goncharnaya-masterskaya.ru/uslugi-i-ceni/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "price": {
+            "amount": 1800,
+            "currency": "RUB",
+            "scope": "visit",
+            "kind": "admission",
+            "label": "Базовый мастер-класс по керамике",
+            "source_url": "https://goncharnaya-masterskaya.ru/uslugi-i-ceni/",
+            "checked_at": "2026-10-11T00:00:00+00:00"
+          },
+          "requirements": "Общий или индивидуальный формат уточни при записи."
+        }
+      ],
+      "prices": [],
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false
+    },
+    {
+      "id": "research:triumph-dance",
+      "title": "Триумф · группы на Маяковского",
+      "address": "улица Маяковского, 37",
+      "city": "Санкт-Петербург",
+      "category": "sport",
+      "lat": null,
+      "lon": null,
+      "sources": [
+        {
+          "url": "https://tancor.spb.ru/price",
+          "label": "Организатор",
+          "kind": "official",
+          "retrieved_at": "2026-10-11T00:00:00+00:00",
+          "license": "Fact-only reference; original summary"
+        }
+      ],
+      "features": [],
+      "documents": [],
+      "notes": "Групповые занятия для взрослых на Маяковского: бальные танцы для начинающих и продолжающих, соло латина. Можно записаться без пары; подходящий уровень выбирай в расписании.",
+      "offers": [
+        {
+          "id": "triumph-trial",
+          "title": "Пробный урок в группе без пары",
+          "description": "Групповой урок танцев для одного участника. Пробный урок стоит 400 ₽, разовый час — 750 ₽.",
+          "activities": [
+            "dance"
+          ],
+          "format": "open_group",
+          "source_url": "https://tancor.spb.ru/price",
+          "booking_url": "https://tancor.spb.ru/schedule",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "price": {
+            "amount": 400,
+            "currency": "RUB",
+            "scope": "visit",
+            "kind": "admission",
+            "label": "Пробный урок в группе без пары",
+            "source_url": "https://tancor.spb.ru/price",
+            "checked_at": "2026-10-11T00:00:00+00:00"
+          },
+          "requirements": "Пробная цена действует для первого занятия; направление и набор в группу уточни."
+        }
+      ],
+      "prices": [],
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false
+    },
+    {
+      "id": "research:meerson-improv",
+      "title": "Школа импровизации Игоря Меерсона",
+      "address": "улица Мира, 3",
+      "city": "Санкт-Петербург",
+      "category": "activity",
+      "lat": null,
+      "lon": null,
+      "sources": [
+        {
+          "url": "https://igormeerson.ru/improvworkshop",
+          "label": "Организатор",
+          "kind": "official",
+          "retrieved_at": "2026-10-11T00:00:00+00:00",
+          "license": "Fact-only reference; original summary"
+        }
+      ],
+      "features": [],
+      "documents": [],
+      "notes": "Практическое занятие по импровизации с командными упражнениями. На странице организатора опубликованы две даты и разовая стоимость участия.",
+      "offers": [
+        {
+          "id": "meerson-20261029",
+          "title": "Мастер-класс по импровизации",
+          "description": "Командные упражнения и практика спонтанного общения в группе участников.",
+          "activities": [
+            "workshops",
+            "improv"
+          ],
+          "format": "open_group",
+          "source_url": "https://igormeerson.ru/improvworkshop",
+          "booking_url": "https://igormeerson.ru/improvworkshop",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "price": {
+            "amount": 1000,
+            "currency": "RUB",
+            "scope": "visit",
+            "kind": "admission",
+            "label": "Мастер-класс по импровизации",
+            "source_url": "https://igormeerson.ru/improvworkshop",
+            "checked_at": "2026-10-11T00:00:00+00:00"
+          },
+          "starts_at": "2026-10-29T20:10:00+03:00",
+          "ends_at": "2026-10-29T20:10:00+03:00"
+        },
+        {
+          "id": "meerson-20261110",
+          "title": "Мастер-класс по импровизации",
+          "description": "Практика импровизации и коммуникации вместе с другими участниками.",
+          "activities": [
+            "workshops",
+            "improv"
+          ],
+          "format": "open_group",
+          "source_url": "https://igormeerson.ru/improvworkshop",
+          "booking_url": "https://igormeerson.ru/improvworkshop",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "price": {
+            "amount": 1000,
+            "currency": "RUB",
+            "scope": "visit",
+            "kind": "admission",
+            "label": "Мастер-класс по импровизации",
+            "source_url": "https://igormeerson.ru/improvworkshop",
+            "checked_at": "2026-10-11T00:00:00+00:00"
+          },
+          "starts_at": "2026-11-10T20:10:00+03:00",
+          "ends_at": "2026-11-10T20:10:00+03:00"
+        }
+      ],
+      "prices": [],
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false
+    },
+    {
+      "id": "research:culinaryon",
+      "title": "CulinaryOn · открытые мастер-классы",
+      "address": null,
+      "city": "Санкт-Петербург",
+      "category": "activity",
+      "lat": null,
+      "lon": null,
+      "sources": [
+        {
+          "url": "https://culinaryon.spb.ru/faq/otkrytye-master-klassy/",
+          "label": "Организатор",
+          "kind": "official",
+          "retrieved_at": "2026-10-11T00:00:00+00:00",
+          "license": "Fact-only reference; original summary"
+        }
+      ],
+      "features": [],
+      "documents": [],
+      "notes": "Открытые кулинарные мастер-классы с совместной готовкой. Адрес конкретной студии и доступные места нужно проверить при записи.",
+      "offers": [
+        {
+          "id": "culinaryon-open",
+          "title": "Готовить вместе на открытом мастер-классе",
+          "description": "Кулинарные занятия для отдельных участников: вместе готовят и дегустируют блюда. Стоимость включает продукты и оборудование.",
+          "activities": [
+            "workshops",
+            "cooking"
+          ],
+          "format": "open_group",
+          "source_url": "https://culinaryon.spb.ru/faq/otkrytye-master-klassy/",
+          "booking_url": "https://culinaryon.spb.ru/calendar/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "price": null
+        },
+        {
+          "id": "culinaryon-20261014",
+          "title": "Французская кухня: нисуаз, ягнёнок и профитроли",
+          "description": "Открытый кулинарный мастер-класс в студии на Петроградской. Точный адрес и наличие мест проверяй в карточке организатора.",
+          "activities": [
+            "workshops",
+            "cooking"
+          ],
+          "format": "open_group",
+          "source_url": "https://culinaryon.spb.ru/calendar/",
+          "booking_url": "https://culinaryon.spb.ru/calendar/2026-10-14klassika-francii-nisuaz-kare-iagnenka-i-profitroli/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "price": {
+            "amount": 7000,
+            "currency": "RUB",
+            "scope": "visit",
+            "kind": "admission",
+            "label": "Французская кухня: нисуаз, ягнёнок и профитроли",
+            "source_url": "https://culinaryon.spb.ru/calendar/",
+            "checked_at": "2026-10-11T00:00:00+00:00"
+          },
+          "starts_at": "2026-10-14T18:00:00+03:00",
+          "ends_at": "2026-10-14T18:00:00+03:00"
+        }
+      ],
+      "prices": [],
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false
+    },
+    {
+      "id": "research:spbu-bookclub",
+      "title": "Книжный клуб СПбГУ",
+      "address": "Университетская набережная, 7–9, читальный зал",
+      "city": "Санкт-Петербург",
+      "category": "library",
+      "lat": null,
+      "lon": null,
+      "sources": [
+        {
+          "url": "https://events.spbu.ru/book-club",
+          "label": "Организатор",
+          "kind": "official",
+          "retrieved_at": "2026-10-11T00:00:00+00:00",
+          "license": "Fact-only reference; original summary"
+        }
+      ],
+      "features": [],
+      "documents": [],
+      "notes": "Открытое обсуждение литературы. Участвовать могут и гости университета; регистрация завершается за три дня до встречи, для прохода нужен паспорт.",
+      "offers": [
+        {
+          "id": "spbu-20261016",
+          "title": "Обсуждаем «Макунаиму»",
+          "description": "Книжный клуб: обсуждение романа Мариу ди Андрады с читателями и приглашённым специалистом.",
+          "activities": [
+            "book_club"
+          ],
+          "format": "open_group",
+          "source_url": "https://events.spbu.ru/book-club",
+          "booking_url": "https://events.spbu.ru/book-club",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "price": null,
+          "starts_at": "2026-10-16T18:00:00+03:00",
+          "ends_at": "2026-10-16T18:00:00+03:00",
+          "requirements": "Регистрация закрывается за три дня; гостям СПбГУ нужен паспорт. Цена на странице не указана."
+        }
+      ],
+      "prices": [],
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false
+    }
+  ]
+}

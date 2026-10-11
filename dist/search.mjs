@@ -1,4 +1,6 @@
 import {analyseText, keywordMatches} from './text-analysis.mjs';
+import {priceFor,priceIsEstimate} from './pricing.mjs';
+import {currentOffers,offersFor,requestedDate} from './experiences.mjs';
 
 export const categories = {
   coworking: 'Коворкинги', library: 'Библиотеки', cafe: 'Кафе', restaurant: 'Рестораны', bar: 'Бары',
@@ -23,6 +25,7 @@ export const featureLabels = {
   speaking_club: 'Есть разговорные встречи', english_club: 'Общение на английском', rpg: 'Есть ролевые игры', war_games: 'Есть варгеймы',
   dance: 'Есть танцевальные события', sports: 'Есть спортивные занятия',
   waterfront: 'У воды', exhibitions: 'Есть выставки', workshops: 'Есть мастер-классы',
+  pottery:'Керамика и лепка',painting:'Рисование и живопись',cooking:'Кулинарные занятия',improv:'Импровизация',book_club:'Книжный клуб',
   climbing: 'Есть скалолазание', boxing: 'Есть бокс', ice_skating: 'Есть каток',
   panoramic_view: 'Панорамный вид', green_interior: 'Растения в пространстве',
   lounge: 'Есть лаунж-зона', chamber_space: 'Камерное пространство',
@@ -142,6 +145,10 @@ export function parseQuery(text) {
   consume(/спорт[а-я]*|тренировк[а-я]*/g,()=>{needs.add('sports');if(!mood)mood='active';});
   consume(/(?:у|около|возле|рядом\s+с)\s+(?:воды|заливом|залива|рекой|реки)|вид\s+на\s+(?:воду|залив|реку)|набережн[а-я]*/g,()=>needs.add('waterfront'));
   consume(/мастер[ -]?класс[а-я]*|сделать\s+что[ -]то\s+руками/g,()=>needs.add('workshops'));
+  for(const [pattern,key] of [[/керамик[а-я]*|гончар[а-я]*(?:\s+круг[а-я]*)?|лепк[а-я]*|лепить/g,'pottery'],
+    [/рисовани[а-я]*|рисовать|живопис[а-я]*|акварел[а-я]*/g,'painting'],[/кулинар[а-я]*|готовить\s+вместе/g,'cooking'],
+    [/импровизаци[а-я]*/g,'improv'],[/книжн[а-я]*\s+клуб[а-я]*|литературн[а-я]*\s+клуб[а-я]*/g,'book_club']])consume(pattern,()=>needs.add(key));
+  consume(/группов[а-я]*|сборн[а-я]*|пробн[а-я]*\s+(?:урок|заняти[а-я]*)/g);
   consume(/погулять|прогулк[а-я]*|гулять|на\s+свежем\s+воздухе|на\s+улице/g,()=>{outdoors=true;});
   consume(/утром|в\s+первой\s+половине\s+дня/g,()=>{daypart='morning';});
   consume(/днем|после\s+обеда/g,()=>{daypart='afternoon';});
@@ -205,10 +212,11 @@ export function searchPlaces(places, opts = {}) {
   const budget = opts.budget !== undefined && opts.budget !== null && opts.budget !== '' ? Number(opts.budget) : query.budget;
   const priceScope = opts.priceScope || query.priceScope;
   const visited = new Set(opts.visited || []);
-  const results = [], alternatives = [];
+  const results = [], alternatives = [], unknownPriceResults=[];
   const gaps = Object.fromEntries(needs.map(k=>[k,0]));
   const profile = profiles[mood];
   let unknownPrice = 0, unknownCoordinates = 0, unknownAtmosphere = 0;
+  const visitDate=requestedDate(opts.query,opts.today);
   for (const p of places) {
     if (p.status==='closed' || (opts.hideVisited && visited.has(p.id))) continue;
     if (opts.city && p.city !== opts.city) continue;
@@ -219,9 +227,19 @@ export function searchPlaces(places, opts = {}) {
     if (query.excludedCategories.includes(p.category)) continue;
     if (query.outdoors && !['park','space'].includes(p.category)) continue;
     if (company==='first_date' && !companyProfiles.first_date[p.category]) continue;
-    const analysis=analyseText(p,[...new Set([...needs,...(profile||[]),...query.excludedFeatures,'exhibitions','quiet'])],context,opts.today);
+    const wantsOffer=company==='new_people'||needs.some(k=>['workshops','pottery','painting','cooking','improv','book_club','rpg','meetups','speaking_club','english_club'].includes(k));
+    const matchingOffers=wantsOffer?offersFor(p,{needs,company,query:opts.query,today:opts.today}):[];
+    // An available private workshop and an unrelated public meetup are not the same offer.
+    if(wantsOffer&&p.offers?.length&&!matchingOffers.length)continue;
+    let offer=matchingOffers[0]||null;
+    if(offer&&budget!==null){const within=matchingOffers.find(e=>{const q=priceFor(p,{offer:e,today:opts.today,scope:priceScope,needs,context});return q&&q.amount<=budget;});if(within)offer=within;}
+    const searchable=offer?{...p,offers:[offer],documents:(p.documents||[]).filter(d=>!String(d.id).startsWith('offer:'))}:p;
+    const analysis=analyseText(searchable,[...new Set([...needs,...(profile||[]),...query.excludedFeatures,'exhibitions','quiet'])],context,opts.today);
     const resolve=key=>{
       const ev=analysis.evidence[key]||{positive:[],negative:[]};
+      if(offer&&((offer.activities||[]).includes(key)||key==='social_events'&&offer.format==='open_group')){
+        return {supported:true,strong:true,hardNegative:false,conflict:false,positive:ev.positive.filter(e=>e.source_url===offer.source_url),negative:[]};
+      }
       const hardNegative=hasFeature(p,key,false,opts.today,context)||ev.negative.some(e=>e.kind!=='review'&&!e.conditional&&!e.stale);
       const documented=meetsFeature(p,key,opts.today,context);
       // Prices and free use require explicit facts with the correct scope, never inference from prose.
@@ -236,7 +254,7 @@ export function searchPlaces(places, opts = {}) {
     const conditions=Object.fromEntries(needs.map(key=>[key,resolve(key)]));
     if(needs.some(key=>conditions[key].hardNegative))continue;
     const supportedNeeds=needs.filter(key=>conditions[key].supported);
-    const coreActivities=new Set(['laptop_work','billiards','board_games','rpg','war_games','climbing','boxing','ice_skating','meetups','speaking_club','english_club','workshops','exhibitions']);
+    const coreActivities=new Set(['laptop_work','billiards','board_games','rpg','war_games','climbing','boxing','ice_skating','meetups','speaking_club','english_club','workshops','exhibitions','pottery','painting','cooking','improv','book_club',...(company==='new_people'?['social_events']:[])]);
     if(needs.some(key=>coreActivities.has(key)&&!conditions[key].supported))continue;
     const missing=needs.filter(key=>!conditions[key].strong);
     missing.forEach(key=>gaps[key]++);
@@ -253,17 +271,18 @@ export function searchPlaces(places, opts = {}) {
     });
     if(profile&&!moodBoost.length)warnings.push('Атмосферу для «'+moods[mood]+'» нужно уточнить');
     else if(profile&&!moodBoost.some(key=>resolve(key).strong))warnings.push('Атмосфера описана в отзывах или зависит от времени');
+    const price=priceFor(p,{today:opts.today,scope:priceScope,needs,context,offer});
+    let unknownBudget=false;
     if (budget!==null && Number.isFinite(budget)) {
-      const age = (new Date(opts.today || Date.now()) - new Date(p.price_checked_at)) / 86400000;
-      const validPrice = Number.isFinite(p.price_max) && p.price_scope===priceScope && safeUrl(p.price_source_url)
-        && Number.isFinite(age) && age >= 0 && age <= 30
-        && (!p.price_valid_until||new Date(opts.today||Date.now())<=new Date(p.price_valid_until));
-      if (!validPrice) {unknownPrice++;warnings.push('Цена неизвестна: бюджет до '+budget+' ₽ не подтверждён');}
-      else if (p.price_max > budget) continue;
+      if(!price){unknownPrice++;unknownBudget=true;warnings.push('Цена неизвестна: бюджет до '+budget+' ₽ не подтверждён');}
+      else if(price.amount>budget)continue;
+      else if(priceIsEstimate(price))warnings.push(price.kind==='menu_order'?'Бюджет рассчитан по примеру заказа; итог зависит от выбранных блюд и количества заказов':price.kind==='from'?'Указана начальная цена; выбранная программа может стоить дороже':'Средний чек — ориентир, итог зависит от заказа');
     }
+    if(offer?.requirements)warnings.push(offer.requirements);
+    if(visitDate&&wantsOffer&&!offer?.starts_at)warnings.push('Дата '+visitDate+' не подтверждена: проверь расписание и места в группе');
     const distance = opts.location ? distanceKm(opts.location,p) : null;
     if (opts.location && opts.radius) {
-      if (distance===null) {unknownCoordinates++;warnings.push('Расстояние неизвестно: у места нет координат');}
+      if (distance===null) {unknownCoordinates++;continue;}
       else if (distance > Number(opts.radius)) continue;
     }
     const matches = keywordMatches({...p,tags:[...(p.tags||[]),categories[p.category],aliases[p.category]]},analysis.documents,query.keywords);
@@ -272,7 +291,7 @@ export function searchPlaces(places, opts = {}) {
     // Unknown labels alone are not a recommendation. At least one requested activity or atmosphere must be supported.
     if(needs.length&&!supportedNeeds.length&&!moodBoost.length&&!matches.length)continue;
     const companyWeight = companyProfiles[company]?.[p.category] || 0;
-    const score = matches.length*8 + supportedNeeds.length*8 + (needs.length-missing.length)*2
+    const score = matches.length*8 + supportedNeeds.length*8 + (needs.length-missing.length)*2 + (offer?12:0)
       + moodBoost.reduce((sum,key)=>sum+(resolve(key).strong?7:2),0) + companyWeight - warnings.length*3
       + (Number.isFinite(p.discovery_priority)?Math.max(-5,Math.min(6,p.discovery_priority)):0) + (p.status==='reviewed'?1:0) + (distance===null?0:Math.max(0,3-distance/4));
     const reasons = supportedNeeds.map(n=>conditions[n].strong?featureLabels[n]:'В текстах: '+featureLabels[n].toLowerCase());
@@ -281,15 +300,16 @@ export function searchPlaces(places, opts = {}) {
     const evidence=[...supportedNeeds,...moodBoost].flatMap(key=>{
       const ev=resolve(key);return ev.conflict?[...ev.positive.slice(0,1),...ev.negative.slice(0,1)]:ev.positive;
     }).filter((e,i,all)=>all.findIndex(x=>x.source_url===e.source_url&&x.excerpt===e.excerpt)===i).slice(0,2);
-    const item={place:p,score,distance,reasons,matches,warnings,evidence};
-    if(!warnings.length)results.push(item);else alternatives.push(item);
+    const item={place:p,score,distance,reasons,matches,warnings,evidence,offer,price};
+    if(unknownBudget&&opts.includeUnknownPrices===false)unknownPriceResults.push(item);
+    else if(!warnings.length)results.push(item);else alternatives.push(item);
   }
   const sort=(a,b)=>b.score-a.score || a.place.title.localeCompare(b.place.title,'ru');
-  results.sort(sort);alternatives.sort(sort);
-  const unhandled = query.keywords.filter(t=>![...results,...alternatives].some(r=>r.matches.includes(t)));
+  results.sort(sort);alternatives.sort(sort);unknownPriceResults.sort(sort);
+  const unhandled = query.keywords.filter(t=>![...results,...alternatives,...unknownPriceResults].some(r=>r.matches.includes(t)));
   const filterConflicts=opts.category&&query.requestedCategories.length&&!query.requestedCategories.includes(opts.category)
     ? ['В запросе: '+query.requestedCategories.map(k=>categories[k]).join(' / ')+'. В фильтре: '+categories[opts.category]+'.']:[];
-  return {results,alternatives,needs,budget,priceScope,gaps,unknownPrice,unknownCoordinates,unknownAtmosphere,parsed:query,mood,company,unhandled,filterConflicts};
+  return {results,alternatives,unknownPriceResults,needs,budget,priceScope,gaps,unknownPrice,unknownCoordinates,unknownAtmosphere,parsed:query,mood,company,unhandled,filterConflicts,visitDate};
 }
 
 export function validateCatalogue(payload) {
@@ -302,6 +322,9 @@ export function validateCatalogue(payload) {
       || p.features.some(f=>!f || typeof f.key!=='string' || !safeUrl(f.source_url)))
       throw new Error('В карточке нет источника, идентификатор повторяется или формат неверен.');
     ids.add(p.id);
+    if(p.prices!==undefined&&(!Array.isArray(p.prices)||p.prices.length>30||p.prices.some(q=>!q||!Number.isFinite(q.amount)||q.amount<0||!safeUrl(q.source_url)||q.currency!=='RUB'||!['visit','hour'].includes(q.scope))))throw new Error('Некорректные цены: нужны сумма, источник и единица.');
+    if(p.offers!==undefined&&(!Array.isArray(p.offers)||p.offers.length>100||p.offers.some(e=>!e||typeof e.id!=='string'||typeof e.title!=='string'||!safeUrl(e.source_url)||!safeUrl(e.booking_url)||!Array.isArray(e.activities)||!['open_group','private','individual','unknown'].includes(e.format))))throw new Error('Некорректный формат занятия или события.');
+    if(p.photos!==undefined&&(!Array.isArray(p.photos)||p.photos.length>20||p.photos.some(f=>!f||!safeUrl(f.url)||!safeUrl(f.source_url)||!f.author||!f.license||!safeUrl(f.license_url))))throw new Error('Фотографии должны содержать источник, автора и разрешение.');
     if(p.documents!==undefined&&(!Array.isArray(p.documents)||p.documents.length>100||p.documents.some(d=>
       !d||typeof d.text!=='string'||d.text.length>24000||!safeUrl(d.source_url)||!['description','review','editorial'].includes(d.kind))))
       throw new Error('Некорректный текстовый источник: нужны текст, тип и ссылка.');

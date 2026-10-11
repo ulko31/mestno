@@ -1,4 +1,5 @@
 // Local retrieval over attributed text. This is an explainable text analyser, not an LLM.
+import {offerDocuments} from './experiences.mjs';
 const normalize=s=>String(s||'').toLowerCase().replaceAll('ё','е');
 const safeUrl=s=>{try{const u=new URL(s);return /^https?:$/.test(u.protocol)&&!u.username&&!u.password?u.href:null;}catch{return null;}};
 export function stem(word){
@@ -8,7 +9,7 @@ export function stem(word){
 }
 export const words=text=>normalize(text).match(/[a-zа-я0-9]+/g)||[];
 export function documentsOf(place,today=new Date()){
-  const documents=[...(place.documents||[])];
+  const documents=[...(place.documents||[]),...offerDocuments(place,today)];
   if(place.notes&&!/^(?:Условия посещения и актуальность требуют проверки\.|Адрес и формат получены из KudaGo\.)/.test(place.notes))documents.push({id:'editorial:'+place.id,kind:'editorial',text:place.notes,
     source_url:place.sources?.[0]?.url,observed_at:place.updated_at||place.sources?.[0]?.retrieved_at,
     valid_until:place.editorial_valid_until});
@@ -45,11 +46,17 @@ const patterns={
   rpg:[/ролев[а-я]*\s+игр[а-я]*|d\s*&\s*d|dnd|днд/],
   war_games:[/варгейм[а-я]*|warhammer/],
   billiards:[/бильярд[а-я]*|бильярдн[а-я]*\s+стол/],
-  social_events:[/открыт[а-я]*\s+(?:встреч[а-я]*|игротек[а-я]*)|можно\s+присоединиться|знакомств[а-я]*|клуб\s+по\s+интересам|разговорн[а-я]*\s+клуб[а-я]*/],
+  social_events:[/открыт[а-я]*\s+(?:встреч[а-я]*|игротек[а-я]*|групп[а-я]*|мастер[ -]?класс[а-я]*)|общ[а-я]*\s+групп[а-я]*|сборн[а-я]*\s+(?:групп[а-я]*|мастер[ -]?класс[а-я]*)|можно\s+присоединиться|знакомств[а-я]*|клуб\s+по\s+интересам|разговорн[а-я]*\s+клуб[а-я]*/,
+    /только\s+для\s+вашей\s+компании|закрыт[а-я]*\s+(?:групп[а-я]*|мероприяти[а-я]*)|посторонних\s+не\s+будет/],
   meetups:[/митап[а-я]*|meetup/],
   speaking_club:[/разговорн[а-я]*\s+клуб[а-я]*|speaking\s+club/],
   english_club:[/разговорн[а-я]*\s+клуб[а-я]*[^.!?]{0,40}английск[а-я]*|english\s+(?:club|speaking)/],
   workshops:[/мастер[ -]?класс[а-я]*|творческ[а-я]*\s+заняти[а-я]*/],
+  pottery:[/керамик[а-я]*|гончар[а-я]*|лепк[а-я]*|глин[а-я]*/],
+  painting:[/живопис[а-я]*|рисовани[а-я]*|рисовать|акварел[а-я]*|картина/],
+  cooking:[/кулинар[а-я]*|готовить\s+вместе|приготовлени[а-я]*\s+(?:блюд[а-я]*|ед[а-я]*)/],
+  improv:[/импровизаци[а-я]*/],
+  book_club:[/книжн[а-я]*\s+клуб[а-я]*|литературн[а-я]*\s+клуб[а-я]*|обсужд[а-я]*\s+книг[а-я]*/],
   dance:[/танц[а-я]*|диджей[а-я]*|dj[ -]?сет[а-я]*/],
   live_music:[/жив[а-я]*\s+музык[а-я]*|концерт[а-я]*/],
   child_friendly:[/детск[а-я]*\s+(?:зона|комната|меню)|с\s+детьми|для\s+детей/],

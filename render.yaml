@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: mestno-telegram
+    runtime: node
+    plan: free
+    region: frankfurt
+    branch: main
+    buildCommand: node --test tests/*.test.mjs
+    startCommand: node bot/server.mjs
+    healthCheckPath: /healthz
+    autoDeployTrigger: checksPass
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: BOT_TOKEN
+        sync: false
+      - key: WEBHOOK_SECRET
+        generateValue: true
+      - key: SERVE_MINI_APP
+        value: "true"
+      - key: AUTO_REGISTER_WEBHOOK
+        value: "true"

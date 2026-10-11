@@ -69,6 +69,15 @@ export function mergeCatalogues(baseline,incoming){
     old.documents=mergeDocuments(old.documents,nextDocs);
     if(Object.keys(snapshots).length)old.review_snapshots=snapshots;
     old.provider_ids={...old.provider_ids,...next.provider_ids};
+    for(const key of ['prices','offers','photos']){
+      if(!Array.isArray(next[key]))continue;
+      const entries=new Map((old[key]||[]).map(e=>[e.id||e.source_url,structuredClone(e)]));
+      for(const e of next[key]){
+        const id=e.id||e.source_url,previous=entries.get(id);
+        if(!previous||new Date(e.checked_at||e.observed_at||0)>=new Date(previous.checked_at||previous.observed_at||0))entries.set(id,structuredClone(e));
+      }
+      old[key]=[...entries.values()];
+    }
     if(Number.isFinite(next.comments_count))old.comments_count=next.comments_count;
     for(const k of ['address','lat','lon','website','opening_hours'])if(old[k]===null||old[k]===undefined)old[k]=next[k]??null;
     if(next.status==='closed')old.status='closed';

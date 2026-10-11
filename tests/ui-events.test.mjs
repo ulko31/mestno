@@ -72,13 +72,18 @@ test('unverified free billiards is displayed as an alternative, not an exact res
   assert.ok(el('alternative-results').innerHTML.includes('пока нет сведений'));
 });
 
-test('the screenshot combination keeps real work cafes with explicit unknown-price warnings',()=>{
+test('the screenshot budget filters known prices and hides unknowns until requested',()=>{
   query('Поработать с ноутбуком в кафе или библиотеке');
   el('category').value='cafe';el('budget').value='1000';el('mood').value='calm';el('budget').emit('change');
   assert.ok(el('empty-state').classes.has('hidden'));
-  assert.ok(el('alternative-results').innerHTML.includes('Coffee 3'));
+  assert.ok(!el('alternative-results').innerHTML.includes('Coffee 3'));
   assert.ok(el('alternative-results').innerHTML.includes('Бэнч'));
+  assert.ok(el('alternative-results').innerHTML.includes('Пример заказа'));
+  assert.ok(!el('alternative-results').innerHTML.includes('Брынза'));
+  el('include-unknown-prices').checked=true;el('include-unknown-prices').emit('change');
+  assert.ok(el('alternative-results').innerHTML.includes('Брынза'));
   assert.ok(el('alternative-results').innerHTML.includes('бюджет до 1000 ₽ не подтверждён'));
+  el('include-unknown-prices').checked=false;el('include-unknown-prices').emit('change');
   assert.ok(!el('results').innerHTML.includes('До 1000 ₽'));
   el('mood').value='';
 });
@@ -101,9 +106,46 @@ test('the API button installs a returned city and a network error preserves it',
   assert.ok(el('api-status').textContent.includes('Получено 1'));
   assert.ok(el('city').options.some(p=>p.value==='Москва'));
   assert.ok(storage.get('kuda.catalogue').includes('Тестовая Москва'));
+  assert.equal(JSON.parse(storage.get('kuda.catalogue')).places.length,1,'Only the imported delta is persisted');
   const stored=storage.get('kuda.catalogue');
   globalThis.fetch=async()=>{throw new TypeError('Failed to fetch');};
   await el('api-load').emit('click');
   assert.ok(el('api-status').textContent.includes('Текущая база сохранена'));
   assert.equal(storage.get('kuda.catalogue'),stored);
+});
+
+test('the long summary is hidden, while open groups have booking information',()=>{
+  el('city').value='Санкт-Петербург';query('Групповой мастер-класс, познакомиться с новыми людьми');
+  assert.equal(el('search-summary').textContent,'');assert.ok(el('search-summary').classes.has('hidden'));
+  const cards=el('results').innerHTML+el('alternative-results').innerHTML;
+  assert.ok(cards.includes('Керамишная'));assert.ok(cards.includes('Расписание и запись'));
+  assert.ok(cards.includes('Можно прийти одной / одному'));assert.ok(!cards.includes('Гончарная студия №1'));
+});
+test('the nearby button requests one point, hides places without coordinates and can be disabled',async()=>{
+  Object.defineProperty(globalThis,'navigator',{value:{geolocation:{getCurrentPosition(success){success({coords:{latitude:59.94,longitude:30.32}});}}},configurable:true});
+  query('Групповой мастер-класс, познакомиться с новыми людьми');
+  await el('location-button').emit('click');
+  assert.ok(el('intent-tags').innerHTML.includes('Рядом · 5 км'));
+  assert.ok(!(el('results').innerHTML+el('alternative-results').innerHTML).includes('Керамишная'));
+  assert.ok(el('location-status').textContent.includes('без координат'));
+  await el('location-button').emit('click');
+  assert.ok((el('results').innerHTML+el('alternative-results').innerHTML).includes('Керамишная'));
+});
+test('opening a recommendation displays its card and other programmes',()=>{
+  const p=catalogue.places.find(p=>p.title==='Керамишная');assert.ok(p);
+  const target={dataset:{openPlace:p.id,openOffer:p.offers[0].id}};
+  documentEvents.click({target:{closest:selector=>selector==='[data-open-place]'?target:null}});
+  assert.ok(!el('place-panel').classes.has('hidden'));
+  assert.ok(el('place-content').innerHTML.includes('Другие форматы здесь'));
+  assert.ok(el('place-content').innerHTML.includes('Только для своей компании'));
+  el('close-place').emit('click');assert.ok(el('place-panel').classes.has('hidden'));
+});
+test('a saved social recommendation stays in a review queue and does not alter search results',async()=>{
+  const before=el('results').innerHTML;
+  el('recommendation-url').value='https://www.instagram.com/p/example/';el('recommendation-title').value='Тестовое неизвестное место';
+  el('recommendation-note').value='Общие мастер-классы, по моему впечатлению.';el('recommendation-original').checked=true;
+  await el('recommendation-form').emit('submit');await el('recommendation-form').emit('submit');
+  const rows=JSON.parse(storage.get('mestno.recommendations'));
+  assert.equal(rows.length,1);assert.equal(rows[0].status,'pending_review');
+  assert.equal(el('results').innerHTML,before);assert.ok(el('recommendation-status').textContent.includes('пока не добавлены'));
 });

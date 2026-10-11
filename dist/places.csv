@@ -7376,3 +7376,13 @@ seed:yasnaya,Ясная Поляна,Санкт-Петербург,coworking,"у
 osm:node:4128135590,Ять,Санкт-Петербург,restaurant,,59.9406762,30.3201007,https://www.openstreetmap.org/node/4128135590
 osm:node:2654514183,Ящик пива,Санкт-Петербург,bar,,59.9286698,30.3056951,https://www.openstreetmap.org/node/2654514183
 osm:node:13759686579,Ён Джэ,Санкт-Петербург,sport,,59.9365452,30.4990767,https://www.openstreetmap.org/node/13759686579
+research:keramishnaya,Керамишная,Санкт-Петербург,activity,"улица Коломенская, 14, 13Н, мансарда",,,https://keramishnaya.ru/mk
+research:biskuit,Бисквит · студия керамики,Санкт-Петербург,activity,"Зверинская улица, 13/5",,,https://biskuit.ru/club
+research:artista-nekrasova,Артиста · Некрасова,Санкт-Петербург,activity,"улица Некрасова, 60",,,https://artistastudio.ru/paint/mk
+research:artista-tuchkov,Артиста · Тучков,Санкт-Петербург,activity,"Тучков переулок, 11/5",,,https://artistastudio.ru/paint/mk
+research:pottery1-kima,Гончарная студия №1 · Кима,Санкт-Петербург,activity,"проспект Кима, 6, 2-й этаж, 257",,,https://goncharnaya-masterskaya.ru/uslugi-i-ceni/
+research:pottery1-nevsky,Гончарная студия №1 · Невский,Санкт-Петербург,activity,"Невский проспект, 32–34, во дворе",,,https://goncharnaya-masterskaya.ru/uslugi-i-ceni/
+research:triumph-dance,Триумф · группы на Маяковского,Санкт-Петербург,sport,"улица Маяковского, 37",,,https://tancor.spb.ru/price
+research:meerson-improv,Школа импровизации Игоря Меерсона,Санкт-Петербург,activity,"улица Мира, 3",,,https://igormeerson.ru/improvworkshop
+research:culinaryon,CulinaryOn · открытые мастер-классы,Санкт-Петербург,activity,,,,https://culinaryon.spb.ru/faq/otkrytye-master-klassy/
+research:spbu-bookclub,Книжный клуб СПбГУ,Санкт-Петербург,library,"Университетская набережная, 7–9, читальный зал",,,https://events.spbu.ru/book-club
