@@ -1,0 +1,75 @@
+name: Обновить каталог мест
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/refresh-catalogue.yml'
+      - 'scripts/import_places.py'
+      - 'scripts/collect_reviews.py'
+  workflow_dispatch:
+    inputs:
+      city:
+        description: Город KudaGo
+        type: choice
+        default: spb
+        options: [spb, msk, ekb, kzn, nsk, nnv]
+      pages:
+        description: Страниц по 100 записей (1–20)
+        type: choice
+        default: '10'
+        options: ['1', '5', '10', '20']
+      collect_reviews:
+        description: Загрузить тексты отзывов и подготовить очередь проверки фактов
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+jobs:
+  catalogue:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+          package-manager-cache: false
+      - name: Проверить поиск и импорт
+        run: |
+          node --test tests/*.test.mjs
+          python -m unittest discover -s tests -p 'test_*.py'
+      - name: Скачать факты из KudaGo
+        env:
+          MESTNO_CITY: ${{ inputs.city || 'spb' }}
+          MESTNO_PAGES: ${{ inputs.pages || '10' }}
+        run: python scripts/import_places.py --provider kudago --city "$MESTNO_CITY" --max-pages "$MESTNO_PAGES"
+      - name: Загрузить отзывы для поиска по текстам
+        if: github.event_name == 'push' || inputs.collect_reviews
+        run: python scripts/collect_reviews.py --max-places 50 --max-pages 2
+      - name: Сохранить результат
+        if: success()
+        uses: actions/upload-artifact@v6
+        with:
+          name: mestno-catalogue-${{ inputs.city || 'spb' }}
+          retention-days: 30
+          if-no-files-found: error
+          path: |
+            dist/places.json
+            dist/places.csv
+            data/review_candidates.json
+      - name: Сохранить частичный результат при ошибке
+        if: failure()
+        uses: actions/upload-artifact@v6
+        with:
+          name: mestno-incomplete-result
+          retention-days: 7
+          path: |
+            dist/places.json
+            dist/places.csv
+            data/review_candidates.json

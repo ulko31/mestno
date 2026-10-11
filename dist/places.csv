@@ -1,0 +1,66 @@
+﻿id,title,city,category,address,lat,lon,sources
+seed:yasnaya,Ясная Поляна,Санкт-Петербург,coworking,"улица Льва Толстого, 1–3",,,https://www.coworkingspb.ru/
+seed:okhta8,Охта-8,Санкт-Петербург,library,"Большеохтинский проспект, 8",,,https://www.culture.ru/institutes/58682/biblioteka-okhta-8
+seed:okhtalib,Охта Lib,Санкт-Петербург,library,"Брантовская дорога, 3",,,https://www.culture.ru/institutes/38450/biblioteka-okhta-lib
+seed:gbs,Коворкинг библиотеки для слепых и слабовидящих,Санкт-Петербург,library,,,,https://www.gbs.spb.ru/ru/pages/proekty/nepreryvnoe_obrazovanie_v_biblioteke/kovorking_prostranstvo_v_biblioteke/
+seed:brusnitsyn,Брусницын,Санкт-Петербург,space,"Кожевенная линия, 30",,,https://brusnitsyn.spb.ru/about
+seed:levashovsky,Левашовский Хлебозавод,Санкт-Петербург,space,"Барочная улица, 4А/1",,,https://visit-petersburg.ru/en/leisure/places/levashovskiy-khlebozavod/
+seed:seno,SENO,Санкт-Петербург,space,,,,https://visit-petersburg.ru/leisure/places/obshchestvennoe-prostranstvo-seno/
+seed:levashovsky-nature,Заказник Левашовский,Санкт-Петербург,park,,,,https://oopt.kpoos.gov.spb.ru/protected_area/levashovsky/
+seed:hermitage,Государственный Эрмитаж,Санкт-Петербург,museum,"Дворцовая площадь, 2",,,https://visit-petersburg.ru/leisure/places/
+seed:erarta,Эрарта,Санкт-Петербург,museum,"29-я линия В.О., 2А",,,https://visit-petersburg.ru/leisure/places/
+seed:orion,Спортивно-стрелковый клуб Орион,Санкт-Петербург,sport,"Пионерская улица, 21",,,https://www.visit-petersburg.ru/en/leisure/?PAGEN_1=13&subcategory=4470
+seed:rc-club,RC Club,Санкт-Петербург,sport,"улица Маршала Говорова, 35/4",,,https://www.visit-petersburg.ru/en/leisure/?PAGEN_1=13&subcategory=4470
+seed:tramontana,Скалодром Трамонтана,Санкт-Петербург,sport,"Бронницкая улица, 24",,,https://www.visit-petersburg.ru/en/leisure/?PAGEN_1=13&subcategory=4470 | https://www.climbingcenter.ru/
+seed:treetotree,TreeToTree Озерки,Санкт-Петербург,sport,"Ереванская улица, 10",,,https://www.visit-petersburg.ru/en/leisure/?PAGEN_1=13&subcategory=4470
+seed:workshops,Открытые мастерские,Санкт-Петербург,activity,"Лиговский проспект, 99",,,https://www.visit-petersburg.ru/en/leisure/?PAGEN_1=13&subcategory=4470
+seed:brain,Музей мозга,Санкт-Петербург,museum,"улица Марата, 86",,,https://www.visit-petersburg.ru/en/leisure/?PAGEN_1=13&subcategory=4470
+seed:comics,Библиотека комиксов,Санкт-Петербург,library,"7-я Красноармейская улица, 30",,,https://www.visit-petersburg.ru/en/leisure/?PAGEN_1=13&subcategory=4470
+seed:grand-canyon,Гранд Каньон Айс,Санкт-Петербург,sport,"Суздальский проспект, 29А",,,https://www.visit-petersburg.ru/en/leisure/?PAGEN_1=13&subcategory=4470
+seed:avtovo-circus,Цирк в Автово,Санкт-Петербург,activity,"Автовская улица, 1А",,,https://www.visit-petersburg.ru/en/leisure/?PAGEN_1=13&subcategory=4470
+seed:coffee3,Coffee 3,Санкт-Петербург,cafe,"набережная реки Карповки, 5АК",,,https://cafecoffee3.ru/
+seed:bench,Бэнч,Санкт-Петербург,cafe,"шоссе Революции, 3к2",,,https://benchplace.ru/
+seed:brynza-karavannaya,"Брынза · Караванная улица, 24",Санкт-Петербург,cafe,"Караванная улица, 24",,,https://cafebrynza.ru/addressa/kafe-dlya-raboty-s-noutbukom/
+seed:brynza-moskovsky,"Брынза · Московский проспект, 86",Санкт-Петербург,cafe,"Московский проспект, 86",,,https://cafebrynza.ru/addressa/kafe-dlya-raboty-s-noutbukom/
+seed:gaga,Playloft GaGa,Санкт-Петербург,anticafe,"Малая Морская улица, 15/7",,,https://playloftgaga.ru/
+seed:mechtatut,МечтаТут,Санкт-Петербург,anticafe,"улица Есенина, 1к1",,,https://me4tut.ru/
+seed:roger,Клуб Роджер,Санкт-Петербург,activity,"Зверинская улица, 36",,,https://rogerclub.ru/
+seed:doigralis,Доигрались,Санкт-Петербург,activity,,,,https://doigralis.ru/
+seed:taledice,Tale’n’Dice,Санкт-Петербург,activity,"улица Мира, 16",,,https://taledice.ru/
+seed:borey,Арт-центр Борей,Санкт-Петербург,gallery,"Литейный проспект, 58",,,https://borey.ru/gallery/
+seed:annanova,Anna Nova Gallery,Санкт-Петербург,gallery,"улица Жуковского, 28",,,https://www.annanova-gallery.ru/ | https://www.annanova-gallery.ru/exhibitions/161/overview/
+seed:blank,Blank,Санкт-Петербург,club,"Арсенальная набережная, 1",,,https://blankclub.ru/about
+seed:leon,Leon Club,Санкт-Петербург,billiards,"улица Оптиков, 4",,,https://leonclub.ru/biliard
+seed:almak,Альмак,Санкт-Петербург,billiards,"Новолитовская улица, 15А",,,https://almakclub.ru/
+seed:maximatic,МАКСИматик,Санкт-Петербург,billiards,"проспект Космонавтов, 55",,,https://billclub.ru/
+seed:broken-hearts,Бар разбитых сердец,Санкт-Петербург,bar,"набережная канала Грибоедова, 30–32Ч",,,https://razbitye-serdtsa.clients.site/ | https://www.restoclub.ru/spb/place/bar-razbityh-serdec
+seed:elagin,Парк на Елагином острове,Санкт-Петербург,park,"Елагин остров, 4",,,https://elaginpark.org/central-park/park-na-elaginom-ostrove-segodnya/
+seed:benua,Сад Бенуа,Санкт-Петербург,space,"Тихорецкий проспект, 17",,,https://benua1890.ru/
+seed:kolokol,Колокол · Рубинштейна,Санкт-Петербург,activity,"улица Рубинштейна, 36",,,https://spb.kolokol.school/ | https://spb.kolokol.school/programs/20096
+seed:learning-group,Разговорные встречи Learning Group,Санкт-Петербург,activity,,,,https://learning-group.ru/speaking-clubs
+seed:iva-orangery,Ива · кофейня в оранжерее,Санкт-Петербург,cafe,"Потёмкинская улица, 2Г",,,https://tavr-orangery.ru/kofeynya
+seed:third-place,Третье место,Санкт-Петербург,space,"Литейный проспект, 62",,,https://third.place/
+seed:myth,MYTH Gallery,Санкт-Петербург,gallery,"улица Чайковского, 61",,,https://mythgallery.art/kontaktyi
+seed:artmuza,АРТМУЗА,Санкт-Петербург,museum,"13-я линия Васильевского острова, 70–72",,,https://artmuza.spb.ru/
+seed:artist,Artist · арт-кафе,Санкт-Петербург,cafe,"13-я линия Васильевского острова, 70, 3-й этаж",,,https://artist.artmuza.spb.ru/
+seed:artcherdak,Чердак художника,Санкт-Петербург,restaurant,"улица Ломоносова, 1/28",,,https://artcherdakrest.ru/
+seed:bookcoffee,Книги и кофе,Санкт-Петербург,cafe,"Гагаринская улица, 20",,,https://www.bookcoffee.ru/
+seed:palma,Особняк Пальма,Санкт-Петербург,space,"переулок Пирогова, 18",,,https://palma.spb.ru/
+seed:smena,Смена,Санкт-Петербург,cafe,"Басков переулок, 20",,,https://smenacafeyo.tilda.ws/
+seed:lib-rzhevskaya,Библиотека Ржевская,Санкт-Петербург,library,"Индустриальный проспект, 35к1",,,https://kr-cbs.ru/libraries/rzhevskaya
+seed:lib-kub,Библиотека КУБ,Санкт-Петербург,library,"проспект Маршака, 24к1",,,https://kr-cbs.ru/libraries/kub
+seed:lib-shkaf,Библиотека ШКАФ,Санкт-Петербург,library,"улица Маршала Тухачевского, 31",,,https://kr-cbs.ru/libraries/shkaf
+seed:lib-sovremennik-28,"Библиотека Современник · Заневский, 28",Санкт-Петербург,library,"Заневский проспект, 28",,,https://kr-cbs.ru/libraries
+seed:lib-sovremennik-32,"Библиотека Современник · Заневский, 32",Санкт-Петербург,library,"Заневский проспект, 32",,,https://kr-cbs.ru/libraries
+seed:lib-sfera,Библиотека СФЕРА,Санкт-Петербург,library,"улица Лагоды, 7, строение 1",,,https://kr-cbs.ru/libraries
+seed:lib-nota,Библиотека НОТА,Санкт-Петербург,library,"проспект Косыгина, 28к1",,,https://kr-cbs.ru/libraries
+seed:lib-les,Библиотека ЛЕС,Санкт-Петербург,library,"Чарушинская улица, 26к1",,,https://kr-cbs.ru/libraries
+seed:lib-okhtinskaya,Библиотека Охтинская,Санкт-Петербург,library,"проспект Энергетиков, 30к5",,,https://kr-cbs.ru/libraries
+seed:lib-malookhtinskaya,Библиотека Малоохтинская,Санкт-Петербург,library,"Новочеркасский проспект, 49/20",,,https://kr-cbs.ru/libraries
+seed:lib-porokhovskaya,Библиотека Пороховская,Санкт-Петербург,library,"улица Лазо, 8к1",,,https://kr-cbs.ru/libraries
+seed:lib-kit,Библиотека КиТ,Санкт-Петербург,library,"Индустриальный проспект, 15",,,https://kr-cbs.ru/libraries
+seed:lib-gorod,Библиотека ГОРОД,Санкт-Петербург,library,"Индустриальный проспект, 35к1",,,https://kr-cbs.ru/libraries
+seed:novoorlovsky,Заказник Новоорловский,Санкт-Петербург,park,,,,https://oopt.kpoos.gov.spb.ru/protected_area/novoorlovskiy/
+seed:yuntolovsky,Заказник Юнтоловский,Санкт-Петербург,park,,,,https://oopt.kpoos.gov.spb.ru/protected_area/yuntolovskiy-2/
+seed:kochneva,Дом Кочневой,Санкт-Петербург,theatre,"набережная реки Фонтанки, 41",,,https://petroconcert.spb.ru/
+seed:ekaterininskoe,Екатерининское собрание,Санкт-Петербург,theatre,"набережная канала Грибоедова, 88–90",,,https://petroconcert.spb.ru/

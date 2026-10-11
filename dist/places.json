@@ -1,0 +1,2872 @@
+{
+  "schema_version": 1,
+  "cities": [
+    "Санкт-Петербург"
+  ],
+  "generated_at": "2026-10-11T17:58:31+00:00",
+  "source_licenses": {
+    "OpenStreetMap": "https://www.openstreetmap.org/copyright",
+    "KudaGo": "https://docs.kudago.com/api/"
+  },
+  "places": [
+    {
+      "id": "seed:yasnaya",
+      "title": "Ясная Поляна",
+      "category": "coworking",
+      "city": "Санкт-Петербург",
+      "address": "улица Льва Толстого, 1–3",
+      "lat": null,
+      "lon": null,
+      "website": null,
+      "sources": [
+        {
+          "url": "https://www.coworkingspb.ru/",
+          "label": "Официальная страница",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [
+        {
+          "key": "coworking",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://www.coworkingspb.ru/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "laptop_work",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://www.coworkingspb.ru/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        }
+      ],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Название и категория сверены с источником. Цены, часы работы и атмосфера не проверены."
+    },
+    {
+      "id": "seed:okhta8",
+      "title": "Охта-8",
+      "category": "library",
+      "city": "Санкт-Петербург",
+      "address": "Большеохтинский проспект, 8",
+      "lat": null,
+      "lon": null,
+      "website": null,
+      "sources": [
+        {
+          "url": "https://www.culture.ru/institutes/58682/biblioteka-okhta-8",
+          "label": "Официальная страница",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [
+        {
+          "key": "coworking",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://www.culture.ru/institutes/58682/biblioteka-okhta-8",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "laptop_work",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://www.culture.ru/institutes/58682/biblioteka-okhta-8",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        }
+      ],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Название и категория сверены с источником. Цены, часы работы и атмосфера не проверены."
+    },
+    {
+      "id": "seed:okhtalib",
+      "title": "Охта Lib",
+      "category": "library",
+      "city": "Санкт-Петербург",
+      "address": "Брантовская дорога, 3",
+      "lat": null,
+      "lon": null,
+      "website": null,
+      "sources": [
+        {
+          "url": "https://www.culture.ru/institutes/38450/biblioteka-okhta-lib",
+          "label": "Официальная страница",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Название и категория сверены с источником. Цены, часы работы и атмосфера не проверены."
+    },
+    {
+      "id": "seed:gbs",
+      "title": "Коворкинг библиотеки для слепых и слабовидящих",
+      "category": "library",
+      "city": "Санкт-Петербург",
+      "address": null,
+      "lat": null,
+      "lon": null,
+      "website": null,
+      "sources": [
+        {
+          "url": "https://www.gbs.spb.ru/ru/pages/proekty/nepreryvnoe_obrazovanie_v_biblioteke/kovorking_prostranstvo_v_biblioteke/",
+          "label": "Официальная страница",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [
+        {
+          "key": "coworking",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://www.gbs.spb.ru/ru/pages/proekty/nepreryvnoe_obrazovanie_v_biblioteke/kovorking_prostranstvo_v_biblioteke/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "laptop_work",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://www.gbs.spb.ru/ru/pages/proekty/nepreryvnoe_obrazovanie_v_biblioteke/kovorking_prostranstvo_v_biblioteke/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        }
+      ],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Название и категория сверены с источником. Цены, часы работы и атмосфера не проверены."
+    },
+    {
+      "id": "seed:brusnitsyn",
+      "title": "Брусницын",
+      "category": "space",
+      "city": "Санкт-Петербург",
+      "address": "Кожевенная линия, 30",
+      "lat": null,
+      "lon": null,
+      "website": null,
+      "sources": [
+        {
+          "url": "https://brusnitsyn.spb.ru/about",
+          "label": "Официальная страница",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Название и категория сверены с источником. Цены, часы работы и атмосфера не проверены."
+    },
+    {
+      "id": "seed:levashovsky",
+      "title": "Левашовский Хлебозавод",
+      "category": "space",
+      "city": "Санкт-Петербург",
+      "address": "Барочная улица, 4А/1",
+      "lat": null,
+      "lon": null,
+      "website": null,
+      "sources": [
+        {
+          "url": "https://visit-petersburg.ru/en/leisure/places/levashovskiy-khlebozavod/",
+          "label": "Официальная страница",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [
+        {
+          "key": "exhibitions",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://visit-petersburg.ru/en/leisure/places/levashovskiy-khlebozavod/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        }
+      ],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Название и категория сверены с источником. Цены, часы работы и атмосфера не проверены."
+    },
+    {
+      "id": "seed:seno",
+      "title": "SENO",
+      "category": "space",
+      "city": "Санкт-Петербург",
+      "address": null,
+      "lat": null,
+      "lon": null,
+      "website": null,
+      "sources": [
+        {
+          "url": "https://visit-petersburg.ru/leisure/places/obshchestvennoe-prostranstvo-seno/",
+          "label": "Официальная страница",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Название и категория сверены с источником. Цены, часы работы и атмосфера не проверены."
+    },
+    {
+      "id": "seed:levashovsky-nature",
+      "title": "Заказник Левашовский",
+      "category": "park",
+      "city": "Санкт-Петербург",
+      "address": null,
+      "lat": null,
+      "lon": null,
+      "website": null,
+      "sources": [
+        {
+          "url": "https://oopt.kpoos.gov.spb.ru/protected_area/levashovsky/",
+          "label": "Официальная страница",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Перед посещением проверьте правила особо охраняемой территории и маршрут."
+    },
+    {
+      "id": "seed:hermitage",
+      "title": "Государственный Эрмитаж",
+      "category": "museum",
+      "city": "Санкт-Петербург",
+      "address": "Дворцовая площадь, 2",
+      "lat": null,
+      "lon": null,
+      "website": null,
+      "sources": [
+        {
+          "url": "https://visit-petersburg.ru/leisure/places/",
+          "label": "Официальная страница",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [
+        {
+          "key": "exhibitions",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://visit-petersburg.ru/leisure/places/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        }
+      ],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Название и категория сверены с источником. Цены, часы работы и атмосфера не проверены.",
+      "is_landmark": true,
+      "discovery_priority": -4
+    },
+    {
+      "id": "seed:erarta",
+      "title": "Эрарта",
+      "category": "museum",
+      "city": "Санкт-Петербург",
+      "address": "29-я линия В.О., 2А",
+      "lat": null,
+      "lon": null,
+      "website": null,
+      "sources": [
+        {
+          "url": "https://visit-petersburg.ru/leisure/places/",
+          "label": "Официальная страница",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [
+        {
+          "key": "exhibitions",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://visit-petersburg.ru/leisure/places/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        }
+      ],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Название и категория сверены с источником. Цены, часы работы и атмосфера не проверены.",
+      "is_landmark": true,
+      "discovery_priority": -4
+    },
+    {
+      "id": "seed:orion",
+      "title": "Спортивно-стрелковый клуб Орион",
+      "category": "sport",
+      "city": "Санкт-Петербург",
+      "address": "Пионерская улица, 21",
+      "lat": null,
+      "lon": null,
+      "website": null,
+      "sources": [
+        {
+          "url": "https://www.visit-petersburg.ru/en/leisure/?PAGEN_1=13&subcategory=4470",
+          "label": "Официальная страница",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [
+        {
+          "key": "sports",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://www.visit-petersburg.ru/en/leisure/?PAGEN_1=13&subcategory=4470",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        }
+      ],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Название и категория сверены с источником. Цены, часы работы и атмосфера не проверены."
+    },
+    {
+      "id": "seed:rc-club",
+      "title": "RC Club",
+      "category": "sport",
+      "city": "Санкт-Петербург",
+      "address": "улица Маршала Говорова, 35/4",
+      "lat": null,
+      "lon": null,
+      "website": null,
+      "sources": [
+        {
+          "url": "https://www.visit-petersburg.ru/en/leisure/?PAGEN_1=13&subcategory=4470",
+          "label": "Официальная страница",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [
+        {
+          "key": "sports",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://www.visit-petersburg.ru/en/leisure/?PAGEN_1=13&subcategory=4470",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        }
+      ],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Название и категория сверены с источником. Цены, часы работы и атмосфера не проверены."
+    },
+    {
+      "id": "seed:tramontana",
+      "title": "Скалодром Трамонтана",
+      "category": "sport",
+      "city": "Санкт-Петербург",
+      "address": "Бронницкая улица, 24",
+      "lat": null,
+      "lon": null,
+      "website": null,
+      "sources": [
+        {
+          "url": "https://www.visit-petersburg.ru/en/leisure/?PAGEN_1=13&subcategory=4470",
+          "label": "Официальная страница",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        },
+        {
+          "url": "https://www.climbingcenter.ru/",
+          "label": "Сайт скалодрома",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [
+        {
+          "key": "sports",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://www.climbingcenter.ru/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "climbing",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://www.climbingcenter.ru/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        }
+      ],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Скалодром и боулдеринг. Перед первым занятием уточни инструктаж, запись и снаряжение. Стоимость не указана без проверки выбранного занятия."
+    },
+    {
+      "id": "seed:treetotree",
+      "title": "TreeToTree Озерки",
+      "category": "sport",
+      "city": "Санкт-Петербург",
+      "address": "Ереванская улица, 10",
+      "lat": null,
+      "lon": null,
+      "website": null,
+      "sources": [
+        {
+          "url": "https://www.visit-petersburg.ru/en/leisure/?PAGEN_1=13&subcategory=4470",
+          "label": "Официальная страница",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [
+        {
+          "key": "sports",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://www.visit-petersburg.ru/en/leisure/?PAGEN_1=13&subcategory=4470",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        }
+      ],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Название и категория сверены с источником. Цены, часы работы и атмосфера не проверены."
+    },
+    {
+      "id": "seed:workshops",
+      "title": "Открытые мастерские",
+      "category": "activity",
+      "city": "Санкт-Петербург",
+      "address": "Лиговский проспект, 99",
+      "lat": null,
+      "lon": null,
+      "website": null,
+      "sources": [
+        {
+          "url": "https://www.visit-petersburg.ru/en/leisure/?PAGEN_1=13&subcategory=4470",
+          "label": "Официальная страница",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Название и категория сверены с источником. Цены, часы работы и атмосфера не проверены."
+    },
+    {
+      "id": "seed:brain",
+      "title": "Музей мозга",
+      "category": "museum",
+      "city": "Санкт-Петербург",
+      "address": "улица Марата, 86",
+      "lat": null,
+      "lon": null,
+      "website": null,
+      "sources": [
+        {
+          "url": "https://www.visit-petersburg.ru/en/leisure/?PAGEN_1=13&subcategory=4470",
+          "label": "Официальная страница",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Название и категория сверены с источником. Цены, часы работы и атмосфера не проверены."
+    },
+    {
+      "id": "seed:comics",
+      "title": "Библиотека комиксов",
+      "category": "library",
+      "city": "Санкт-Петербург",
+      "address": "7-я Красноармейская улица, 30",
+      "lat": null,
+      "lon": null,
+      "website": null,
+      "sources": [
+        {
+          "url": "https://www.visit-petersburg.ru/en/leisure/?PAGEN_1=13&subcategory=4470",
+          "label": "Официальная страница",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Название и категория сверены с источником. Цены, часы работы и атмосфера не проверены."
+    },
+    {
+      "id": "seed:grand-canyon",
+      "title": "Гранд Каньон Айс",
+      "category": "sport",
+      "city": "Санкт-Петербург",
+      "address": "Суздальский проспект, 29А",
+      "lat": null,
+      "lon": null,
+      "website": null,
+      "sources": [
+        {
+          "url": "https://www.visit-petersburg.ru/en/leisure/?PAGEN_1=13&subcategory=4470",
+          "label": "Официальная страница",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [
+        {
+          "key": "sports",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://www.visit-petersburg.ru/en/leisure/?PAGEN_1=13&subcategory=4470",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        }
+      ],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Название и категория сверены с источником. Цены, часы работы и атмосфера не проверены."
+    },
+    {
+      "id": "seed:avtovo-circus",
+      "title": "Цирк в Автово",
+      "category": "activity",
+      "city": "Санкт-Петербург",
+      "address": "Автовская улица, 1А",
+      "lat": null,
+      "lon": null,
+      "website": null,
+      "sources": [
+        {
+          "url": "https://www.visit-petersburg.ru/en/leisure/?PAGEN_1=13&subcategory=4470",
+          "label": "Официальная страница",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Название и категория сверены с источником. Цены, часы работы и атмосфера не проверены."
+    },
+    {
+      "id": "seed:coffee3",
+      "title": "Coffee 3",
+      "category": "cafe",
+      "city": "Санкт-Петербург",
+      "address": "набережная реки Карповки, 5АК",
+      "lat": null,
+      "lon": null,
+      "website": "https://cafecoffee3.ru/",
+      "sources": [
+        {
+          "url": "https://cafecoffee3.ru/",
+          "label": "Сайт места",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [
+        {
+          "key": "laptop_work",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://cafecoffee3.ru/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "coworking",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://cafecoffee3.ru/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "workshops",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://cafecoffee3.ru/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "social_events",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://cafecoffee3.ru/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "child_friendly",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://cafecoffee3.ru/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "lounge",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://cafecoffee3.ru/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "panoramic_view",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://cafecoffee3.ru/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        }
+      ],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Есть рабочая зона и отдельная чилаут-зона с подушками и панорамным видом. Для мечтательного настроения выбирай именно чилаут. В пятницу–воскресенье бронь ограничена двумя часами.",
+      "tags": [
+        "кофе",
+        "учеба",
+        "рабочая зона",
+        "каппинг"
+      ],
+      "discovery_priority": 5
+    },
+    {
+      "id": "seed:bench",
+      "title": "Бэнч",
+      "category": "cafe",
+      "city": "Санкт-Петербург",
+      "address": "шоссе Революции, 3к2",
+      "lat": null,
+      "lon": null,
+      "website": "https://benchplace.ru/",
+      "sources": [
+        {
+          "url": "https://benchplace.ru/",
+          "label": "Сайт места",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [
+        {
+          "key": "laptop_work",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://benchplace.ru/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "wifi",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://benchplace.ru/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "power_outlets",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://benchplace.ru/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "board_games",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://benchplace.ru/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "rpg",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://benchplace.ru/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "social_events",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://benchplace.ru/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "meetups",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://benchplace.ru/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        }
+      ],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Дневная работа с ноутбуком, розетки и Wi-Fi описаны на сайте. Вечером бывают игры и митапы; проверь афишу и запись, если идёшь знакомиться.",
+      "tags": [
+        "кофе",
+        "учеба",
+        "D&D",
+        "DevOps",
+        "книжный клуб",
+        "митап",
+        "программирование"
+      ],
+      "discovery_priority": 6
+    },
+    {
+      "id": "seed:brynza-karavannaya",
+      "title": "Брынза · Караванная улица, 24",
+      "category": "cafe",
+      "city": "Санкт-Петербург",
+      "address": "Караванная улица, 24",
+      "lat": null,
+      "lon": null,
+      "website": "https://cafebrynza.ru/addressa/kafe-dlya-raboty-s-noutbukom/",
+      "sources": [
+        {
+          "url": "https://cafebrynza.ru/addressa/kafe-dlya-raboty-s-noutbukom/",
+          "label": "Сайт места",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [
+        {
+          "key": "laptop_work",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://cafebrynza.ru/addressa/kafe-dlya-raboty-s-noutbukom/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "wifi",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://cafebrynza.ru/addressa/kafe-dlya-raboty-s-noutbukom/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "power_outlets",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://cafebrynza.ru/addressa/kafe-dlya-raboty-s-noutbukom/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "child_friendly",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://cafebrynza.ru/addressa/kafe-dlya-raboty-s-noutbukom/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "quiet",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://cafebrynza.ru/addressa/kafe-dlya-raboty-s-noutbukom/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": "weekday_morning"
+        }
+      ],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Точка включена в список кафе для работы. Заведение просит делать заказы при длительном посещении. Более тихая обстановка описана для первой половины дня в будни, а не для любого времени.",
+      "tags": [
+        "кофе",
+        "учеба",
+        "работа"
+      ],
+      "discovery_priority": 1
+    },
+    {
+      "id": "seed:brynza-moskovsky",
+      "title": "Брынза · Московский проспект, 86",
+      "category": "cafe",
+      "city": "Санкт-Петербург",
+      "address": "Московский проспект, 86",
+      "lat": null,
+      "lon": null,
+      "website": "https://cafebrynza.ru/addressa/kafe-dlya-raboty-s-noutbukom/",
+      "sources": [
+        {
+          "url": "https://cafebrynza.ru/addressa/kafe-dlya-raboty-s-noutbukom/",
+          "label": "Сайт места",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [
+        {
+          "key": "laptop_work",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://cafebrynza.ru/addressa/kafe-dlya-raboty-s-noutbukom/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "wifi",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://cafebrynza.ru/addressa/kafe-dlya-raboty-s-noutbukom/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "power_outlets",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://cafebrynza.ru/addressa/kafe-dlya-raboty-s-noutbukom/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "child_friendly",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://cafebrynza.ru/addressa/kafe-dlya-raboty-s-noutbukom/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "quiet",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://cafebrynza.ru/addressa/kafe-dlya-raboty-s-noutbukom/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": "weekday_morning"
+        }
+      ],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Точка включена в список кафе для работы. Заведение просит делать заказы при длительном посещении. Более тихая обстановка описана для первой половины дня в будни, а не для любого времени.",
+      "tags": [
+        "кофе",
+        "учеба",
+        "работа"
+      ],
+      "discovery_priority": 1
+    },
+    {
+      "id": "seed:gaga",
+      "title": "Playloft GaGa",
+      "category": "anticafe",
+      "city": "Санкт-Петербург",
+      "address": "Малая Морская улица, 15/7",
+      "lat": null,
+      "lon": null,
+      "website": "https://playloftgaga.ru/",
+      "sources": [
+        {
+          "url": "https://playloftgaga.ru/",
+          "label": "Сайт места",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [
+        {
+          "key": "board_games",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://playloftgaga.ru/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "rpg",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://playloftgaga.ru/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "social_events",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://playloftgaga.ru/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "laptop_work",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://playloftgaga.ru/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "workshops",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://playloftgaga.ru/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        }
+      ],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Есть настольные игры, рабочий формат и открытая афиша. Для знакомства выбирай общую игротеку или событие, а не аренду отдельного помещения. Тариф и запись — на сайте.",
+      "tags": [
+        "настолки",
+        "D&D",
+        "чтение",
+        "мастер-класс"
+      ],
+      "discovery_priority": 3
+    },
+    {
+      "id": "seed:mechtatut",
+      "title": "МечтаТут",
+      "category": "anticafe",
+      "city": "Санкт-Петербург",
+      "address": "улица Есенина, 1к1",
+      "lat": null,
+      "lon": null,
+      "website": "https://me4tut.ru/",
+      "sources": [
+        {
+          "url": "https://me4tut.ru/",
+          "label": "Сайт места",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [
+        {
+          "key": "board_games",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://me4tut.ru/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "social_events",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://me4tut.ru/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        }
+      ],
+      "price_max": 950,
+      "price_scope": "visit",
+      "price_source_url": "https://me4tut.ru/",
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Свободное посещение: минимальный чек 300 ₽, поминутная оплата и дневной максимум 950 ₽. Чай, печенье и игры входят в этот тариф. Аренда залов считается отдельно; на игротеку уточни запись.",
+      "tags": [
+        "настолки",
+        "мафия",
+        "игротека",
+        "найти компанию"
+      ],
+      "discovery_priority": 3,
+      "price_checked_at": "2026-10-11T00:00:00+00:00"
+    },
+    {
+      "id": "seed:roger",
+      "title": "Клуб Роджер",
+      "category": "activity",
+      "city": "Санкт-Петербург",
+      "address": "Зверинская улица, 36",
+      "lat": null,
+      "lon": null,
+      "website": "https://rogerclub.ru/",
+      "sources": [
+        {
+          "url": "https://rogerclub.ru/",
+          "label": "Сайт места",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [
+        {
+          "key": "board_games",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://rogerclub.ru/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "war_games",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://rogerclub.ru/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "rpg",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://rogerclub.ru/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "social_events",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://rogerclub.ru/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        }
+      ],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Клуб специализируется на варгеймах и помогает найти соперника. Посещение по предварительной записи; события и правила участия уточняются в клубе.",
+      "tags": [
+        "Warhammer",
+        "варгейм",
+        "НРИ",
+        "настолки"
+      ],
+      "discovery_priority": 3
+    },
+    {
+      "id": "seed:doigralis",
+      "title": "Доигрались",
+      "category": "activity",
+      "city": "Санкт-Петербург",
+      "address": null,
+      "lat": null,
+      "lon": null,
+      "website": "https://doigralis.ru/",
+      "sources": [
+        {
+          "url": "https://doigralis.ru/",
+          "label": "Сайт места",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [
+        {
+          "key": "board_games",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://doigralis.ru/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "rpg",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://doigralis.ru/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "social_events",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://doigralis.ru/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        }
+      ],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Открытые наборы на настольные ролевые игры и кампании. Можно прийти без своей группы. До записи проверь место встречи, систему, возраст участников и стоимость конкретной игры.",
+      "tags": [
+        "D&D",
+        "НРИ",
+        "ролевые игры",
+        "ваншот"
+      ],
+      "discovery_priority": 3
+    },
+    {
+      "id": "seed:taledice",
+      "title": "Tale’n’Dice",
+      "category": "activity",
+      "city": "Санкт-Петербург",
+      "address": "улица Мира, 16",
+      "lat": null,
+      "lon": null,
+      "website": "https://taledice.ru/",
+      "sources": [
+        {
+          "url": "https://taledice.ru/",
+          "label": "Сайт места",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [
+        {
+          "key": "board_games",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://taledice.ru/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "rpg",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://taledice.ru/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        }
+      ],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Официальное описание указывает настольные и ролевые игры. Доступность страницы и текущую запись на игру нужно уточнить; карточка не подтверждает свободные места сегодня.",
+      "tags": [
+        "D&D",
+        "НРИ",
+        "настолки"
+      ],
+      "discovery_priority": 3
+    },
+    {
+      "id": "seed:borey",
+      "title": "Арт-центр Борей",
+      "category": "gallery",
+      "city": "Санкт-Петербург",
+      "address": "Литейный проспект, 58",
+      "lat": null,
+      "lon": null,
+      "website": "https://borey.ru/gallery/",
+      "sources": [
+        {
+          "url": "https://borey.ru/gallery/",
+          "label": "Сайт места",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [
+        {
+          "key": "exhibitions",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://borey.ru/gallery/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        }
+      ],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Независимая галерея с программой современного искусства. Предлагается для знакомства с искусством; мечтательное настроение или тишина по одной категории не выводятся.",
+      "tags": [
+        "современное искусство",
+        "живопись",
+        "графика"
+      ],
+      "discovery_priority": 3
+    },
+    {
+      "id": "seed:annanova",
+      "title": "Anna Nova Gallery",
+      "category": "gallery",
+      "city": "Санкт-Петербург",
+      "address": "улица Жуковского, 28",
+      "lat": null,
+      "lon": null,
+      "website": "https://www.annanova-gallery.ru/",
+      "sources": [
+        {
+          "url": "https://www.annanova-gallery.ru/",
+          "label": "Сайт места",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        },
+        {
+          "url": "https://www.annanova-gallery.ru/exhibitions/161/overview/",
+          "label": "Текущая выставка",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [
+        {
+          "key": "exhibitions",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://www.annanova-gallery.ru/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "imaginative_exhibition",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://www.annanova-gallery.ru/exhibitions/161/overview/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null,
+          "valid_from": "2026-10-09T00:00:00+03:00",
+          "valid_until": "2026-11-15T23:59:59+03:00"
+        }
+      ],
+      "price_max": 250,
+      "price_scope": "visit",
+      "price_source_url": "https://www.annanova-gallery.ru/exhibitions/161/overview/",
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "До 15 ноября 2026 идёт выставка Димы Филиппова о воображении, свете и изменении взгляда. Поэтому она предлагается для мечтаний. После окончания этот признак отключится; следующую тему нужно проверить.",
+      "tags": [
+        "современное искусство",
+        "инсталляции"
+      ],
+      "discovery_priority": 3,
+      "price_valid_until": "2026-11-15T23:59:59+03:00",
+      "price_checked_at": "2026-10-11T00:00:00+00:00",
+      "editorial_valid_until": "2026-11-15T20:59:59Z"
+    },
+    {
+      "id": "seed:blank",
+      "title": "Blank",
+      "category": "club",
+      "city": "Санкт-Петербург",
+      "address": "Арсенальная набережная, 1",
+      "lat": null,
+      "lon": null,
+      "website": "https://blankclub.ru/about",
+      "sources": [
+        {
+          "url": "https://blankclub.ru/about",
+          "label": "Сайт места",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [
+        {
+          "key": "dance",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://blankclub.ru/about",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        }
+      ],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Клуб электронной музыки. Смотри дату вечеринки, возрастные ограничения, правила входа и билеты: наличие танцпола не означает событие в любой день.",
+      "tags": [
+        "электронная музыка",
+        "DJ",
+        "танцы"
+      ],
+      "discovery_priority": 3
+    },
+    {
+      "id": "seed:leon",
+      "title": "Leon Club",
+      "category": "billiards",
+      "city": "Санкт-Петербург",
+      "address": "улица Оптиков, 4",
+      "lat": null,
+      "lon": null,
+      "website": "https://leonclub.ru/biliard",
+      "sources": [
+        {
+          "url": "https://leonclub.ru/biliard",
+          "label": "Сайт места",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [
+        {
+          "key": "billiards",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://leonclub.ru/biliard",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "free_billiards",
+          "value": false,
+          "status": "documented",
+          "source_url": "https://leonclub.ru/biliard",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": "game"
+        }
+      ],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Пул, русский бильярд и снукер. В прайсе указана платная игра; бесплатное первое занятие секции не означает бесплатную аренду стола. Тариф зависит от стола и времени.",
+      "tags": [],
+      "discovery_priority": 3
+    },
+    {
+      "id": "seed:almak",
+      "title": "Альмак",
+      "category": "billiards",
+      "city": "Санкт-Петербург",
+      "address": "Новолитовская улица, 15А",
+      "lat": null,
+      "lon": null,
+      "website": "https://almakclub.ru/",
+      "sources": [
+        {
+          "url": "https://almakclub.ru/",
+          "label": "Сайт места",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [
+        {
+          "key": "billiards",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://almakclub.ru/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "wifi",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://almakclub.ru/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        }
+      ],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Бильярдный и развлекательный центр с русской пирамидой и пулом. Бесплатная парковка не подтверждает бесплатную игру. Условия и тарифы проверь на сайте.",
+      "tags": [],
+      "discovery_priority": 3
+    },
+    {
+      "id": "seed:maximatic",
+      "title": "МАКСИматик",
+      "category": "billiards",
+      "city": "Санкт-Петербург",
+      "address": "проспект Космонавтов, 55",
+      "lat": null,
+      "lon": null,
+      "website": "https://billclub.ru/",
+      "sources": [
+        {
+          "url": "https://billclub.ru/",
+          "label": "Сайт места",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [
+        {
+          "key": "billiards",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://billclub.ru/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "free_billiards",
+          "value": false,
+          "status": "documented",
+          "source_url": "https://billclub.ru/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": "game"
+        }
+      ],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Пул, русский бильярд и снукер с почасовыми тарифами. Не относится к бесплатной игре. Выбор стола, бронь и итоговую стоимость уточни в клубе.",
+      "tags": [],
+      "discovery_priority": 3
+    },
+    {
+      "id": "seed:broken-hearts",
+      "title": "Бар разбитых сердец",
+      "category": "bar",
+      "city": "Санкт-Петербург",
+      "address": "набережная канала Грибоедова, 30–32Ч",
+      "lat": null,
+      "lon": null,
+      "website": "https://razbitye-serdtsa.clients.site/",
+      "sources": [
+        {
+          "url": "https://razbitye-serdtsa.clients.site/",
+          "label": "Сайт места",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        },
+        {
+          "url": "https://www.restoclub.ru/spb/place/bar-razbityh-serdec",
+          "label": "Restoclub · требует уточнения",
+          "kind": "editorial",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [
+        {
+          "key": "billiards",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://razbitye-serdtsa.clients.site/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "free_billiards",
+          "value": true,
+          "status": "pending_review",
+          "source_url": "https://www.restoclub.ru/spb/place/bar-razbityh-serdec",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": "game"
+        }
+      ],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "На сайте заведения подтверждён бильярд. Restoclub описывает бесплатный пул по очереди, но указывает другой адрес — Садовая, 19. Условия игры и адрес требуют уточнения; бесплатность не подтверждена.",
+      "tags": [
+        "пул",
+        "коктейли"
+      ],
+      "discovery_priority": 3
+    },
+    {
+      "id": "seed:elagin",
+      "title": "Парк на Елагином острове",
+      "category": "park",
+      "city": "Санкт-Петербург",
+      "address": "Елагин остров, 4",
+      "lat": null,
+      "lon": null,
+      "website": "https://elaginpark.org/central-park/park-na-elaginom-ostrove-segodnya/",
+      "sources": [
+        {
+          "url": "https://elaginpark.org/central-park/park-na-elaginom-ostrove-segodnya/",
+          "label": "Сайт места",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [
+        {
+          "key": "waterfront",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://elaginpark.org/central-park/park-na-elaginom-ostrove-segodnya/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        }
+      ],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Прогулка на острове у воды. У парка, выставок и мастер-классов разные правила посещения; стоимость входа и доступность отдельных объектов уточни перед выходом.",
+      "tags": [
+        "прогулка",
+        "природа",
+        "река"
+      ],
+      "discovery_priority": 3
+    },
+    {
+      "id": "seed:benua",
+      "title": "Сад Бенуа",
+      "category": "space",
+      "city": "Санкт-Петербург",
+      "address": "Тихорецкий проспект, 17",
+      "lat": null,
+      "lon": null,
+      "website": "https://benua1890.ru/",
+      "sources": [
+        {
+          "url": "https://benua1890.ru/",
+          "label": "Сайт места",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [
+        {
+          "key": "exhibitions",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://benua1890.ru/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "garden",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://benua1890.ru/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        }
+      ],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Пространство с садом и художественными проектами. Для мечтаний учитывается наличие сада; архив выставок не подтверждает действующую экспозицию.",
+      "tags": [
+        "паблик-арт",
+        "прогулка",
+        "современное искусство"
+      ],
+      "discovery_priority": 3
+    },
+    {
+      "id": "seed:kolokol",
+      "title": "Колокол · Рубинштейна",
+      "category": "activity",
+      "city": "Санкт-Петербург",
+      "address": "улица Рубинштейна, 36",
+      "lat": null,
+      "lon": null,
+      "website": "https://spb.kolokol.school/",
+      "sources": [
+        {
+          "url": "https://spb.kolokol.school/",
+          "label": "Сайт места",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        },
+        {
+          "url": "https://spb.kolokol.school/programs/20096",
+          "label": "Программа школы · адрес уточнить",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [
+        {
+          "key": "workshops",
+          "value": true,
+          "status": "pending_review",
+          "source_url": "https://spb.kolokol.school/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        }
+      ],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Гончарная школа предлагает запись на мастер-классы через контакты. На момент проверки сайт временно недоступен; адрес из прежней официальной программы нужно подтвердить перед записью.",
+      "tags": [
+        "керамика",
+        "гончарный круг"
+      ],
+      "discovery_priority": 3
+    },
+    {
+      "id": "seed:learning-group",
+      "title": "Разговорные встречи Learning Group",
+      "category": "activity",
+      "city": "Санкт-Петербург",
+      "address": null,
+      "lat": null,
+      "lon": null,
+      "website": "https://learning-group.ru/speaking-clubs",
+      "sources": [
+        {
+          "url": "https://learning-group.ru/speaking-clubs",
+          "label": "Сайт места",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [
+        {
+          "key": "social_events",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://learning-group.ru/speaking-clubs",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "speaking_club",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://learning-group.ru/speaking-clubs",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "english_club",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://learning-group.ru/speaking-clubs",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "board_games",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://learning-group.ru/speaking-clubs",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        }
+      ],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Встречи для практики английского с играми и совместными занятиями. Локация зависит от события; выбирай уровень языка, дату и адрес в расписании, а не юридический адрес школы.",
+      "tags": [
+        "английский",
+        "языки",
+        "разговорный клуб"
+      ],
+      "discovery_priority": 3
+    },
+    {
+      "id": "seed:iva-orangery",
+      "title": "Ива · кофейня в оранжерее",
+      "category": "cafe",
+      "city": "Санкт-Петербург",
+      "address": "Потёмкинская улица, 2Г",
+      "lat": null,
+      "lon": null,
+      "website": "https://tavr-orangery.ru/kofeynya",
+      "sources": [
+        {
+          "url": "https://tavr-orangery.ru/kofeynya",
+          "label": "Сайт места",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [
+        {
+          "key": "green_interior",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://tavr-orangery.ru/kofeynya",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        }
+      ],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Второй этаж оранжереи с видом на растения. У входа в оранжерею и заказа в кофейне отдельные условия; проверь их перед визитом.",
+      "tags": [
+        "оранжерея",
+        "пальмы",
+        "растения",
+        "кофе"
+      ],
+      "discovery_priority": 3
+    },
+    {
+      "id": "seed:third-place",
+      "title": "Третье место",
+      "category": "space",
+      "city": "Санкт-Петербург",
+      "address": "Литейный проспект, 62",
+      "lat": null,
+      "lon": null,
+      "website": "https://third.place/",
+      "sources": [
+        {
+          "url": "https://third.place/",
+          "label": "Сайт места",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [
+        {
+          "key": "historic_interior",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://third.place/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "art_interior",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://third.place/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "exhibitions",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://third.place/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "cinema_events",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://third.place/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        }
+      ],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Особняк с искусством во дворе и культурной программой. У кинопоказов, выставок и двора разные условия посещения. Архив событий не означает, что выставка идёт сегодня.",
+      "tags": [
+        "современное искусство",
+        "особняк",
+        "двор",
+        "кино"
+      ],
+      "discovery_priority": 3
+    },
+    {
+      "id": "seed:myth",
+      "title": "MYTH Gallery",
+      "category": "gallery",
+      "city": "Санкт-Петербург",
+      "address": "улица Чайковского, 61",
+      "lat": null,
+      "lon": null,
+      "website": "https://mythgallery.art/kontaktyi",
+      "sources": [
+        {
+          "url": "https://mythgallery.art/kontaktyi",
+          "label": "Сайт места",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [
+        {
+          "key": "exhibitions",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://mythgallery.art/kontaktyi",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "historic_interior",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://mythgallery.art/kontaktyi",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        }
+      ],
+      "price_max": 200,
+      "price_scope": "visit",
+      "price_source_url": "https://mythgallery.art/kontaktyi",
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Современное искусство в доме с сохранённой лепниной и финской печью. Вход через домофон 55. Стандартный билет 200 ₽; текущую экспозицию проверь в афише.",
+      "tags": [
+        "современное искусство",
+        "модерн",
+        "исторический интерьер"
+      ],
+      "discovery_priority": 3,
+      "price_checked_at": "2026-10-11T00:00:00+00:00"
+    },
+    {
+      "id": "seed:artmuza",
+      "title": "АРТМУЗА",
+      "category": "museum",
+      "city": "Санкт-Петербург",
+      "address": "13-я линия Васильевского острова, 70–72",
+      "lat": null,
+      "lon": null,
+      "website": "https://artmuza.spb.ru/",
+      "sources": [
+        {
+          "url": "https://artmuza.spb.ru/",
+          "label": "Сайт места",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [
+        {
+          "key": "exhibitions",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://artmuza.spb.ru/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "free_entry",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://artmuza.spb.ru/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        }
+      ],
+      "price_max": 0,
+      "price_scope": "visit",
+      "price_source_url": "https://artmuza.spb.ru/",
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Музей современного искусства с несколькими выставками. Обычный вход в музей бесплатный; отдельные занятия и события могут оплачиваться.",
+      "tags": [
+        "современное искусство",
+        "живопись",
+        "скульптура"
+      ],
+      "discovery_priority": 3,
+      "price_checked_at": "2026-10-11T00:00:00+00:00"
+    },
+    {
+      "id": "seed:artist",
+      "title": "Artist · арт-кафе",
+      "category": "cafe",
+      "city": "Санкт-Петербург",
+      "address": "13-я линия Васильевского острова, 70, 3-й этаж",
+      "lat": null,
+      "lon": null,
+      "website": "https://artist.artmuza.spb.ru/",
+      "sources": [
+        {
+          "url": "https://artist.artmuza.spb.ru/",
+          "label": "Сайт места",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [
+        {
+          "key": "chamber_space",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://artist.artmuza.spb.ru/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        }
+      ],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Кафе на третьем этаже АРТМУЗЫ; в описании указано 30 мест. Можно совместить с музеем. Небольшой зал сам по себе не подтверждает тишину.",
+      "tags": [
+        "кофе",
+        "музей",
+        "небольшой зал"
+      ],
+      "discovery_priority": 3
+    },
+    {
+      "id": "seed:artcherdak",
+      "title": "Чердак художника",
+      "category": "restaurant",
+      "city": "Санкт-Петербург",
+      "address": "улица Ломоносова, 1/28",
+      "lat": null,
+      "lon": null,
+      "website": "https://artcherdakrest.ru/",
+      "sources": [
+        {
+          "url": "https://artcherdakrest.ru/",
+          "label": "Сайт места",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [
+        {
+          "key": "panoramic_view",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://artcherdakrest.ru/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "art_interior",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://artcherdakrest.ru/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "waterfront",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://artcherdakrest.ru/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        }
+      ],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Ресторан при галерее: панорамная терраса, вид на канал и произведения искусства в интерьере. Для посещения террасы уточни бронь и условия заказа.",
+      "tags": [
+        "фондю",
+        "терраса",
+        "канал",
+        "антиквариат"
+      ],
+      "discovery_priority": 3
+    },
+    {
+      "id": "seed:bookcoffee",
+      "title": "Книги и кофе",
+      "category": "cafe",
+      "city": "Санкт-Петербург",
+      "address": "Гагаринская улица, 20",
+      "lat": null,
+      "lon": null,
+      "website": "https://www.bookcoffee.ru/",
+      "sources": [
+        {
+          "url": "https://www.bookcoffee.ru/",
+          "label": "Сайт места",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [
+        {
+          "key": "chamber_space",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://www.bookcoffee.ru/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "live_music",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://www.bookcoffee.ru/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        }
+      ],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Арт-кафе с гостиной и камерным залом. Вечернее мероприятие может менять обстановку. Малый зал может быть занят частной встречей; уточни доступность.",
+      "tags": [
+        "литература",
+        "концерты",
+        "книги"
+      ],
+      "discovery_priority": 3
+    },
+    {
+      "id": "seed:palma",
+      "title": "Особняк Пальма",
+      "category": "space",
+      "city": "Санкт-Петербург",
+      "address": "переулок Пирогова, 18",
+      "lat": null,
+      "lon": null,
+      "website": "https://palma.spb.ru/",
+      "sources": [
+        {
+          "url": "https://palma.spb.ru/",
+          "label": "Сайт места",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [
+        {
+          "key": "historic_interior",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://palma.spb.ru/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        }
+      ],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Исторический особняк с творческими резидентами и залами для мероприятий. Выбирай конкретное открытое событие: аренда пространства не означает свободный вход.",
+      "tags": [
+        "архитектура",
+        "особняк",
+        "локальные бренды"
+      ],
+      "discovery_priority": 3
+    },
+    {
+      "id": "seed:smena",
+      "title": "Смена",
+      "category": "cafe",
+      "city": "Санкт-Петербург",
+      "address": "Басков переулок, 20",
+      "lat": null,
+      "lon": null,
+      "website": "https://smenacafeyo.tilda.ws/",
+      "sources": [
+        {
+          "url": "https://smenacafeyo.tilda.ws/",
+          "label": "Сайт места",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Кофейня с завтраками. На сайте указано, что столики не бронируют. Работа с ноутбуком, розетки и уровень шума отдельно не подтверждены.",
+      "tags": [
+        "кофе",
+        "завтраки"
+      ],
+      "discovery_priority": 3
+    },
+    {
+      "id": "seed:lib-rzhevskaya",
+      "title": "Библиотека Ржевская",
+      "category": "library",
+      "city": "Санкт-Петербург",
+      "address": "Индустриальный проспект, 35к1",
+      "lat": null,
+      "lon": null,
+      "website": "https://kr-cbs.ru/libraries/rzhevskaya",
+      "sources": [
+        {
+          "url": "https://kr-cbs.ru/libraries/rzhevskaya",
+          "label": "Сайт места",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [
+        {
+          "key": "reading_space",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://kr-cbs.ru/libraries/rzhevskaya",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "laptop_work",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://kr-cbs.ru/libraries/rzhevskaya",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "child_friendly",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://kr-cbs.ru/libraries/rzhevskaya",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        }
+      ],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Есть два коворкинга и детская игровая зона. Перед работой уточни регистрацию читателя и доступность нужного пространства.",
+      "tags": [
+        "книги",
+        "библиотека"
+      ],
+      "discovery_priority": 3
+    },
+    {
+      "id": "seed:lib-kub",
+      "title": "Библиотека КУБ",
+      "category": "library",
+      "city": "Санкт-Петербург",
+      "address": "проспект Маршака, 24к1",
+      "lat": null,
+      "lon": null,
+      "website": "https://kr-cbs.ru/libraries/kub",
+      "sources": [
+        {
+          "url": "https://kr-cbs.ru/libraries/kub",
+          "label": "Сайт места",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [
+        {
+          "key": "reading_space",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://kr-cbs.ru/libraries/kub",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "lounge",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://kr-cbs.ru/libraries/kub",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "laptop_work",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://kr-cbs.ru/libraries/kub",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        },
+        {
+          "key": "child_friendly",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://kr-cbs.ru/libraries/kub",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        }
+      ],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Есть лаунж-зона для чтения и коворкинг. Это разные зоны; уточни, где можно разговаривать или работать.",
+      "tags": [
+        "книги",
+        "библиотека"
+      ],
+      "discovery_priority": 3
+    },
+    {
+      "id": "seed:lib-shkaf",
+      "title": "Библиотека ШКАФ",
+      "category": "library",
+      "city": "Санкт-Петербург",
+      "address": "улица Маршала Тухачевского, 31",
+      "lat": null,
+      "lon": null,
+      "website": "https://kr-cbs.ru/libraries/shkaf",
+      "sources": [
+        {
+          "url": "https://kr-cbs.ru/libraries/shkaf",
+          "label": "Сайт места",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [
+        {
+          "key": "reading_space",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://kr-cbs.ru/libraries/shkaf",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        }
+      ],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Библиотека и арт-резиденция. Для работы в отдельном кабинете проверь правила бронирования; наличие библиотеки не гарантирует свободную переговорную.",
+      "tags": [
+        "книги",
+        "библиотека"
+      ],
+      "discovery_priority": 3
+    },
+    {
+      "id": "seed:lib-sovremennik-28",
+      "title": "Библиотека Современник · Заневский, 28",
+      "category": "library",
+      "city": "Санкт-Петербург",
+      "address": "Заневский проспект, 28",
+      "lat": null,
+      "lon": null,
+      "website": "https://kr-cbs.ru/libraries",
+      "sources": [
+        {
+          "url": "https://kr-cbs.ru/libraries",
+          "label": "Сайт места",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Адрес действующего филиала указан библиотечной сетью. Состав услуг, мероприятия и доступ к рабочим местам уточни на странице филиала.",
+      "tags": [
+        "книги",
+        "библиотека"
+      ],
+      "discovery_priority": 3
+    },
+    {
+      "id": "seed:lib-sovremennik-32",
+      "title": "Библиотека Современник · Заневский, 32",
+      "category": "library",
+      "city": "Санкт-Петербург",
+      "address": "Заневский проспект, 32",
+      "lat": null,
+      "lon": null,
+      "website": "https://kr-cbs.ru/libraries",
+      "sources": [
+        {
+          "url": "https://kr-cbs.ru/libraries",
+          "label": "Сайт места",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Адрес действующего филиала указан библиотечной сетью. Состав услуг, мероприятия и доступ к рабочим местам уточни на странице филиала.",
+      "tags": [
+        "книги",
+        "библиотека"
+      ],
+      "discovery_priority": 3
+    },
+    {
+      "id": "seed:lib-sfera",
+      "title": "Библиотека СФЕРА",
+      "category": "library",
+      "city": "Санкт-Петербург",
+      "address": "улица Лагоды, 7, строение 1",
+      "lat": null,
+      "lon": null,
+      "website": "https://kr-cbs.ru/libraries",
+      "sources": [
+        {
+          "url": "https://kr-cbs.ru/libraries",
+          "label": "Сайт места",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Адрес действующего филиала указан библиотечной сетью. Состав услуг, мероприятия и доступ к рабочим местам уточни на странице филиала.",
+      "tags": [
+        "книги",
+        "библиотека"
+      ],
+      "discovery_priority": 3
+    },
+    {
+      "id": "seed:lib-nota",
+      "title": "Библиотека НОТА",
+      "category": "library",
+      "city": "Санкт-Петербург",
+      "address": "проспект Косыгина, 28к1",
+      "lat": null,
+      "lon": null,
+      "website": "https://kr-cbs.ru/libraries",
+      "sources": [
+        {
+          "url": "https://kr-cbs.ru/libraries",
+          "label": "Сайт места",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Адрес действующего филиала указан библиотечной сетью. Состав услуг, мероприятия и доступ к рабочим местам уточни на странице филиала.",
+      "tags": [
+        "книги",
+        "библиотека"
+      ],
+      "discovery_priority": 3
+    },
+    {
+      "id": "seed:lib-les",
+      "title": "Библиотека ЛЕС",
+      "category": "library",
+      "city": "Санкт-Петербург",
+      "address": "Чарушинская улица, 26к1",
+      "lat": null,
+      "lon": null,
+      "website": "https://kr-cbs.ru/libraries",
+      "sources": [
+        {
+          "url": "https://kr-cbs.ru/libraries",
+          "label": "Сайт места",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Адрес действующего филиала указан библиотечной сетью. Состав услуг, мероприятия и доступ к рабочим местам уточни на странице филиала.",
+      "tags": [
+        "книги",
+        "библиотека"
+      ],
+      "discovery_priority": 3
+    },
+    {
+      "id": "seed:lib-okhtinskaya",
+      "title": "Библиотека Охтинская",
+      "category": "library",
+      "city": "Санкт-Петербург",
+      "address": "проспект Энергетиков, 30к5",
+      "lat": null,
+      "lon": null,
+      "website": "https://kr-cbs.ru/libraries",
+      "sources": [
+        {
+          "url": "https://kr-cbs.ru/libraries",
+          "label": "Сайт места",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Адрес действующего филиала указан библиотечной сетью. Состав услуг, мероприятия и доступ к рабочим местам уточни на странице филиала.",
+      "tags": [
+        "книги",
+        "библиотека"
+      ],
+      "discovery_priority": 3
+    },
+    {
+      "id": "seed:lib-malookhtinskaya",
+      "title": "Библиотека Малоохтинская",
+      "category": "library",
+      "city": "Санкт-Петербург",
+      "address": "Новочеркасский проспект, 49/20",
+      "lat": null,
+      "lon": null,
+      "website": "https://kr-cbs.ru/libraries",
+      "sources": [
+        {
+          "url": "https://kr-cbs.ru/libraries",
+          "label": "Сайт места",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Адрес действующего филиала указан библиотечной сетью. Состав услуг, мероприятия и доступ к рабочим местам уточни на странице филиала.",
+      "tags": [
+        "книги",
+        "библиотека"
+      ],
+      "discovery_priority": 3
+    },
+    {
+      "id": "seed:lib-porokhovskaya",
+      "title": "Библиотека Пороховская",
+      "category": "library",
+      "city": "Санкт-Петербург",
+      "address": "улица Лазо, 8к1",
+      "lat": null,
+      "lon": null,
+      "website": "https://kr-cbs.ru/libraries",
+      "sources": [
+        {
+          "url": "https://kr-cbs.ru/libraries",
+          "label": "Сайт места",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Адрес действующего филиала указан библиотечной сетью. Состав услуг, мероприятия и доступ к рабочим местам уточни на странице филиала.",
+      "tags": [
+        "книги",
+        "библиотека"
+      ],
+      "discovery_priority": 3
+    },
+    {
+      "id": "seed:lib-kit",
+      "title": "Библиотека КиТ",
+      "category": "library",
+      "city": "Санкт-Петербург",
+      "address": "Индустриальный проспект, 15",
+      "lat": null,
+      "lon": null,
+      "website": "https://kr-cbs.ru/libraries",
+      "sources": [
+        {
+          "url": "https://kr-cbs.ru/libraries",
+          "label": "Сайт места",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Адрес действующего филиала указан библиотечной сетью. Состав услуг, мероприятия и доступ к рабочим местам уточни на странице филиала.",
+      "tags": [
+        "книги",
+        "библиотека"
+      ],
+      "discovery_priority": 3
+    },
+    {
+      "id": "seed:lib-gorod",
+      "title": "Библиотека ГОРОД",
+      "category": "library",
+      "city": "Санкт-Петербург",
+      "address": "Индустриальный проспект, 35к1",
+      "lat": null,
+      "lon": null,
+      "website": "https://kr-cbs.ru/libraries",
+      "sources": [
+        {
+          "url": "https://kr-cbs.ru/libraries",
+          "label": "Сайт места",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Адрес действующего филиала указан библиотечной сетью. Состав услуг, мероприятия и доступ к рабочим местам уточни на странице филиала.",
+      "tags": [
+        "книги",
+        "библиотека"
+      ],
+      "discovery_priority": 3
+    },
+    {
+      "id": "seed:novoorlovsky",
+      "title": "Заказник Новоорловский",
+      "category": "park",
+      "city": "Санкт-Петербург",
+      "address": null,
+      "lat": null,
+      "lon": null,
+      "website": "https://oopt.kpoos.gov.spb.ru/protected_area/novoorlovskiy/",
+      "sources": [
+        {
+          "url": "https://oopt.kpoos.gov.spb.ru/protected_area/novoorlovskiy/",
+          "label": "Сайт места",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [
+        {
+          "key": "nature",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://oopt.kpoos.gov.spb.ru/protected_area/novoorlovskiy/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        }
+      ],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Природная территория в черте города. Маршрут и разрешённые тропы выбирай по карте дирекции; у заказника нет одного входа по почтовому адресу.",
+      "tags": [
+        "природа",
+        "лес",
+        "экотропа",
+        "прогулка"
+      ],
+      "discovery_priority": 3
+    },
+    {
+      "id": "seed:yuntolovsky",
+      "title": "Заказник Юнтоловский",
+      "category": "park",
+      "city": "Санкт-Петербург",
+      "address": null,
+      "lat": null,
+      "lon": null,
+      "website": "https://oopt.kpoos.gov.spb.ru/protected_area/yuntolovskiy-2/",
+      "sources": [
+        {
+          "url": "https://oopt.kpoos.gov.spb.ru/protected_area/yuntolovskiy-2/",
+          "label": "Сайт места",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [
+        {
+          "key": "nature",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://oopt.kpoos.gov.spb.ru/protected_area/yuntolovskiy-2/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        }
+      ],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Природная территория в черте города. Маршрут и разрешённые тропы выбирай по карте дирекции; у заказника нет одного входа по почтовому адресу.",
+      "tags": [
+        "природа",
+        "лес",
+        "экотропа",
+        "прогулка"
+      ],
+      "discovery_priority": 3
+    },
+    {
+      "id": "seed:kochneva",
+      "title": "Дом Кочневой",
+      "category": "theatre",
+      "city": "Санкт-Петербург",
+      "address": "набережная реки Фонтанки, 41",
+      "lat": null,
+      "lon": null,
+      "website": "https://petroconcert.spb.ru/",
+      "sources": [
+        {
+          "url": "https://petroconcert.spb.ru/",
+          "label": "Сайт места",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [
+        {
+          "key": "live_music",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://petroconcert.spb.ru/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        }
+      ],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Концертная площадка Петербург-концерта. Выбирай программу и дату: наличие зала не означает, что можно прийти без билета или события.",
+      "tags": [
+        "концерт",
+        "музыка"
+      ],
+      "discovery_priority": 3
+    },
+    {
+      "id": "seed:ekaterininskoe",
+      "title": "Екатерининское собрание",
+      "category": "theatre",
+      "city": "Санкт-Петербург",
+      "address": "набережная канала Грибоедова, 88–90",
+      "lat": null,
+      "lon": null,
+      "website": "https://petroconcert.spb.ru/",
+      "sources": [
+        {
+          "url": "https://petroconcert.spb.ru/",
+          "label": "Сайт места",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "features": [
+        {
+          "key": "live_music",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://petroconcert.spb.ru/",
+          "checked_at": "2026-10-11T00:00:00+00:00",
+          "scope": null
+        }
+      ],
+      "price_max": null,
+      "price_scope": null,
+      "price_source_url": null,
+      "status": "catalogue",
+      "updated_at": "2026-10-11T00:00:00+00:00",
+      "notes": "Концертная площадка Петербург-концерта. Выбирай программу и дату: наличие зала не означает, что можно прийти без билета или события.",
+      "tags": [
+        "концерт",
+        "музыка"
+      ],
+      "discovery_priority": 3
+    }
+  ]
+}

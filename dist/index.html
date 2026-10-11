@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#722d42">
+  <meta name="description" content="Местно — места под твоё настроение и планы. Источники, условия посещения, избранное и новые открытия.">
+  <title>Местно — найди своё место</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="integrations.css">
+  <script src="https://telegram.org/js/telegram-web-app.js" defer></script>
+  <script type="module" src="app.mjs"></script>
+</head>
+<body>
+<header class="topbar"><a class="brand" href="index.html" aria-label="Местно — на главную"><span class="brand-mark" aria-hidden="true">м</span><span>местно</span></a>
+  <nav aria-label="Разделы"><button class="nav-button active" data-view="discover">Открывать</button><button class="nav-button" data-view="saved">Избранное <span id="fav-count">0</span></button><button class="nav-button" data-view="catalogue">Моя база</button></nav>
+  <span class="city-pill"><span></span> <span id="current-city">Санкт-Петербург</span></span>
+</header>
+<main>
+<section class="hero"><div class="hero-copy"><p class="eyebrow">Найди своё место</p><h1>Твоё настроение.<br><span class="accent-text">Твоё место.</span></h1><p class="hero-description">Поработать, помечтать, встретить своих.<br class="desktop"> Расскажи, что хочется — найдём, с чего начать.</p></div><div class="city-art" aria-hidden="true"><div class="sun"></div><div class="tower tower-a"></div><div class="tower tower-b"></div><div class="tower tower-c"></div><div class="arch"></div><div class="art-label">НОВЫЙ РАКУРС<br>ЗНАКОМОГО ГОРОДА</div><div class="art-note">У каждого настроения<br>своё место.</div></div></section>
+<section id="discover-view">
+  <form id="search-form" class="search-box"><label for="query">Что хочется сегодня?</label><div class="query-row"><textarea id="query" rows="2" maxlength="1000" aria-describedby="query-help" placeholder="Хочу поработать с ноутбуком и розеткой — в кафе, не в коворкинге"></textarea><button class="primary search-submit" type="submit">Найти места <span aria-hidden="true">↗</span></button></div>
+  <p class="query-help" id="query-help">Можно своими словами: настроение, с кем идёшь и что важно в месте.</p>
+  <div class="ideas" aria-label="Примеры запросов">
+    <button type="button" data-query="Поработать с ноутбуком в кафе или библиотеке">С ноутбуком</button>
+    <button type="button" data-query="Спокойно поговорить с подругой в кафе">Поболтать без суеты</button>
+    <button type="button" data-query="Место для первого свидания, спокойно поговорить">Первое свидание</button>
+    <button type="button" data-query="Познакомиться с новыми людьми, поиграть в настолки">Найти своих</button>
+    <button type="button" data-query="Помечтать на выставке или в атмосферном кафе">Помечтать</button>
+    <button type="button" data-query="Погрустить одной, посмотреть выставку">Погрустить</button>
+    <button type="button" data-query="Подумать, погулять у воды">Подумать у воды</button>
+    <button type="button" data-query="Потусить с друзьями, потанцевать">Музыка и танцы</button>
+    <button type="button" data-query="Бесплатный бильярд">Бильярд без оплаты</button>
+    <button type="button" data-query="Спорт, попробовать скалолазание">Попробовать спорт</button>
+    <button type="button" data-query="Выставка, чтобы вдохновиться">За вдохновением</button>
+    <button type="button" data-query="Мастер-класс, познакомиться с новыми людьми">Сделать что-то вместе</button>
+  </div>
+  <details class="more-ideas"><summary>Ещё идеи для запроса</summary><div class="ideas">
+    <button type="button" data-query="Кафе для работы с ноутбуком и розетками, не коворкинг">Кафе с розетками</button>
+    <button type="button" data-query="Тихое кафе для работы с ноутбуком утром в будни">Сосредоточиться утром</button>
+    <button type="button" data-query="Настольные игры с друзьями до 1 000 рублей">Настолки до 1 000 ₽</button>
+    <button type="button" data-query="Кафе с детьми">С детьми</button>
+    <button type="button" data-query="Выставка с родителями">С родителями</button>
+    <button type="button" data-query="Познакомиться с новыми людьми на митапе">Митап и новые люди</button>
+    <button type="button" data-query="Погулять с партнёром у воды">Прогулка вдвоём</button>
+    <button type="button" data-query="Кафе или галерея для первого знакомства">Встреча без неловкости</button>
+  </div></details>
+  <div class="filter-row"><label>Категория<select id="category"><option value="">Все места</option></select></label><label>Бюджет на посещение, ₽<input type="number" id="budget" min="0" max="1000000" placeholder="Не ограничен"></label><label>С кем / зачем<select id="company"><option value="">Не важно</option></select></label><label>Настроение<select id="mood"><option value="">Любое</option></select></label></div>
+  <div class="discovery-controls"><label class="city-select">Город<select id="city"></select></label><label class="check"><input type="checkbox" id="hide-landmarks" checked> Без туристической классики</label></div>
+  <div class="filter-bottom"><label class="check"><input type="checkbox" id="hide-visited" checked> Не предлагать посещённые</label><div class="geo-controls"><button type="button" id="location-button" class="text-button">◎ Рядом со мной</button><label class="radius-label hidden" id="radius-label">Радиус <select id="radius"><option value="2">2 км</option><option value="5" selected>5 км</option><option value="10">10 км</option><option value="30">30 км</option></select></label></div></div>
+  <p id="location-status" class="small-note" role="status"></p><div class="search-actions"><button type="button" id="clear-filters" class="text-button">Сбросить запрос и фильтры</button></div>
+  </form>
+  <div class="section-heading"><div><p class="eyebrow">Знакомый город, новые открытия</p><h2 id="results-title">Начни с интереса</h2></div><span id="result-count" class="count-label"></span></div>
+  <div id="interpretation" class="interpretation hidden" role="status"><p class="interpretation-label">Так поняли твой запрос</p><div id="intent-tags" class="intent-tags"></div><p id="intent-warning" class="intent-warning hidden"></p></div>
+  <div id="search-summary" class="notice hidden" role="status"></div><div id="results" class="cards"></div><div id="empty-state" class="empty hidden"><span class="empty-symbol">↗</span><h3>Точное совпадение пока не найдено</h3><p id="empty-message"></p><button id="retry-query" class="secondary">Повторить запрос без фильтров</button><button id="reset-search" class="text-button">Смотреть весь каталог</button></div>
+  <section id="alternatives-section" class="alternatives-section hidden"><h3>Подходят по запросу — уточни условия</h3><p>У этих мест есть основания для рекомендации. Цена, отдельные условия или атмосфера ещё требуют проверки — подробности в карточке.</p><div id="alternative-results" class="cards"></div></section>
+  <div class="more-wrap"><button id="load-more" class="secondary hidden">Показать ещё</button></div>
+</section>
+<section id="saved-view" class="hidden"><div class="section-heading"><div><p class="eyebrow">Места на потом</p><h2>Твои сохранённые</h2></div></div><div id="saved-results" class="cards"></div><p id="saved-empty" class="notice">Сохраняй интересные карточки — они появятся здесь.</p></section>
+<section id="catalogue-view" class="hidden"><div class="section-heading"><div><p class="eyebrow">Открытый процесс</p><h2>Как устроена твоя база</h2></div><span class="stage-label">Первая версия</span></div>
+<div id="stats" class="stats"></div><div class="catalogue-grid"><article class="info-panel"><h3>Добавить места из KudaGo</h3><p>Можно загрузить до 1 000 записей за один запуск. Закрытые места пропускаются. Адреса и координаты пополняют каталог; настроение, цены и бесплатные услуги по одной категории не угадываются.</p><label class="api-city-label">Город для загрузки<select id="api-city"><option value="spb">Санкт-Петербург</option><option value="msk">Москва</option><option value="ekb">Екатеринбург</option><option value="kzn">Казань</option><option value="nsk">Новосибирск</option><option value="nnv">Нижний Новгород</option></select></label><div class="api-buttons"><button id="api-load" class="secondary">Загрузить места через API</button><button id="api-cancel" class="text-button hidden">Отменить</button></div><p id="api-status" class="small-note" role="status">Ключ API не нужен. Загрузка начнётся по кнопке.</p><p class="small-note">Для загрузки отзывов: <a href="https://github.com/ulko31/mestno/actions/workflows/refresh-catalogue.yml" target="_blank" rel="noopener noreferrer">GitHub → Actions → Обновить каталог мест</a>. Полученный places.json загрузи здесь из файла.</p><a href="https://docs.kudago.com/api/" class="text-link" target="_blank" rel="noopener noreferrer">Источник и условия использования →</a></article>
+<article class="info-panel"><h3>Твой каталог</h3><p>Здесь стартовая база с источниками и отдельными сведениями об атмосфере. Дополнительные места объединяются с ней, сохраняя проверенные условия и филиалы.</p><p>Загруженный каталог, избранное и посещённые сохраняются в этом браузере. Новая версия приложения также обновляет стартовые карточки.</p><label for="catalogue-file" class="secondary upload-label">Загрузить файл каталога<input type="file" id="catalogue-file" accept="application/json,.json"></label><button id="download-catalogue" class="text-button">Скачать текущий каталог</button><button id="restore-catalogue" class="text-button">Вернуть стартовую базу</button><p id="import-status" class="small-note" role="status"></p></article>
+<article class="info-panel"><h3>Почему источник важен</h3><p>«Есть стол для бильярда» и «игра бесплатная» — два разных условия. Бесплатный вход не означает бесплатную игру.</p><p>У цены есть дата и единица: посещение, час или отдельная активность. По одному отзыву мы не делаем вывод обо всём заведении.</p><a href="sources.html" class="text-link">Посмотреть источники и правила →</a><a href="project-source.zip" class="text-link" download>Скачать код и инструкции →</a></article></div></section>
+<section class="closing-note"><div class="note-symbol">＊</div><div><h3>Меньше угадываний. Больше подходящих мест.</h3><p>В карточке всегда есть источник. Цены, часы работы и впечатления могут меняться — проверь условия перед выходом.</p></div></section>
+</main>
+<footer><div class="brand small-brand">местно</div><span>Место для твоего момента.</span><a href="sources.html">Источники</a></footer>
+<div id="toast" role="status" class="toast hidden"></div>
+</body></html>
