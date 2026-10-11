@@ -1,12 +1,13 @@
 import {categories, moods, companies, featureLabels, safeUrl, hasFeature, parseQuery, searchPlaces, validateCatalogue} from './search.mjs';
-import {loadKudaGo,mergeCatalogues} from './providers.mjs';
+import {loadKudaGo,loadKudaGoReviews,mergeCatalogues} from './providers.mjs';
+import {documentsOf} from './text-analysis.mjs';
 const $ = id => document.getElementById(id);
 const escape = s => String(s ?? '').replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const load = (key, fallback) => {try{return JSON.parse(localStorage.getItem(key)) ?? fallback;}catch{return fallback;}};
 const save = (key, value) => {try{localStorage.setItem(key, JSON.stringify(value));return true;}catch{return false;}};
 const state = {catalogue:null, baseline:null, favorites:new Set(load('kuda.favorites',[])), visited:new Set(load('kuda.visited',[])),
   location:null, lastSearch:null, visible:12, view:'discover',autoMood:'',autoCompany:''};
-let toastTimer, apiController;
+let toastTimer, apiController,reviewController;
 function toast(message){$('toast').textContent=message;$('toast').classList.remove('hidden');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').classList.add('hidden'),3500);}
 
 function card({place:p, distance=null, reasons=[],warnings=[],evidence=[]}) {
@@ -89,7 +90,7 @@ function renderSearch(reset=false) {
 }
 
 function renderSaved(){const items=state.catalogue.places.filter(p=>state.favorites.has(p.id));$('saved-results').innerHTML=items.map(p=>card({place:p})).join('');$('saved-empty').classList.toggle('hidden',items.length>0);$('fav-count').textContent=items.length;}
-function renderStats(){const p=state.catalogue.places;const values=[[p.length,'карточек в каталоге'],[p.filter(x=>x.notes||(x.documents||[]).some(d=>d.kind==='description')).length,'мест с описаниями'],[p.reduce((n,x)=>n+(x.documents||[]).filter(d=>d.kind==='review').length,0),'загруженных отзывов'],[p.filter(x=>Number.isFinite(x.lat)&&Number.isFinite(x.lon)).length,'мест с координатами']];$('stats').innerHTML=values.map(([n,label])=>`<div class="stat"><strong>${n}</strong><span>${escape(label)}</span></div>`).join('');}
+function renderStats(){const p=state.catalogue.places;const values=[[p.length,'карточек в каталоге'],[p.filter(x=>documentsOf(x).some(d=>d.kind!=='review')).length,'мест с описаниями'],[p.reduce((n,x)=>n+(x.documents||[]).filter(d=>d.kind==='review').length,0),'загруженных отзывов'],[p.filter(x=>Number.isFinite(x.lat)&&Number.isFinite(x.lon)).length,'мест с координатами']];$('stats').innerHTML=values.map(([n,label])=>`<div class="stat"><strong>${n}</strong><span>${escape(label)}</span></div>`).join('');}
 function renderAll(){renderSearch();renderSaved();renderStats();}
 function syncCities(){
   const selected=$('city').value;
@@ -100,7 +101,9 @@ function syncCities(){
 }
 function installCatalogue(payload){
   state.catalogue=mergeCatalogues(state.catalogue||state.baseline,payload);
-  const persisted=save('kuda.catalogue',state.catalogue);syncCities();renderAll();return persisted;
+  const baseline=new Map(state.baseline.places.map(p=>[p.id,JSON.stringify(p)]));
+  const delta=state.catalogue.places.filter(p=>baseline.get(p.id)!==JSON.stringify(p));
+  const persisted=save('kuda.catalogue',{schema_version:1,places:delta});syncCities();renderAll();return persisted;
 }
 function setView(view){state.view=view;for(const name of ['discover','saved','catalogue'])$(name+'-view').classList.toggle('hidden',name!==view);document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===view));}
 
@@ -148,6 +151,18 @@ $('download-catalogue').addEventListener('click',()=>{
   const a=document.createElement('a');a.href=url;a.download='mestno-catalogue.json';a.click();URL.revokeObjectURL(url);
 });
 $('api-cancel').addEventListener('click',()=>apiController?.abort());
+$('reviews-cancel').addEventListener('click',()=>reviewController?.abort());
+$('reviews-load').addEventListener('click',async()=>{
+  if(reviewController)return;reviewController=new AbortController();$('reviews-load').disabled=true;$('reviews-cancel').classList.remove('hidden');
+  try{
+    const r=await loadKudaGoReviews({catalogue:state.catalogue,signal:reviewController.signal,
+      onProgress:x=>{$('reviews-status').textContent=`Проверено ${x.checked} из ${x.total} мест, получено ${x.reviewCount} отзывов…`;}});
+    const persisted=installCatalogue(r.catalogue);
+    $('reviews-status').textContent=`Проверено ${r.checkedPlaces} мест. Загружено ${r.reviewCount} текстов отзывов с датами и источниками.`
+      +(persisted?' Сохранено в этом браузере.':' Для сохранения скачай текущий каталог.');
+  }catch(err){$('reviews-status').textContent=reviewController.signal.aborted?'Загрузка отменена. Каталог сохранён.':err.message+' Каталог сохранён.';}
+  finally{reviewController=null;$('reviews-load').disabled=false;$('reviews-cancel').classList.add('hidden');}
+});
 $('api-load').addEventListener('click',async()=>{
   if(apiController)return;
   apiController=new AbortController();$('api-load').disabled=true;$('api-city').disabled=true;$('api-cancel').classList.remove('hidden');

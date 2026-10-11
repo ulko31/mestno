@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {fromKudaGo,loadKudaGo,mergeCatalogues} from '../dist/providers.mjs';
+import {fromKudaGo,loadKudaGo,loadKudaGoReviews,mergeCatalogues} from '../dist/providers.mjs';
 const row=(id,extra={})=>({id,title:'Место '+id,address:'улица, '+id,coords:{lat:59.93,lon:30.31},categories:['cafes'],
   site_url:'https://kudago.com/spb/place/test-'+id+'/',...extra});
 const catalogue=places=>({schema_version:1,places});
@@ -53,4 +53,27 @@ test('duplicate source observations with different time scope are preserved',()=
 test('invalid API geometry and unsupported cities are rejected',async()=>{
   assert.throws(()=>fromKudaGo({results:[row(1,{coords:{lat:999,lon:30}})]}));
   await assert.rejects(loadKudaGo({city:'unsupported'}),/город/);
+});
+test('browser review import keeps attributed prose without author profiles or false verified facts',async()=>{
+ const places=fromKudaGo({results:[row(1,{comments_count:3})]});
+ const r=await loadKudaGoReviews({catalogue:catalogue(places),fetcher:async url=>{
+   assert.ok(url.includes('/1/comments/'));assert.ok(!new URL(url).searchParams.get('fields').includes('user'));
+   return {ok:true,json:async()=>({results:[{id:2,text:'Работала с ноутбуком. Есть розетки.',date_posted:'2026-10-10'},
+     {id:3,text:'Удалено',date_posted:'2026-10-10',is_deleted:true}]})};
+ }});
+ assert.equal(r.reviewCount,1);assert.equal(r.catalogue.places[0].documents[0].kind,'review');
+ assert.equal(r.catalogue.places[0].features.length,0);
+});
+test('a failed review endpoint preserves the catalogue and cannot return a fake completed import',async()=>{
+ const cat=catalogue(fromKudaGo({results:[row(1,{comments_count:1})]}));const before=JSON.stringify(cat);
+ await assert.rejects(loadKudaGoReviews({catalogue:cat,fetcher:async()=>({ok:false,status:403})}),/403/);
+ assert.equal(JSON.stringify(cat),before);
+});
+test('a newer review snapshot removes old deleted reviews while preserving descriptions',()=>{
+ const p=fromKudaGo({results:[row(1,{description:'Описание'})]})[0],ref=p.sources[0].url;
+ const old={...p,documents:[...p.documents,{id:'r:1',kind:'review',text:'Удалённый отзыв',source_url:ref,observed_at:'2026-10-01',retrieved_at:'2026-10-01'}],review_snapshots:{[ref]:'2026-10-01'}};
+ const fresh={...p,review_snapshots:{[ref]:'2026-10-10'}};
+ const merged=mergeCatalogues(catalogue([old]),catalogue([fresh]));
+ assert.equal(merged.places[0].documents.length,1);assert.equal(merged.places[0].documents[0].kind,'description');
+ assert.equal(mergeCatalogues(merged,catalogue([old])).places[0].documents.length,1);
 });

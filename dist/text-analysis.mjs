@@ -9,7 +9,7 @@ export function stem(word){
 export const words=text=>normalize(text).match(/[a-zа-я0-9]+/g)||[];
 export function documentsOf(place,today=new Date()){
   const documents=[...(place.documents||[])];
-  if(place.notes)documents.push({id:'editorial:'+place.id,kind:'editorial',text:place.notes,
+  if(place.notes&&!/^(?:Условия посещения и актуальность требуют проверки\.|Адрес и формат получены из KudaGo\.)/.test(place.notes))documents.push({id:'editorial:'+place.id,kind:'editorial',text:place.notes,
     source_url:place.sources?.[0]?.url,observed_at:place.updated_at||place.sources?.[0]?.retrieved_at,
     valid_until:place.editorial_valid_until});
   return documents.filter(d=>{

@@ -150,7 +150,15 @@ def merge(existing, incoming):
             old["is_landmark"] = old.get("is_landmark", False) or new.get("is_landmark", False)
             old["features"] = list({(s["key"], str(s["value"]), s["source_url"], s.get("scope")): s
                                      for s in old["features"] + new["features"]}.values())
-            old['documents']=merge_documents(old.get('documents',[]),new.get('documents',[]))
+            snapshots=dict(old.get('review_snapshots',{}))
+            for ref,date in new.get('review_snapshots',{}).items():
+                if ref not in snapshots or date>snapshots[ref]:
+                    old['documents']=[d for d in old.get('documents',[]) if d.get('kind')!='review' or d.get('source_url')!=ref]
+                    snapshots[ref]=date
+            next_docs=[d for d in new.get('documents',[]) if d.get('kind')!='review' or d.get('source_url') not in snapshots
+                or new.get('review_snapshots',{}).get(d['source_url'],d.get('retrieved_at',d.get('observed_at','')))>=snapshots[d['source_url']]]
+            old['documents']=merge_documents(old.get('documents',[]),next_docs)
+            if snapshots:old['review_snapshots']=snapshots
             for field in ("address", "lat", "lon", "website", "opening_hours"):
                 if old.get(field) is None and new.get(field) is not None:
                     old[field] = new[field]

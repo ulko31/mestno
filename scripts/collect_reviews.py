@@ -132,9 +132,10 @@ def main():
                 comments.extend(data['results'])
                 if local is not None or not data.get('next'):break
             documents=review_documents(p,comments);texts+=len(documents)
-            deleted={'kudago:comment:'+str(c['id']) for c in comments if c.get('is_deleted') and c.get('id')}
-            old=[d for d in p.get('documents',[]) if d.get('id') not in deleted]
+            ref=next((s['url'] for s in p.get('sources',[]) if 'kudago.com/' in s['url']),None)
+            old=[d for d in p.get('documents',[]) if d.get('kind')!='review' or d.get('source_url')!=ref]
             p['documents']=merge_documents(old,documents)
+            if ref:p['review_snapshots']={**p.get('review_snapshots',{}),ref:datetime.now(timezone.utc).isoformat()}
             pending.extend(aggregate_comments(p,comments));checked+=1
         except Exception as exc:
             errors.append({'place_id':p['id'],'error':str(exc)})

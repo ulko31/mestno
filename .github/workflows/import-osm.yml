@@ -1,9 +1,6 @@
 name: Загрузить места из OpenStreetMap
 
 on:
-  push:
-    branches: [main]
-    paths: ['.github/workflows/import-osm.yml']
   workflow_dispatch:
 
 permissions:

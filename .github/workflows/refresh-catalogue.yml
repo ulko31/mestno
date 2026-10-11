@@ -1,12 +1,6 @@
 name: Обновить каталог мест
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - '.github/workflows/refresh-catalogue.yml'
-      - 'scripts/import_places.py'
-      - 'scripts/collect_reviews.py'
   workflow_dispatch:
     inputs:
       city:

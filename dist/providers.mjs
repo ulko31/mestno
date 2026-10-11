@@ -60,7 +60,14 @@ export function mergeCatalogues(baseline,incoming){
       if(!prev||new Date(f.checked_at)>new Date(prev.checked_at))features.set(k,f);
     }
     old.features=[...features.values()];
-    old.documents=mergeDocuments(old.documents,next.documents);
+    const snapshots={...old.review_snapshots};
+    for(const [source,date] of Object.entries(next.review_snapshots||{}))if(!snapshots[source]||new Date(date)>new Date(snapshots[source])){
+      old.documents=(old.documents||[]).filter(d=>d.kind!=='review'||d.source_url!==source);snapshots[source]=date;
+    }
+    const nextDocs=(next.documents||[]).filter(d=>d.kind!=='review'||!snapshots[d.source_url]
+      || new Date(next.review_snapshots?.[d.source_url]||d.retrieved_at||d.observed_at)>=new Date(snapshots[d.source_url]));
+    old.documents=mergeDocuments(old.documents,nextDocs);
+    if(Object.keys(snapshots).length)old.review_snapshots=snapshots;
     old.provider_ids={...old.provider_ids,...next.provider_ids};
     if(Number.isFinite(next.comments_count))old.comments_count=next.comments_count;
     for(const k of ['address','lat','lon','website','opening_hours'])if(old[k]===null||old[k]===undefined)old[k]=next[k]??null;
@@ -99,4 +106,45 @@ export async function loadKudaGo({city='spb',maxPages=10,fetcher=fetch,onProgres
   const unique=[...new Map(places.map(p=>[p.id,p])).values()];
   return {catalogue:validateCatalogue({schema_version:1,generated_at:checkedAt,city:apiCities[city],
     source_licenses:{KudaGo:'https://docs.kudago.com/api/'},places:unique}),closedIds:[...closedIds],fetched,total,truncated};
+}
+
+export async function loadKudaGoReviews({catalogue,maxPlaces=20,fetcher=fetch,onProgress=()=>{},signal}={}){
+  validateCatalogue(catalogue);
+  if(!Number.isInteger(maxPlaces)||maxPlaces<1||maxPlaces>50)throw new Error('Можно проверить от 1 до 50 мест за запуск.');
+  const selected=catalogue.places.filter(p=>p.status!=='closed'&&Number.isSafeInteger(p.provider_ids?.kudago)&&p.comments_count>0).slice(0,maxPlaces);
+  if(!selected.length)throw new Error('Сначала загрузи места из KudaGo с доступными комментариями. В OpenStreetMap отзывов нет.');
+  const retrievedAt=new Date().toISOString(),incoming=[];let reviewCount=0;
+  for(const p of selected){
+    const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),20000);
+    const abort=()=>controller.abort();signal?.addEventListener('abort',abort,{once:true});
+    try{
+      if(signal?.aborted)throw new Error('Загрузка отменена.');
+      const url=new URL('places/'+p.provider_ids.kudago+'/comments/',KUDAGO_API);
+      url.search=new URLSearchParams({page_size:'100',order_by:'-date_posted',fields:'id,date_posted,text,is_deleted,reply_to'}).toString();
+      const response=await fetcher(url.href,{signal:controller.signal});
+      if(signal?.aborted)throw new Error('Загрузка отменена.');
+      if(!response.ok)throw new Error('KudaGo ответил '+response.status+'.');
+      const data=await response.json();
+      if(!Array.isArray(data.results)||data.results.length>100)throw new Error('Неожиданный формат комментариев.');
+      const ref=p.sources.find(s=>{try{return new URL(s.url).hostname==='kudago.com';}catch{return false;}})?.url;
+      if(!ref)throw new Error('Не найдена ссылка на конкретное место в KudaGo.');
+      const seen=new Set(),docs=[];
+      for(const r of data.results){
+        const date=new Date(typeof r.date_posted==='number'?r.date_posted*1000:r.date_posted);
+        const age=(new Date(retrievedAt)-date)/86400000;
+        if(r.is_deleted||r.reply_to||!Number.isFinite(age)||age<0||age>730)continue;
+        const text=plainText(r.text).replace(/[\w.+-]+@[\w.-]+\.[a-z]{2,}/gi,'[контакт удалён]')
+          .replace(/(?<!\w)\+?\d[\d ()-]{8,}\d(?!\w)/g,'[контакт удалён]').slice(0,3000);
+        if(!text||seen.has(text))continue;seen.add(text);
+        docs.push({id:'kudago:comment:'+(r.id||encodeURIComponent(text.slice(0,100))),kind:'review',text,
+          source_url:ref,observed_at:date.toISOString(),retrieved_at:retrievedAt});
+        if(docs.length===12)break;
+      }
+      reviewCount+=docs.length;
+      incoming.push({...p,documents:mergeDocuments((p.documents||[]).filter(d=>d.kind!=='review'||d.source_url!==ref),docs),
+        review_snapshots:{...p.review_snapshots,[ref]:retrievedAt}});
+      onProgress({checked:incoming.length,total:selected.length,reviewCount});
+    }finally{clearTimeout(timer);signal?.removeEventListener('abort',abort);}
+  }
+  return {catalogue:validateCatalogue({schema_version:1,places:incoming}),checkedPlaces:incoming.length,reviewCount};
 }
