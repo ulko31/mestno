@@ -1,6 +1,6 @@
-import {validateCatalogue,safeUrl,categories} from './search.mjs?v=20261013';
-import {photoUrl} from './photo-assets.mjs?v=20261013';
-import {activityKeys} from './experiences.mjs?v=20261013';
+import {validateCatalogue,safeUrl,categories} from './search.mjs?v=20261013b';
+import {photoUrl} from './photo-assets.mjs?v=20261013b';
+import {activityKeys} from './experiences.mjs?v=20261013b';
 const copy=x=>structuredClone(x);
 export const ADMIN_DRAFT_KEY='mestno.admin.drafts';
 function required(s,label,max=4000){if(typeof s!=='string'||!s.trim()||s.length>max)throw new Error('Проверь поле «'+label+'».');return s.trim();}

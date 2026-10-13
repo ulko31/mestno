@@ -1,6 +1,6 @@
 // A menu item, an average bill and an activity ticket have different meanings.
-import {activityKeys} from './experiences.mjs?v=20261013';
-import {currentBilliards} from './billiards.mjs?v=20261013';
+import {activityKeys} from './experiences.mjs?v=20261013b';
+import {currentBilliards} from './billiards.mjs?v=20261013b';
 const safe=s=>{try{const u=new URL(s);return /^https?:$/.test(u.protocol)&&!u.username&&!u.password?u.href:null;}catch{return null;}};
 export function currentPrice(q,today=new Date()){
   const age=(new Date(today)-new Date(q?.checked_at))/86400000;

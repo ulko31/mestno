@@ -1,0 +1,2412 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-13T12:32:38.663101+00:00",
+  "source_licenses": {},
+  "places": [
+    {
+      "id": "osm:node:6534436350",
+      "title": "Цветочки",
+      "address": "улица Некрасова, 17",
+      "city": "Санкт-Петербург",
+      "category": "bar",
+      "sources": [
+        {
+          "url": "https://perfectbarsteam.ru/flowers",
+          "label": "Описание и условия",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        },
+        {
+          "url": "https://www.restoclub.ru/spb/place/cvetochki-1",
+          "label": "Средний чек",
+          "kind": "editorial",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v08:description",
+          "kind": "description",
+          "text": "Коктейльный бар: авторские шоты, коктейль «Довлатов», тематические вечеринки и квизы. По воскресеньям бывают DJ-вечера. Формат для барного вечера, тишина не обещана.",
+          "source_url": "https://perfectbarsteam.ru/flowers",
+          "observed_at": "2026-10-13T12:32:38.663101+00:00",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "notes": "Коктейльный бар: авторские шоты, коктейль «Довлатов», тематические вечеринки и квизы. По воскресеньям бывают DJ-вечера. Формат для барного вечера, тишина не обещана.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T12:32:38.663101+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "lat": 59.9387051,
+      "lon": 30.3569627,
+      "website": "https://perfectbarsteam.ru/flowers",
+      "prices": [
+        {
+          "id": "v08:average",
+          "amount": 1900,
+          "currency": "RUB",
+          "scope": "visit",
+          "kind": "average_check",
+          "label": "Средний чек по опубликованной карточке",
+          "note": "Ориентир за еду на человека, без напитков. Итог зависит от заказа.",
+          "excludes_beverages": true,
+          "source_url": "https://www.restoclub.ru/spb/place/cvetochki-1",
+          "checked_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ]
+    },
+    {
+      "id": "osm:node:3689523356",
+      "title": "Полторы комнаты",
+      "address": "улица Маяковского, 34/4, подъезд 4",
+      "city": "Санкт-Петербург",
+      "category": "bar",
+      "sources": [
+        {
+          "url": "https://perfectbarsteam.ru/oneandhalfroombar",
+          "label": "Описание и условия",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v08:description",
+          "kind": "description",
+          "text": "Коктейльный бар с необычной подачей напитков и отдельной экспериментальной красной комнатой. Для визита команда рекомендует заранее забронировать место.",
+          "source_url": "https://perfectbarsteam.ru/oneandhalfroombar",
+          "observed_at": "2026-10-13T12:32:38.663101+00:00",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "notes": "Коктейльный бар с необычной подачей напитков и отдельной экспериментальной красной комнатой. Для визита команда рекомендует заранее забронировать место.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T12:32:38.663101+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "lat": 59.9401439,
+      "lon": 30.3550404,
+      "website": "https://perfectbarsteam.ru/oneandhalfroombar"
+    },
+    {
+      "id": "curated:ultramen",
+      "title": "Ultramen!",
+      "address": "набережная реки Фонтанки, 59",
+      "city": "Санкт-Петербург",
+      "category": "bar",
+      "sources": [
+        {
+          "url": "https://perfectbarsteam.ru/ultramen",
+          "label": "Описание и условия",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v08:description",
+          "kind": "description",
+          "text": "Яркий азиатский бар с лапшой собственного приготовления, рисом и закусками. Коктейли, соджу и поп-культура; энергичный формат вечера с друзьями.",
+          "source_url": "https://perfectbarsteam.ru/ultramen",
+          "observed_at": "2026-10-13T12:32:38.663101+00:00",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "notes": "Яркий азиатский бар с лапшой собственного приготовления, рисом и закусками. Коктейли, соджу и поп-культура; энергичный формат вечера с друзьями.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T12:32:38.663101+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "website": "https://perfectbarsteam.ru/ultramen"
+    },
+    {
+      "id": "osm:node:5665018737",
+      "title": "Oy! Bar & Oysters",
+      "address": "улица Ломоносова, 3",
+      "city": "Санкт-Петербург",
+      "category": "bar",
+      "sources": [
+        {
+          "url": "https://perfectbarsteam.ru/oyoybar",
+          "label": "Описание и условия",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v08:description",
+          "kind": "description",
+          "text": "Бар с эстетикой постпанка: устрицы, шампанское и коктейли на основе мартини. По воскресеньям гости могут смешать свой вариант мартини; участие и запись уточни у команды.",
+          "source_url": "https://perfectbarsteam.ru/oyoybar",
+          "observed_at": "2026-10-13T12:32:38.663101+00:00",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "notes": "Бар с эстетикой постпанка: устрицы, шампанское и коктейли на основе мартини. По воскресеньям гости могут смешать свой вариант мартини; участие и запись уточни у команды.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T12:32:38.663101+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "lat": 59.9304906,
+      "lon": 30.3312991,
+      "website": "https://perfectbarsteam.ru/oyoybar"
+    },
+    {
+      "id": "curated:cocos-kruzenshterna",
+      "title": "Cocos Lounge · проспект Крузенштерна, 2",
+      "address": "проспект Крузенштерна, 2",
+      "city": "Санкт-Петербург",
+      "category": "bar",
+      "sources": [
+        {
+          "url": "https://cocos-lounge.bar/",
+          "label": "Описание и условия",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v08:description",
+          "kind": "description",
+          "text": "Лаунж с авторской кухней, коктейлями и вином. Приглушённое освещение, свечи и музыка. Формат 18+; громкость и программу выбранного филиала уточни перед визитом.",
+          "source_url": "https://cocos-lounge.bar/",
+          "observed_at": "2026-10-13T12:32:38.663101+00:00",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "notes": "Лаунж с авторской кухней, коктейлями и вином. Приглушённое освещение, свечи и музыка. Формат 18+; громкость и программу выбранного филиала уточни перед визитом.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T12:32:38.663101+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "website": "https://cocos-lounge.bar/kruzenshterna",
+      "collection_name": "Cocos Lounge"
+    },
+    {
+      "id": "osm:node:10601320241",
+      "title": "Cocos Lounge · улица Парфёновская, 14",
+      "address": "улица Парфёновская, 14",
+      "city": "Санкт-Петербург",
+      "category": "bar",
+      "sources": [
+        {
+          "url": "https://cocos-lounge.bar/",
+          "label": "Описание и условия",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v08:description",
+          "kind": "description",
+          "text": "Лаунж с авторской кухней, коктейлями и вином. Приглушённое освещение, свечи и музыка. Формат 18+; громкость и программу выбранного филиала уточни перед визитом.",
+          "source_url": "https://cocos-lounge.bar/",
+          "observed_at": "2026-10-13T12:32:38.663101+00:00",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "notes": "Лаунж с авторской кухней, коктейлями и вином. Приглушённое освещение, свечи и музыка. Формат 18+; громкость и программу выбранного филиала уточни перед визитом.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T12:32:38.663101+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "lat": 59.898879,
+      "lon": 30.312476,
+      "website": "https://cocos-lounge.bar/parfenovskaia",
+      "collection_name": "Cocos Lounge"
+    },
+    {
+      "id": "osm:node:11768942174",
+      "title": "Cocos Lounge · Социалистическая улица, 21",
+      "address": "Социалистическая улица, 21",
+      "city": "Санкт-Петербург",
+      "category": "bar",
+      "sources": [
+        {
+          "url": "https://cocos-lounge.bar/",
+          "label": "Описание и условия",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v08:description",
+          "kind": "description",
+          "text": "Лаунж с авторской кухней, коктейлями и вином. Приглушённое освещение, свечи и музыка. Формат 18+; громкость и программу выбранного филиала уточни перед визитом.",
+          "source_url": "https://cocos-lounge.bar/",
+          "observed_at": "2026-10-13T12:32:38.663101+00:00",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "notes": "Лаунж с авторской кухней, коктейлями и вином. Приглушённое освещение, свечи и музыка. Формат 18+; громкость и программу выбранного филиала уточни перед визитом.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T12:32:38.663101+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "lat": 59.9197642,
+      "lon": 30.34671,
+      "website": "https://cocos-lounge.bar/socialisticheskaia",
+      "collection_name": "Cocos Lounge"
+    },
+    {
+      "id": "curated:cocos-remeslennaia",
+      "title": "Cocos Lounge · Ремесленная улица, 21",
+      "address": "Ремесленная улица, 21",
+      "city": "Санкт-Петербург",
+      "category": "bar",
+      "sources": [
+        {
+          "url": "https://cocos-lounge.bar/",
+          "label": "Описание и условия",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v08:description",
+          "kind": "description",
+          "text": "Лаунж с авторской кухней, коктейлями и вином. Приглушённое освещение, свечи и музыка. Формат 18+; громкость и программу выбранного филиала уточни перед визитом.",
+          "source_url": "https://cocos-lounge.bar/",
+          "observed_at": "2026-10-13T12:32:38.663101+00:00",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "notes": "Лаунж с авторской кухней, коктейлями и вином. Приглушённое освещение, свечи и музыка. Формат 18+; громкость и программу выбранного филиала уточни перед визитом.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T12:32:38.663101+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "website": "https://cocos-lounge.bar/remeslennaia",
+      "collection_name": "Cocos Lounge"
+    },
+    {
+      "id": "curated:cocos-moskovskii",
+      "title": "Cocos Lounge · Московский проспект, 183–185",
+      "address": "Московский проспект, 183–185",
+      "city": "Санкт-Петербург",
+      "category": "bar",
+      "sources": [
+        {
+          "url": "https://cocos-lounge.bar/",
+          "label": "Описание и условия",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v08:description",
+          "kind": "description",
+          "text": "Лаунж с авторской кухней, коктейлями и вином. Приглушённое освещение, свечи и музыка. Формат 18+; громкость и программу выбранного филиала уточни перед визитом.",
+          "source_url": "https://cocos-lounge.bar/",
+          "observed_at": "2026-10-13T12:32:38.663101+00:00",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "notes": "Лаунж с авторской кухней, коктейлями и вином. Приглушённое освещение, свечи и музыка. Формат 18+; громкость и программу выбранного филиала уточни перед визитом.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T12:32:38.663101+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "website": "https://cocos-lounge.bar/moskovskii",
+      "collection_name": "Cocos Lounge"
+    },
+    {
+      "id": "curated:cocos-malii",
+      "title": "Cocos Lounge · Малый проспект П.С., 79–81–83, литера А",
+      "address": "Малый проспект П.С., 79–81–83, литера А",
+      "city": "Санкт-Петербург",
+      "category": "bar",
+      "sources": [
+        {
+          "url": "https://cocos-lounge.bar/",
+          "label": "Описание и условия",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v08:description",
+          "kind": "description",
+          "text": "Лаунж с авторской кухней, коктейлями и вином. Приглушённое освещение, свечи и музыка. Формат 18+; громкость и программу выбранного филиала уточни перед визитом.",
+          "source_url": "https://cocos-lounge.bar/",
+          "observed_at": "2026-10-13T12:32:38.663101+00:00",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "notes": "Лаунж с авторской кухней, коктейлями и вином. Приглушённое освещение, свечи и музыка. Формат 18+; громкость и программу выбранного филиала уточни перед визитом.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T12:32:38.663101+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "website": "https://cocos-lounge.bar/maliiprospect",
+      "collection_name": "Cocos Lounge"
+    },
+    {
+      "id": "curated:cocos-kazanskaia",
+      "title": "Cocos Lounge · Казанская улица, 7В",
+      "address": "Казанская улица, 7В",
+      "city": "Санкт-Петербург",
+      "category": "bar",
+      "sources": [
+        {
+          "url": "https://cocos-lounge.bar/",
+          "label": "Описание и условия",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v08:description",
+          "kind": "description",
+          "text": "Лаунж с авторской кухней, коктейлями и вином. Приглушённое освещение, свечи и музыка. Формат 18+; громкость и программу выбранного филиала уточни перед визитом.",
+          "source_url": "https://cocos-lounge.bar/",
+          "observed_at": "2026-10-13T12:32:38.663101+00:00",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "notes": "Лаунж с авторской кухней, коктейлями и вином. Приглушённое освещение, свечи и музыка. Формат 18+; громкость и программу выбранного филиала уточни перед визитом.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T12:32:38.663101+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "website": "https://cocos-lounge.bar/kazanskaia",
+      "collection_name": "Cocos Lounge",
+      "prices": [
+        {
+          "id": "v08:menu:food",
+          "amount": 920,
+          "currency": "RUB",
+          "scope": "visit",
+          "kind": "menu_order",
+          "label": "Удон с говядиной из меню",
+          "note": "Одна порция 350 г, без напитков и других блюд; цена только этого филиала.",
+          "for_needs": [
+            "food"
+          ],
+          "source_url": "https://cocos-lounge.bar/menukazanskaia",
+          "checked_at": "2026-10-13T12:32:38.663101+00:00",
+          "excludes_beverages": true
+        }
+      ]
+    },
+    {
+      "id": "osm:node:981620697",
+      "title": "Solids · бар и бильярд",
+      "address": "Гатчинская улица, 16",
+      "city": "Санкт-Петербург",
+      "category": "bar",
+      "sources": [
+        {
+          "url": "https://solidsbilliard.com/",
+          "label": "Описание и условия",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "features": [
+        {
+          "key": "billiards",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://solidsbilliard.com/",
+          "checked_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "documents": [
+        {
+          "id": "v08:description",
+          "kind": "description",
+          "text": "Бар с американским пулом, коктейлями и закусками. Уютная зона ожидания отдельно от игровых столов. По пятницам и субботам играют диджеи; для спокойного разговора уточни время и зону.",
+          "source_url": "https://solidsbilliard.com/",
+          "observed_at": "2026-10-13T12:32:38.663101+00:00",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "notes": "Бар с американским пулом, коктейлями и закусками. Уютная зона ожидания отдельно от игровых столов. По пятницам и субботам играют диджеи; для спокойного разговора уточни время и зону.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T12:32:38.663101+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "lat": 59.9618526,
+      "lon": 30.2996007,
+      "website": "https://solidsbilliard.com/",
+      "tags": [
+        "Solids",
+        "Солидс",
+        "Solice"
+      ],
+      "billiards_terms": [
+        {
+          "id": "solids:main",
+          "mode": "paid",
+          "game_amount": 1500,
+          "game_scope": "hour",
+          "verified": true,
+          "queue": true,
+          "source_url": "https://solidsbilliard.com/",
+          "checked_at": "2026-10-13T12:32:38.663101+00:00",
+          "note": "Основной зал: 1500 ₽ за стол в час, без бронирования. Orange Room: 5000 ₽/час и депозит 5000 ₽/час; бронь от двух часов. Еда отдельно. Тариф прочитан в текущих схемах условий на сайте."
+        }
+      ]
+    },
+    {
+      "id": "osm:node:12379513211",
+      "title": "Kiks · улица Марата, 56–58",
+      "address": "улица Марата, 56–58",
+      "city": "Санкт-Петербург",
+      "category": "bar",
+      "sources": [
+        {
+          "url": "https://list.tg/channel/kiks_bi",
+          "label": "Обзор места",
+          "kind": "social",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        },
+        {
+          "url": "https://kiksbi.ru/",
+          "label": "Сайт и условия игры",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00",
+          "retrieved_mode": "search_index"
+        }
+      ],
+      "features": [
+        {
+          "key": "billiards",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://list.tg/channel/kiks_bi",
+          "checked_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "documents": [
+        {
+          "id": "v08:description",
+          "kind": "editorial",
+          "text": "Бильярдный бар с закусками и крафтовыми напитками. В опубликованных условиях игра оплачивается отдельно; тариф зависит от времени и зала. Стол можно бронировать через бот заведения.",
+          "source_url": "https://list.tg/channel/kiks_bi",
+          "observed_at": "2026-10-13T12:32:38.663101+00:00",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "notes": "Бильярдный бар с закусками и крафтовыми напитками. В опубликованных условиях игра оплачивается отдельно; тариф зависит от времени и зала. Стол можно бронировать через бот заведения.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T12:32:38.663101+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "lat": 59.921989,
+      "lon": 30.3494284,
+      "collection_name": "Kiks",
+      "tags": [
+        "Kiks",
+        "Kix",
+        "Кикс"
+      ],
+      "billiards_terms": [
+        {
+          "id": "kiks:paid",
+          "mode": "paid",
+          "verified": false,
+          "source_url": "https://kiksbi.ru/",
+          "checked_at": "2026-10-13T12:32:38.663101+00:00",
+          "retrieved_mode": "search_index",
+          "note": "Платная игра указана на сайте в поисковом индексе. Прямое чтение сайта недоступно; актуальную сумму и условия выбранного зала проверь при бронировании. Старые суммы не показаны как свежий тариф."
+        }
+      ]
+    },
+    {
+      "id": "curated:kiks-petrograd",
+      "title": "Kiks · Каменноостровский проспект, 26–28",
+      "address": "Каменноостровский проспект, 26–28",
+      "city": "Санкт-Петербург",
+      "category": "bar",
+      "sources": [
+        {
+          "url": "https://list.tg/channel/kiks_bi",
+          "label": "Обзор места",
+          "kind": "social",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        },
+        {
+          "url": "https://kiksbi.ru/",
+          "label": "Сайт и условия игры",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00",
+          "retrieved_mode": "search_index"
+        }
+      ],
+      "features": [
+        {
+          "key": "billiards",
+          "value": true,
+          "status": "documented",
+          "source_url": "https://list.tg/channel/kiks_bi",
+          "checked_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "documents": [
+        {
+          "id": "v08:description",
+          "kind": "editorial",
+          "text": "Бильярдный бар с закусками и крафтовыми напитками. В опубликованных условиях игра оплачивается отдельно; тариф зависит от времени и зала. Стол можно бронировать через бот заведения.",
+          "source_url": "https://list.tg/channel/kiks_bi",
+          "observed_at": "2026-10-13T12:32:38.663101+00:00",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "notes": "Бильярдный бар с закусками и крафтовыми напитками. В опубликованных условиях игра оплачивается отдельно; тариф зависит от времени и зала. Стол можно бронировать через бот заведения.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T12:32:38.663101+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "collection_name": "Kiks",
+      "tags": [
+        "Kiks",
+        "Kix",
+        "Кикс"
+      ],
+      "billiards_terms": [
+        {
+          "id": "kiks:paid",
+          "mode": "paid",
+          "verified": false,
+          "source_url": "https://kiksbi.ru/",
+          "checked_at": "2026-10-13T12:32:38.663101+00:00",
+          "retrieved_mode": "search_index",
+          "note": "Платная игра указана на сайте в поисковом индексе. Прямое чтение сайта недоступно; актуальную сумму и условия выбранного зала проверь при бронировании. Старые суммы не показаны как свежий тариф."
+        }
+      ]
+    },
+    {
+      "id": "curated:chez-serge",
+      "title": "Серж · Chez Serge",
+      "address": "улица Восстания, 19, отель AKYAN",
+      "city": "Санкт-Петербург",
+      "category": "bar",
+      "sources": [
+        {
+          "url": "https://cava-akyan.rest/serge",
+          "label": "Описание и условия",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v08:description",
+          "kind": "description",
+          "text": "Коктейльный бар в отеле: винтажные плакаты, диваны и уютное освещение. Есть закуски; проводят живую музыку и поэтические вечера. Расписание выступлений стоит проверить для спокойной встречи.",
+          "source_url": "https://cava-akyan.rest/serge",
+          "observed_at": "2026-10-13T12:32:38.663101+00:00",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "notes": "Коктейльный бар в отеле: винтажные плакаты, диваны и уютное освещение. Есть закуски; проводят живую музыку и поэтические вечера. Расписание выступлений стоит проверить для спокойной встречи.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T12:32:38.663101+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "lat": 59.935417,
+      "lon": 30.360604,
+      "coordinate_source_url": "https://cava-akyan.rest/serge",
+      "coordinate_precision": "publisher_map_marker",
+      "website": "https://cava-akyan.rest/serge"
+    },
+    {
+      "id": "curated:dead-poets",
+      "title": "Dead Poets",
+      "address": "улица Жуковского, 12",
+      "city": "Санкт-Петербург",
+      "category": "bar",
+      "sources": [
+        {
+          "url": "https://www.restoclub.ru/spb/place/dead-poets",
+          "label": "Обзор места",
+          "kind": "editorial",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        },
+        {
+          "url": "https://www.restoclub.ru/spb/place/dead-poets",
+          "label": "Средний чек",
+          "kind": "editorial",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v08:description",
+          "kind": "editorial",
+          "text": "Камерный бар с коммунальным столом, закусками и коктейлями, названными в честь литераторов. Проводят поэтические встречи и лекции; музыкальная программа может менять атмосферу.",
+          "source_url": "https://www.restoclub.ru/spb/place/dead-poets",
+          "observed_at": "2026-10-13T12:32:38.663101+00:00",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "notes": "Камерный бар с коммунальным столом, закусками и коктейлями, названными в честь литераторов. Проводят поэтические встречи и лекции; музыкальная программа может менять атмосферу.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T12:32:38.663101+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "prices": [
+        {
+          "id": "v08:average",
+          "amount": 1900,
+          "currency": "RUB",
+          "scope": "visit",
+          "kind": "average_check",
+          "label": "Средний чек по опубликованной карточке",
+          "note": "Ориентир за еду на человека, без напитков. Итог зависит от заказа.",
+          "excludes_beverages": true,
+          "source_url": "https://www.restoclub.ru/spb/place/dead-poets",
+          "checked_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ]
+    },
+    {
+      "id": "osm:node:8120861817",
+      "title": "Animals",
+      "address": "улица Некрасова, 60",
+      "city": "Санкт-Петербург",
+      "category": "restaurant",
+      "sources": [
+        {
+          "url": "https://youareanimals.ru/",
+          "label": "Описание и условия",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v08:description",
+          "kind": "description",
+          "text": "Фермерский ресторан с собственным хлебом и сыром, сезонными овощами, завтраками, вином и коктейлями. Для ужина доступны бронирования столов.",
+          "source_url": "https://youareanimals.ru/",
+          "observed_at": "2026-10-13T12:32:38.663101+00:00",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "notes": "Фермерский ресторан с собственным хлебом и сыром, сезонными овощами, завтраками, вином и коктейлями. Для ужина доступны бронирования столов.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T12:32:38.663101+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "lat": 59.938393,
+      "lon": 30.3681671,
+      "website": "https://youareanimals.ru/"
+    },
+    {
+      "id": "osm:node:2283527775",
+      "title": "DUO Gastrobar",
+      "address": "Кирочная улица, 8Б",
+      "city": "Санкт-Петербург",
+      "category": "restaurant",
+      "sources": [
+        {
+          "url": "https://duobar.ru/",
+          "label": "Описание и условия",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        },
+        {
+          "url": "https://www.restoclub.ru/spb/place/duo-gastrobar",
+          "label": "Средний чек",
+          "kind": "editorial",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v08:description",
+          "kind": "description",
+          "text": "Уютный городской гастробар с авторской кухней и завтраками. Небольшой зал, современная подача; стол для ужина можно забронировать.",
+          "source_url": "https://duobar.ru/",
+          "observed_at": "2026-10-13T12:32:38.663101+00:00",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "notes": "Уютный городской гастробар с авторской кухней и завтраками. Небольшой зал, современная подача; стол для ужина можно забронировать.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T12:32:38.663101+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "lat": 59.9442372,
+      "lon": 30.3517907,
+      "website": "https://duobar.ru/",
+      "prices": [
+        {
+          "id": "v08:average",
+          "amount": 1500,
+          "currency": "RUB",
+          "scope": "visit",
+          "kind": "average_check",
+          "label": "Средний чек по опубликованной карточке",
+          "note": "Ориентир за еду на человека, без напитков. Итог зависит от заказа.",
+          "excludes_beverages": true,
+          "source_url": "https://www.restoclub.ru/spb/place/duo-gastrobar",
+          "checked_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ]
+    },
+    {
+      "id": "osm:node:4155298711",
+      "title": "Tartarbar",
+      "address": "Виленский переулок, 15",
+      "city": "Санкт-Петербург",
+      "category": "restaurant",
+      "sources": [
+        {
+          "url": "https://tartarbar.ru/",
+          "label": "Описание и условия",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v08:description",
+          "kind": "description",
+          "text": "Ресторан с авторской мясной кухней, тартарами и открытой кухней. Есть завтраки и бронирование столов; подходит для гастрономического ужина, тишина не подтверждена.",
+          "source_url": "https://tartarbar.ru/",
+          "observed_at": "2026-10-13T12:32:38.663101+00:00",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "notes": "Ресторан с авторской мясной кухней, тартарами и открытой кухней. Есть завтраки и бронирование столов; подходит для гастрономического ужина, тишина не подтверждена.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T12:32:38.663101+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "lat": 59.9400259,
+      "lon": 30.3660393,
+      "website": "https://tartarbar.ru/"
+    },
+    {
+      "id": "osm:node:5058371148",
+      "title": "Duo Asia",
+      "address": "улица Рубинштейна, 20, второй этаж",
+      "city": "Санкт-Петербург",
+      "category": "restaurant",
+      "sources": [
+        {
+          "url": "https://duoasia.ru/",
+          "label": "Описание и условия",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v08:description",
+          "kind": "description",
+          "text": "Авторская азиатская кухня, открытая кухня в центре чёрно-белого зала. Для ужина есть бронирование; спокойную посадку уточни у команды.",
+          "source_url": "https://duoasia.ru/",
+          "observed_at": "2026-10-13T12:32:38.663101+00:00",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "notes": "Авторская азиатская кухня, открытая кухня в центре чёрно-белого зала. Для ужина есть бронирование; спокойную посадку уточни у команды.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T12:32:38.663101+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "lat": 59.9301729,
+      "lon": 30.3448847,
+      "website": "https://duoasia.ru/"
+    },
+    {
+      "id": "osm:node:9461991617",
+      "title": "Frantsuza Bistrot",
+      "address": "набережная Адмирала Лазарева, 22",
+      "city": "Санкт-Петербург",
+      "category": "restaurant",
+      "sources": [
+        {
+          "url": "https://frantsuzabistrot.ru/ru",
+          "label": "Описание и условия",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v08:description",
+          "kind": "description",
+          "text": "Бистро современной французской кухни: пате, рататуй, бёф бургиньон и завтраки. Для ужина можно забронировать стол; тихая атмосфера отдельно не подтверждена.",
+          "source_url": "https://frantsuzabistrot.ru/ru",
+          "observed_at": "2026-10-13T12:32:38.663101+00:00",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "notes": "Бистро современной французской кухни: пате, рататуй, бёф бургиньон и завтраки. Для ужина можно забронировать стол; тихая атмосфера отдельно не подтверждена.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T12:32:38.663101+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "lat": 59.9640376,
+      "lon": 30.2770569,
+      "website": "https://frantsuzabistrot.ru/ru"
+    },
+    {
+      "id": "curated:harvest",
+      "title": "Harvest",
+      "address": "проспект Добролюбова, 11Е",
+      "city": "Санкт-Петербург",
+      "category": "restaurant",
+      "sources": [
+        {
+          "url": "https://harvestduo.ru/",
+          "label": "Описание и условия",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v08:description",
+          "kind": "description",
+          "text": "Авторский ресторан с особым вниманием к овощам, завтраками и дегустационным меню. Есть веранда и предварительное бронирование; сезон работы веранды уточни.",
+          "source_url": "https://harvestduo.ru/",
+          "observed_at": "2026-10-13T12:32:38.663101+00:00",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "notes": "Авторский ресторан с особым вниманием к овощам, завтраками и дегустационным меню. Есть веранда и предварительное бронирование; сезон работы веранды уточни.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T12:32:38.663101+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "lat": 59.949605,
+      "lon": 30.301531,
+      "coordinate_source_url": "https://harvestduo.ru/",
+      "coordinate_precision": "publisher_map_marker",
+      "website": "https://harvestduo.ru/"
+    },
+    {
+      "id": "osm:node:5101396421",
+      "title": "Банщики",
+      "address": "Дегтярная улица, 1А",
+      "city": "Санкт-Петербург",
+      "category": "restaurant",
+      "sources": [
+        {
+          "url": "https://banshiki.spb.ru/",
+          "label": "Описание и условия",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        },
+        {
+          "url": "https://www.restoclub.ru/spb/place/banshhiki",
+          "label": "Средний чек",
+          "kind": "editorial",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v08:description",
+          "kind": "description",
+          "text": "Ресторан русской кухни в обстановке уютного загородного дома. Собственные заготовки и современные версии традиционных блюд. Можно забронировать стол для ужина.",
+          "source_url": "https://banshiki.spb.ru/",
+          "observed_at": "2026-10-13T12:32:38.663101+00:00",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "notes": "Ресторан русской кухни в обстановке уютного загородного дома. Собственные заготовки и современные версии традиционных блюд. Можно забронировать стол для ужина.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T12:32:38.663101+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "lat": 59.9302933,
+      "lon": 30.3700196,
+      "website": "https://banshiki.spb.ru/",
+      "prices": [
+        {
+          "id": "v08:average",
+          "amount": 3800,
+          "currency": "RUB",
+          "scope": "visit",
+          "kind": "average_check",
+          "label": "Средний чек по опубликованной карточке",
+          "note": "Ориентир за еду на человека, без напитков. Итог зависит от заказа.",
+          "excludes_beverages": true,
+          "source_url": "https://www.restoclub.ru/spb/place/banshhiki",
+          "checked_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ]
+    },
+    {
+      "id": "curated:probka-spb",
+      "title": "Probka",
+      "address": "Зоологический переулок, 2–4",
+      "city": "Санкт-Петербург",
+      "category": "restaurant",
+      "sources": [
+        {
+          "url": "https://www.probka.org/restaurants/probka-spb/",
+          "label": "Описание и условия",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v08:description",
+          "kind": "description",
+          "text": "Итальянский ресторан: кухня, завтраки, вино и бронирование столов. Комфорт разговора за выбранным столом уточни при записи.",
+          "source_url": "https://www.probka.org/restaurants/probka-spb/",
+          "observed_at": "2026-10-13T12:32:38.663101+00:00",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "notes": "Итальянский ресторан: кухня, завтраки, вино и бронирование столов. Комфорт разговора за выбранным столом уточни при записи.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T12:32:38.663101+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "website": "https://www.probka.org/restaurants/probka-spb/"
+    },
+    {
+      "id": "curated:mama-tuta-zoo",
+      "title": "Mama Tuta · Петроградская",
+      "address": "Зоологический переулок, 2–4",
+      "city": "Санкт-Петербург",
+      "category": "restaurant",
+      "sources": [
+        {
+          "url": "https://www.probka.org/restaurants/mama-tuta-zoo/",
+          "label": "Описание и условия",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v08:description",
+          "kind": "description",
+          "text": "Ресторан с авторской грузинской кухней, хачапури и вином. Для ужина есть бронирование. По будням открывается вечером; актуальное время уточни на сайте.",
+          "source_url": "https://www.probka.org/restaurants/mama-tuta-zoo/",
+          "observed_at": "2026-10-13T12:32:38.663101+00:00",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "notes": "Ресторан с авторской грузинской кухней, хачапури и вином. Для ужина есть бронирование. По будням открывается вечером; актуальное время уточни на сайте.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T12:32:38.663101+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "website": "https://www.probka.org/restaurants/mama-tuta-zoo/"
+    },
+    {
+      "id": "curated:da-manu",
+      "title": "DA MANU",
+      "address": "Большая Морская улица, 36",
+      "city": "Санкт-Петербург",
+      "category": "restaurant",
+      "sources": [
+        {
+          "url": "https://www.probka.org/restaurants/da-manu-morskaya/",
+          "label": "Описание и условия",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v08:description",
+          "kind": "description",
+          "text": "Итальянский ресторан и авторская кухня на Большой Морской. Есть бронирование для ужина; камерность и тишину за выбранным столом уточни перед свиданием.",
+          "source_url": "https://www.probka.org/restaurants/da-manu-morskaya/",
+          "observed_at": "2026-10-13T12:32:38.663101+00:00",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "notes": "Итальянский ресторан и авторская кухня на Большой Морской. Есть бронирование для ужина; камерность и тишину за выбранным столом уточни перед свиданием.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T12:32:38.663101+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "website": "https://www.probka.org/restaurants/da-manu-morskaya/"
+    },
+    {
+      "id": "osm:node:1654662104",
+      "title": "Северянин",
+      "address": "Столярный переулок, 18/69",
+      "city": "Санкт-Петербург",
+      "category": "restaurant",
+      "sources": [
+        {
+          "url": "https://www.restoclub.ru/spb/place/severjanin",
+          "label": "Обзор места",
+          "kind": "editorial",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        },
+        {
+          "url": "https://www.restoclub.ru/spb/place/severjanin",
+          "label": "Средний чек",
+          "kind": "editorial",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v08:description",
+          "kind": "editorial",
+          "text": "Ресторан северной кухни в обстановке исторической квартиры: камин, канделябры и камерный кабинет. Домашняя атмосфера и литературные детали для неспешного ужина. Кабинет может требовать отдельной брони.",
+          "source_url": "https://www.restoclub.ru/spb/place/severjanin",
+          "observed_at": "2026-10-13T12:32:38.663101+00:00",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "notes": "Ресторан северной кухни в обстановке исторической квартиры: камин, канделябры и камерный кабинет. Домашняя атмосфера и литературные детали для неспешного ужина. Кабинет может требовать отдельной брони.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T12:32:38.663101+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "lat": 59.926478,
+      "lon": 30.3130654,
+      "prices": [
+        {
+          "id": "v08:average",
+          "amount": 2700,
+          "currency": "RUB",
+          "scope": "visit",
+          "kind": "average_check",
+          "label": "Средний чек по опубликованной карточке",
+          "note": "Ориентир за еду на человека, без напитков. Итог зависит от заказа.",
+          "excludes_beverages": true,
+          "source_url": "https://www.restoclub.ru/spb/place/severjanin",
+          "checked_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ]
+    },
+    {
+      "id": "osm:node:2661699204",
+      "title": "Мечтатели",
+      "address": "набережная реки Фонтанки, 11",
+      "city": "Санкт-Петербург",
+      "category": "cafe",
+      "sources": [
+        {
+          "url": "https://www.restoclub.ru/spb/place/mechtateli",
+          "label": "Обзор места",
+          "kind": "editorial",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        },
+        {
+          "url": "https://www.restoclub.ru/spb/place/mechtateli",
+          "label": "Средний чек",
+          "kind": "editorial",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v08:description",
+          "kind": "editorial",
+          "text": "Кафе с романтической обстановкой, авторской кухней, альтернативным кофе и ретросветильниками. Для кофе и свидания; набережная рядом, вид на воду из зала не подтверждён.",
+          "source_url": "https://www.restoclub.ru/spb/place/mechtateli",
+          "observed_at": "2026-10-13T12:32:38.663101+00:00",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "notes": "Кафе с романтической обстановкой, авторской кухней, альтернативным кофе и ретросветильниками. Для кофе и свидания; набережная рядом, вид на воду из зала не подтверждён.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T12:32:38.663101+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "lat": 59.9368269,
+      "lon": 30.3428393,
+      "prices": [
+        {
+          "id": "v08:average",
+          "amount": 1400,
+          "currency": "RUB",
+          "scope": "visit",
+          "kind": "average_check",
+          "label": "Средний чек по опубликованной карточке",
+          "note": "Ориентир за еду на человека, без напитков. Итог зависит от заказа.",
+          "excludes_beverages": true,
+          "source_url": "https://www.restoclub.ru/spb/place/mechtateli",
+          "checked_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ]
+    },
+    {
+      "id": "curated:le-moniteur",
+      "title": "Le Moniteur",
+      "address": "Кадетская линия, 31",
+      "city": "Санкт-Петербург",
+      "category": "cafe",
+      "sources": [
+        {
+          "url": "https://www.restoclub.ru/spb/place/le-moniteur",
+          "label": "Обзор места",
+          "kind": "editorial",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        },
+        {
+          "url": "https://www.restoclub.ru/spb/place/le-moniteur",
+          "label": "Средний чек",
+          "kind": "editorial",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        },
+        {
+          "url": "https://cafelemoniteur.com/",
+          "kind": "official",
+          "label": "Сайт кофейни",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v08:description",
+          "kind": "editorial",
+          "text": "Камерная винтажная кофейня: старые фотографии, книжные полки и ретромебель. Кофе, домашние десерты и завтраки. Можно посидеть с книгой; свободный стол уточни.",
+          "source_url": "https://www.restoclub.ru/spb/place/le-moniteur",
+          "observed_at": "2026-10-13T12:32:38.663101+00:00",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "notes": "Камерная винтажная кофейня: старые фотографии, книжные полки и ретромебель. Кофе, домашние десерты и завтраки. Можно посидеть с книгой; свободный стол уточни.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T12:32:38.663101+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "prices": [
+        {
+          "id": "v08:average",
+          "amount": 550,
+          "currency": "RUB",
+          "scope": "visit",
+          "kind": "average_check",
+          "label": "Средний чек по опубликованной карточке",
+          "note": "Ориентир за еду на человека, без напитков. Итог зависит от заказа.",
+          "excludes_beverages": true,
+          "source_url": "https://www.restoclub.ru/spb/place/le-moniteur",
+          "checked_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "website": "https://cafelemoniteur.com/"
+    },
+    {
+      "id": "osm:node:9751960079",
+      "title": "ТЧК · двор на Каменноостровском",
+      "address": "Каменноостровский проспект, 18/11, вход с улицы Мира",
+      "city": "Санкт-Петербург",
+      "category": "cafe",
+      "sources": [
+        {
+          "url": "https://www.restoclub.ru/spb/place/tchk",
+          "label": "Обзор места",
+          "kind": "editorial",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        },
+        {
+          "url": "https://www.restoclub.ru/spb/place/tchk",
+          "label": "Средний чек",
+          "kind": "editorial",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v08:description",
+          "kind": "editorial",
+          "text": "Микрокофейня в домике во дворе: уютная винтажная обстановка и несколько столиков. Кофе, пироги и завтраки; зелёный двор доступен в тёплый сезон. Посадка ограничена.",
+          "source_url": "https://www.restoclub.ru/spb/place/tchk",
+          "observed_at": "2026-10-13T12:32:38.663101+00:00",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "notes": "Микрокофейня в домике во дворе: уютная винтажная обстановка и несколько столиков. Кофе, пироги и завтраки; зелёный двор доступен в тёплый сезон. Посадка ограничена.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T12:32:38.663101+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "lat": 59.9591996,
+      "lon": 30.3164456,
+      "prices": [
+        {
+          "id": "v08:average",
+          "amount": 250,
+          "currency": "RUB",
+          "scope": "visit",
+          "kind": "average_check",
+          "label": "Средний чек по опубликованной карточке",
+          "note": "Ориентир за еду на человека, без напитков. Итог зависит от заказа.",
+          "excludes_beverages": true,
+          "source_url": "https://www.restoclub.ru/spb/place/tchk",
+          "checked_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ]
+    },
+    {
+      "id": "curated:vmyach",
+      "title": "ВМЯЧ",
+      "address": "улица Передовиков, 18к2",
+      "city": "Санкт-Петербург",
+      "category": "sport",
+      "sources": [
+        {
+          "url": "https://vball.ru/",
+          "label": "Описание и условия",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        },
+        {
+          "url": "https://vball.ru/padel",
+          "label": "Спортивная площадка",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        },
+        {
+          "url": "https://vball.ru/badminton",
+          "label": "Спортивная площадка",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        },
+        {
+          "url": "https://vball.ru/volleyball",
+          "label": "Спортивная площадка",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        },
+        {
+          "url": "https://vball.ru/pingpong",
+          "label": "Спортивная площадка",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v08:description",
+          "kind": "description",
+          "text": "Крытый спортивный центр: падел, бадминтон, волейбол и настольный теннис. Можно арендовать площадку для своей компании или записаться на групповые занятия.",
+          "source_url": "https://vball.ru/",
+          "observed_at": "2026-10-13T12:32:38.663101+00:00",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "notes": "Крытый спортивный центр: падел, бадминтон, волейбол и настольный теннис. Можно арендовать площадку для своей компании или записаться на групповые занятия.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T12:32:38.663101+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "lat": 59.94691,
+      "lon": 30.457882,
+      "coordinate_source_url": "https://vball.ru/",
+      "coordinate_precision": "publisher_map_marker",
+      "website": "https://vball.ru/",
+      "sport_facilities": [
+        {
+          "id": "vmyach:padel",
+          "activities": [
+            "padel"
+          ],
+          "environment": "indoor",
+          "season": "year_round",
+          "note": "Тариф от 2500 ₽ за час стандартного корта для 2–4 игроков; вечером дороже. Ракетки и тренер могут оплачиваться отдельно.",
+          "source_url": "https://vball.ru/padel",
+          "booking_url": "https://vball.ru/padel",
+          "checked_at": "2026-10-13T12:32:38.663101+00:00",
+          "tariff": {
+            "amount": 2500,
+            "unit": "корт / час",
+            "kind": "from"
+          }
+        },
+        {
+          "id": "vmyach:badminton",
+          "activities": [
+            "badminton"
+          ],
+          "environment": "indoor",
+          "season": "year_round",
+          "note": "Тариф от 1500 ₽ за корт в час в будни утром; комплект ракеток и воланов отдельно, 500 ₽.",
+          "source_url": "https://vball.ru/badminton",
+          "booking_url": "https://vball.ru/badminton",
+          "checked_at": "2026-10-13T12:32:38.663101+00:00",
+          "tariff": {
+            "amount": 1500,
+            "unit": "корт / час",
+            "kind": "from"
+          }
+        },
+        {
+          "id": "vmyach:volleyball",
+          "activities": [
+            "volleyball"
+          ],
+          "environment": "indoor",
+          "season": "year_round",
+          "note": "Тариф за площадку, а не за человека; размер команды и свободное время уточни.",
+          "source_url": "https://vball.ru/volleyball",
+          "booking_url": "https://vball.ru/volleyball",
+          "checked_at": "2026-10-13T12:32:38.663101+00:00",
+          "tariff": {
+            "amount": 3000,
+            "unit": "корт / час",
+            "kind": "from"
+          }
+        },
+        {
+          "id": "vmyach:pingpong",
+          "activities": [
+            "table_tennis"
+          ],
+          "environment": "indoor",
+          "season": "year_round",
+          "note": "На сайте центра указана начальная цена; продолжительность и инвентарь уточни при бронировании.",
+          "source_url": "https://vball.ru/pingpong",
+          "booking_url": "https://vball.ru/pingpong",
+          "checked_at": "2026-10-13T12:32:38.663101+00:00",
+          "tariff": {
+            "amount": 500,
+            "unit": "сеанс (уточни длительность)",
+            "kind": "from"
+          }
+        }
+      ],
+      "offers": [
+        {
+          "id": "vmyach:padel-adults",
+          "title": "Падел в группе для взрослых",
+          "activities": [
+            "sports",
+            "padel"
+          ],
+          "format": "open_group",
+          "audience": "adults",
+          "description": "Групповое занятие на один час, до четырёх участников; уровни разделены.",
+          "source_url": "https://vball.ru/padel/group",
+          "booking_url": "https://vball.ru/padel/group",
+          "checked_at": "2026-10-13T12:32:38.663101+00:00",
+          "schedule_note": "Регулярные группы · даты и наличие места смотри в расписании",
+          "requirements": "Предварительная запись; наличие места и свой уровень уточни в расписании.",
+          "price": {
+            "amount": 2500,
+            "currency": "RUB",
+            "scope": "visit",
+            "kind": "admission",
+            "label": "Групповое занятие на человека",
+            "source_url": "https://vball.ru/padel/group",
+            "checked_at": "2026-10-13T12:32:38.663101+00:00"
+          }
+        },
+        {
+          "id": "vmyach:volley-adults",
+          "title": "Волейбол в группе для взрослых",
+          "activities": [
+            "sports",
+            "volleyball"
+          ],
+          "format": "open_group",
+          "audience": "adults",
+          "description": "Двухчасовое занятие в открытой группе для взрослых; выбери свой уровень.",
+          "source_url": "https://vball.ru/volleyball",
+          "booking_url": "https://vball.ru/volleyball",
+          "checked_at": "2026-10-13T12:32:38.663101+00:00",
+          "schedule_note": "Регулярные группы · выбери актуальную дату",
+          "requirements": "Предварительная запись; наличие места и свой уровень уточни в расписании.",
+          "price": {
+            "amount": 990,
+            "currency": "RUB",
+            "scope": "visit",
+            "kind": "admission",
+            "label": "Групповое занятие на человека",
+            "source_url": "https://vball.ru/volleyball",
+            "checked_at": "2026-10-13T12:32:38.663101+00:00"
+          }
+        }
+      ]
+    },
+    {
+      "id": "curated:padel-pro",
+      "title": "Padel PRO",
+      "address": "проспект Стачек, 45к2",
+      "city": "Санкт-Петербург",
+      "category": "sport",
+      "sources": [
+        {
+          "url": "https://www.padel-pro.ru/",
+          "label": "Описание и условия",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v08:description",
+          "kind": "description",
+          "text": "Крытый падел-клуб с вводными занятиями, арендой кортов и тренировками по уровням. Есть пробная открытая группа для новичков и мероприятия сообщества.",
+          "source_url": "https://www.padel-pro.ru/",
+          "observed_at": "2026-10-13T12:32:38.663101+00:00",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "notes": "Крытый падел-клуб с вводными занятиями, арендой кортов и тренировками по уровням. Есть пробная открытая группа для новичков и мероприятия сообщества.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T12:32:38.663101+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "website": "https://www.padel-pro.ru/",
+      "sport_facilities": [
+        {
+          "id": "padel-pro:indoor",
+          "activities": [
+            "padel"
+          ],
+          "environment": "indoor",
+          "season": "year_round",
+          "note": "Аренда корта и вводный урок — разные услуги; выбери формат при записи.",
+          "source_url": "https://www.padel-pro.ru/",
+          "booking_url": "https://www.padel-pro.ru/",
+          "checked_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "offers": [
+        {
+          "id": "padel-pro:intro",
+          "title": "Пробное групповое занятие по паделу",
+          "activities": [
+            "sports",
+            "padel"
+          ],
+          "format": "open_group",
+          "audience": "adults",
+          "description": "Первое знакомство с паделом в общей группе с тренером.",
+          "source_url": "https://www.padel-pro.ru/",
+          "booking_url": "https://www.padel-pro.ru/",
+          "checked_at": "2026-10-13T12:32:38.663101+00:00",
+          "schedule_note": "Опубликованы среда 20:00, суббота и воскресенье 13:00 · актуальные места уточни при записи",
+          "requirements": "Предварительная запись; наличие места и свой уровень уточни в расписании.",
+          "price": {
+            "amount": 1500,
+            "currency": "RUB",
+            "scope": "visit",
+            "kind": "admission",
+            "label": "Групповое занятие на человека",
+            "source_url": "https://www.padel-pro.ru/",
+            "checked_at": "2026-10-13T12:32:38.663101+00:00"
+          }
+        }
+      ]
+    },
+    {
+      "id": "osm:way:656374260",
+      "title": "Шанс Арена",
+      "address": "улица Грибалёвой, 9к2",
+      "city": "Санкт-Петербург",
+      "category": "sport",
+      "sources": [
+        {
+          "url": "https://shans-arena.ru/",
+          "label": "Описание и условия",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v08:description",
+          "kind": "description",
+          "text": "Спортивный комплекс с крытым кортом для падела и ледовой ареной. Есть аренда, запись и расписание массовых катаний.",
+          "source_url": "https://shans-arena.ru/",
+          "observed_at": "2026-10-13T12:32:38.663101+00:00",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "notes": "Спортивный комплекс с крытым кортом для падела и ледовой ареной. Есть аренда, запись и расписание массовых катаний.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T12:32:38.663101+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "lat": 59.9845557,
+      "lon": 30.3553755,
+      "website": "https://shans-arena.ru/",
+      "sport_facilities": [
+        {
+          "id": "shans:padel",
+          "activities": [
+            "padel"
+          ],
+          "environment": "indoor",
+          "season": "year_round",
+          "note": "Забронируй корт; состав тарифа и инвентарь уточни на сайте.",
+          "source_url": "https://shans-arena.ru/",
+          "booking_url": "https://shans-arena.ru/",
+          "checked_at": "2026-10-13T12:32:38.663101+00:00"
+        },
+        {
+          "id": "shans:ice",
+          "activities": [
+            "ice_skating"
+          ],
+          "environment": "indoor",
+          "season": "year_round",
+          "note": "Массовое катание только по расписанию; прокат коньков уточни.",
+          "source_url": "https://shans-arena.ru/",
+          "booking_url": "https://shans-arena.ru/",
+          "checked_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ]
+    },
+    {
+      "id": "osm:node:1224621171",
+      "title": "Динамит · игровые виды спорта",
+      "address": "переулок Челиева, 13",
+      "city": "Санкт-Петербург",
+      "category": "sport",
+      "sources": [
+        {
+          "url": "https://www.dynamitsport.ru/scopes/games/arenda",
+          "label": "Описание и условия",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v08:description",
+          "kind": "description",
+          "text": "Крытый игровой зал для баскетбола, волейбола и бадминтона. Аренда закрывает зал под вашу компанию; сборная игра с незнакомыми участниками не подтверждена.",
+          "source_url": "https://www.dynamitsport.ru/scopes/games/arenda",
+          "observed_at": "2026-10-13T12:32:38.663101+00:00",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "notes": "Крытый игровой зал для баскетбола, волейбола и бадминтона. Аренда закрывает зал под вашу компанию; сборная игра с незнакомыми участниками не подтверждена.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T12:32:38.663101+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "lat": 59.8892282,
+      "lon": 30.4775335,
+      "website": "https://www.dynamitsport.ru/scopes/games/arenda",
+      "sport_facilities": [
+        {
+          "id": "dynamit:games",
+          "activities": [
+            "basketball",
+            "volleyball",
+            "badminton"
+          ],
+          "environment": "indoor",
+          "season": "year_round",
+          "note": "Стоимость и свободный зал — по запросу. Аренда для своей группы, не открытая тренировка.",
+          "source_url": "https://www.dynamitsport.ru/scopes/games/arenda",
+          "booking_url": "https://www.dynamitsport.ru/scopes/games/arenda",
+          "checked_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ]
+    },
+    {
+      "id": "osm:way:94949169",
+      "title": "Tennis Style",
+      "address": "Наличная улица, 44/6",
+      "city": "Санкт-Петербург",
+      "category": "sport",
+      "sources": [
+        {
+          "url": "https://tennis-style.ru/contact.html",
+          "label": "Описание и условия",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        },
+        {
+          "url": "https://tennis-style.ru/",
+          "label": "Спортивная площадка",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v08:description",
+          "kind": "description",
+          "text": "Школа большого тенниса на Васильевском: индивидуальные и групповые тренировки для взрослых и детей. Для обучения предоставляют ракетки и мячи; условия выбранной группы уточни.",
+          "source_url": "https://tennis-style.ru/contact.html",
+          "observed_at": "2026-10-13T12:32:38.663101+00:00",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "notes": "Школа большого тенниса на Васильевском: индивидуальные и групповые тренировки для взрослых и детей. Для обучения предоставляют ракетки и мячи; условия выбранной группы уточни.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T12:32:38.663101+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "lat": 59.9528711,
+      "lon": 30.2267851,
+      "website": "https://tennis-style.ru/contact.html",
+      "sport_facilities": [
+        {
+          "id": "tennis-style:courts",
+          "activities": [
+            "tennis"
+          ],
+          "environment": "unknown",
+          "season": "unknown",
+          "note": "Запись на занятие и тип корта уточни. Групповое обучение не означает свободную игру без записи.",
+          "source_url": "https://tennis-style.ru/",
+          "booking_url": "https://tennis-style.ru/contact.html",
+          "checked_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ]
+    },
+    {
+      "id": "osm:way:30326120",
+      "title": "Песок · пляжный спорт",
+      "address": "Октябрьская набережная, 6к3",
+      "city": "Санкт-Петербург",
+      "category": "sport",
+      "sources": [
+        {
+          "url": "https://sportpesok.com/sport/arenda-ploshchadok/",
+          "label": "Описание и условия",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v08:description",
+          "kind": "description",
+          "text": "Крытые площадки на тёплом песке: пляжный волейбол и пляжный теннис круглый год. Можно арендовать площадку для друзей или выбрать сборную игру по уровням.",
+          "source_url": "https://sportpesok.com/sport/arenda-ploshchadok/",
+          "observed_at": "2026-10-13T12:32:38.663101+00:00",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "notes": "Крытые площадки на тёплом песке: пляжный волейбол и пляжный теннис круглый год. Можно арендовать площадку для друзей или выбрать сборную игру по уровням.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T12:32:38.663101+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "lat": 59.91623,
+      "lon": 30.418878,
+      "coordinate_source_url": "https://sportpesok.com/sport/arenda-ploshchadok/",
+      "coordinate_precision": "publisher_map_marker",
+      "website": "https://sportpesok.com/sport/arenda-ploshchadok/",
+      "sport_facilities": [
+        {
+          "id": "pesok:beach",
+          "activities": [
+            "beach_volleyball",
+            "volleyball",
+            "beach_tennis"
+          ],
+          "environment": "indoor",
+          "season": "year_round",
+          "note": "Аренда от 2500 ₽ за площадку в час в будни днём; вечер и выходные дороже. Это цена всей площадки.",
+          "source_url": "https://sportpesok.com/sport/arenda-ploshchadok/",
+          "booking_url": "https://sportpesok.com/pricing/",
+          "checked_at": "2026-10-13T12:32:38.663101+00:00",
+          "tariff": {
+            "amount": 2500,
+            "unit": "площадка / час",
+            "kind": "from"
+          }
+        }
+      ]
+    },
+    {
+      "id": "curated:dinamo-beach",
+      "title": "Динамо · центр пляжного спорта",
+      "address": "проспект Динамо, 44Б",
+      "city": "Санкт-Петербург",
+      "category": "sport",
+      "sources": [
+        {
+          "url": "https://dinamobeach.ru/",
+          "label": "Описание и условия",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v08:description",
+          "kind": "description",
+          "text": "Центр пляжного спорта с крытыми и открытыми песчаными кортами. Пляжный волейбол, пляжный теннис, занятия и аренда; выбери тип площадки и уровень.",
+          "source_url": "https://dinamobeach.ru/",
+          "observed_at": "2026-10-13T12:32:38.663101+00:00",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "notes": "Центр пляжного спорта с крытыми и открытыми песчаными кортами. Пляжный волейбол, пляжный теннис, занятия и аренда; выбери тип площадки и уровень.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T12:32:38.663101+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "website": "https://dinamobeach.ru/",
+      "sport_facilities": [
+        {
+          "id": "dinamo:beach",
+          "activities": [
+            "beach_volleyball",
+            "volleyball",
+            "beach_tennis"
+          ],
+          "environment": "mixed",
+          "season": "year_round",
+          "note": "Крытые и открытые корты имеют разное расписание; бронь и тариф уточни.",
+          "source_url": "https://dinamobeach.ru/",
+          "booking_url": "https://dinamobeach.ru/",
+          "checked_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ]
+    },
+    {
+      "id": "curated:nova-arena-games",
+      "title": "Nova Arena · универсальный зал",
+      "address": "Гражданский проспект, 100",
+      "city": "Санкт-Петербург",
+      "category": "sport",
+      "sources": [
+        {
+          "url": "https://www.novaarena.ru/universal_hall",
+          "label": "Описание и условия",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v08:description",
+          "kind": "description",
+          "text": "Универсальный спортивный зал с паркетом, игровым полем и трибунами. Есть баскетбольная школа и аренда площадки для своей команды.",
+          "source_url": "https://www.novaarena.ru/universal_hall",
+          "observed_at": "2026-10-13T12:32:38.663101+00:00",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "notes": "Универсальный спортивный зал с паркетом, игровым полем и трибунами. Есть баскетбольная школа и аренда площадки для своей команды.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T12:32:38.663101+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "website": "https://www.novaarena.ru/universal_hall",
+      "sport_facilities": [
+        {
+          "id": "nova:basketball",
+          "activities": [
+            "basketball"
+          ],
+          "environment": "indoor",
+          "season": "year_round",
+          "note": "Аренда зала по заявке; открытая взрослая группа не подтверждена.",
+          "source_url": "https://www.novaarena.ru/universal_hall",
+          "booking_url": "https://www.novaarena.ru/universal_hall",
+          "checked_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ]
+    },
+    {
+      "id": "curated:sunpark-sport",
+      "title": "Sunpark · вейк и искусственная волна",
+      "address": "Никольская улица, 9, Среднее Суздальское озеро",
+      "city": "Санкт-Петербург",
+      "category": "sport",
+      "sources": [
+        {
+          "url": "https://sunparkspb.ru/portfolio/wakepark/",
+          "label": "Описание и условия",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        },
+        {
+          "url": "https://sunparkspb.ru/contacts/",
+          "label": "Спортивная площадка",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v08:description",
+          "kind": "description",
+          "text": "Вейк-парк с круговой лебёдкой, тренерами и прокатом. В комплексе также есть искусственная волна для сёрфинга; сезон вейка и режим волны проверяются отдельно.",
+          "source_url": "https://sunparkspb.ru/portfolio/wakepark/",
+          "observed_at": "2026-10-13T12:32:38.663101+00:00",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "notes": "Вейк-парк с круговой лебёдкой, тренерами и прокатом. В комплексе также есть искусственная волна для сёрфинга; сезон вейка и режим волны проверяются отдельно.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T12:32:38.663101+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "website": "https://sunparkspb.ru/portfolio/wakepark/",
+      "sport_facilities": [
+        {
+          "id": "sunpark:wake",
+          "activities": [
+            "wakeboarding"
+          ],
+          "environment": "outdoor",
+          "season": "summer",
+          "note": "Прокат и урок с инструктором выбери отдельно; сокращение светового дня меняет расписание.",
+          "source_url": "https://sunparkspb.ru/portfolio/wakepark/",
+          "booking_url": "https://sunparkspb.ru/portfolio/wakepark/",
+          "checked_at": "2026-10-13T12:32:38.663101+00:00"
+        },
+        {
+          "id": "sunpark:wave",
+          "activities": [
+            "surfing"
+          ],
+          "environment": "indoor",
+          "season": "year_round",
+          "note": "Комплекс сообщает о круглогодичной работе волны; доступный сеанс уточни при записи.",
+          "source_url": "https://sunparkspb.ru/contacts/",
+          "booking_url": "https://sunparkspb.ru/contacts/",
+          "checked_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ]
+    },
+    {
+      "id": "curated:kingwinch-kronshtadt",
+      "title": "Kingwinch · форт Константин",
+      "address": "Кронштадт, форт Константин",
+      "city": "Санкт-Петербург",
+      "category": "sport",
+      "sources": [
+        {
+          "url": "https://kingwinch.ru/nashi-parki/kronshtadt.html",
+          "label": "Описание и условия",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v08:description",
+          "kind": "description",
+          "text": "Вейкбординг за лебёдкой на открытой воде. Есть обучение и прокат; доступность зависит от сезона.",
+          "source_url": "https://kingwinch.ru/nashi-parki/kronshtadt.html",
+          "observed_at": "2026-10-13T12:32:38.663101+00:00",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "notes": "Вейкбординг за лебёдкой на открытой воде. Есть обучение и прокат; доступность зависит от сезона.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T12:32:38.663101+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "website": "https://kingwinch.ru/nashi-parki/kronshtadt.html",
+      "sport_facilities": [
+        {
+          "id": "curated:kingwinch-kronshtadt:wake",
+          "activities": [
+            "wakeboarding"
+          ],
+          "environment": "outdoor",
+          "season": "summer",
+          "note": "Кабельный вейк; сезон, сет, инструктора и прокат уточни.",
+          "source_url": "https://kingwinch.ru/nashi-parki/kronshtadt.html",
+          "booking_url": "https://kingwinch.ru/nashi-parki/kronshtadt.html",
+          "checked_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ]
+    },
+    {
+      "id": "curated:kingwinch-myaglovo",
+      "title": "Kingwinch · карьер Мяглово",
+      "address": "Ленинградская область, Всеволожский район, карьер Мяглово",
+      "city": "Санкт-Петербург",
+      "category": "sport",
+      "sources": [
+        {
+          "url": "https://kingwinch.ru/nashi-parki/myaglovo.html",
+          "label": "Описание и условия",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v08:description",
+          "kind": "description",
+          "text": "Вейкбординг за лебёдкой на открытой воде. Есть обучение и прокат; доступность зависит от сезона.",
+          "source_url": "https://kingwinch.ru/nashi-parki/myaglovo.html",
+          "observed_at": "2026-10-13T12:32:38.663101+00:00",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "notes": "Вейкбординг за лебёдкой на открытой воде. Есть обучение и прокат; доступность зависит от сезона.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T12:32:38.663101+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "lat": 59.82361111111111,
+      "lon": 30.7075,
+      "coordinate_source_url": "https://kingwinch.ru/nashi-parki/myaglovo.html",
+      "coordinate_precision": "publisher_map_marker",
+      "website": "https://kingwinch.ru/nashi-parki/myaglovo.html",
+      "sport_facilities": [
+        {
+          "id": "curated:kingwinch-myaglovo:wake",
+          "activities": [
+            "wakeboarding"
+          ],
+          "environment": "outdoor",
+          "season": "summer",
+          "note": "Загородный парк; проверь подъезд, сезон и набор проката.",
+          "source_url": "https://kingwinch.ru/nashi-parki/myaglovo.html",
+          "booking_url": "https://kingwinch.ru/nashi-parki/myaglovo.html",
+          "checked_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ]
+    },
+    {
+      "id": "osm:node:11889183618",
+      "title": "Kingwinch · зимний бассейн",
+      "address": "Новоизмайловский проспект, 16к6",
+      "city": "Санкт-Петербург",
+      "category": "sport",
+      "sources": [
+        {
+          "url": "https://kingwinch.ru/nashi-parki/zimnij-bassejn.html",
+          "label": "Описание и условия",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v08:description",
+          "kind": "description",
+          "text": "Вейкбординг в крытом бассейне: тренировки с лебёдкой в холодный сезон.",
+          "source_url": "https://kingwinch.ru/nashi-parki/zimnij-bassejn.html",
+          "observed_at": "2026-10-13T12:32:38.663101+00:00",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "notes": "Вейкбординг в крытом бассейне: тренировки с лебёдкой в холодный сезон.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T12:32:38.663101+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "lat": 59.868765,
+      "lon": 30.308738,
+      "website": "https://kingwinch.ru/nashi-parki/zimnij-bassejn.html",
+      "sport_facilities": [
+        {
+          "id": "osm:node:11889183618:wake",
+          "activities": [
+            "wakeboarding"
+          ],
+          "environment": "indoor",
+          "season": "winter",
+          "note": "На сайте указан сезон 1 октября — 1 мая; запись на вейк и условия бассейна уточни.",
+          "source_url": "https://kingwinch.ru/nashi-parki/zimnij-bassejn.html",
+          "booking_url": "https://kingwinch.ru/nashi-parki/zimnij-bassejn.html",
+          "checked_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ]
+    },
+    {
+      "id": "curated:vejkserfing-vostochnyij",
+      "title": "Kingwinch · вейксёрф Восточный",
+      "address": "Рыбацкий проспект, 10, литера А",
+      "city": "Санкт-Петербург",
+      "category": "sport",
+      "sources": [
+        {
+          "url": "https://kingwinch.ru/nashi-parki/vejkserfing-vostochnyij.html",
+          "label": "Описание и условия",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v08:description",
+          "kind": "description",
+          "text": "Вейксёрфинг за катером: занятия на волне для новичков и райдеров. Фактическое место посадки указано в адресе; название проекта может отличаться от района.",
+          "source_url": "https://kingwinch.ru/nashi-parki/vejkserfing-vostochnyij.html",
+          "observed_at": "2026-10-13T12:32:38.663101+00:00",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "notes": "Вейксёрфинг за катером: занятия на волне для новичков и райдеров. Фактическое место посадки указано в адресе; название проекта может отличаться от района.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T12:32:38.663101+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "website": "https://kingwinch.ru/nashi-parki/vejkserfing-vostochnyij.html",
+      "sport_facilities": [
+        {
+          "id": "curated:vejkserfing-vostochnyij:surf",
+          "activities": [
+            "wakesurfing"
+          ],
+          "environment": "outdoor",
+          "season": "summer",
+          "note": "Проверь сезон, погоду, катер и длительность сета при записи.",
+          "source_url": "https://kingwinch.ru/nashi-parki/vejkserfing-vostochnyij.html",
+          "booking_url": "https://kingwinch.ru/nashi-parki/vejkserfing-vostochnyij.html",
+          "checked_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ]
+    },
+    {
+      "id": "curated:vejkserfing-krestovky",
+      "title": "Kingwinch · вейксёрф Крестовский",
+      "address": "Наличная улица, 59, центр водно-моторного спорта",
+      "city": "Санкт-Петербург",
+      "category": "sport",
+      "sources": [
+        {
+          "url": "https://kingwinch.ru/nashi-parki/vejkserfing-krestovky.html",
+          "label": "Описание и условия",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v08:description",
+          "kind": "description",
+          "text": "Вейксёрфинг за катером: занятия на волне для новичков и райдеров. Фактическое место посадки указано в адресе; название проекта может отличаться от района.",
+          "source_url": "https://kingwinch.ru/nashi-parki/vejkserfing-krestovky.html",
+          "observed_at": "2026-10-13T12:32:38.663101+00:00",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "notes": "Вейксёрфинг за катером: занятия на волне для новичков и райдеров. Фактическое место посадки указано в адресе; название проекта может отличаться от района.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T12:32:38.663101+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "website": "https://kingwinch.ru/nashi-parki/vejkserfing-krestovky.html",
+      "sport_facilities": [
+        {
+          "id": "curated:vejkserfing-krestovky:surf",
+          "activities": [
+            "wakesurfing"
+          ],
+          "environment": "outdoor",
+          "season": "summer",
+          "note": "Проверь сезон, погоду, катер и длительность сета при записи.",
+          "source_url": "https://kingwinch.ru/nashi-parki/vejkserfing-krestovky.html",
+          "booking_url": "https://kingwinch.ru/nashi-parki/vejkserfing-krestovky.html",
+          "checked_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ]
+    },
+    {
+      "id": "curated:ohta-ski",
+      "title": "Охта Парк · горные лыжи",
+      "address": "Ленинградская область, деревня Мистолово, улица Людмилы Кедриной",
+      "city": "Санкт-Петербург",
+      "category": "sport",
+      "sources": [
+        {
+          "url": "https://www.ohtapark.ru/services/servisy-kurorta/gornolyzhnye-trassy/",
+          "label": "Описание и условия",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v08:description",
+          "kind": "description",
+          "text": "Горнолыжные трассы и сноуборд, подъёмники, прокат и служба инструкторов. Загородный курорт; зимняя работа зависит от открытия трасс.",
+          "source_url": "https://www.ohtapark.ru/services/servisy-kurorta/gornolyzhnye-trassy/",
+          "observed_at": "2026-10-13T12:32:38.663101+00:00",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "notes": "Горнолыжные трассы и сноуборд, подъёмники, прокат и служба инструкторов. Загородный курорт; зимняя работа зависит от открытия трасс.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T12:32:38.663101+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "website": "https://www.ohtapark.ru/services/servisy-kurorta/gornolyzhnye-trassy/",
+      "area": "Ленинградская область",
+      "sport_facilities": [
+        {
+          "id": "curated:ohta-ski:slopes",
+          "activities": [
+            "skiing",
+            "snowboarding"
+          ],
+          "environment": "outdoor",
+          "season": "winter",
+          "note": "Ски-пасс, прокат и урок оплачиваются по разным тарифам; наличие открытого склона не подтверждается этой карточкой.",
+          "source_url": "https://www.ohtapark.ru/services/servisy-kurorta/gornolyzhnye-trassy/",
+          "booking_url": "https://www.ohtapark.ru/services/servisy-kurorta/gornolyzhnye-trassy/",
+          "checked_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ]
+    },
+    {
+      "id": "curated:tuutari-ski",
+      "title": "Туутари Парк · горные лыжи",
+      "address": "Ленинградская область, Ломоносовский район, деревня Ретселя",
+      "city": "Санкт-Петербург",
+      "category": "sport",
+      "sources": [
+        {
+          "url": "https://tuutari.ru/",
+          "label": "Описание и условия",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v08:description",
+          "kind": "description",
+          "text": "Горнолыжный комплекс на Дудергофских высотах: лыжи, сноуборд, прокат и зимние развлечения. Проверь сезонные тарифы и работу склонов.",
+          "source_url": "https://tuutari.ru/",
+          "observed_at": "2026-10-13T12:32:38.663101+00:00",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "notes": "Горнолыжный комплекс на Дудергофских высотах: лыжи, сноуборд, прокат и зимние развлечения. Проверь сезонные тарифы и работу склонов.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T12:32:38.663101+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "lat": 59.693396,
+      "lon": 30.179333,
+      "coordinate_source_url": "https://tuutari.ru/",
+      "coordinate_precision": "publisher_map_marker",
+      "website": "https://tuutari.ru/",
+      "area": "Ленинградская область",
+      "sport_facilities": [
+        {
+          "id": "curated:tuutari-ski:slopes",
+          "activities": [
+            "skiing",
+            "snowboarding"
+          ],
+          "environment": "outdoor",
+          "season": "winter",
+          "note": "Ски-пасс, прокат и урок оплачиваются по разным тарифам; наличие открытого склона не подтверждается этой карточкой.",
+          "source_url": "https://tuutari.ru/",
+          "booking_url": "https://tuutari.ru/",
+          "checked_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ]
+    },
+    {
+      "id": "curated:krasnoe-ozero-ski",
+      "title": "Красное Озеро · горные лыжи",
+      "address": "Ленинградская область, Приозерский район, посёлок Коробицыно",
+      "city": "Санкт-Петербург",
+      "category": "sport",
+      "sources": [
+        {
+          "url": "https://www.krasnoeozero.ru/uslugi/zimnij-otdykh.html",
+          "label": "Описание и условия",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v08:description",
+          "kind": "description",
+          "text": "Загородный горнолыжный курорт: лыжи, сноуборд, трассы и прокат. Планируй дорогу в Коробицыно; билеты на подъёмники и снаряжение — отдельные расходы.",
+          "source_url": "https://www.krasnoeozero.ru/uslugi/zimnij-otdykh.html",
+          "observed_at": "2026-10-13T12:32:38.663101+00:00",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "notes": "Загородный горнолыжный курорт: лыжи, сноуборд, трассы и прокат. Планируй дорогу в Коробицыно; билеты на подъёмники и снаряжение — отдельные расходы.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T12:32:38.663101+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "website": "https://www.krasnoeozero.ru/uslugi/zimnij-otdykh.html",
+      "area": "Ленинградская область",
+      "sport_facilities": [
+        {
+          "id": "curated:krasnoe-ozero-ski:slopes",
+          "activities": [
+            "skiing",
+            "snowboarding"
+          ],
+          "environment": "outdoor",
+          "season": "winter",
+          "note": "Ски-пасс, прокат и урок оплачиваются по разным тарифам; наличие открытого склона не подтверждается этой карточкой.",
+          "source_url": "https://www.krasnoeozero.ru/uslugi/zimnij-otdykh.html",
+          "booking_url": "https://www.krasnoeozero.ru/uslugi/zimnij-otdykh.html",
+          "checked_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ]
+    },
+    {
+      "id": "curated:igora-ski",
+      "title": "Игора · горные лыжи",
+      "address": "Ленинградская область, платформа 69-й км, улица Всесезонная, 1",
+      "city": "Санкт-Петербург",
+      "category": "sport",
+      "sources": [
+        {
+          "url": "https://igora.ru/",
+          "label": "Описание и условия",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v08:description",
+          "kind": "description",
+          "text": "Курорт с горнолыжными склонами, прокатом и ледовым дворцом. Расположен в Ленинградской области; зимние трассы проверяй по камерам и расписанию.",
+          "source_url": "https://igora.ru/",
+          "observed_at": "2026-10-13T12:32:38.663101+00:00",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "notes": "Курорт с горнолыжными склонами, прокатом и ледовым дворцом. Расположен в Ленинградской области; зимние трассы проверяй по камерам и расписанию.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T12:32:38.663101+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "lat": 60.516779,
+      "lon": 30.215527,
+      "coordinate_source_url": "https://igora.ru/",
+      "coordinate_precision": "publisher_map_marker",
+      "website": "https://igora.ru/",
+      "area": "Ленинградская область",
+      "sport_facilities": [
+        {
+          "id": "curated:igora-ski:slopes",
+          "activities": [
+            "skiing",
+            "snowboarding"
+          ],
+          "environment": "outdoor",
+          "season": "winter",
+          "note": "Ски-пасс, прокат и урок оплачиваются по разным тарифам; наличие открытого склона не подтверждается этой карточкой.",
+          "source_url": "https://igora.ru/",
+          "booking_url": "https://igora.ru/",
+          "checked_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ]
+    },
+    {
+      "id": "curated:ohta-courts",
+      "title": "Охта Парк · спортивные площадки",
+      "address": "Ленинградская область, деревня Мистолово, улица Людмилы Кедриной",
+      "city": "Санкт-Петербург",
+      "category": "sport",
+      "sources": [
+        {
+          "url": "https://www.ohtapark.ru/services/servisy-kurorta/sportivnye-ploshchadki/",
+          "label": "Описание и условия",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v08:description",
+          "kind": "description",
+          "text": "Открытые корты для большого тенниса и падела, поля для баскетбола и волейбола. Спортплощадка и вход на курорт имеют отдельные условия; загородный адрес.",
+          "source_url": "https://www.ohtapark.ru/services/servisy-kurorta/sportivnye-ploshchadki/",
+          "observed_at": "2026-10-13T12:32:38.663101+00:00",
+          "retrieved_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ],
+      "notes": "Открытые корты для большого тенниса и падела, поля для баскетбола и волейбола. Спортплощадка и вход на курорт имеют отдельные условия; загородный адрес.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T12:32:38.663101+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "website": "https://www.ohtapark.ru/services/servisy-kurorta/sportivnye-ploshchadki/",
+      "sport_facilities": [
+        {
+          "id": "ohta:courts",
+          "activities": [
+            "tennis",
+            "padel",
+            "basketball",
+            "volleyball"
+          ],
+          "environment": "outdoor",
+          "season": "unknown",
+          "note": "Свободное посещение баскетбольного и волейбольного поля указано без оплаты площадки; закрытие под группу платное. Отдельно проверь вход на курорт, погоду и бронь корта.",
+          "source_url": "https://www.ohtapark.ru/services/servisy-kurorta/sportivnye-ploshchadki/",
+          "booking_url": "https://www.ohtapark.ru/services/servisy-kurorta/sportivnye-ploshchadki/",
+          "checked_at": "2026-10-13T12:32:38.663101+00:00"
+        }
+      ]
+    }
+  ],
+  "collection_report": {
+    "venue_patches": 49,
+    "source_method": "Actual public official pages and explicitly attributed editorial descriptions; no inferred free games or fabricated prices",
+    "photos_copied": 0,
+    "social_channels_read": [
+      "kiks_bi"
+    ],
+    "unverified_tariff_venues": [
+      "Kiks"
+    ],
+    "note": "Source pages were researched interactively. The programme and facility records are kept separate."
+  }
+}

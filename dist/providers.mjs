@@ -1,4 +1,4 @@
-import {normalize, safeUrl, validateCatalogue} from './search.mjs?v=20261013';
+import {normalize, safeUrl, validateCatalogue} from './search.mjs?v=20261013b';
 
 export const apiCities={spb:'Санкт-Петербург',msk:'Москва',ekb:'Екатеринбург',kzn:'Казань',nsk:'Новосибирск',nnv:'Нижний Новгород'};
 export const KUDAGO_API='https://kudago.com/public-api/v1.4/';
@@ -69,7 +69,7 @@ export function mergeCatalogues(baseline,incoming){
     old.documents=mergeDocuments(old.documents,nextDocs);
     if(Object.keys(snapshots).length)old.review_snapshots=snapshots;
     old.provider_ids={...old.provider_ids,...next.provider_ids};
-    for(const key of ['prices','offers','photos','billiards_terms']){
+    for(const key of ['prices','offers','photos','billiards_terms','sport_facilities']){
       if(!Array.isArray(next[key]))continue;
       const entries=new Map((old[key]||[]).map(e=>[e.id||e.source_url,structuredClone(e)]));
       for(const e of next[key]){

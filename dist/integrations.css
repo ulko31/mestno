@@ -23,3 +23,5 @@ button:disabled{opacity:.55;cursor:wait}
 @media(max-width:600px){.place-panel{padding:12px 8px}.place-panel-tools{padding:12px}.offer-summary{padding:12px}}
 
 .game-cost{padding:12px 14px;background:#f4efe9;border-radius:10px;font-size:13px;line-height:1.6;margin:10px 0}.game-cost strong{color:#722d42}.game-cost a{color:#722d42}
+
+.activity-filter{margin:14px 0;max-width:440px}.activity-filter label{display:grid;gap:7px;font-size:13px}.sport-info{font-size:13px;line-height:1.55;padding:12px;background:var(--surface,#f5f3ec);border-radius:12px}.sport-info a{color:inherit}

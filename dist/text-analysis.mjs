@@ -1,5 +1,6 @@
 // Local retrieval over attributed text. This is an explainable text analyser, not an LLM.
-import {offerDocuments} from './experiences.mjs?v=20261013';
+import {offerDocuments} from './experiences.mjs?v=20261013b';
+import {sportPatterns} from './sports.mjs?v=20261013b';
 const normalize=s=>String(s||'').toLowerCase().replaceAll('ё','е');
 const safeUrl=s=>{try{const u=new URL(s);return /^https?:$/.test(u.protocol)&&!u.username&&!u.password?u.href:null;}catch{return null;}};
 export function stem(word){
@@ -29,6 +30,7 @@ const patterns={
   coffee:[/(?<![а-я])кофе(?![а-я])|кофейн[а-я]*|капучино|эспрессо/],
   romantic:[/романтич[а-я]*|для\s+свидани[а-я]*|на\s+свидани[а-я]*|пригласить\s+на\s+свидани[а-я]*|свеч[а-я]*\s+на\s+стол[а-я]*/],
   cocktails:[/коктейл[а-я]*|настойк[а-я]*|наливк[а-я]*/],
+  party_scene:[/вечеринк[а-я]*|тусовк[а-я]*|потусить|потусоваться/],
   warm_lighting:[/тепл[а-я]*\s+(?:свет|освещени[а-я]*)/],vintage_interior:[/винтажн[а-я]*\s+(?:мебел[а-я]*|интерьер[а-я]*)/],
   food:[/(?<![а-я])ед(?:а|у|ы|е|ой|ою)(?![а-я])|поесть|кухн[а-я]*|пицц[а-я]*|донер[а-я]*|бургер[а-я]*|закуск[а-я]*|завтрак[а-я]*|выпечк[а-я]*|пекарн[а-я]*/],
   laptop_work:[/ноутбук|коворкинг|рабоч(?:ая|ие)\s+(?:зона|места)|для\s+(?:работы|учебы)|приходят\s+(?:работать|поработать|учиться)|удобно\s+(?:работать|учиться)|работал[аи]?\s+за\s+компьютером|писать\s+код/,
@@ -71,10 +73,11 @@ const patterns={
   german_club:[/немецк[а-я]*\s+(?:разговорн[а-я]*\s+)?клуб[а-я]*|клуб[а-я]*[^.!?]{0,50}немецк[а-я]*/],
   italian_club:[/итальянск[а-я]*\s+(?:разговорн[а-я]*\s+)?клуб[а-я]*|клуб[а-я]*[^.!?]{0,50}итальянск[а-я]*/],
   sign_club:[/жестов[а-я]*\s+язык[а-я]*|ржя/],
-  dance:[/танц[а-я]*|диджей[а-я]*|dj[ -]?сет[а-я]*/],
+  dance:[/танц[а-я]*|дидже[йи][а-я]*|dj[ -]?сет[а-я]*/],
   live_music:[/жив[а-я]*\s+музык[а-я]*|концерт[а-я]*/],
   child_friendly:[/детск[а-я]*\s+(?:зона|комната|меню)|с\s+детьми|для\s+детей/],
-  sports:[/спортивн[а-я]*|тренировк[а-я]*|скалолазани[а-я]*|скалодром[а-я]*|бокс|каток/],
+  sports:[new RegExp('спортивн[а-я]*|тренировк[а-я]*|'+sportPatterns.map(([,re])=>'(?:'+re.source+')').join('|'))],
+  ...Object.fromEntries(sportPatterns.map(([key,re])=>[key,[re]])),
   climbing:[/скалолазани[а-я]*|скалодром[а-я]*|боулдеринг[а-я]*/],
   boxing:[/бокс[а-я]*/], ice_skating:[/каток[а-я]*|катани[а-я]*\s+на\s+коньках/]
 };
@@ -86,7 +89,7 @@ function timeContext(text,context,document){
   if(part&&context.daypart&&part!==context.daypart)return {skip:true};
   if(day&&context.visitDay&&day!==context.visitDay)return {skip:true};
   if(document.scope==='weekday_morning'&&(context.daypart!=='morning'||context.visitDay!=='weekday'))return {conditional:true};
-  const conditional=Boolean((part&&!context.daypart)||(day&&!context.visitDay)||/иногда|бывало|на\s+мероприятиях|только\s+при/.test(q));
+  const conditional=Boolean((part&&!context.daypart)||(day&&!context.visitDay)||/иногда|бывало|на\s+мероприятиях|только\s+при|по\s+(?:пятниц[а-я]*|суббот[а-я]*|воскресень[а-я]*)/.test(q));
   return {conditional,contextLabel:[day==='weekday'?'в будни':day==='weekend'?'в выходные':'',
     {morning:'утром',evening:'вечером',night:'ночью'}[part]||''].filter(Boolean).join(' ')};
 }
@@ -98,12 +101,13 @@ export function analyseText(place,keys,context={},today=new Date()){
     const clauses=document.text.replace(/<[^>]*>/g,' ').split(/[.!?;\n]+|,\s*(?:но\s+|а\s+|(?=вечером|утром|ночью))/i);
     for(const original of clauses){
       const text=normalize(original);
-      if(!text.trim()||/не\s+(?:подтвержден[а-я]*|проверен[а-я]*|указан[а-я]*)|требует\s+проверки/.test(text))continue;
+      if(!text.trim()||/не\s+(?:подтвержден[а-я]*|проверен[а-я]*|указан[а-я]*|обещан[а-я]*|гарантирован[а-я]*)|требует\s+проверки|уточни[а-я]*|уточня[а-я]*|проверь[а-я]*|проверить|проверя[а-я]*/.test(text))continue;
       const timing=timeContext(text,context,document);if(timing.skip)continue;
       for(const key of keys){
         const rule=patterns[key];if(!rule)continue;
-        const negative=Boolean(rule[1]?.test(text));
-        if(!negative&&!rule[0].test(text))continue;
+        const concept=key==='tennis'?['table_tennis','padel','beach_tennis'].reduce((s,k)=>s.replace(new RegExp(sportPatterns.find(([key])=>key===k)[1].source,'g'),' '),text):text;
+        const negative=Boolean(rule[1]?.test(concept));
+        if(!negative&&!rule[0].test(concept))continue;
         // Generic negation must not produce an affirmative statement.
         if(!negative&&/(?:нет|без|не\s+бывает|не\s+проводят)\s/.test(text)&&!(key==='quiet'&&/без\s+громк[а-я]*\s+музык[а-я]*/.test(text)))continue;
         const item={key,value:!negative,source_url:document.source_url,kind:document.kind,observed_at:document.observed_at||document.retrieved_at,

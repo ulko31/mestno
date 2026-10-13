@@ -1,3 +1,4 @@
+import {analyseText} from '../dist/text-analysis.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -80,4 +81,10 @@ test('the screenshot filters use researched prices and keep an affordable work e
  assert.ok(![...r.results,...r.alternatives].some(x=>x.place.title==='Coffee 3'));
  assert.equal(r.alternatives.find(x=>x.place.title==='Бэнч').price.amount,290);
  assert.ok(r.alternatives.some(x=>x.place.title==='Бэнч'));
+});
+
+test('requests to verify an atmosphere do not become positive proof of it',()=>{
+ const p={id:'uncertain',sources:[{url:'https://example.org'}],documents:[{kind:'description',text:'Тишина не обещана. Камерность и тишину уточни перед свиданием. Уютный зал с кофе.',source_url:'https://example.org',observed_at:'2026-10-10T12:00:00Z'}]};
+ const a=analyseText(p,['quiet','chamber_space','cozy'],{},new Date('2026-10-11T12:00:00Z'));
+ assert.equal(a.evidence.quiet.positive.length,0);assert.equal(a.evidence.chamber_space.positive.length,0);assert.equal(a.evidence.cozy.positive.length,1);
 });

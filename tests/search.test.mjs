@@ -86,7 +86,7 @@ test('quiet morning claim is not an all-day quiet guarantee',()=>{
  assert.equal(searchPlaces([p],{query:'Тихое кафе для работы утром в выходные',today}).results.length,0);
 });
 test('first meeting is distinct from meeting a new group by interests',()=>{
- const cafe={...place('cafe'),category:'cafe'};
+ const cafe={...place('cafe'),category:'cafe',documents:[{kind:'description',text:'Небольшое кафе с кофе и десертами.',source_url:'https://example.org/cafe',observed_at:'2026-10-10T12:00:00Z'}]};
  const social={...place('social',[feature('social_events'),feature('board_games')]),category:'anticafe'};
  const office={...place('office'),category:'coworking'};
  const first=searchPlaces([cafe,social,office],{query:'Место для первого знакомства',today});

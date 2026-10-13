@@ -130,3 +130,24 @@ test('source and editing tools are on a separate page',()=>{
   assert.ok(!html.includes('id="recommendation-form"'));assert.ok(!html.includes('id="api-load"'));
   assert.ok(html.includes('href="admin.html"'));assert.ok(html.includes('О каталоге'));
 });
+
+test('food and billiards payment choices reach search, including Solids and Kiks',()=>{
+ el('clear-filters').emit('click');query('Поесть и поиграть в бильярд');
+ assert.ok(!el('billiards-options').classes.has('hidden'));
+ let cards=el('results').innerHTML+el('alternative-results').innerHTML;
+ assert.ok(cards.includes('Solids'));assert.ok(cards.includes('Kiks'));assert.ok(cards.includes('Schmaus'));
+ el('billiards-payment').value='paid';el('billiards-payment').emit('change');cards=el('results').innerHTML+el('alternative-results').innerHTML;
+ assert.ok(cards.includes('Solids'));assert.ok(cards.includes('1 500 ₽'));assert.ok(!cards.includes('Schmaus'));assert.ok(!cards.includes('MazaPark'));
+ el('billiards-payment').value='free';el('billiards-payment').emit('change');cards=el('results').innerHTML+el('alternative-results').innerHTML;
+ assert.ok(cards.includes('Schmaus'));assert.ok(!cards.includes('Solids'));assert.ok(!cards.includes('Kiks'));
+ el('clear-filters').emit('click');assert.equal(el('billiards-payment').value,'');
+});
+test('sports dropdown reaches the actual page and reset clears old sport and payment choices',()=>{
+ el('clear-filters').emit('click');el('category').value='sport';el('category').emit('change');
+ assert.ok(!el('sports-options').classes.has('hidden'));assert.ok(el('sport-type').options.some(x=>x.value==='padel'));assert.ok(el('sport-type').options.some(x=>x.value==='wakeboarding'));
+ el('sport-type').value='badminton';el('sport-type').emit('change');let cards=el('results').innerHTML+el('alternative-results').innerHTML;
+ assert.ok(cards.includes('ВМЯЧ'));assert.ok(cards.includes('Динамит'));assert.ok(!cards.includes('Kingwinch'));
+ el('sport-type').value='wakeboarding';el('sport-type').emit('change');cards=el('results').innerHTML+el('alternative-results').innerHTML;
+ assert.ok(cards.includes('Kingwinch'));assert.ok(cards.includes('Открытая вода'));assert.ok(!cards.includes('Динамит'));
+ el('clear-filters').emit('click');assert.equal(el('sport-type').value,'');
+});

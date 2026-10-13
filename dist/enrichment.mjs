@@ -1,5 +1,5 @@
-import {mergeCatalogues} from './providers.mjs?v=20261013';
-import {validateCatalogue} from './search.mjs?v=20261013';
+import {mergeCatalogues} from './providers.mjs?v=20261013b';
+import {validateCatalogue} from './search.mjs?v=20261013b';
 export function applyEnrichment(catalogue,incoming){
   validateCatalogue(incoming);const current=structuredClone(validateCatalogue(catalogue)),r=incoming.collection_report;
   // A complete official snapshot may remove cancelled or withdrawn library events.

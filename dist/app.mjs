@@ -1,12 +1,13 @@
-import {categories, moods, companies, featureLabels, safeUrl, hasFeature, parseQuery, searchPlaces, validateCatalogue} from './search.mjs?v=20261013';
-import {mergeCatalogues} from './providers.mjs?v=20261013';
-import {documentsOf} from './text-analysis.mjs?v=20261013';
-import {priceFor,priceLabel} from './pricing.mjs?v=20261013';
-import {currentOffers,offerWhen} from './experiences.mjs?v=20261013';
-import {linkedPlace,placeLink} from './place-links.mjs?v=20261013';
-import {photoUrl} from './photo-assets.mjs?v=20261013';
-import {applyAdminDrafts,ADMIN_DRAFT_KEY} from './admin-model.mjs?v=20261013';
-import {billiardsInfo} from './billiards.mjs?v=20261013';
+import {categories, moods, companies, featureLabels, safeUrl, hasFeature, parseQuery, searchPlaces, validateCatalogue} from './search.mjs?v=20261013b';
+import {mergeCatalogues} from './providers.mjs?v=20261013b';
+import {documentsOf} from './text-analysis.mjs?v=20261013b';
+import {priceFor,priceLabel} from './pricing.mjs?v=20261013b';
+import {currentOffers,offerWhen} from './experiences.mjs?v=20261013b';
+import {linkedPlace,placeLink} from './place-links.mjs?v=20261013b';
+import {photoUrl} from './photo-assets.mjs?v=20261013b';
+import {applyAdminDrafts,ADMIN_DRAFT_KEY} from './admin-model.mjs?v=20261013b';
+import {billiardsInfo} from './billiards.mjs?v=20261013b';
+import {sportLabels,sportsFor,sportDetails} from './sports.mjs?v=20261013b';
 const $ = id => document.getElementById(id);
 const escape = s => String(s ?? '').replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const load = (key, fallback) => {try{return JSON.parse(localStorage.getItem(key)) ?? fallback;}catch{return fallback;}};
@@ -16,27 +17,30 @@ const state = {catalogue:null, baseline:null, favorites:new Set(load('kuda.favor
 let toastTimer;
 function toast(message){$('toast').textContent=message;$('toast').classList.remove('hidden');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').classList.add('hidden'),3500);}
 
-function card({place:p, distance=null, reasons=[],warnings=[],evidence=[],offer=null,price=undefined,billiards=null},detail=false) {
+function card({place:p, distance=null, reasons=[],warnings=[],evidence=[],offer=null,price=undefined,billiards=null,sport=null},detail=false) {
   const tags=[...new Set((p.features||[]).filter(f=>hasFeature(p,f.key,f.value) && f.value===true && f.key!=='free_billiards' && featureLabels[f.key]).map(f=>f.key))];
   const refs=p.sources.map(s=>safeUrl(s.url)?`<a href="${escape(safeUrl(s.url))}" target="_blank" rel="noopener noreferrer">${escape(s.label || 'Источник')} ↗</a>`:'').join('');
   const map='https://yandex.ru/maps/?text='+encodeURIComponent([p.title,p.address,p.city].filter(Boolean).join(', '));
   if(price===undefined)price=priceFor(p,{offer});
   if(!billiards&&(p.billiards_terms?.length||tags.includes('billiards')||p.category==='billiards'))billiards=billiardsInfo(p);
   const gameInfo=billiards?`<p class="game-cost"><strong>${escape(billiards.label)}</strong>${billiards.term?`<br><a href="${escape(safeUrl(billiards.term.source_url))}" target="_blank" rel="noopener noreferrer">Условия игры ↗</a> · ${escape(String(billiards.term.checked_at).slice(0,10))}`:''}${billiards.warnings.length?`<br>${escape(billiards.warnings.join(' '))}`:''}</p>`:'';
+  if(!sport)sport=sportDetails(sportsFor(p)[0]);
+  const sportInfo=sport?`<p class="sport-info"><strong>${escape(sport.label)}</strong> · ${escape(sport.environment)}${sport.cost?`<br>${escape(sport.cost)}`:''}${sport.conditions.length||sport.warnings.length?`<br>${escape([...sport.conditions,...sport.warnings].join(' '))}`:''}<br><a href="${escape(safeUrl(sport.booking_url))}" target="_blank" rel="noopener noreferrer">Площадка и запись ↗</a> · ${escape(String(sport.checked_at).slice(0,10))}</p>`:'';
   const unknown=priceLabel(price);
   const priceInfo=price?`<p class="price-source">${escape(price.label||'Указанная цена')} · ${escape(String(price.checked_at).slice(0,10))} <a href="${escape(safeUrl(price.source_url))}" target="_blank" rel="noopener noreferrer">${price.kind==='menu_order'?'Меню':'Источник цены'} ↗</a>${price.note?`<br>${escape(price.note)}`:''}</p>`:'';
   const photo=(p.photos||[]).find(f=>photoUrl(f.url)&&safeUrl(f.source_url)&&f.author&&f.license);
   const image=photo?`<img class="place-photo" src="${escape(photoUrl(photo.url))}" alt="${escape(photo.alt||p.title)}" loading="lazy" decoding="async" referrerpolicy="no-referrer">`:'';
   const photoCredit=photo?`<p class="photo-credit">${escape(photo.caption||'Фото места')} · ${escape(photo.author)} · <a href="${escape(safeUrl(photo.license_url))}" target="_blank" rel="noopener noreferrer">${escape(photo.license)}</a> · <a href="${escape(safeUrl(photo.source_url))}" target="_blank" rel="noopener noreferrer">Оригинал ↗</a> · кадрировано</p>`:'';
   const format=offer?`<div class="offer-summary"><span class="offer-format">${offer.format==='open_group'?'Можно прийти одной / одному':offer.format==='private'?'Для своей компании':'Занятие по записи'}</span><h4>${escape(offer.title)}</h4><p>${escape(offerWhen(offer))}</p><p>${escape(offer.description||'')}</p><a class="text-link" href="${escape(safeUrl(offer.booking_url))}" target="_blank" rel="noopener noreferrer">Расписание и запись ↗</a></div>`:'';
-  const otherWarnings=warnings.filter(w=>!billiards?.warnings.includes(w));
+  const otherWarnings=warnings.filter(w=>!billiards?.warnings.includes(w)&&!sport?.warnings.includes(w));
   const checks=otherWarnings.length?`<div class="conditions-to-check"><strong>Перед визитом уточни</strong><ul>${otherWarnings.map(w=>`<li>${escape(w)}</li>`).join('')}</ul></div>`:'';
   const proof=evidence.length?`<details class="text-evidence"><summary>На чём основан подбор</summary>${evidence.map(e=>`<p><span>${e.source_kind==='social'?'Публичная рекомендация':e.kind==='review'?'Отзыв посетителя':e.kind==='editorial'?'Обзор места':'Описание места'} · ${e.publication_date_unknown?'дата публикации не указана':escape(String(e.observed_at).slice(0,10))}</span><br>«${escape(e.excerpt)}» <a href="${escape(safeUrl(e.source_url))}" target="_blank" rel="noopener noreferrer">Источник ↗</a></p>`).join('')}</details>`:'';
-  return `<article class="place-card"><div class="card-cover cover-${escape(categories[p.category]?p.category:'other')}"><span class="cover-shape" aria-hidden="true"></span>${image}<span class="category-label">${escape(categories[p.category]||'Место')}</span><button class="favorite-button ${state.favorites.has(p.id)?'is-saved':''}" data-favorite="${escape(p.id)}" aria-label="${state.favorites.has(p.id)?'Убрать из избранного':'Сохранить'}: ${escape(p.title)}" aria-pressed="${state.favorites.has(p.id)}">${state.favorites.has(p.id)?'♥':'♡'}</button></div><div class="card-content"><h3>${escape(p.title)}</h3><p class="address">${escape(p.address || 'Точный адрес уточни в источнике')}${distance!==null?` · ${distance.toFixed(1)} км по прямой`:''}</p><div class="badges">${tags.map(key=>`<span class="badge">${escape(featureLabels[key])}</span>`).join('')}<span class="badge ${price?'price-badge':'unknown'}">${escape(unknown)}</span></div>${priceInfo}${gameInfo}${format}<p class="card-note">${reasons.length?escape(reasons.join(' · '))+'. ':''}${escape(p.notes || 'Условия посещения требуют проверки.')}</p>${checks}${proof}${photoCredit}<div class="card-sources">${refs}</div><div class="card-bottom">${detail?'':`<button class="text-button" data-open-place="${escape(p.id)}" data-open-offer="${escape(offer?.id||'')}">Карточка ↗</button>`}<a class="map-link" href="${escape(map)}" target="_blank" rel="noopener noreferrer">На карте ↗</a><button class="visited-button ${state.visited.has(p.id)?'is-visited':''}" data-visited="${escape(p.id)}">${state.visited.has(p.id)?'Посещено ✓':'Уже была / был'}</button></div></div></article>`;
+  return `<article class="place-card"><div class="card-cover cover-${escape(categories[p.category]?p.category:'other')}"><span class="cover-shape" aria-hidden="true"></span>${image}<span class="category-label">${escape(categories[p.category]||'Место')}</span><button class="favorite-button ${state.favorites.has(p.id)?'is-saved':''}" data-favorite="${escape(p.id)}" aria-label="${state.favorites.has(p.id)?'Убрать из избранного':'Сохранить'}: ${escape(p.title)}" aria-pressed="${state.favorites.has(p.id)}">${state.favorites.has(p.id)?'♥':'♡'}</button></div><div class="card-content"><h3>${escape(p.title)}</h3><p class="address">${escape(p.address || 'Точный адрес уточни в источнике')}${distance!==null?` · ${distance.toFixed(1)} км по прямой`:''}</p><div class="badges">${tags.map(key=>`<span class="badge">${escape(featureLabels[key])}</span>`).join('')}<span class="badge ${price?'price-badge':'unknown'}">${escape(unknown)}</span></div>${priceInfo}${gameInfo}${sportInfo}${format}<p class="card-note">${reasons.length?escape(reasons.join(' · '))+'. ':''}${escape(p.notes || 'Условия посещения требуют проверки.')}</p>${checks}${proof}${photoCredit}<div class="card-sources">${refs}</div><div class="card-bottom">${detail?'':`<button class="text-button" data-open-place="${escape(p.id)}" data-open-offer="${escape(offer?.id||'')}">Карточка ↗</button>`}<a class="map-link" href="${escape(map)}" target="_blank" rel="noopener noreferrer">На карте ↗</a><button class="visited-button ${state.visited.has(p.id)?'is-visited':''}" data-visited="${escape(p.id)}">${state.visited.has(p.id)?'Посещено ✓':'Уже была / был'}</button></div></div></article>`;
 }
 
 function options() {
   return {query:$('query').value, category:$('category').value, budget:$('budget').value,
+    sport:$('sport-type').value,billiardsPayment:$('billiards-payment').value,
     mood:$('mood').value,company:$('company').value,city:$('city').value,hideLandmarks:$('hide-landmarks').checked,
     hideVisited:$('hide-visited').checked,visited:[...state.visited],location:state.location,radius:state.location?$('radius').value:null,
     includeUnknownPrices:!$('known-price-only').checked};
@@ -62,6 +66,7 @@ function renderInterpretation(result){
   if(result.budget!==null)labels.push(`До ${result.budget} ₽ ${result.priceScope==='hour'?'за час':'за посещение'}`);
   if(state.location)labels.push('Рядом · '+$('radius').value+' км');
   if(result.visitDate)labels.push('Дата: '+result.visitDate);
+  if(result.billiardsPayment)labels.push({free:'Бильярд без отдельной оплаты',paid:'Бильярд оплачивается отдельно',ticket:'Бильярд внутри платного билета',unknown:'Оплата бильярда ещё не подтверждена'}[result.billiardsPayment]);
   $('intent-tags').innerHTML=[...new Set(labels)].map(label=>`<span>${escape(label)}</span>`).join('');
   const warnings=[];
   warnings.push(...result.filterConflicts);
@@ -76,6 +81,8 @@ function renderSearch(reset=false) {
   if(reset)state.visible=12;
   const result=searchPlaces(state.catalogue.places,options());state.lastSearch=result;
   renderInterpretation(result);
+  $('billiards-options').classList.toggle('hidden',!result.needs.includes('billiards'));
+  $('sports-options').classList.toggle('hidden',!result.needs.includes('sports')&&$('category').value!=='sport');
   $('results').innerHTML=result.results.slice(0,state.visible).map(item=>card(item)).join('');
   $('results-title').textContent=result.unhandled.length?'По понятой части запроса':($('query').value.trim()||$('mood').value||$('company').value?'Под твой запрос':'Открой новое место');
   $('current-city').textContent=$('city').value||'Каталог';
@@ -129,7 +136,7 @@ function installCatalogue(payload){
 }
 function setView(view){state.view=view;for(const name of ['discover','saved','catalogue'])$(name+'-view').classList.toggle('hidden',name!==view);document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===view));}
 
-function reset(){for(const id of ['query','category','budget','mood','company'])$(id).value='';$('known-price-only').checked=false;state.autoMood='';state.autoCompany='';state.location=null;$('radius-label').classList.add('hidden');$('location-button').textContent='◎ Рядом со мной';$('location-status').textContent='';renderSearch(true);}
+function reset(){for(const id of ['query','category','budget','mood','company','sport-type','billiards-payment'])$(id).value='';$('known-price-only').checked=false;state.autoMood='';state.autoCompany='';state.location=null;$('radius-label').classList.add('hidden');$('location-button').textContent='◎ Рядом со мной';$('location-status').textContent='';renderSearch(true);}
 
 async function requestLocation(){
   if(state.location){state.location=null;$('location-button').textContent='◎ Рядом со мной';$('radius-label').classList.add('hidden');$('location-status').textContent='';renderSearch(true);return;}
@@ -149,7 +156,7 @@ document.addEventListener('click',e=>{
   if(favorite){const id=favorite.dataset.favorite;state.favorites.has(id)?state.favorites.delete(id):state.favorites.add(id);save('kuda.favorites',[...state.favorites]);renderAll();}
   if(visited){const id=visited.dataset.visited;state.visited.has(id)?state.visited.delete(id):state.visited.add(id);save('kuda.visited',[...state.visited]);renderAll();toast('Список посещённых обновлён');}
   const open=e.target.closest('[data-open-place]');if(open){state.openedPlace=open.dataset.openPlace;state.openedOffer=open.dataset.openOffer||'';renderPlacePanel();}
-  const query=e.target.closest('[data-query]');if(query){for(const id of ['category','budget','mood','company'])$(id).value='';$('query').value=query.dataset.query;syncTextContext();renderSearch(true);}
+  const query=e.target.closest('[data-query]');if(query){for(const id of ['category','budget','mood','company','sport-type','billiards-payment'])$(id).value='';$('query').value=query.dataset.query;syncTextContext();renderSearch(true);}
   const view=e.target.closest('[data-view]');if(view)setView(view.dataset.view);
 });
 document.addEventListener('error',e=>{if(e.target?.classList?.contains?.('place-photo'))e.target.hidden=true;},true);
@@ -159,11 +166,11 @@ $('close-place').addEventListener('click',closePlace);
 $('place-panel').addEventListener('click',e=>{if(e.target===$('place-panel'))closePlace();});
 $('share-place').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(placeLink(window.location.href,state.openedPlace,state.openedOffer));toast('Ссылка на карточку скопирована');}catch{toast('Копирование недоступно в этом браузере.');}});
 $('search-form').addEventListener('submit',e=>{e.preventDefault();syncTextContext();renderSearch(true);});
-for(const id of ['category','budget','company','mood','hide-visited','hide-landmarks','city','radius','known-price-only'])$(id).addEventListener('change',()=>renderSearch(true));
+for(const id of ['category','budget','company','mood','hide-visited','hide-landmarks','city','radius','known-price-only','sport-type','billiards-payment'])$(id).addEventListener('change',()=>renderSearch(true));
 $('location-button').addEventListener('click',requestLocation);$('reset-search').addEventListener('click',reset);
 $('clear-filters').addEventListener('click',reset);
 $('retry-query').addEventListener('click',()=>{
-  for(const id of ['category','budget','mood','company'])$(id).value='';
+  for(const id of ['category','budget','mood','company','sport-type','billiards-payment'])$(id).value='';
   state.autoMood='';state.autoCompany='';state.location=null;
   $('radius-label').classList.add('hidden');$('location-button').textContent='◎ Рядом со мной';$('location-status').textContent='';
   syncTextContext();renderSearch(true);
@@ -171,12 +178,13 @@ $('retry-query').addEventListener('click',()=>{
 $('load-more').addEventListener('click',()=>{state.visible+=12;renderSearch();});
 
 try {
-  const response=await fetch('places.json?v=20261013');if(!response.ok)throw new Error('Не удалось загрузить каталог');
+  const response=await fetch('places.json?v=20261013b');if(!response.ok)throw new Error('Не удалось загрузить каталог');
   state.baseline=validateCatalogue(await response.json());
   const cached=load('kuda.catalogue',null);try{state.catalogue=cached?mergeCatalogues(state.baseline,validateCatalogue(cached)):state.baseline;}catch{state.catalogue=state.baseline;}
   try{state.catalogue=applyAdminDrafts(state.catalogue,load(ADMIN_DRAFT_KEY,null));}catch{toast('Черновики редактора не удалось прочитать. Опубликованный каталог доступен.');}
   syncCities();
   for(const [value,label] of Object.entries(categories)){const option=document.createElement('option');option.value=value;option.textContent=label;$('category').append(option);}
+  for(const [value,label] of Object.entries(sportLabels)){const option=document.createElement('option');option.value=value;option.textContent=label;$('sport-type').append(option);}
   for(const [id,values] of [['mood',moods],['company',companies]])for(const [value,label] of Object.entries(values)){const option=document.createElement('option');option.value=value;option.textContent=label;$(id).append(option);}
   const initialQuery=window.location?.href?new URL(window.location.href).searchParams.get('query'):null;
   if(initialQuery){$('query').value=initialQuery.slice(0,1000);syncTextContext();}
