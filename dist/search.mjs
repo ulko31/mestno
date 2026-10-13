@@ -1,6 +1,7 @@
-import {analyseText, keywordMatches} from './text-analysis.mjs';
-import {priceFor,priceIsEstimate} from './pricing.mjs';
-import {currentOffers,offersFor,requestedDate} from './experiences.mjs';
+import {analyseText, keywordMatches} from './text-analysis.mjs?v=20261012';
+import {priceFor,priceIsEstimate} from './pricing.mjs?v=20261012';
+import {currentOffers,offersFor,requestedDate,activityKeys} from './experiences.mjs?v=20261012';
+import {photoUrl} from './photo-assets.mjs?v=20261012';
 
 export const categories = {
   coworking: 'Коворкинги', library: 'Библиотеки', cafe: 'Кафе', restaurant: 'Рестораны', bar: 'Бары',
@@ -26,6 +27,9 @@ export const featureLabels = {
   dance: 'Есть танцевальные события', sports: 'Есть спортивные занятия',
   waterfront: 'У воды', exhibitions: 'Есть выставки', workshops: 'Есть мастер-классы',
   pottery:'Керамика и лепка',painting:'Рисование и живопись',cooking:'Кулинарные занятия',improv:'Импровизация',book_club:'Книжный клуб',
+  candles:'Свечеварение',perfume:'Создание парфюма',mosaic:'Мозаика',tufting:'Тафтинг',resin:'Эпоксидная смола',crafts:'Рукоделие',
+  french_club:'Общение на французском',spanish_club:'Общение на испанском',korean_club:'Общение на корейском',german_club:'Общение на немецком',italian_club:'Общение на итальянском',
+  sign_club:'Русский жестовый язык',
   climbing: 'Есть скалолазание', boxing: 'Есть бокс', ice_skating: 'Есть каток',
   panoramic_view: 'Панорамный вид', green_interior: 'Растения в пространстве',
   lounge: 'Есть лаунж-зона', chamber_space: 'Камерное пространство',
@@ -123,6 +127,8 @@ export function parseQuery(text) {
   consume(/митап[а-я]*/g,()=>{company='new_people';needs.add('social_events');needs.add('meetups');});
   consume(/разговорн[а-я]*\s+клуб[а-я]*|speaking\s+club/g,()=>{company='new_people';needs.add('social_events');needs.add('speaking_club');});
   consume(/английск[а-я]*|на\s+английском/g,()=>needs.add('english_club'));
+  for(const [re,key] of [[/французск[а-я]*/g,'french_club'],[/испанск[а-я]*/g,'spanish_club'],[/корейск[а-я]*/g,'korean_club'],[/немецк[а-я]*/g,'german_club'],[/итальянск[а-я]*/g,'italian_club']])consume(re,()=>needs.add(key));
+  consume(/русск[а-я]*\s+жестов[а-я]*\s+язык[а-я]*|жестов[а-я]*\s+язык[а-я]*|ржя/g,()=>needs.add('sign_club'));
   consume(/познакомиться|знакомиться|нов[а-я]*\s+(?:люд[а-я]*|знакомств[а-я]*|друз[а-я]*)|найти\s+(?:компанию|друзей)|по\s+интересам|единомышленник[а-я]*/g,()=>{company='new_people';needs.add('social_events');});
   consume(/(?:с\s+)?(?:ребенком|детьми)|детск[а-я]*/g,()=>{company='children';needs.add('child_friendly');});
   consume(/(?:с\s+)?(?:родителями|мамой|папой)/g,()=>{if(!company)company='parents';});
@@ -147,7 +153,8 @@ export function parseQuery(text) {
   consume(/мастер[ -]?класс[а-я]*|сделать\s+что[ -]то\s+руками/g,()=>needs.add('workshops'));
   for(const [pattern,key] of [[/керамик[а-я]*|гончар[а-я]*(?:\s+круг[а-я]*)?|лепк[а-я]*|лепить/g,'pottery'],
     [/рисовани[а-я]*|рисовать|живопис[а-я]*|акварел[а-я]*/g,'painting'],[/кулинар[а-я]*|готовить\s+вместе/g,'cooking'],
-    [/импровизаци[а-я]*/g,'improv'],[/книжн[а-я]*\s+клуб[а-я]*|литературн[а-я]*\s+клуб[а-я]*/g,'book_club']])consume(pattern,()=>needs.add(key));
+    [/импровизаци[а-я]*/g,'improv'],[/книжн[а-я]*\s+клуб[а-я]*|литературн[а-я]*\s+клуб[а-я]*|читательск[а-я]*\s+клуб[а-я]*/g,'book_club'],
+    [/свечеварени[а-я]*|свеч[а-я]*/g,'candles'],[/парфюм[а-я]*|дух[иов]+(?![а-я])/g,'perfume'],[/мозаик[а-я]*/g,'mosaic'],[/тафтинг[а-я]*|созда[а-я]*\s+ковр[а-я]*/g,'tufting'],[/эпоксидн[а-я]*\s+смол[а-я]*/g,'resin'],[/рукодели[а-я]*|вязан[а-я]*|вышив[а-я]*|коллаж[а-я]*/g,'crafts']])consume(pattern,()=>needs.add(key));
   consume(/группов[а-я]*|сборн[а-я]*|пробн[а-я]*\s+(?:урок|заняти[а-я]*)/g);
   consume(/погулять|прогулк[а-я]*|гулять|на\s+свежем\s+воздухе|на\s+улице/g,()=>{outdoors=true;});
   consume(/утром|в\s+первой\s+половине\s+дня/g,()=>{daypart='morning';});
@@ -222,21 +229,25 @@ export function searchPlaces(places, opts = {}) {
     if (opts.city && p.city !== opts.city) continue;
     const explicitlyNamed = query.keywords.length && query.keywords.every(t=>normalize(p.title).includes(t));
     if (opts.hideLandmarks && p.is_landmark && !explicitlyNamed) continue;
-    if (opts.category && p.category!==opts.category) continue;
+    const participates=currentOffers(p,opts.today).length>0;
+    if (opts.category && p.category!==opts.category && !(opts.category==='activity'&&participates)) continue;
     if (query.requestedCategories.length && !query.requestedCategories.includes(p.category)) continue;
     if (query.excludedCategories.includes(p.category)) continue;
     if (query.outdoors && !['park','space'].includes(p.category)) continue;
     if (company==='first_date' && !companyProfiles.first_date[p.category]) continue;
-    const wantsOffer=company==='new_people'||needs.some(k=>['workshops','pottery','painting','cooking','improv','book_club','rpg','meetups','speaking_club','english_club'].includes(k));
+    const explicitOffer=company==='new_people'||needs.some(k=>activityKeys.includes(k));
+    const wantsOffer=explicitOffer||(participates&&['activity','sport'].includes(p.category)&&!needs.includes('laptop_work'));
     const matchingOffers=wantsOffer?offersFor(p,{needs,company,query:opts.query,today:opts.today}):[];
     // An available private workshop and an unrelated public meetup are not the same offer.
-    if(wantsOffer&&p.offers?.length&&!matchingOffers.length)continue;
+    if(explicitOffer&&p.offers?.length&&!matchingOffers.length)continue;
     let offer=matchingOffers[0]||null;
+    if(needs.includes('free_entry'))offer=matchingOffers.find(e=>priceFor(p,{offer:e,today:opts.today})?.amount===0)||offer;
     if(offer&&budget!==null){const within=matchingOffers.find(e=>{const q=priceFor(p,{offer:e,today:opts.today,scope:priceScope,needs,context});return q&&q.amount<=budget;});if(within)offer=within;}
     const searchable=offer?{...p,offers:[offer],documents:(p.documents||[]).filter(d=>!String(d.id).startsWith('offer:'))}:p;
     const analysis=analyseText(searchable,[...new Set([...needs,...(profile||[]),...query.excludedFeatures,'exhibitions','quiet'])],context,opts.today);
     const resolve=key=>{
       const ev=analysis.evidence[key]||{positive:[],negative:[]};
+      if(offer&&key==='free_entry'&&priceFor(p,{offer,today:opts.today})?.amount===0)return {supported:true,strong:true,hardNegative:false,conflict:false,positive:[],negative:[]};
       if(offer&&((offer.activities||[]).includes(key)||key==='social_events'&&offer.format==='open_group')){
         return {supported:true,strong:true,hardNegative:false,conflict:false,positive:ev.positive.filter(e=>e.source_url===offer.source_url),negative:[]};
       }
@@ -254,7 +265,7 @@ export function searchPlaces(places, opts = {}) {
     const conditions=Object.fromEntries(needs.map(key=>[key,resolve(key)]));
     if(needs.some(key=>conditions[key].hardNegative))continue;
     const supportedNeeds=needs.filter(key=>conditions[key].supported);
-    const coreActivities=new Set(['laptop_work','billiards','board_games','rpg','war_games','climbing','boxing','ice_skating','meetups','speaking_club','english_club','workshops','exhibitions','pottery','painting','cooking','improv','book_club',...(company==='new_people'?['social_events']:[])]);
+    const coreActivities=new Set(['laptop_work','billiards','climbing','boxing','ice_skating','exhibitions',...activityKeys,...(company==='new_people'?['social_events']:[])]);
     if(needs.some(key=>coreActivities.has(key)&&!conditions[key].supported))continue;
     const missing=needs.filter(key=>!conditions[key].strong);
     missing.forEach(key=>gaps[key]++);
@@ -272,6 +283,7 @@ export function searchPlaces(places, opts = {}) {
     if(profile&&!moodBoost.length)warnings.push('Атмосферу для «'+moods[mood]+'» нужно уточнить');
     else if(profile&&!moodBoost.some(key=>resolve(key).strong))warnings.push('Атмосфера описана в отзывах или зависит от времени');
     const price=priceFor(p,{today:opts.today,scope:priceScope,needs,context,offer});
+    if(needs.includes('free_entry')&&price?.amount>0)continue;
     let unknownBudget=false;
     if (budget!==null && Number.isFinite(budget)) {
       if(!price){unknownPrice++;unknownBudget=true;warnings.push('Цена неизвестна: бюджет до '+budget+' ₽ не подтверждён');}
@@ -304,7 +316,7 @@ export function searchPlaces(places, opts = {}) {
     if(unknownBudget&&opts.includeUnknownPrices===false)unknownPriceResults.push(item);
     else if(!warnings.length)results.push(item);else alternatives.push(item);
   }
-  const sort=(a,b)=>b.score-a.score || a.place.title.localeCompare(b.place.title,'ru');
+  const sort=(a,b)=>(budget!==null?Number(Boolean(b.price))-Number(Boolean(a.price)):0)||b.score-a.score || a.place.title.localeCompare(b.place.title,'ru');
   results.sort(sort);alternatives.sort(sort);unknownPriceResults.sort(sort);
   const unhandled = query.keywords.filter(t=>![...results,...alternatives,...unknownPriceResults].some(r=>r.matches.includes(t)));
   const filterConflicts=opts.category&&query.requestedCategories.length&&!query.requestedCategories.includes(opts.category)
@@ -324,7 +336,7 @@ export function validateCatalogue(payload) {
     ids.add(p.id);
     if(p.prices!==undefined&&(!Array.isArray(p.prices)||p.prices.length>30||p.prices.some(q=>!q||!Number.isFinite(q.amount)||q.amount<0||!safeUrl(q.source_url)||q.currency!=='RUB'||!['visit','hour'].includes(q.scope))))throw new Error('Некорректные цены: нужны сумма, источник и единица.');
     if(p.offers!==undefined&&(!Array.isArray(p.offers)||p.offers.length>100||p.offers.some(e=>!e||typeof e.id!=='string'||typeof e.title!=='string'||!safeUrl(e.source_url)||!safeUrl(e.booking_url)||!Array.isArray(e.activities)||!['open_group','private','individual','unknown'].includes(e.format))))throw new Error('Некорректный формат занятия или события.');
-    if(p.photos!==undefined&&(!Array.isArray(p.photos)||p.photos.length>20||p.photos.some(f=>!f||!safeUrl(f.url)||!safeUrl(f.source_url)||!f.author||!f.license||!safeUrl(f.license_url))))throw new Error('Фотографии должны содержать источник, автора и разрешение.');
+    if(p.photos!==undefined&&(!Array.isArray(p.photos)||p.photos.length>20||p.photos.some(f=>!f||!photoUrl(f.url)||!safeUrl(f.source_url)||!f.author||!f.license||!safeUrl(f.license_url))))throw new Error('Фотографии должны содержать источник, автора и разрешение.');
     if(p.documents!==undefined&&(!Array.isArray(p.documents)||p.documents.length>100||p.documents.some(d=>
       !d||typeof d.text!=='string'||d.text.length>24000||!safeUrl(d.source_url)||!['description','review','editorial'].includes(d.kind))))
       throw new Error('Некорректный текстовый источник: нужны текст, тип и ссылка.');

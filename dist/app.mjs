@@ -1,18 +1,18 @@
-import {categories, moods, companies, featureLabels, safeUrl, hasFeature, parseQuery, searchPlaces, validateCatalogue} from './search.mjs';
-import {loadKudaGo,loadKudaGoReviews,mergeCatalogues} from './providers.mjs';
-import {documentsOf} from './text-analysis.mjs';
-import {priceFor,priceLabel} from './pricing.mjs';
-import {currentOffers,offerWhen} from './experiences.mjs';
-import {loadKudaGoEvents} from './events-provider.mjs';
-import {linkedPlace,placeLink} from './place-links.mjs';
-import {recommendationDraft} from './source-intake.mjs';
+import {categories, moods, companies, featureLabels, safeUrl, hasFeature, parseQuery, searchPlaces, validateCatalogue} from './search.mjs?v=20261012';
+import {mergeCatalogues} from './providers.mjs?v=20261012';
+import {documentsOf} from './text-analysis.mjs?v=20261012';
+import {priceFor,priceLabel} from './pricing.mjs?v=20261012';
+import {currentOffers,offerWhen} from './experiences.mjs?v=20261012';
+import {linkedPlace,placeLink} from './place-links.mjs?v=20261012';
+import {photoUrl} from './photo-assets.mjs?v=20261012';
+import {applyAdminDrafts,ADMIN_DRAFT_KEY} from './admin-model.mjs?v=20261012';
 const $ = id => document.getElementById(id);
 const escape = s => String(s ?? '').replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const load = (key, fallback) => {try{return JSON.parse(localStorage.getItem(key)) ?? fallback;}catch{return fallback;}};
 const save = (key, value) => {try{localStorage.setItem(key, JSON.stringify(value));return true;}catch{return false;}};
 const state = {catalogue:null, baseline:null, favorites:new Set(load('kuda.favorites',[])), visited:new Set(load('kuda.visited',[])),
   location:null, lastSearch:null, visible:12, view:'discover',autoMood:'',autoCompany:'',openedPlace:null,openedOffer:''};
-let toastTimer, apiController,reviewController,eventController;
+let toastTimer;
 function toast(message){$('toast').textContent=message;$('toast').classList.remove('hidden');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').classList.add('hidden'),3500);}
 
 function card({place:p, distance=null, reasons=[],warnings=[],evidence=[],offer=null,price=null},detail=false) {
@@ -22,8 +22,8 @@ function card({place:p, distance=null, reasons=[],warnings=[],evidence=[],offer=
   price=price||priceFor(p,{offer});
   const unknown=priceLabel(price);
   const priceInfo=price?`<p class="price-source">${escape(price.label||'Указанная цена')} · ${escape(String(price.checked_at).slice(0,10))} <a href="${escape(safeUrl(price.source_url))}" target="_blank" rel="noopener noreferrer">${price.kind==='menu_order'?'Меню':'Источник цены'} ↗</a>${price.note?`<br>${escape(price.note)}`:''}</p>`:'';
-  const photo=(p.photos||[]).find(f=>safeUrl(f.url)&&safeUrl(f.source_url)&&f.author&&f.license);
-  const image=photo?`<img class="place-photo" src="${escape(safeUrl(photo.url))}" alt="${escape(photo.alt||p.title)}" loading="lazy" decoding="async" referrerpolicy="no-referrer">`:'';
+  const photo=(p.photos||[]).find(f=>photoUrl(f.url)&&safeUrl(f.source_url)&&f.author&&f.license);
+  const image=photo?`<img class="place-photo" src="${escape(photoUrl(photo.url))}" alt="${escape(photo.alt||p.title)}" loading="lazy" decoding="async" referrerpolicy="no-referrer">`:'';
   const photoCredit=photo?`<p class="photo-credit">${escape(photo.caption||'Фото места')} · ${escape(photo.author)} · <a href="${escape(safeUrl(photo.license_url))}" target="_blank" rel="noopener noreferrer">${escape(photo.license)}</a> · <a href="${escape(safeUrl(photo.source_url))}" target="_blank" rel="noopener noreferrer">Оригинал ↗</a> · кадрировано</p>`:'';
   const format=offer?`<div class="offer-summary"><span class="offer-format">${offer.format==='open_group'?'Можно прийти одной / одному':offer.format==='private'?'Для своей компании':'Занятие по записи'}</span><h4>${escape(offer.title)}</h4><p>${escape(offerWhen(offer))}</p><p>${escape(offer.description||'')}</p><a class="text-link" href="${escape(safeUrl(offer.booking_url))}" target="_blank" rel="noopener noreferrer">Расписание и запись ↗</a></div>`:'';
   const checks=warnings.length?`<div class="conditions-to-check"><strong>Перед визитом уточни</strong><ul>${warnings.map(w=>`<li>${escape(w)}</li>`).join('')}</ul></div>`:'';
@@ -35,7 +35,7 @@ function options() {
   return {query:$('query').value, category:$('category').value, budget:$('budget').value,
     mood:$('mood').value,company:$('company').value,city:$('city').value,hideLandmarks:$('hide-landmarks').checked,
     hideVisited:$('hide-visited').checked,visited:[...state.visited],location:state.location,radius:state.location?$('radius').value:null,
-    includeUnknownPrices:$('include-unknown-prices').checked};
+    includeUnknownPrices:!$('known-price-only').checked};
 }
 
 function syncTextContext(){
@@ -79,7 +79,8 @@ function renderSearch(reset=false) {
   $('load-more').classList.toggle('hidden',Math.max(result.results.length,result.alternatives.length)<=state.visible);
   $('search-summary').textContent='';$('search-summary').classList.add('hidden');
   $('budget-options').classList.toggle('hidden',result.budget===null);
-  $('budget-status').textContent=result.unknownPriceResults.length?`${result.unknownPriceResults.length} подходящих мест скрыто: цена неизвестна.`:result.budget!==null?'Средний чек и пример заказа — ориентиры; билет и тариф указаны отдельно.':'';
+  const unknown=[...result.results,...result.alternatives].filter(x=>!x.price).length;
+  $('budget-status').textContent=result.unknownPriceResults.length?`${result.unknownPriceResults.length} мест скрыто без данных о бюджете.`:unknown?`${unknown} вариантов без данных о бюджете — уточни стоимость в карточке.`:result.budget!==null?'Средний чек учитывается как бюджет на человека.':'';
   const details=[];
   for(const [key,n] of Object.entries(result.gaps))if(n)details.push(`«${featureLabels[key]}»: у части мест нет подтверждения`);
   if(result.unknownPrice)details.push('есть места без свежей цены за нужную единицу');
@@ -100,7 +101,7 @@ function renderPlacePanel(){
   const offer=state.openedOffer?currentOffers(p).find(e=>e.id===state.openedOffer):found?.offer;
   $('place-content').innerHTML=card({place:p,...(found||{}),offer:offer||null,price:offer?priceFor(p,{offer}):found?.price},true);
   const more=currentOffers(p).filter(e=>e.id!==offer?.id);
-  if(more.length)$('place-content').innerHTML+=`<section class="other-offers"><h3>Другие форматы здесь</h3>${more.map(e=>`<div><strong>${escape(e.title)}</strong><p>${escape(offerWhen(e))} · ${escape(priceLabel(priceFor(p,{offer:e})))}</p><p>${escape(e.format==='open_group'?'Можно присоединиться к группе':e.format==='private'?'Только для своей компании':'Формат группы уточни')}${e.requirements?' · '+escape(e.requirements):''}</p><a href="${escape(safeUrl(e.booking_url))}" target="_blank" rel="noopener noreferrer">Расписание и запись ↗</a></div>`).join('')}</section>`;
+  if(more.length)$('place-content').innerHTML+=`<section class="other-offers"><h3>Другие форматы здесь</h3>${more.map(e=>`<div><strong>${escape(e.title)}</strong><p>${escape(offerWhen(e))} · ${escape(priceLabel(priceFor(p,{offer:e})))}</p>${e.price_note?`<p>${escape(e.price_note)}</p>`:''}<p>${escape(e.format==='open_group'?'Можно присоединиться к группе':e.format==='private'?'Только для своей компании':'Формат группы уточни')}${e.requirements?' · '+escape(e.requirements):''}</p><a href="${escape(safeUrl(e.booking_url))}" target="_blank" rel="noopener noreferrer">Расписание и запись ↗</a></div>`).join('')}</section>`;
   $('place-panel').classList.remove('hidden');document.body?.classList.add('place-is-open');
   $('close-place').focus?.();
 }
@@ -123,7 +124,7 @@ function installCatalogue(payload){
 }
 function setView(view){state.view=view;for(const name of ['discover','saved','catalogue'])$(name+'-view').classList.toggle('hidden',name!==view);document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===view));}
 
-function reset(){for(const id of ['query','category','budget','mood','company'])$(id).value='';state.autoMood='';state.autoCompany='';state.location=null;$('radius-label').classList.add('hidden');$('location-button').textContent='◎ Рядом со мной';$('location-status').textContent='';renderSearch(true);}
+function reset(){for(const id of ['query','category','budget','mood','company'])$(id).value='';$('known-price-only').checked=false;state.autoMood='';state.autoCompany='';state.location=null;$('radius-label').classList.add('hidden');$('location-button').textContent='◎ Рядом со мной';$('location-status').textContent='';renderSearch(true);}
 
 async function requestLocation(){
   if(state.location){state.location=null;$('location-button').textContent='◎ Рядом со мной';$('radius-label').classList.add('hidden');$('location-status').textContent='';renderSearch(true);return;}
@@ -148,11 +149,12 @@ document.addEventListener('click',e=>{
 });
 document.addEventListener('error',e=>{if(e.target?.classList?.contains?.('place-photo'))e.target.hidden=true;},true);
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closePlace();});
+window.addEventListener?.('storage',e=>{if(e.key!==ADMIN_DRAFT_KEY&&e.key!=='kuda.catalogue')return;try{const cached=load('kuda.catalogue',null);state.catalogue=applyAdminDrafts(cached?mergeCatalogues(state.baseline,cached):state.baseline,load(ADMIN_DRAFT_KEY,null));syncCities();renderAll();}catch{toast('Не удалось применить изменения редактора.');}});
 $('close-place').addEventListener('click',closePlace);
 $('place-panel').addEventListener('click',e=>{if(e.target===$('place-panel'))closePlace();});
 $('share-place').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(placeLink(window.location.href,state.openedPlace,state.openedOffer));toast('Ссылка на карточку скопирована');}catch{toast('Копирование недоступно в этом браузере.');}});
 $('search-form').addEventListener('submit',e=>{e.preventDefault();syncTextContext();renderSearch(true);});
-for(const id of ['category','budget','company','mood','hide-visited','hide-landmarks','city','radius','include-unknown-prices'])$(id).addEventListener('change',()=>renderSearch(true));
+for(const id of ['category','budget','company','mood','hide-visited','hide-landmarks','city','radius','known-price-only'])$(id).addEventListener('change',()=>renderSearch(true));
 $('location-button').addEventListener('click',requestLocation);$('reset-search').addEventListener('click',reset);
 $('clear-filters').addEventListener('click',reset);
 $('retry-query').addEventListener('click',()=>{
@@ -162,83 +164,18 @@ $('retry-query').addEventListener('click',()=>{
   syncTextContext();renderSearch(true);
 });
 $('load-more').addEventListener('click',()=>{state.visible+=12;renderSearch();});
-$('catalogue-file').addEventListener('change',async e=>{
-  const f=e.target.files[0];if(!f)return;
-  try{if(f.size>25*1024*1024)throw new Error('Файл слишком большой: предел 25 МБ.');const payload=validateCatalogue(JSON.parse(await f.text()));const persisted=installCatalogue(payload);$('import-status').textContent=`Обработано ${payload.places.length} карточек. В общей базе: ${state.catalogue.places.length}.`+(persisted?' Каталог сохранён в этом браузере.':' Каталог работает до закрытия страницы: недостаточно места для сохранения.');}
-  catch(err){$('import-status').textContent='Импорт не выполнен: '+err.message;}finally{e.target.value='';}
-});
-$('restore-catalogue').addEventListener('click',()=>{state.catalogue=state.baseline;try{localStorage.removeItem('kuda.catalogue');}catch{}syncCities();renderAll();$('import-status').textContent='Стартовая база восстановлена.';});
-$('recommendation-form').addEventListener('submit',e=>{
-  e.preventDefault();try{
-    const row=recommendationDraft({url:$('recommendation-url').value,title:$('recommendation-title').value,
-      address:$('recommendation-address').value,city:$('city').value,note:$('recommendation-note').value,noteIsOriginal:$('recommendation-original').checked});
-    const rows=load('mestno.recommendations',[]);const existing=rows.findIndex(x=>x.source_url===row.source_url&&x.title===row.title&&x.address===row.address);
-    if(existing>=0)rows[existing]=row;else rows.push(row);
-    if(!save('mestno.recommendations',rows))throw new Error('Не хватает места в браузере. Сначала скачай сохранённые предложения.');
-    $('recommendation-status').textContent=`Сохранено для проверки. В твоём списке ${rows.length} предложений; в общую выдачу они пока не добавлены.`;
-  }catch(err){$('recommendation-status').textContent=err.message;}
-});
-$('recommendations-export').addEventListener('click',()=>{
-  const rows=load('mestno.recommendations',[]);if(!rows.length){$('recommendation-status').textContent='Добавь первое предложение.';return;}
-  const url=URL.createObjectURL(new Blob([JSON.stringify({schema_version:1,recommendations:rows},null,2)],{type:'application/json'}));
-  const a=document.createElement('a');a.href=url;a.download='mestno-recommendations.json';a.click();URL.revokeObjectURL(url);
-});
-$('download-catalogue').addEventListener('click',()=>{
-  const url=URL.createObjectURL(new Blob([JSON.stringify(state.catalogue,null,2)],{type:'application/json'}));
-  const a=document.createElement('a');a.href=url;a.download='mestno-catalogue.json';a.click();URL.revokeObjectURL(url);
-});
-$('api-cancel').addEventListener('click',()=>apiController?.abort());
-$('reviews-cancel').addEventListener('click',()=>reviewController?.abort());
-$('events-cancel').addEventListener('click',()=>eventController?.abort());
-$('events-load').addEventListener('click',async()=>{
-  if(eventController)return;eventController=new AbortController();$('events-load').disabled=true;$('events-cancel').classList.remove('hidden');
-  try{const payload=await loadKudaGoEvents({city:$('api-city').value,signal:eventController.signal,
-    onProgress:r=>{$('events-status').textContent=`Получено ${r.events} событий…`;}});
-    const persisted=installCatalogue(payload);const n=payload.places.reduce((sum,p)=>sum+(p.offers||[]).length,0);
-    $('events-status').textContent=`Загружено ${n} событий с датами и ссылками.`+(persisted?' Сохранено.':' Для сохранения скачай каталог.');
-  }catch(err){$('events-status').textContent=eventController.signal.aborted?'Загрузка отменена. База сохранена.':'Не удалось загрузить события: '+err.message+' База сохранена.';}
-  finally{eventController=null;$('events-load').disabled=false;$('events-cancel').classList.add('hidden');}
-});
-$('reviews-load').addEventListener('click',async()=>{
-  if(reviewController)return;reviewController=new AbortController();$('reviews-load').disabled=true;$('reviews-cancel').classList.remove('hidden');
-  try{
-    const r=await loadKudaGoReviews({catalogue:state.catalogue,signal:reviewController.signal,
-      onProgress:x=>{$('reviews-status').textContent=`Проверено ${x.checked} из ${x.total} мест, получено ${x.reviewCount} отзывов…`;}});
-    const persisted=installCatalogue(r.catalogue);
-    $('reviews-status').textContent=`Проверено ${r.checkedPlaces} мест. Загружено ${r.reviewCount} текстов отзывов с датами и источниками.`
-      +(persisted?' Сохранено в этом браузере.':' Для сохранения скачай текущий каталог.');
-  }catch(err){$('reviews-status').textContent=reviewController.signal.aborted?'Загрузка отменена. Каталог сохранён.':err.message+' Каталог сохранён.';}
-  finally{reviewController=null;$('reviews-load').disabled=false;$('reviews-cancel').classList.add('hidden');}
-});
-$('api-load').addEventListener('click',async()=>{
-  if(apiController)return;
-  apiController=new AbortController();$('api-load').disabled=true;$('api-city').disabled=true;$('api-cancel').classList.remove('hidden');
-  $('api-status').textContent='Соединяемся с KudaGo. Текущая база сохранена.';
-  try{
-    const result=await loadKudaGo({city:$('api-city').value||'spb',signal:apiController.signal,
-      onProgress:p=>{$('api-status').textContent=`Страница ${p.page}: получено ${p.fetched} записей из ${p.total}, пригодных карточек ${p.accepted}.`;}});
-    installCatalogue(result.catalogue);
-    const closed=new Set(result.closedIds);for(const p of state.catalogue.places)if(closed.has(p.id)||closed.has('kudago:'+p.provider_ids?.kudago))p.status='closed';
-    const persisted=persistCatalogue();renderAll();
-    $('api-status').textContent=`Получено ${result.catalogue.places.length} карточек. В базе ${state.catalogue.places.length}.`
-      +(result.truncated?' Достигнут лимит 10 страниц; это часть каталога источника.':'')
-      +(persisted?' Сохранено в этом браузере.':' Для сохранения скачай текущий каталог.')
-      +' Описания учитываются в поиске. Тексты отзывов загружаются через GitHub или файл каталога.';
-  }catch(err){
-    $('api-status').textContent=apiController.signal.aborted?'Загрузка отменена. База сохранена.':
-      'Загрузка не выполнена: '+err.message+' Текущая база сохранена. При недоступности API в браузере можно загрузить файл, полученный по инструкции в исходном коде.';
-  }finally{apiController=null;$('api-load').disabled=false;$('api-city').disabled=false;$('api-cancel').classList.add('hidden');}
-});
 
 try {
-  const response=await fetch('places.json');if(!response.ok)throw new Error('Не удалось загрузить каталог');
+  const response=await fetch('places.json?v=20261012');if(!response.ok)throw new Error('Не удалось загрузить каталог');
   state.baseline=validateCatalogue(await response.json());
   const cached=load('kuda.catalogue',null);try{state.catalogue=cached?mergeCatalogues(state.baseline,validateCatalogue(cached)):state.baseline;}catch{state.catalogue=state.baseline;}
+  try{state.catalogue=applyAdminDrafts(state.catalogue,load(ADMIN_DRAFT_KEY,null));}catch{toast('Черновики редактора не удалось прочитать. Опубликованный каталог доступен.');}
   syncCities();
   for(const [value,label] of Object.entries(categories)){const option=document.createElement('option');option.value=value;option.textContent=label;$('category').append(option);}
   for(const [id,values] of [['mood',moods],['company',companies]])for(const [value,label] of Object.entries(values)){const option=document.createElement('option');option.value=value;option.textContent=label;$(id).append(option);}
   const initialQuery=window.location?.href?new URL(window.location.href).searchParams.get('query'):null;
   if(initialQuery){$('query').value=initialQuery.slice(0,1000);syncTextContext();}
+  $('admin-link').classList.toggle('hidden',!window.location?.hostname?.endsWith('.chatgpt.site'));
   renderAll();
   const tg=window.Telegram?.WebApp;if(tg?.initData){tg.ready();tg.expand();}
   const link=linkedPlace({href:window.location?.href,startParam:tg?.initDataUnsafe?.start_param||''});

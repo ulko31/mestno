@@ -1,4 +1,5 @@
 const safe=s=>{try{const u=new URL(s);return /^https?:$/.test(u.protocol)&&!u.username&&!u.password;}catch{return false;}};
+export const activityKeys=['workshops','pottery','painting','cooking','improv','book_club','board_games','rpg','war_games','speaking_club','english_club','french_club','spanish_club','korean_club','german_club','italian_club','sign_club','meetups','dance','sports','candles','perfume','mosaic','tufting','resin','crafts'];
 export function cityDate(value=new Date()){
   return new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Moscow',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date(value));
 }
@@ -23,8 +24,9 @@ export function currentOffers(place,today=new Date()){
 export function offersFor(place,{needs=[],company='',query='',today=new Date()}={}){
   const day=requestedDate(query,today);
   return currentOffers(place,today).filter(e=>{
-    if(company==='new_people'&&e.format!=='open_group')return false;
-    const requested=needs.filter(k=>['workshops','pottery','painting','cooking','improv','book_club','board_games','rpg','war_games','speaking_club','english_club','meetups','dance','sports'].includes(k));
+    if(e.audience==='children'&&company!=='children'&&!needs.includes('child_friendly'))return false;
+    if(company==='new_people'&&(e.format!=='open_group'||e.audience==='children'))return false;
+    const requested=needs.filter(k=>activityKeys.includes(k));
     if(requested.some(k=>!(e.activities||[]).includes(k)))return false;
     if(day&&e.starts_at&&(e.is_continuous?day<cityDate(e.starts_at)||day>cityDate(e.ends_at):cityDate(e.starts_at)!==day))return false;
     return true;

@@ -1,0 +1,360 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-11T22:30:45.987195+00:00",
+  "places": [
+    {
+      "id": "research:jaime-lab",
+      "title": "J’aime LAB · парфюмерная студия",
+      "address": "Тамбовская улица, 11, 2-й этаж",
+      "city": "Санкт-Петербург",
+      "category": "activity",
+      "lat": null,
+      "lon": null,
+      "sources": [
+        {
+          "url": "https://jaimelab.ru/",
+          "label": "Организатор",
+          "kind": "official",
+          "retrieved_at": "2026-10-11T22:30:45.987195+00:00",
+          "license": "Fact-only reference; original summary"
+        }
+      ],
+      "features": [],
+      "documents": [],
+      "notes": "Студия создания ароматов. Общий урок открыт для отдельных участников; индивидуальный и парный форматы записываются отдельно.",
+      "offers": [
+        {
+          "id": "jaime-group",
+          "title": "Создание парфюма в общей группе",
+          "description": "Сбор собственного аромата и флакон 10 мл. Обычно по выходным, дата по записи.",
+          "activities": [
+            "workshops",
+            "perfume"
+          ],
+          "format": "open_group",
+          "source_url": "https://jaimelab.ru/",
+          "booking_url": "https://jaimelab.ru/",
+          "checked_at": "2026-10-11T22:30:45.987195+00:00",
+          "price": {
+            "amount": 3500,
+            "currency": "RUB",
+            "scope": "visit",
+            "kind": "admission",
+            "label": "Создание парфюма в общей группе",
+            "source_url": "https://jaimelab.ru/",
+            "checked_at": "2026-10-11T22:30:45.987195+00:00"
+          }
+        },
+        {
+          "id": "jaime-individual",
+          "title": "Индивидуальное создание парфюма",
+          "description": "Личная работа с парфюмером для одного участника.",
+          "activities": [
+            "workshops",
+            "perfume"
+          ],
+          "format": "individual",
+          "source_url": "https://jaimelab.ru/",
+          "booking_url": "https://jaimelab.ru/",
+          "checked_at": "2026-10-11T22:30:45.987195+00:00",
+          "price": {
+            "amount": 6000,
+            "currency": "RUB",
+            "scope": "visit",
+            "kind": "admission",
+            "label": "Индивидуальное создание парфюма",
+            "source_url": "https://jaimelab.ru/",
+            "checked_at": "2026-10-11T22:30:45.987195+00:00"
+          }
+        },
+        {
+          "id": "jaime-couple",
+          "title": "Создание парфюма вдвоём",
+          "description": "Закрытый парный формат с двумя флаконами.",
+          "activities": [
+            "workshops",
+            "perfume"
+          ],
+          "format": "private",
+          "source_url": "https://jaimelab.ru/",
+          "booking_url": "https://jaimelab.ru/",
+          "checked_at": "2026-10-11T22:30:45.987195+00:00",
+          "price": null,
+          "price_note": "8000 ₽ за двоих; это цена всей пары, а не одного участника."
+        }
+      ],
+      "prices": [],
+      "status": "catalogue",
+      "updated_at": "2026-10-11T22:30:45.987195+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false
+    },
+    {
+      "id": "research:artista-handmade",
+      "title": "Артиста Handmade · Рубинштейна",
+      "address": "улица Рубинштейна, 23, домофон 102",
+      "city": "Санкт-Петербург",
+      "category": "activity",
+      "lat": null,
+      "lon": null,
+      "sources": [
+        {
+          "url": "https://artistastudio.ru/handmade/",
+          "label": "Организатор",
+          "kind": "official",
+          "retrieved_at": "2026-10-11T22:30:45.987195+00:00",
+          "license": "Fact-only reference; original summary"
+        }
+      ],
+      "features": [],
+      "documents": [],
+      "notes": "Прикладное творчество в группах для начинающих. Свежая страница указывает Рубинштейна, 23. Предоплата 1000 ₽ не равна полной цене занятия.",
+      "offers": [
+        {
+          "id": "artista-handmade-resin",
+          "title": "Картина из эпоксидной смолы",
+          "description": "Материалы и работа с мастером по программе студии. Дату и полную стоимость подтверждает организатор.",
+          "activities": [
+            "workshops",
+            "resin"
+          ],
+          "format": "open_group",
+          "source_url": "https://artistastudio.ru/handmade/",
+          "booking_url": "https://artistastudio.ru/handmade/",
+          "checked_at": "2026-10-11T22:30:45.987195+00:00",
+          "price": null,
+          "requirements": "Предоплата 1000 ₽ — только часть стоимости; полный бюджет уточни при записи."
+        },
+        {
+          "id": "artista-handmade-candles",
+          "title": "Создание ароматической свечи",
+          "description": "Материалы и работа с мастером по программе студии. Дату и полную стоимость подтверждает организатор.",
+          "activities": [
+            "workshops",
+            "candles"
+          ],
+          "format": "open_group",
+          "source_url": "https://artistastudio.ru/handmade/",
+          "booking_url": "https://artistastudio.ru/handmade/",
+          "checked_at": "2026-10-11T22:30:45.987195+00:00",
+          "price": null,
+          "requirements": "Предоплата 1000 ₽ — только часть стоимости; полный бюджет уточни при записи."
+        },
+        {
+          "id": "artista-handmade-mosaic",
+          "title": "Мозаика своими руками",
+          "description": "Материалы и работа с мастером по программе студии. Дату и полную стоимость подтверждает организатор.",
+          "activities": [
+            "workshops",
+            "mosaic"
+          ],
+          "format": "open_group",
+          "source_url": "https://artistastudio.ru/handmade/",
+          "booking_url": "https://artistastudio.ru/handmade/",
+          "checked_at": "2026-10-11T22:30:45.987195+00:00",
+          "price": null,
+          "requirements": "Предоплата 1000 ₽ — только часть стоимости; полный бюджет уточни при записи."
+        },
+        {
+          "id": "artista-handmade-perfume",
+          "title": "Составление аромата",
+          "description": "Материалы и работа с мастером по программе студии. Дату и полную стоимость подтверждает организатор.",
+          "activities": [
+            "workshops",
+            "perfume"
+          ],
+          "format": "open_group",
+          "source_url": "https://artistastudio.ru/handmade/",
+          "booking_url": "https://artistastudio.ru/handmade/",
+          "checked_at": "2026-10-11T22:30:45.987195+00:00",
+          "price": null,
+          "requirements": "Предоплата 1000 ₽ — только часть стоимости; полный бюджет уточни при записи."
+        },
+        {
+          "id": "artista-handmade-tufting",
+          "title": "Создание ковра в технике тафтинга",
+          "description": "Материалы и работа с мастером по программе студии. Дату и полную стоимость подтверждает организатор.",
+          "activities": [
+            "workshops",
+            "tufting"
+          ],
+          "format": "open_group",
+          "source_url": "https://artistastudio.ru/handmade/",
+          "booking_url": "https://artistastudio.ru/handmade/",
+          "checked_at": "2026-10-11T22:30:45.987195+00:00",
+          "price": null,
+          "requirements": "Предоплата 1000 ₽ — только часть стоимости; полный бюджет уточни при записи."
+        },
+        {
+          "id": "artista-handmade-florarium",
+          "title": "Создание флорариума",
+          "description": "Материалы и работа с мастером по программе студии. Дату и полную стоимость подтверждает организатор.",
+          "activities": [
+            "workshops",
+            "crafts"
+          ],
+          "format": "open_group",
+          "source_url": "https://artistastudio.ru/handmade/",
+          "booking_url": "https://artistastudio.ru/handmade/",
+          "checked_at": "2026-10-11T22:30:45.987195+00:00",
+          "price": null,
+          "requirements": "Предоплата 1000 ₽ — только часть стоимости; полный бюджет уточни при записи."
+        }
+      ],
+      "prices": [],
+      "status": "catalogue",
+      "updated_at": "2026-10-11T22:30:45.987195+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false
+    },
+    {
+      "id": "research:fiery-history",
+      "title": "Хроники Огненной Истории · музей свечей",
+      "address": "набережная Крюкова канала, 7/2",
+      "city": "Санкт-Петербург",
+      "category": "activity",
+      "lat": null,
+      "lon": null,
+      "sources": [
+        {
+          "url": "https://fieryhistory.ru/events",
+          "label": "Организатор",
+          "kind": "official",
+          "retrieved_at": "2026-10-11T22:30:45.987195+00:00",
+          "license": "Fact-only reference; original summary"
+        }
+      ],
+      "features": [],
+      "documents": [],
+      "notes": "Свечеварение при музее, занятия в малых группах. Во время застывания изделия можно осмотреть экспозицию.",
+      "offers": [
+        {
+          "id": "fiery-candle",
+          "title": "Свечеварение в группе при музее",
+          "description": "Создание свечи из воска и ароматических компонентов в группе 6–8 участников.",
+          "activities": [
+            "workshops",
+            "candles"
+          ],
+          "format": "open_group",
+          "source_url": "https://fieryhistory.ru/events",
+          "booking_url": "https://fieryhistory.ru/events",
+          "checked_at": "2026-10-11T22:30:45.987195+00:00",
+          "price": null
+        }
+      ],
+      "prices": [],
+      "status": "catalogue",
+      "updated_at": "2026-10-11T22:30:45.987195+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false
+    },
+    {
+      "id": "research:open-living",
+      "title": "Открытая гостиная · бесплатная рабочая зона",
+      "address": "Литейный проспект, 17–19",
+      "city": "Санкт-Петербург",
+      "category": "library",
+      "lat": null,
+      "lon": null,
+      "sources": [
+        {
+          "url": "https://lermontovka-spb.ru/center/otkrytaya-gostinaya/",
+          "label": "Организатор",
+          "kind": "official",
+          "retrieved_at": "2026-10-11T22:30:45.987195+00:00",
+          "license": "Fact-only reference; original summary"
+        }
+      ],
+      "features": [
+        {
+          "key": "laptop_work",
+          "value": true,
+          "status": "documented",
+          "checked_at": "2026-10-11T22:30:45.987195+00:00",
+          "source_url": "https://lermontovka-spb.ru/center/otkrytaya-gostinaya/",
+          "scope": "workspace"
+        },
+        {
+          "key": "free_workspace",
+          "value": true,
+          "status": "documented",
+          "checked_at": "2026-10-11T22:30:45.987195+00:00",
+          "source_url": "https://lermontovka-spb.ru/center/otkrytaya-gostinaya/",
+          "scope": "workspace"
+        }
+      ],
+      "documents": [],
+      "notes": "Бесплатная коворкинг-зона на первом этаже особняка Мусиных-Пушкиных. Можно работать с ноутбуком; часы библиотеки проверь перед визитом.",
+      "offers": [],
+      "prices": [
+        {
+          "amount": 0,
+          "currency": "RUB",
+          "scope": "visit",
+          "kind": "workspace",
+          "label": "Рабочая зона",
+          "source_url": "https://lermontovka-spb.ru/center/otkrytaya-gostinaya/",
+          "checked_at": "2026-10-11T22:30:45.987195+00:00",
+          "for_needs": [
+            "laptop_work"
+          ]
+        }
+      ],
+      "status": "catalogue",
+      "updated_at": "2026-10-11T22:30:45.987195+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false
+    },
+    {
+      "id": "research:mo-parfum",
+      "title": "MO PARFUM · авторская парфюмерия",
+      "address": "набережная Макарова, 60/1, помещение 454Н",
+      "city": "Санкт-Петербург",
+      "category": "activity",
+      "lat": null,
+      "lon": null,
+      "sources": [
+        {
+          "url": "https://moparfum.com/master-klassy",
+          "label": "Организатор",
+          "kind": "official",
+          "retrieved_at": "2026-10-11T22:38:55.073733+00:00",
+          "license": "Fact-only reference; original summary"
+        }
+      ],
+      "features": [],
+      "documents": [],
+      "notes": "Создание духов в мини-группе до восьми участников. Запись по расписанию студии.",
+      "offers": [
+        {
+          "id": "mo-parfum-group",
+          "title": "Создание авторского парфюма в мини-группе",
+          "description": "Занятие с парфюмером в группе до восьми человек.",
+          "activities": [
+            "workshops",
+            "perfume"
+          ],
+          "format": "open_group",
+          "source_url": "https://moparfum.com/master-klassy",
+          "booking_url": "https://moparfum.com/master-klassy",
+          "checked_at": "2026-10-11T22:38:55.073733+00:00",
+          "price": {
+            "amount": 8500,
+            "currency": "RUB",
+            "scope": "visit",
+            "kind": "admission",
+            "label": "Создание авторского парфюма в мини-группе",
+            "source_url": "https://moparfum.com/master-klassy",
+            "checked_at": "2026-10-11T22:38:55.073733+00:00"
+          }
+        }
+      ],
+      "prices": [],
+      "status": "catalogue",
+      "updated_at": "2026-10-11T22:38:55.073733+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false
+    }
+  ]
+}

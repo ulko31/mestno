@@ -38,7 +38,7 @@ export function createBot({catalogue,miniAppUrl,now=()=>Date.now(),allowedUserId
     }
     session.expires=time+TTL;sessions.set(chatId,session);
     const result=searchPlaces(catalogue.places,{query:session.query,city:session.city,hideLandmarks:true,
-      includeUnknownPrices:false,today:new Date(time),location:session.location,radius:session.location?5:null});
+      includeUnknownPrices:true,today:new Date(time),location:session.location,radius:session.location?5:null});
     const choices=[...result.results,...result.alternatives].slice(0,3),messages=[];
     if(!choices.length){
       let reason='Подходящих вариантов с известными условиями пока нет.';

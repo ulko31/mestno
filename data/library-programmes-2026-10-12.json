@@ -1,0 +1,985 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-12T01:15:09.736742+03:00",
+  "source_url": "https://lermontovka-spb.ru/events/",
+  "places": [
+    {
+      "id": "lermontovka:library/biblioteka-izmaylovskaya",
+      "title": "Библиотека Измайловская",
+      "address": "пр. Измайловский, д.16/30 Вход со стороны ул. 7-ая Красноармейская, д. 30 (вход под арку, домофон «Библиотека»)",
+      "city": "Санкт-Петербург",
+      "category": "library",
+      "lat": 59.911448,
+      "lon": 30.308816,
+      "coordinate_source_url": "https://lermontovka-spb.ru/events/13_10_26_master-klass-po-sozdaniyu-yelochnykh-igrushek-proekt-vne-polki/",
+      "sources": [
+        {
+          "url": "https://lermontovka-spb.ru/library/biblioteka-izmaylovskaya/",
+          "label": "Библиотека",
+          "kind": "official",
+          "retrieved_at": "2026-10-12T01:15:09.736742+03:00"
+        }
+      ],
+      "features": [],
+      "documents": [],
+      "notes": "Библиотечная площадка с опубликованными встречами и занятиями. Дату, уровень и регистрацию смотри в программе.",
+      "offers": [
+        {
+          "id": "lermontovka:events/13_10_26_master-klass-po-sozdaniyu-yelochnykh-igrushek-proekt-vne-polki",
+          "title": "Мастер класс по созданию ёлочных игрушек/Проект «Вне полки»",
+          "description": "Творческое занятие по опубликованной программе.",
+          "activities": [
+            "workshops"
+          ],
+          "format": "open_group",
+          "audience": "general",
+          "source_url": "https://lermontovka-spb.ru/events/13_10_26_master-klass-po-sozdaniyu-yelochnykh-igrushek-proekt-vne-polki/",
+          "booking_url": "https://lermontovka-spb.ru/events/13_10_26_master-klass-po-sozdaniyu-yelochnykh-igrushek-proekt-vne-polki/",
+          "checked_at": "2026-10-12T01:15:09.736742+03:00",
+          "starts_at": "2026-10-13T18:00:00+03:00",
+          "ends_at": "2026-10-13T20:30:00+03:00",
+          "price": null,
+          "requirements": "Возраст 6+."
+        },
+        {
+          "id": "lermontovka:events/17_10_26_seriya-master-klassov-po-sozdaniyu-zinov-i-fotoknig-s-olegom-kolimbetom-",
+          "title": "Серия мастер-классов по созданию зинов и фотокниг с Олегом Колимбетом",
+          "description": "Творческое занятие по опубликованной программе.",
+          "activities": [
+            "workshops"
+          ],
+          "format": "open_group",
+          "audience": "general",
+          "source_url": "https://lermontovka-spb.ru/events/17_10_26_seriya-master-klassov-po-sozdaniyu-zinov-i-fotoknig-s-olegom-kolimbetom-/",
+          "booking_url": "https://lermontovka-spb.ru/events/17_10_26_seriya-master-klassov-po-sozdaniyu-zinov-i-fotoknig-s-olegom-kolimbetom-/",
+          "checked_at": "2026-10-12T01:15:09.736742+03:00",
+          "starts_at": "2026-10-17T16:00:00+03:00",
+          "ends_at": "2026-10-17T20:00:00+03:00",
+          "price": null,
+          "requirements": "Возраст 16+."
+        },
+        {
+          "id": "lermontovka:events/23_10_26_dramklass-kak-napisat-pesu-master-klass-prakticheskoe-zanyatie-festival-literaturnykh-teatrov-teatr-",
+          "title": "Драмкласс. Как написать пьесу: мастер класс – практическое занятие /Фестиваль литературных театров «Театр+»",
+          "description": "Творческое занятие по опубликованной программе.",
+          "activities": [
+            "workshops"
+          ],
+          "format": "open_group",
+          "audience": "general",
+          "source_url": "https://lermontovka-spb.ru/events/23_10_26_dramklass-kak-napisat-pesu-master-klass-prakticheskoe-zanyatie-festival-literaturnykh-teatrov-teatr-/",
+          "booking_url": "https://lermontovka-spb.ru/events/23_10_26_dramklass-kak-napisat-pesu-master-klass-prakticheskoe-zanyatie-festival-literaturnykh-teatrov-teatr-/",
+          "checked_at": "2026-10-12T01:15:09.736742+03:00",
+          "starts_at": "2026-10-23T18:00:00+03:00",
+          "ends_at": "2026-10-23T19:00:00+03:00",
+          "price": null,
+          "requirements": ""
+        }
+      ],
+      "prices": [],
+      "status": "catalogue",
+      "updated_at": "2026-10-12T01:15:09.736742+03:00",
+      "is_landmark": false,
+      "discovery_priority": 5
+    },
+    {
+      "id": "lermontovka:library/biblioteka-im-k-a-timiryazeva",
+      "title": "Библиотека им. К.А.Тимирязева",
+      "address": "ул. Шкапина, д. 6",
+      "city": "Санкт-Петербург",
+      "category": "library",
+      "lat": 59.907622,
+      "lon": 30.297021,
+      "coordinate_source_url": "https://lermontovka-spb.ru/events/13_10_26_razgovornyy-klub-russkogo-zhestovogo-yazyka-tikhoe-mesto/",
+      "sources": [
+        {
+          "url": "https://lermontovka-spb.ru/library/biblioteka-im-k-a-timiryazeva/",
+          "label": "Библиотека",
+          "kind": "official",
+          "retrieved_at": "2026-10-12T01:15:09.736742+03:00"
+        }
+      ],
+      "features": [],
+      "documents": [],
+      "notes": "Библиотечная площадка с опубликованными встречами и занятиями. Дату, уровень и регистрацию смотри в программе.",
+      "offers": [
+        {
+          "id": "lermontovka:events/13_10_26_razgovornyy-klub-russkogo-zhestovogo-yazyka-tikhoe-mesto",
+          "title": "Разговорный клуб русского жестового языка «Тихое место»",
+          "description": "Разговорная практика в группе.",
+          "activities": [
+            "speaking_club",
+            "sign_club"
+          ],
+          "format": "open_group",
+          "audience": "general",
+          "source_url": "https://lermontovka-spb.ru/events/13_10_26_razgovornyy-klub-russkogo-zhestovogo-yazyka-tikhoe-mesto/",
+          "booking_url": "https://lermontovka-spb.ru/events/13_10_26_razgovornyy-klub-russkogo-zhestovogo-yazyka-tikhoe-mesto/",
+          "checked_at": "2026-10-12T01:15:09.736742+03:00",
+          "starts_at": "2026-10-13T18:30:00+03:00",
+          "ends_at": "2026-10-13T19:30:00+03:00",
+          "price": null,
+          "requirements": "Нужна предварительная регистрация по ссылке организатора. Возраст 16+."
+        },
+        {
+          "id": "lermontovka:events/14_10_26_knizhnyy-klub-nastroyshchik",
+          "title": "Книжный клуб «Настройщик»",
+          "description": "Совместное обсуждение литературы.",
+          "activities": [
+            "book_club"
+          ],
+          "format": "open_group",
+          "audience": "general",
+          "source_url": "https://lermontovka-spb.ru/events/14_10_26_knizhnyy-klub-nastroyshchik/",
+          "booking_url": "https://lermontovka-spb.ru/events/14_10_26_knizhnyy-klub-nastroyshchik/",
+          "checked_at": "2026-10-12T01:15:09.736742+03:00",
+          "starts_at": "2026-10-14T18:30:00+03:00",
+          "ends_at": "2026-10-14T19:55:00+03:00",
+          "price": null,
+          "requirements": "Нужна предварительная регистрация по ссылке организатора. Возраст 18+."
+        },
+        {
+          "id": "lermontovka:events/24_10_26_master-klass-tosenkye-i-drugie-yaponskie-igry-epokhi-edo",
+          "title": "Мастер-класс «Тосэнкё и другие японские игры эпохи Эдо»",
+          "description": "Творческое занятие по опубликованной программе.",
+          "activities": [
+            "workshops"
+          ],
+          "format": "open_group",
+          "audience": "general",
+          "source_url": "https://lermontovka-spb.ru/events/24_10_26_master-klass-tosenkye-i-drugie-yaponskie-igry-epokhi-edo/",
+          "booking_url": "https://lermontovka-spb.ru/events/24_10_26_master-klass-tosenkye-i-drugie-yaponskie-igry-epokhi-edo/",
+          "checked_at": "2026-10-12T01:15:09.736742+03:00",
+          "starts_at": "2026-10-24T12:30:00+03:00",
+          "ends_at": "2026-10-24T15:30:00+03:00",
+          "price": null,
+          "requirements": "Нужна предварительная регистрация по ссылке организатора. Возраст 12+."
+        },
+        {
+          "id": "lermontovka:events/27_10_26_razgovornyy-klub-russkogo-zhestovogo-yazyka-tikhoe-mesto",
+          "title": "Разговорный клуб русского жестового языка «Тихое место»",
+          "description": "Разговорная практика в группе.",
+          "activities": [
+            "speaking_club",
+            "sign_club"
+          ],
+          "format": "open_group",
+          "audience": "general",
+          "source_url": "https://lermontovka-spb.ru/events/27_10_26_razgovornyy-klub-russkogo-zhestovogo-yazyka-tikhoe-mesto/",
+          "booking_url": "https://lermontovka-spb.ru/events/27_10_26_razgovornyy-klub-russkogo-zhestovogo-yazyka-tikhoe-mesto/",
+          "checked_at": "2026-10-12T01:15:09.736742+03:00",
+          "starts_at": "2026-10-27T18:30:00+03:00",
+          "ends_at": "2026-10-27T19:30:00+03:00",
+          "price": null,
+          "requirements": "Нужна предварительная регистрация по ссылке организатора. Возраст 16+."
+        },
+        {
+          "id": "lermontovka:events/29_10_26_vstrecha-razgovornogo-kluba-yaponskogo-yazyka",
+          "title": "Встреча разговорного клуба японского языка",
+          "description": "Разговорная практика в группе.",
+          "activities": [
+            "speaking_club"
+          ],
+          "format": "open_group",
+          "audience": "general",
+          "source_url": "https://lermontovka-spb.ru/events/29_10_26_vstrecha-razgovornogo-kluba-yaponskogo-yazyka/",
+          "booking_url": "https://lermontovka-spb.ru/events/29_10_26_vstrecha-razgovornogo-kluba-yaponskogo-yazyka/",
+          "checked_at": "2026-10-12T01:15:09.736742+03:00",
+          "starts_at": "2026-10-29T18:30:00+03:00",
+          "ends_at": "2026-10-29T19:45:00+03:00",
+          "price": null,
+          "requirements": "Нужна предварительная регистрация по ссылке организатора. Возраст 12+."
+        }
+      ],
+      "prices": [],
+      "status": "catalogue",
+      "updated_at": "2026-10-12T01:15:09.736742+03:00",
+      "is_landmark": false,
+      "discovery_priority": 5
+    },
+    {
+      "id": "lermontovka:library/biblioteka-na-stremyannoy",
+      "title": "Библиотека «На Стремянной»",
+      "address": "Стремянная ул., д. 20",
+      "city": "Санкт-Петербург",
+      "category": "library",
+      "lat": 59.930863,
+      "lon": 30.353624,
+      "coordinate_source_url": "https://lermontovka-spb.ru/events/14_10_26_master-klass-ko-dnyu-lermontova-gornyy-peyzazh/",
+      "sources": [
+        {
+          "url": "https://lermontovka-spb.ru/library/biblioteka-na-stremyannoy/",
+          "label": "Библиотека",
+          "kind": "official",
+          "retrieved_at": "2026-10-12T01:15:09.736742+03:00"
+        }
+      ],
+      "features": [],
+      "documents": [],
+      "notes": "Библиотечная площадка с опубликованными встречами и занятиями. Дату, уровень и регистрацию смотри в программе.",
+      "offers": [
+        {
+          "id": "lermontovka:events/14_10_26_master-klass-ko-dnyu-lermontova-gornyy-peyzazh",
+          "title": "Мастер-класс ко Дню Лермонтова «Горный пейзаж»",
+          "description": "Творческое занятие по опубликованной программе.",
+          "activities": [
+            "workshops"
+          ],
+          "format": "open_group",
+          "audience": "general",
+          "source_url": "https://lermontovka-spb.ru/events/14_10_26_master-klass-ko-dnyu-lermontova-gornyy-peyzazh/",
+          "booking_url": "https://lermontovka-spb.ru/events/14_10_26_master-klass-ko-dnyu-lermontova-gornyy-peyzazh/",
+          "checked_at": "2026-10-12T01:15:09.736742+03:00",
+          "starts_at": "2026-10-14T18:00:00+03:00",
+          "ends_at": "2026-10-14T19:30:00+03:00",
+          "price": null,
+          "requirements": "Нужна предварительная регистрация по ссылке организатора. Возраст 12+."
+        },
+        {
+          "id": "lermontovka:events/16_10_26_igroteka-na-stremyannoy-uno-",
+          "title": "Игротека «На Стремянной» «Уно»",
+          "description": "Настольная игра с участниками.",
+          "activities": [
+            "board_games"
+          ],
+          "format": "open_group",
+          "audience": "general",
+          "source_url": "https://lermontovka-spb.ru/events/16_10_26_igroteka-na-stremyannoy-uno-/",
+          "booking_url": "https://lermontovka-spb.ru/events/16_10_26_igroteka-na-stremyannoy-uno-/",
+          "checked_at": "2026-10-12T01:15:09.736742+03:00",
+          "starts_at": "2026-10-16T18:00:00+03:00",
+          "ends_at": "2026-10-16T19:30:00+03:00",
+          "price": {
+            "amount": 0,
+            "currency": "RUB",
+            "scope": "visit",
+            "kind": "admission",
+            "source_url": "https://lermontovka-spb.ru/events/16_10_26_igroteka-na-stremyannoy-uno-/",
+            "checked_at": "2026-10-12T01:15:09.736742+03:00",
+            "label": "Участие в библиотечной встрече"
+          },
+          "requirements": "Нужна предварительная регистрация по ссылке организатора. Возраст 12+."
+        },
+        {
+          "id": "lermontovka:events/17_10_26_%20razgovornyy-frantsuzskiy-klub-na-stremyannoy",
+          "title": "Разговорный французский клуб «На Стремянной»",
+          "description": "Разговорная практика в группе.",
+          "activities": [
+            "speaking_club",
+            "french_club"
+          ],
+          "format": "open_group",
+          "audience": "general",
+          "source_url": "https://lermontovka-spb.ru/events/17_10_26_%20razgovornyy-frantsuzskiy-klub-na-stremyannoy/",
+          "booking_url": "https://lermontovka-spb.ru/events/17_10_26_%20razgovornyy-frantsuzskiy-klub-na-stremyannoy/",
+          "checked_at": "2026-10-12T01:15:09.736742+03:00",
+          "starts_at": "2026-10-17T16:30:00+03:00",
+          "ends_at": "2026-10-17T17:30:00+03:00",
+          "price": {
+            "amount": 0,
+            "currency": "RUB",
+            "scope": "visit",
+            "kind": "admission",
+            "source_url": "https://lermontovka-spb.ru/events/17_10_26_%20razgovornyy-frantsuzskiy-klub-na-stremyannoy/",
+            "checked_at": "2026-10-12T01:15:09.736742+03:00",
+            "label": "Участие в библиотечной встрече"
+          },
+          "requirements": "Нужна предварительная регистрация по ссылке организатора. Возраст 16+."
+        },
+        {
+          "id": "lermontovka:events/20_10_26_ispanskiy-razgovornyy-klub-na-stremyannoy-",
+          "title": "Испанский разговорный клуб «На Стремянной»",
+          "description": "Разговорная практика в группе.",
+          "activities": [
+            "speaking_club",
+            "spanish_club"
+          ],
+          "format": "open_group",
+          "audience": "general",
+          "source_url": "https://lermontovka-spb.ru/events/20_10_26_ispanskiy-razgovornyy-klub-na-stremyannoy-/",
+          "booking_url": "https://lermontovka-spb.ru/events/20_10_26_ispanskiy-razgovornyy-klub-na-stremyannoy-/",
+          "checked_at": "2026-10-12T01:15:09.736742+03:00",
+          "starts_at": "2026-10-20T18:00:00+03:00",
+          "ends_at": "2026-10-20T19:00:00+03:00",
+          "price": {
+            "amount": 0,
+            "currency": "RUB",
+            "scope": "visit",
+            "kind": "admission",
+            "source_url": "https://lermontovka-spb.ru/events/20_10_26_ispanskiy-razgovornyy-klub-na-stremyannoy-/",
+            "checked_at": "2026-10-12T01:15:09.736742+03:00",
+            "label": "Участие в библиотечной встрече"
+          },
+          "requirements": "Нужна предварительная регистрация по ссылке организатора. Уровень языка: B1. Возраст 1+."
+        },
+        {
+          "id": "lermontovka:events/21_10_26_koreyskiy-razgovornyy-klub-na-stremyannoy",
+          "title": "Корейский разговорный клуб «На Стремянной»",
+          "description": "Разговорная практика в группе.",
+          "activities": [
+            "speaking_club",
+            "korean_club"
+          ],
+          "format": "open_group",
+          "audience": "general",
+          "source_url": "https://lermontovka-spb.ru/events/21_10_26_koreyskiy-razgovornyy-klub-na-stremyannoy/",
+          "booking_url": "https://lermontovka-spb.ru/events/21_10_26_koreyskiy-razgovornyy-klub-na-stremyannoy/",
+          "checked_at": "2026-10-12T01:15:09.736742+03:00",
+          "starts_at": "2026-10-21T18:40:00+03:00",
+          "ends_at": "2026-10-21T19:40:00+03:00",
+          "price": {
+            "amount": 0,
+            "currency": "RUB",
+            "scope": "visit",
+            "kind": "admission",
+            "source_url": "https://lermontovka-spb.ru/events/21_10_26_koreyskiy-razgovornyy-klub-na-stremyannoy/",
+            "checked_at": "2026-10-12T01:15:09.736742+03:00",
+            "label": "Участие в библиотечной встрече"
+          },
+          "requirements": "Нужна предварительная регистрация по ссылке организатора. Уровень языка: А1–А2. Возраст 12+."
+        },
+        {
+          "id": "lermontovka:events/23_10__26_igroteka-na-stremyannoy-karkasson-",
+          "title": "Игротека «На Стремянной» «Каркассон»",
+          "description": "Настольная игра с участниками.",
+          "activities": [
+            "board_games"
+          ],
+          "format": "open_group",
+          "audience": "general",
+          "source_url": "https://lermontovka-spb.ru/events/23_10__26_igroteka-na-stremyannoy-karkasson-/",
+          "booking_url": "https://lermontovka-spb.ru/events/23_10__26_igroteka-na-stremyannoy-karkasson-/",
+          "checked_at": "2026-10-12T01:15:09.736742+03:00",
+          "starts_at": "2026-10-23T18:00:00+03:00",
+          "ends_at": "2026-10-23T19:30:00+03:00",
+          "price": {
+            "amount": 0,
+            "currency": "RUB",
+            "scope": "visit",
+            "kind": "admission",
+            "source_url": "https://lermontovka-spb.ru/events/23_10__26_igroteka-na-stremyannoy-karkasson-/",
+            "checked_at": "2026-10-12T01:15:09.736742+03:00",
+            "label": "Участие в библиотечной встрече"
+          },
+          "requirements": "Нужна предварительная регистрация по ссылке организатора. Возраст 12+."
+        },
+        {
+          "id": "lermontovka:events/31_10_26_%20angliyskiy-razgovornyy-klub-na-stremyannoy",
+          "title": "Английский разговорный клуб «На Стремянной»",
+          "description": "Разговорная практика в группе.",
+          "activities": [
+            "speaking_club",
+            "english_club"
+          ],
+          "format": "open_group",
+          "audience": "general",
+          "source_url": "https://lermontovka-spb.ru/events/31_10_26_%20angliyskiy-razgovornyy-klub-na-stremyannoy/",
+          "booking_url": "https://lermontovka-spb.ru/events/31_10_26_%20angliyskiy-razgovornyy-klub-na-stremyannoy/",
+          "checked_at": "2026-10-12T01:15:09.736742+03:00",
+          "starts_at": "2026-10-31T13:30:00+03:00",
+          "ends_at": "2026-10-31T15:00:00+03:00",
+          "price": {
+            "amount": 0,
+            "currency": "RUB",
+            "scope": "visit",
+            "kind": "admission",
+            "source_url": "https://lermontovka-spb.ru/events/31_10_26_%20angliyskiy-razgovornyy-klub-na-stremyannoy/",
+            "checked_at": "2026-10-12T01:15:09.736742+03:00",
+            "label": "Участие в библиотечной встрече"
+          },
+          "requirements": "Нужна предварительная регистрация по ссылке организатора. Уровень языка: B2. Возраст 16+."
+        }
+      ],
+      "prices": [],
+      "status": "catalogue",
+      "updated_at": "2026-10-12T01:15:09.736742+03:00",
+      "is_landmark": false,
+      "discovery_priority": 5
+    },
+    {
+      "id": "lermontovka:library/biblioteka-bronnitskaya",
+      "title": "Библиотека Бронницкая",
+      "address": "ул. Бронницкая, д. 16 Вход со стороны Клинского пр., д. 17",
+      "city": "Санкт-Петербург",
+      "category": "library",
+      "lat": 59.915017,
+      "lon": 30.322598,
+      "coordinate_source_url": "https://lermontovka-spb.ru/events/16_10_2026_russkiy-gonkur-knizhnyy-klub-na-frantsuzskom-yazyke-b2-/",
+      "sources": [
+        {
+          "url": "https://lermontovka-spb.ru/library/biblioteka-bronnitskaya/",
+          "label": "Библиотека",
+          "kind": "official",
+          "retrieved_at": "2026-10-12T01:15:09.736742+03:00"
+        }
+      ],
+      "features": [],
+      "documents": [],
+      "notes": "Библиотечная площадка с опубликованными встречами и занятиями. Дату, уровень и регистрацию смотри в программе.",
+      "offers": [
+        {
+          "id": "lermontovka:events/16_10_2026_russkiy-gonkur-knizhnyy-klub-na-frantsuzskom-yazyke-b2-",
+          "title": "«Русский Гонкур»: книжный клуб на французском языке (B2)",
+          "description": "Совместное обсуждение литературы.",
+          "activities": [
+            "book_club",
+            "french_club"
+          ],
+          "format": "open_group",
+          "audience": "general",
+          "source_url": "https://lermontovka-spb.ru/events/16_10_2026_russkiy-gonkur-knizhnyy-klub-na-frantsuzskom-yazyke-b2-/",
+          "booking_url": "https://lermontovka-spb.ru/events/16_10_2026_russkiy-gonkur-knizhnyy-klub-na-frantsuzskom-yazyke-b2-/",
+          "checked_at": "2026-10-12T01:15:09.736742+03:00",
+          "starts_at": "2026-10-16T18:00:00+03:00",
+          "ends_at": "2026-10-16T19:30:00+03:00",
+          "price": null,
+          "requirements": "Нужна предварительная регистрация по ссылке организатора. Возраст 16+."
+        },
+        {
+          "id": "lermontovka:events/20_10_2026_%20razgovornyy-klub-frantsuzskogo-ugolka",
+          "title": "Разговорный клуб Французского уголка",
+          "description": "Разговорная практика в группе.",
+          "activities": [
+            "speaking_club",
+            "french_club"
+          ],
+          "format": "open_group",
+          "audience": "general",
+          "source_url": "https://lermontovka-spb.ru/events/20_10_2026_%20razgovornyy-klub-frantsuzskogo-ugolka/",
+          "booking_url": "https://lermontovka-spb.ru/events/20_10_2026_%20razgovornyy-klub-frantsuzskogo-ugolka/",
+          "checked_at": "2026-10-12T01:15:09.736742+03:00",
+          "starts_at": "2026-10-20T12:30:00+03:00",
+          "ends_at": "2026-10-20T13:45:00+03:00",
+          "price": {
+            "amount": 0,
+            "currency": "RUB",
+            "scope": "visit",
+            "kind": "admission",
+            "source_url": "https://lermontovka-spb.ru/events/20_10_2026_%20razgovornyy-klub-frantsuzskogo-ugolka/",
+            "checked_at": "2026-10-12T01:15:09.736742+03:00",
+            "label": "Участие в библиотечной встрече"
+          },
+          "requirements": "Нужна предварительная регистрация по ссылке организатора. Уровень языка: А2, B1, C1. Возраст 16+."
+        },
+        {
+          "id": "lermontovka:events/27_10_2026_%20knizhnyy-klub-s-psikhologom",
+          "title": "Книжный клуб с психологом",
+          "description": "Совместное обсуждение литературы.",
+          "activities": [
+            "book_club"
+          ],
+          "format": "open_group",
+          "audience": "general",
+          "source_url": "https://lermontovka-spb.ru/events/27_10_2026_%20knizhnyy-klub-s-psikhologom/",
+          "booking_url": "https://lermontovka-spb.ru/events/27_10_2026_%20knizhnyy-klub-s-psikhologom/",
+          "checked_at": "2026-10-12T01:15:09.736742+03:00",
+          "starts_at": "2026-10-27T17:00:00+03:00",
+          "ends_at": "2026-10-27T19:30:00+03:00",
+          "price": {
+            "amount": 0,
+            "currency": "RUB",
+            "scope": "visit",
+            "kind": "admission",
+            "source_url": "https://lermontovka-spb.ru/events/27_10_2026_%20knizhnyy-klub-s-psikhologom/",
+            "checked_at": "2026-10-12T01:15:09.736742+03:00",
+            "label": "Участие в библиотечной встрече"
+          },
+          "requirements": "Нужна предварительная регистрация по ссылке организатора. Возраст 16+."
+        }
+      ],
+      "prices": [],
+      "status": "catalogue",
+      "updated_at": "2026-10-12T01:15:09.736742+03:00",
+      "is_landmark": false,
+      "discovery_priority": 5
+    },
+    {
+      "id": "lermontovka:library/biblioteka-ekateringofskaya",
+      "title": "Библиотека Екатерингофская",
+      "address": "ул. Циолковского, д. 7",
+      "city": "Санкт-Петербург",
+      "category": "library",
+      "lat": 59.911561,
+      "lon": 30.285972,
+      "coordinate_source_url": "https://lermontovka-spb.ru/events/17_10_26_master-klass-tanets-renessansa-ot-taynykh-smyslov-k-pervym-shagam/",
+      "sources": [
+        {
+          "url": "https://lermontovka-spb.ru/library/biblioteka-ekateringofskaya/",
+          "label": "Библиотека",
+          "kind": "official",
+          "retrieved_at": "2026-10-12T01:15:09.736742+03:00"
+        }
+      ],
+      "features": [],
+      "documents": [],
+      "notes": "Библиотечная площадка с опубликованными встречами и занятиями. Дату, уровень и регистрацию смотри в программе.",
+      "offers": [
+        {
+          "id": "lermontovka:events/17_10_26_master-klass-tanets-renessansa-ot-taynykh-smyslov-k-pervym-shagam",
+          "title": "Мастер-класс «Танец Ренессанса: от тайных смыслов к первым шагам»",
+          "description": "Творческое занятие по опубликованной программе.",
+          "activities": [
+            "workshops"
+          ],
+          "format": "open_group",
+          "audience": "general",
+          "source_url": "https://lermontovka-spb.ru/events/17_10_26_master-klass-tanets-renessansa-ot-taynykh-smyslov-k-pervym-shagam/",
+          "booking_url": "https://lermontovka-spb.ru/events/17_10_26_master-klass-tanets-renessansa-ot-taynykh-smyslov-k-pervym-shagam/",
+          "checked_at": "2026-10-12T01:15:09.736742+03:00",
+          "starts_at": "2026-10-17T16:00:00+03:00",
+          "ends_at": "2026-10-17T17:00:00+03:00",
+          "price": null,
+          "requirements": "Возраст 12+."
+        },
+        {
+          "id": "lermontovka:events/24_10_26_master-klass-chaynyy-serviz-iz-yaichnykh-lotkov",
+          "title": "Мастер-класс «Чайный сервиз из яичных лотков»",
+          "description": "Творческое занятие по опубликованной программе.",
+          "activities": [
+            "workshops"
+          ],
+          "format": "open_group",
+          "audience": "general",
+          "source_url": "https://lermontovka-spb.ru/events/24_10_26_master-klass-chaynyy-serviz-iz-yaichnykh-lotkov/",
+          "booking_url": "https://lermontovka-spb.ru/events/24_10_26_master-klass-chaynyy-serviz-iz-yaichnykh-lotkov/",
+          "checked_at": "2026-10-12T01:15:09.736742+03:00",
+          "starts_at": "2026-10-24T12:00:00+03:00",
+          "ends_at": "2026-10-24T13:30:00+03:00",
+          "price": null,
+          "requirements": "Возраст 6+."
+        },
+        {
+          "id": "lermontovka:events/28_10_26_master-klass-srednevekovyy-initsial",
+          "title": "Мастер-класс «Средневековый инициал»",
+          "description": "Творческое занятие по опубликованной программе.",
+          "activities": [
+            "workshops"
+          ],
+          "format": "open_group",
+          "audience": "general",
+          "source_url": "https://lermontovka-spb.ru/events/28_10_26_master-klass-srednevekovyy-initsial/",
+          "booking_url": "https://lermontovka-spb.ru/events/28_10_26_master-klass-srednevekovyy-initsial/",
+          "checked_at": "2026-10-12T01:15:09.736742+03:00",
+          "starts_at": "2026-10-28T18:30:00+03:00",
+          "ends_at": "2026-10-28T19:45:00+03:00",
+          "price": null,
+          "requirements": "Возраст 12+."
+        }
+      ],
+      "prices": [],
+      "status": "catalogue",
+      "updated_at": "2026-10-12T01:15:09.736742+03:00",
+      "is_landmark": false,
+      "discovery_priority": 5
+    },
+    {
+      "id": "lermontovka:center/biblioteka-natsionalnykh-literatur",
+      "title": "Библиотека национальных литератур",
+      "address": "ул. Садовая, д. 33",
+      "city": "Санкт-Петербург",
+      "category": "library",
+      "lat": 59.928293,
+      "lon": 30.320809,
+      "coordinate_source_url": "https://lermontovka-spb.ru/events/20-10_26_marafon-master-klassov-v-chest-dnya-yazykov-narodov-rossii/",
+      "sources": [
+        {
+          "url": "https://lermontovka-spb.ru/center/biblioteka-natsionalnykh-literatur/",
+          "label": "Библиотека",
+          "kind": "official",
+          "retrieved_at": "2026-10-12T01:15:09.736742+03:00"
+        }
+      ],
+      "features": [],
+      "documents": [],
+      "notes": "Библиотечная площадка с опубликованными встречами и занятиями. Дату, уровень и регистрацию смотри в программе.",
+      "offers": [
+        {
+          "id": "lermontovka:events/20-10_26_marafon-master-klassov-v-chest-dnya-yazykov-narodov-rossii",
+          "title": "Марафон мастер-классов в честь Дня языков народов России",
+          "description": "Творческое занятие по опубликованной программе.",
+          "activities": [
+            "workshops"
+          ],
+          "format": "open_group",
+          "audience": "general",
+          "source_url": "https://lermontovka-spb.ru/events/20-10_26_marafon-master-klassov-v-chest-dnya-yazykov-narodov-rossii/",
+          "booking_url": "https://lermontovka-spb.ru/events/20-10_26_marafon-master-klassov-v-chest-dnya-yazykov-narodov-rossii/",
+          "checked_at": "2026-10-12T01:15:09.736742+03:00",
+          "starts_at": "2026-10-20T17:00:00+03:00",
+          "ends_at": "2026-10-20T20:00:00+03:00",
+          "price": {
+            "amount": 0,
+            "currency": "RUB",
+            "scope": "visit",
+            "kind": "admission",
+            "source_url": "https://lermontovka-spb.ru/events/20-10_26_marafon-master-klassov-v-chest-dnya-yazykov-narodov-rossii/",
+            "checked_at": "2026-10-12T01:15:09.736742+03:00",
+            "label": "Участие в библиотечной встрече"
+          },
+          "requirements": "Возраст 12+."
+        }
+      ],
+      "prices": [],
+      "status": "catalogue",
+      "updated_at": "2026-10-12T01:15:09.736742+03:00",
+      "is_landmark": false,
+      "discovery_priority": 5
+    },
+    {
+      "id": "lermontovka:library/detskaya-biblioteka",
+      "title": "Детская библиотека",
+      "address": "4-я Красноармейская ул., д. 13",
+      "city": "Санкт-Петербург",
+      "category": "library",
+      "lat": 59.914001,
+      "lon": 30.31241,
+      "coordinate_source_url": "https://lermontovka-spb.ru/events/20_10_26_master-klass-plastilinovoe-shosse/",
+      "sources": [
+        {
+          "url": "https://lermontovka-spb.ru/library/detskaya-biblioteka/",
+          "label": "Библиотека",
+          "kind": "official",
+          "retrieved_at": "2026-10-12T01:15:09.736742+03:00"
+        }
+      ],
+      "features": [],
+      "documents": [],
+      "notes": "Библиотечная площадка с опубликованными встречами и занятиями. Дату, уровень и регистрацию смотри в программе.",
+      "offers": [
+        {
+          "id": "lermontovka:events/20_10_26_master-klass-plastilinovoe-shosse",
+          "title": "Мастер-класс «Пластилиновое шоссе»",
+          "description": "Творческое занятие по опубликованной программе.",
+          "activities": [
+            "workshops",
+            "child_friendly"
+          ],
+          "format": "open_group",
+          "audience": "children",
+          "source_url": "https://lermontovka-spb.ru/events/20_10_26_master-klass-plastilinovoe-shosse/",
+          "booking_url": "https://lermontovka-spb.ru/events/20_10_26_master-klass-plastilinovoe-shosse/",
+          "checked_at": "2026-10-12T01:15:09.736742+03:00",
+          "starts_at": "2026-10-20T17:00:00+03:00",
+          "ends_at": "2026-10-20T18:00:00+03:00",
+          "price": null,
+          "requirements": "Возраст 6+."
+        },
+        {
+          "id": "lermontovka:events/27_10_26_master-klass-letuchaya-myshka-nochnaya-malyshka",
+          "title": "Мастер-класс «Летучая мышка – ночная малышка»",
+          "description": "Творческое занятие по опубликованной программе.",
+          "activities": [
+            "workshops",
+            "child_friendly"
+          ],
+          "format": "open_group",
+          "audience": "children",
+          "source_url": "https://lermontovka-spb.ru/events/27_10_26_master-klass-letuchaya-myshka-nochnaya-malyshka/",
+          "booking_url": "https://lermontovka-spb.ru/events/27_10_26_master-klass-letuchaya-myshka-nochnaya-malyshka/",
+          "checked_at": "2026-10-12T01:15:09.736742+03:00",
+          "starts_at": "2026-10-27T12:00:00+03:00",
+          "ends_at": "2026-10-27T13:00:00+03:00",
+          "price": null,
+          "requirements": "Возраст 6+."
+        },
+        {
+          "id": "lermontovka:events/28_10_26_%20master-klass-myagkie-istorii-khrabraya-ulitka",
+          "title": "Мастер-класс «Мягкие истории: храбрая улитка»",
+          "description": "Творческое занятие по опубликованной программе.",
+          "activities": [
+            "workshops",
+            "child_friendly"
+          ],
+          "format": "open_group",
+          "audience": "children",
+          "source_url": "https://lermontovka-spb.ru/events/28_10_26_%20master-klass-myagkie-istorii-khrabraya-ulitka/",
+          "booking_url": "https://lermontovka-spb.ru/events/28_10_26_%20master-klass-myagkie-istorii-khrabraya-ulitka/",
+          "checked_at": "2026-10-12T01:15:09.736742+03:00",
+          "starts_at": "2026-10-28T12:00:00+03:00",
+          "ends_at": "2026-10-28T13:00:00+03:00",
+          "price": null,
+          "requirements": "Возраст 6+."
+        },
+        {
+          "id": "lermontovka:events/29_10_26_master-klass-knizhnye-koty-pushistye-geroi",
+          "title": "Мастер-класс «Книжные коты – пушистые герои»",
+          "description": "Творческое занятие по опубликованной программе.",
+          "activities": [
+            "workshops",
+            "child_friendly"
+          ],
+          "format": "open_group",
+          "audience": "children",
+          "source_url": "https://lermontovka-spb.ru/events/29_10_26_master-klass-knizhnye-koty-pushistye-geroi/",
+          "booking_url": "https://lermontovka-spb.ru/events/29_10_26_master-klass-knizhnye-koty-pushistye-geroi/",
+          "checked_at": "2026-10-12T01:15:09.736742+03:00",
+          "starts_at": "2026-10-29T12:00:00+03:00",
+          "ends_at": "2026-10-29T13:00:00+03:00",
+          "price": null,
+          "requirements": "Возраст 6+."
+        }
+      ],
+      "prices": [],
+      "status": "catalogue",
+      "updated_at": "2026-10-12T01:15:09.736742+03:00",
+      "is_landmark": false,
+      "discovery_priority": 5
+    },
+    {
+      "id": "lermontovka:library/tsentralnaya-biblioteka-im-m-yu-lermontova",
+      "title": "Библиотека им. М.Ю. Лермонтова",
+      "address": "Литейный пр., д. 17-19",
+      "city": "Санкт-Петербург",
+      "category": "library",
+      "lat": 59.943629,
+      "lon": 30.348046,
+      "coordinate_source_url": "https://lermontovka-spb.ru/events/23_10_26_art-terapevticheskiy-master-klass-volshebnyy-sad/",
+      "sources": [
+        {
+          "url": "https://lermontovka-spb.ru/library/tsentralnaya-biblioteka-im-m-yu-lermontova/",
+          "label": "Библиотека",
+          "kind": "official",
+          "retrieved_at": "2026-10-12T01:15:09.736742+03:00"
+        }
+      ],
+      "features": [],
+      "documents": [],
+      "notes": "Библиотечная площадка с опубликованными встречами и занятиями. Дату, уровень и регистрацию смотри в программе.",
+      "offers": [
+        {
+          "id": "lermontovka:events/23_10_26_art-terapevticheskiy-master-klass-volshebnyy-sad",
+          "title": "Арт-терапевтический мастер-класс «Волшебный сад»",
+          "description": "Творческое занятие по опубликованной программе.",
+          "activities": [
+            "workshops"
+          ],
+          "format": "open_group",
+          "audience": "general",
+          "source_url": "https://lermontovka-spb.ru/events/23_10_26_art-terapevticheskiy-master-klass-volshebnyy-sad/",
+          "booking_url": "https://lermontovka-spb.ru/events/23_10_26_art-terapevticheskiy-master-klass-volshebnyy-sad/",
+          "checked_at": "2026-10-12T01:15:09.736742+03:00",
+          "starts_at": "2026-10-23T11:00:00+03:00",
+          "ends_at": "2026-10-23T14:30:00+03:00",
+          "price": null,
+          "requirements": "Нужна предварительная регистрация по ссылке организатора. Возраст 18+."
+        },
+        {
+          "id": "lermontovka:events/24_10_26_literaturnaya-vstrecha-knizhnogo-kluba-nastoyashcha-ya",
+          "title": "Литературная встреча книжного клуба «Настояща_Я»",
+          "description": "Совместное обсуждение литературы.",
+          "activities": [
+            "book_club"
+          ],
+          "format": "open_group",
+          "audience": "general",
+          "source_url": "https://lermontovka-spb.ru/events/24_10_26_literaturnaya-vstrecha-knizhnogo-kluba-nastoyashcha-ya/",
+          "booking_url": "https://lermontovka-spb.ru/events/24_10_26_literaturnaya-vstrecha-knizhnogo-kluba-nastoyashcha-ya/",
+          "checked_at": "2026-10-12T01:15:09.736742+03:00",
+          "starts_at": "2026-10-24T11:00:00+03:00",
+          "ends_at": "2026-10-24T12:30:00+03:00",
+          "price": null,
+          "requirements": "Нужна предварительная регистрация по ссылке организатора. Возраст 18+."
+        },
+        {
+          "id": "lermontovka:events/27_10_26_master-klass-po-loskutnomu-shityu-tekhnika-kreyzi-iz-polos",
+          "title": "Мастер-класс по лоскутному шитью «Техника „Крейзи\" из полос»",
+          "description": "Творческое занятие по опубликованной программе.",
+          "activities": [
+            "workshops"
+          ],
+          "format": "open_group",
+          "audience": "general",
+          "source_url": "https://lermontovka-spb.ru/events/27_10_26_master-klass-po-loskutnomu-shityu-tekhnika-kreyzi-iz-polos/",
+          "booking_url": "https://lermontovka-spb.ru/events/27_10_26_master-klass-po-loskutnomu-shityu-tekhnika-kreyzi-iz-polos/",
+          "checked_at": "2026-10-12T01:15:09.736742+03:00",
+          "starts_at": "2026-10-27T15:00:00+03:00",
+          "ends_at": "2026-10-27T16:30:00+03:00",
+          "price": null,
+          "requirements": "Нужна предварительная регистрация по ссылке организатора. Возраст 18+."
+        },
+        {
+          "id": "lermontovka:events/29_10_26_master-klass-po-pleteniyu",
+          "title": "Мастер-класс по плетению",
+          "description": "Творческое занятие по опубликованной программе.",
+          "activities": [
+            "workshops"
+          ],
+          "format": "open_group",
+          "audience": "general",
+          "source_url": "https://lermontovka-spb.ru/events/29_10_26_master-klass-po-pleteniyu/",
+          "booking_url": "https://lermontovka-spb.ru/events/29_10_26_master-klass-po-pleteniyu/",
+          "checked_at": "2026-10-12T01:15:09.736742+03:00",
+          "starts_at": "2026-10-29T11:00:00+03:00",
+          "ends_at": "2026-10-29T12:00:00+03:00",
+          "price": null,
+          "requirements": "Нужна предварительная регистрация по ссылке организатора. Возраст 18+."
+        },
+        {
+          "id": "lermontovka:events/30_10_26_master-klass-nichut-ne-strashno-",
+          "title": "Мастер-класс «Ничуть не страшно!»",
+          "description": "Творческое занятие по опубликованной программе.",
+          "activities": [
+            "workshops"
+          ],
+          "format": "open_group",
+          "audience": "general",
+          "source_url": "https://lermontovka-spb.ru/events/30_10_26_master-klass-nichut-ne-strashno-/",
+          "booking_url": "https://lermontovka-spb.ru/events/30_10_26_master-klass-nichut-ne-strashno-/",
+          "checked_at": "2026-10-12T01:15:09.736742+03:00",
+          "starts_at": "2026-10-30T11:00:00+03:00",
+          "ends_at": "2026-10-30T12:30:00+03:00",
+          "price": null,
+          "requirements": "Нужна предварительная регистрация по ссылке организатора. Возраст 18+."
+        }
+      ],
+      "prices": [],
+      "status": "catalogue",
+      "updated_at": "2026-10-12T01:15:09.736742+03:00",
+      "is_landmark": false,
+      "discovery_priority": 5
+    },
+    {
+      "id": "lermontovka:center/tsentr-britanskoy-knigi",
+      "title": "Центр Британской книги",
+      "address": "пр. Измайловский, д. 16/30 Вход со стороны ул. 7-я Красноармейская, д. 30 (вход под арку, звонок Библиотека)",
+      "city": "Санкт-Петербург",
+      "category": "library",
+      "lat": 59.911448,
+      "lon": 30.308816,
+      "coordinate_source_url": "https://lermontovka-spb.ru/events/28_10_26_lektsiya-praktikum-etika-prisutstviya-kak-byt-ryadom-kogda-slova-bessilny/",
+      "sources": [
+        {
+          "url": "https://lermontovka-spb.ru/center/tsentr-britanskoy-knigi/",
+          "label": "Библиотека",
+          "kind": "official",
+          "retrieved_at": "2026-10-12T01:15:09.736742+03:00"
+        }
+      ],
+      "features": [],
+      "documents": [],
+      "notes": "Библиотечная площадка с опубликованными встречами и занятиями. Дату, уровень и регистрацию смотри в программе.",
+      "offers": [
+        {
+          "id": "lermontovka:events/28_10_26_lektsiya-praktikum-etika-prisutstviya-kak-byt-ryadom-kogda-slova-bessilny",
+          "title": "Лекция практикум «Этика присутствия: как быть рядом, когда слова бессильны»",
+          "description": "Творческое занятие по опубликованной программе.",
+          "activities": [
+            "workshops"
+          ],
+          "format": "open_group",
+          "audience": "general",
+          "source_url": "https://lermontovka-spb.ru/events/28_10_26_lektsiya-praktikum-etika-prisutstviya-kak-byt-ryadom-kogda-slova-bessilny/",
+          "booking_url": "https://lermontovka-spb.ru/events/28_10_26_lektsiya-praktikum-etika-prisutstviya-kak-byt-ryadom-kogda-slova-bessilny/",
+          "checked_at": "2026-10-12T01:15:09.736742+03:00",
+          "starts_at": "2026-10-28T18:30:00+03:00",
+          "ends_at": "2026-10-28T20:00:00+03:00",
+          "price": null,
+          "requirements": "Нужна предварительная регистрация по ссылке организатора. Возраст 16+."
+        }
+      ],
+      "prices": [],
+      "status": "catalogue",
+      "updated_at": "2026-10-12T01:15:09.736742+03:00",
+      "is_landmark": false,
+      "discovery_priority": 5
+    },
+    {
+      "id": "lermontovka:library/biblioteka-semenovskaya",
+      "title": "Библиотека Семеновская",
+      "address": "Московский пр., д. 50",
+      "city": "Санкт-Петербург",
+      "category": "library",
+      "lat": 59.911098,
+      "lon": 30.319405,
+      "coordinate_source_url": "https://lermontovka-spb.ru/events/30_10_26_knizhnyy-klub-k4-kamera-obskura/",
+      "sources": [
+        {
+          "url": "https://lermontovka-spb.ru/library/biblioteka-semenovskaya/",
+          "label": "Библиотека",
+          "kind": "official",
+          "retrieved_at": "2026-10-12T01:15:09.736742+03:00"
+        }
+      ],
+      "features": [],
+      "documents": [],
+      "notes": "Библиотечная площадка с опубликованными встречами и занятиями. Дату, уровень и регистрацию смотри в программе.",
+      "offers": [
+        {
+          "id": "lermontovka:events/30_10_26_knizhnyy-klub-k4-kamera-obskura",
+          "title": "Книжный клуб «К4». «Камера обскура»",
+          "description": "Совместное обсуждение литературы.",
+          "activities": [
+            "book_club"
+          ],
+          "format": "open_group",
+          "audience": "general",
+          "source_url": "https://lermontovka-spb.ru/events/30_10_26_knizhnyy-klub-k4-kamera-obskura/",
+          "booking_url": "https://lermontovka-spb.ru/events/30_10_26_knizhnyy-klub-k4-kamera-obskura/",
+          "checked_at": "2026-10-12T01:15:09.736742+03:00",
+          "starts_at": "2026-10-30T18:00:00+03:00",
+          "ends_at": "2026-10-30T20:00:00+03:00",
+          "price": null,
+          "requirements": "Возраст 16+."
+        }
+      ],
+      "prices": [],
+      "status": "catalogue",
+      "updated_at": "2026-10-12T01:15:09.736742+03:00",
+      "is_landmark": false,
+      "discovery_priority": 5
+    },
+    {
+      "id": "seed:workshops",
+      "title": "Открытые мастерские",
+      "address": "Лиговский пр. д. 99 (отдельный вход с Лиговского пр., либо через библиотеку «Лиговская»)",
+      "city": "Санкт-Петербург",
+      "category": "library",
+      "lat": 59.922512,
+      "lon": 30.354774,
+      "coordinate_source_url": "https://lermontovka-spb.ru/events/31_10_26_chitatelskiy-klub-po-angliyski-/",
+      "sources": [
+        {
+          "url": "https://lermontovka-spb.ru/center/otkrytye-masterskie/",
+          "label": "Библиотека",
+          "kind": "official",
+          "retrieved_at": "2026-10-12T01:15:09.736742+03:00"
+        }
+      ],
+      "features": [],
+      "documents": [],
+      "notes": "Библиотечная площадка с опубликованными встречами и занятиями. Дату, уровень и регистрацию смотри в программе.",
+      "offers": [
+        {
+          "id": "lermontovka:events/31_10_26_chitatelskiy-klub-po-angliyski-",
+          "title": "Читательский клуб «по-английски»",
+          "description": "Совместное обсуждение литературы.",
+          "activities": [
+            "book_club",
+            "english_club"
+          ],
+          "format": "open_group",
+          "audience": "general",
+          "source_url": "https://lermontovka-spb.ru/events/31_10_26_chitatelskiy-klub-po-angliyski-/",
+          "booking_url": "https://lermontovka-spb.ru/events/31_10_26_chitatelskiy-klub-po-angliyski-/",
+          "checked_at": "2026-10-12T01:15:09.736742+03:00",
+          "starts_at": "2026-10-31T16:00:00+03:00",
+          "ends_at": "2026-10-31T17:30:00+03:00",
+          "price": null,
+          "requirements": "Уровень языка: А2. Возраст 2+."
+        }
+      ],
+      "prices": [],
+      "status": "catalogue",
+      "updated_at": "2026-10-12T01:15:09.736742+03:00",
+      "is_landmark": false,
+      "discovery_priority": 5
+    }
+  ],
+  "collection_report": {
+    "index_pages": 24,
+    "candidate_events": 136,
+    "fetched_events": 136,
+    "accepted_offers": 34,
+    "errors": []
+  }
+}

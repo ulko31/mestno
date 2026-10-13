@@ -1,6 +1,6 @@
-import {safeUrl,validateCatalogue} from './search.mjs';
-import {apiCities,KUDAGO_API,plainText} from './providers.mjs';
-import {analyseText} from './text-analysis.mjs';
+import {safeUrl,validateCatalogue} from './search.mjs?v=20261012';
+import {apiCities,KUDAGO_API,plainText} from './providers.mjs?v=20261012';
+import {analyseText} from './text-analysis.mjs?v=20261012';
 const concepts=['workshops','pottery','painting','cooking','improv','book_club','board_games','rpg','speaking_club','english_club','meetups','dance','exhibitions','live_music'];
 export function eventPrice(value,{isFree=false,source,checkedAt}={}){
   const base={currency:'RUB',scope:'visit',source_url:source,checked_at:checkedAt,kind:'admission',label:'Участие в событии'};

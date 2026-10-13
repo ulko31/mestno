@@ -14,11 +14,11 @@ test('bot and Mini App use the same reviewed scenario and link to a particular c
  for(const a of actions){assert.equal(a.method,'sendMessage');const href=a.args.reply_markup.inline_keyboard[0][0].web_app.url;assert.ok(new URL(href).searchParams.get('place'));}
  assert.ok(actions.every(x=>!x.args.text.includes('CulinaryOn')));
 });
-test('unknown price is not silently sold as within budget and the bot gives an app fallback',async()=>{
+test('the bot includes relevant unknown budgets automatically and labels their uncertainty',async()=>{
  const bot=createBot({catalogue,miniAppUrl:app,now:()=>when});
  const actions=await bot.handle(message('Книжный клуб, познакомиться с людьми до 1000 рублей'));
- assert.equal(actions.length,1);assert.match(actions[0].args.text,/цена неизвестна/);
- assert.equal(new URL(actions[0].args.reply_markup.inline_keyboard[0][0].web_app.url).searchParams.get('query'),'Книжный клуб, познакомиться с людьми до 1000 рублей');
+ assert.ok(actions.length>=1);assert.ok(actions.every(x=>x.args.text.includes('бюджет до 1000 ₽ не подтверждён')));
+ assert.ok(actions.every(x=>new URL(x.args.reply_markup.inline_keyboard[0][0].web_app.url).searchParams.has('place')));
 });
 test('private beta IDs and private chats are respected',async()=>{
  const bot=createBot({catalogue,miniAppUrl:app,now:()=>when,allowedUserIds:[777]});
@@ -106,6 +106,8 @@ test('opt-in app hosting serves assets with correct MIME and does not expose the
   const home=await fetch(base+'/');assert.equal(home.status,200);assert.match(await home.text(),/Местно/);
   const js=await fetch(base+'/pricing.mjs');assert.match(js.headers.get('content-type'),/javascript/);
   assert.equal((await fetch(base+'/.env')).status,404);assert.equal((await fetch(base+'/../bot/server.mjs')).status,404);
+  for(const path of ['/admin.html','/%61dmin.html','/a/../admin.html','/admin.mjs'])assert.equal((await fetch(base+path)).status,404,path);
+  const photo=await fetch(base+'/photos/seed-artmuza.jpg');assert.equal(photo.status,200);assert.match(photo.headers.get('content-type'),/image\/jpeg/);
   const data=await fetch(base+'/places.json');assert.equal((await data.json()).places.length,catalogue.places.length);
  });
 });

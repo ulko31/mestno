@@ -44,7 +44,7 @@ test('a recurring group never falsely promises a place on the requested date',()
 test('a published average check and a menu example remain estimates, not visit maximums',()=>{
  const p={...place('coffee'),category:'cafe',prices:[quote(2000,'average_check'),quote(290,'menu_order')]};
  assert.equal(priceFor(p,{today}).kind,'average_check');assert.equal(priceFor(p,{today,needs:['laptop_work']}).kind,'menu_order');
- assert.match(priceLabel(p.prices[0]),/Средний чек/);assert.match(priceLabel(p.prices[1]),/Пример заказа/);
+ assert.match(priceLabel(p.prices[0]),/Бюджет ≈/);assert.match(priceLabel(p.prices[1]),/Заказ от/);
  assert.equal(all(searchPlaces([p],{budget:1000,today})).length,0);
 });
 test('a stale price never qualifies for the budget and unknown prices can be opted into',()=>{
@@ -87,5 +87,5 @@ test('the actual catalogue has source-attributed offers and licensed photos and 
  const r=searchPlaces(catalogue.places,{query:'Мастер-класс, познакомиться с новыми людьми',today});
  assert.ok(r.results.some(x=>x.place.title==='Керамишная'));assert.ok(r.results.some(x=>x.offer.activities.includes('improv')));
  assert.ok(all(r).some(x=>x.offer.activities.includes('painting')));assert.ok(!all(r).some(x=>x.place.title.includes('Гончарная студия №1')));
- assert.equal(catalogue.places.reduce((n,p)=>n+(p.photos||[]).length,0),3);
+ assert.ok(catalogue.places.reduce((n,p)=>n+(p.photos||[]).length,0)>=11);
 });

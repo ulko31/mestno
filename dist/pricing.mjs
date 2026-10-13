@@ -1,4 +1,5 @@
 // A menu item, an average bill and an activity ticket have different meanings.
+import {activityKeys} from './experiences.mjs?v=20261012';
 const safe=s=>{try{const u=new URL(s);return /^https?:$/.test(u.protocol)&&!u.username&&!u.password?u.href:null;}catch{return null;}};
 export function currentPrice(q,today=new Date()){
   const age=(new Date(today)-new Date(q?.checked_at))/86400000;
@@ -10,7 +11,7 @@ export function currentPrice(q,today=new Date()){
 export function priceFor(place,{today=new Date(),scope='visit',needs=[],context={},offer=null}={}){
   // Never substitute a cheap drink or free entrance for a requested workshop.
   if(offer)return currentPrice(offer.price,today)&&offer.price.scope===scope?offer.price:null;
-  const activity=needs.some(k=>['workshops','pottery','painting','cooking','improv','book_club','dance','billiards','climbing','boxing','ice_skating','rpg','war_games','speaking_club','english_club'].includes(k));
+  const activity=needs.some(k=>activityKeys.includes(k)||['billiards','climbing','boxing','ice_skating'].includes(k));
   let quotes=(place.prices||[]).filter(q=>currentPrice(q,today)&&q.scope===scope
     && (!q.visit_day||q.visit_day===context.visitDay)
     && (!q.daypart||q.daypart===context.daypart)
@@ -28,13 +29,13 @@ export function priceFor(place,{today=new Date(),scope='visit',needs=[],context=
   return quotes.sort((a,b)=>rank(a)-rank(b)||a.amount-b.amount)[0]||null;
 }
 export function priceLabel(q){
-  if(!q)return 'Стоимость пока неизвестна';
+  if(!q)return 'Бюджет уточняется';
   const n=q.amount.toLocaleString('ru-RU');
-  if(q.kind==='average_check')return `Средний чек ≈ ${n} ₽`;
-  if(q.kind==='menu_order')return `Пример заказа · ${n} ₽`;
-  if(q.kind==='day_cap')return `Стоп-чек · ${n} ₽`;
+  if(q.kind==='average_check')return `Бюджет ≈ ${n} ₽ / человек`;
+  if(q.kind==='menu_order')return `Заказ от ${n} ₽`;
+  if(q.kind==='day_cap')return `Бюджет до ${n} ₽`;
   if(q.kind==='hourly')return `${n} ₽ / час`;
   if(q.kind==='from')return `От ${n} ₽ / человек`;
-  return q.amount===0?'Вход без оплаты':`${n} ₽ / человек`;
+  return q.amount===0?(q.kind==='workspace'?'Рабочее место без оплаты':'Без оплаты'):`${n} ₽ / человек`;
 }
 export const priceIsEstimate=q=>q&&['average_check','menu_order','from'].includes(q.kind);

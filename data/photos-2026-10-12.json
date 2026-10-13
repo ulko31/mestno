@@ -1,0 +1,498 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-11T22:30:45.987195+00:00",
+  "places": [
+    {
+      "id": "seed:artmuza",
+      "title": "АРТМУЗА",
+      "city": "Санкт-Петербург",
+      "category": "museum",
+      "sources": [
+        {
+          "url": "https://artmuza.spb.ru/",
+          "label": "Сайт места",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "photos": [
+        {
+          "id": "commons:Артмуза, внутренний двор зимой.jpg",
+          "url": "photos/seed-artmuza.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:%D0%90%D1%80%D1%82%D0%BC%D1%83%D0%B7%D0%B0,_%D0%B2%D0%BD%D1%83%D1%82%D1%80%D0%B5%D0%BD%D0%BD%D0%B8%D0%B9_%D0%B4%D0%B2%D0%BE%D1%80_%D0%B7%D0%B8%D0%BC%D0%BE%D0%B9.jpg",
+          "author": "SoulMaker",
+          "license": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+          "caption": "Внутренний двор АРТМУЗЫ зимой; архивный снимок 2018 года",
+          "alt": "Внутренний двор АРТМУЗЫ зимой; архивный снимок 2018 года",
+          "checked_at": "2026-10-11T22:30:45.987195+00:00",
+          "taken_year": "2018"
+        }
+      ],
+      "features": []
+    },
+    {
+      "id": "lermontovka:library/biblioteka-na-stremyannoy",
+      "title": "Библиотека «На Стремянной»",
+      "city": "Санкт-Петербург",
+      "category": "library",
+      "sources": [
+        {
+          "url": "https://lermontovka-spb.ru/library/biblioteka-na-stremyannoy/",
+          "label": "Библиотека",
+          "kind": "official",
+          "retrieved_at": "2026-10-12T01:15:09.736742+03:00"
+        }
+      ],
+      "photos": [
+        {
+          "id": "commons:Стремянная 20 05dif.jpg",
+          "url": "photos/lermontovka-library-biblioteka-na-stremyannoy.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:%D0%A1%D1%82%D1%80%D0%B5%D0%BC%D1%8F%D0%BD%D0%BD%D0%B0%D1%8F_20_05dif.jpg",
+          "author": "Екатерина Борисова",
+          "license": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+          "caption": "Здание библиотеки на Стремянной, 20; архивный снимок",
+          "alt": "Здание библиотеки на Стремянной, 20; архивный снимок",
+          "checked_at": "2026-10-11T22:30:45.987195+00:00",
+          "taken_year": "2017"
+        }
+      ],
+      "features": []
+    },
+    {
+      "id": "seed:elagin",
+      "title": "Парк на Елагином острове",
+      "city": "Санкт-Петербург",
+      "category": "park",
+      "sources": [
+        {
+          "url": "https://elaginpark.org/central-park/park-na-elaginom-ostrove-segodnya/",
+          "label": "Сайт места",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "photos": [
+        {
+          "id": "commons:0189Cb. Елагин остров. 3-й Южный пруд.jpg",
+          "url": "photos/seed-elagin.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:0189Cb._%D0%95%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B2._3-%D0%B9_%D0%AE%D0%B6%D0%BD%D1%8B%D0%B9_%D0%BF%D1%80%D1%83%D0%B4.jpg",
+          "author": "Александровы АГ",
+          "license": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+          "caption": "Третий Южный пруд на Елагином острове; снимок 2023 года",
+          "alt": "Третий Южный пруд на Елагином острове; снимок 2023 года",
+          "checked_at": "2026-10-11T22:30:45.987195+00:00",
+          "taken_year": "2023"
+        }
+      ],
+      "features": []
+    },
+    {
+      "id": "seed:annanova",
+      "title": "Anna Nova Gallery",
+      "city": "Санкт-Петербург",
+      "category": "gallery",
+      "sources": [
+        {
+          "url": "https://www.annanova-gallery.ru/",
+          "label": "Сайт места",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        },
+        {
+          "url": "https://www.annanova-gallery.ru/exhibitions/161/overview/",
+          "label": "Текущая выставка",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "photos": [
+        {
+          "id": "commons:Санкт‑Петербург, ул. Жуковского, 28 (Восстания, 12). --2024-11-02.jpg",
+          "url": "photos/seed-annanova.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:%D0%A1%D0%B0%D0%BD%D0%BA%D1%82%E2%80%91%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3,_%D1%83%D0%BB._%D0%96%D1%83%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B3%D0%BE,_28_(%D0%92%D0%BE%D1%81%D1%81%D1%82%D0%B0%D0%BD%D0%B8%D1%8F,_12)._--2024-11-02.jpg",
+          "author": "Bestalex",
+          "license": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+          "caption": "Здание галереи на Жуковского, 28; не интерьер выставки",
+          "alt": "Здание галереи на Жуковского, 28; не интерьер выставки",
+          "checked_at": "2026-10-11T22:30:45.987195+00:00",
+          "taken_year": "2024"
+        }
+      ],
+      "features": []
+    },
+    {
+      "id": "seed:yuntolovsky",
+      "title": "Заказник Юнтоловский",
+      "city": "Санкт-Петербург",
+      "category": "park",
+      "sources": [
+        {
+          "url": "https://oopt.kpoos.gov.spb.ru/protected_area/yuntolovskiy-2/",
+          "label": "Сайт места",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "photos": [
+        {
+          "id": "commons:Белая ночь в Юнтолово.jpg",
+          "url": "photos/seed-yuntolovsky.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:%D0%91%D0%B5%D0%BB%D0%B0%D1%8F_%D0%BD%D0%BE%D1%87%D1%8C_%D0%B2_%D0%AE%D0%BD%D1%82%D0%BE%D0%BB%D0%BE%D0%B2%D0%BE.jpg",
+          "author": "Okolegovna23",
+          "license": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+          "caption": "Белая ночь в Юнтоловском заказнике; архивный снимок",
+          "alt": "Белая ночь в Юнтоловском заказнике; архивный снимок",
+          "checked_at": "2026-10-11T22:30:45.987195+00:00",
+          "taken_year": "Take"
+        }
+      ],
+      "features": []
+    },
+    {
+      "id": "seed:novoorlovsky",
+      "title": "Заказник Новоорловский",
+      "city": "Санкт-Петербург",
+      "category": "park",
+      "sources": [
+        {
+          "url": "https://oopt.kpoos.gov.spb.ru/protected_area/novoorlovskiy/",
+          "label": "Сайт места",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "photos": [
+        {
+          "id": "commons:Знак в Новоорловском заказнике.jpg",
+          "url": "photos/seed-novoorlovsky.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:%D0%97%D0%BD%D0%B0%D0%BA_%D0%B2_%D0%9D%D0%BE%D0%B2%D0%BE%D0%BE%D1%80%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%BC_%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%BD%D0%B8%D0%BA%D0%B5.jpg",
+          "author": "Горбунова М.С.",
+          "license": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+          "caption": "Информационный знак в Новоорловском заказнике",
+          "alt": "Информационный знак в Новоорловском заказнике",
+          "checked_at": "2026-10-11T22:30:45.987195+00:00",
+          "taken_year": "2022"
+        }
+      ],
+      "features": []
+    },
+    {
+      "id": "seed:kochneva",
+      "title": "Дом Кочневой",
+      "city": "Санкт-Петербург",
+      "category": "theatre",
+      "sources": [
+        {
+          "url": "https://petroconcert.spb.ru/",
+          "label": "Сайт места",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "photos": [
+        {
+          "id": "commons:Ilyiny-Kochneva Mansion, Main Staircase, 2023-07-25 12.jpg",
+          "url": "photos/seed-kochneva.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Ilyiny-Kochneva_Mansion,_Main_Staircase,_2023-07-25_12.jpg",
+          "author": "Giovanni Battista Scotti (1776 – San Pietroburgo, 1830)photo by Kaganer",
+          "license": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+          "caption": "Деталь главной лестницы Дома Кочневой; снимок 2023 года",
+          "alt": "Деталь главной лестницы Дома Кочневой; снимок 2023 года",
+          "checked_at": "2026-10-11T22:30:45.987195+00:00",
+          "taken_year": "2023"
+        }
+      ],
+      "features": []
+    },
+    {
+      "id": "seed:levashovsky",
+      "title": "Левашовский Хлебозавод",
+      "city": "Санкт-Петербург",
+      "category": "space",
+      "sources": [
+        {
+          "url": "https://visit-petersburg.ru/en/leisure/places/levashovskiy-khlebozavod/",
+          "label": "Официальная страница",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "photos": [
+        {
+          "id": "commons:Здание Левашовского хлебозавода Санкт-Петербург 2024 04.png",
+          "url": "photos/seed-levashovsky.png",
+          "source_url": "https://commons.wikimedia.org/wiki/File:%D0%97%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5_%D0%9B%D0%B5%D0%B2%D0%B0%D1%88%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D1%85%D0%BB%D0%B5%D0%B1%D0%BE%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4%D0%B0_%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3_2024_04.png",
+          "author": "Никонико962",
+          "license": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+          "caption": "Левашовский хлебозавод после реставрации; снимок 2024 года",
+          "alt": "Левашовский хлебозавод после реставрации; снимок 2024 года",
+          "checked_at": "2026-10-11T22:30:45.987195+00:00",
+          "taken_year": "2024"
+        }
+      ],
+      "features": []
+    },
+    {
+      "id": "seed:brusnitsyn",
+      "title": "Брусницын",
+      "city": "Санкт-Петербург",
+      "category": "space",
+      "sources": [
+        {
+          "url": "https://brusnitsyn.spb.ru/about",
+          "label": "Официальная страница",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "photos": [
+        {
+          "id": "commons:Культурный квартал Брусницын 02.jpg",
+          "url": "photos/seed-brusnitsyn.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:%D0%9A%D1%83%D0%BB%D1%8C%D1%82%D1%83%D1%80%D0%BD%D1%8B%D0%B9_%D0%BA%D0%B2%D0%B0%D1%80%D1%82%D0%B0%D0%BB_%D0%91%D1%80%D1%83%D1%81%D0%BD%D0%B8%D1%86%D1%8B%D0%BD_02.jpg",
+          "author": "Anastasiya Lvova",
+          "license": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+          "caption": "Культурный квартал Брусницын; фото 2024 года",
+          "alt": "Культурный квартал Брусницын; фото 2024 года",
+          "checked_at": "2026-10-11T22:30:45.987195+00:00",
+          "taken_year": "2024"
+        }
+      ],
+      "features": []
+    },
+    {
+      "id": "seed:iva-orangery",
+      "title": "Ива · кофейня в оранжерее",
+      "city": "Санкт-Петербург",
+      "category": "cafe",
+      "sources": [
+        {
+          "url": "https://tavr-orangery.ru/kofeynya",
+          "label": "Сайт места",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "photos": [
+        {
+          "id": "commons:Пальмовая оранжерея (Таврический сад).jpg",
+          "url": "photos/seed-iva-orangery.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:%D0%9F%D0%B0%D0%BB%D1%8C%D0%BC%D0%BE%D0%B2%D0%B0%D1%8F_%D0%BE%D1%80%D0%B0%D0%BD%D0%B6%D0%B5%D1%80%D0%B5%D1%8F_(%D0%A2%D0%B0%D0%B2%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%B0%D0%B4).jpg",
+          "author": "Екатерина Борисова",
+          "license": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+          "caption": "Здание оранжереи, где находится кофейня; не интерьер кафе",
+          "alt": "Здание оранжереи, где находится кофейня; не интерьер кафе",
+          "checked_at": "2026-10-11T22:30:45.987195+00:00",
+          "taken_year": "2022"
+        }
+      ],
+      "features": []
+    },
+    {
+      "id": "seed:benua",
+      "title": "Сад Бенуа",
+      "city": "Санкт-Петербург",
+      "category": "space",
+      "sources": [
+        {
+          "url": "https://benua1890.ru/",
+          "label": "Сайт места",
+          "kind": "official",
+          "license": "Fact-only reference; no copied text/photos",
+          "retrieved_at": "2026-10-11T00:00:00+00:00"
+        }
+      ],
+      "photos": [
+        {
+          "id": "commons:Сад Бенуа, пруд с островом03.jpg",
+          "url": "photos/seed-benua.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:%D0%A1%D0%B0%D0%B4_%D0%91%D0%B5%D0%BD%D1%83%D0%B0,_%D0%BF%D1%80%D1%83%D0%B4_%D1%81_%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B2%D0%BE%D0%BC03.jpg",
+          "author": "Екатерина Борисова",
+          "license": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+          "caption": "Пруд в Саду Бенуа; архивное фото",
+          "alt": "Пруд в Саду Бенуа; архивное фото",
+          "checked_at": "2026-10-11T22:30:45.987195+00:00",
+          "taken_year": "2018"
+        }
+      ],
+      "features": []
+    }
+  ],
+  "photo_sources": [
+    {
+      "place_id": "seed:artmuza",
+      "id": "commons:Артмуза, внутренний двор зимой.jpg",
+      "url": "photos/seed-artmuza.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:%D0%90%D1%80%D1%82%D0%BC%D1%83%D0%B7%D0%B0,_%D0%B2%D0%BD%D1%83%D1%82%D1%80%D0%B5%D0%BD%D0%BD%D0%B8%D0%B9_%D0%B4%D0%B2%D0%BE%D1%80_%D0%B7%D0%B8%D0%BC%D0%BE%D0%B9.jpg",
+      "author": "SoulMaker",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "caption": "Внутренний двор АРТМУЗЫ зимой; архивный снимок 2018 года",
+      "alt": "Внутренний двор АРТМУЗЫ зимой; архивный снимок 2018 года",
+      "checked_at": "2026-10-11T22:30:45.987195+00:00",
+      "taken_year": "2018",
+      "original_thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/%D0%90%D1%80%D1%82%D0%BC%D1%83%D0%B7%D0%B0%2C_%D0%B2%D0%BD%D1%83%D1%82%D1%80%D0%B5%D0%BD%D0%BD%D0%B8%D0%B9_%D0%B4%D0%B2%D0%BE%D1%80_%D0%B7%D0%B8%D0%BC%D0%BE%D0%B9.jpg/960px-%D0%90%D1%80%D1%82%D0%BC%D1%83%D0%B7%D0%B0%2C_%D0%B2%D0%BD%D1%83%D1%82%D1%80%D0%B5%D0%BD%D0%BD%D0%B8%D0%B9_%D0%B4%D0%B2%D0%BE%D1%80_%D0%B7%D0%B8%D0%BC%D0%BE%D0%B9.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    {
+      "place_id": "lermontovka:library/biblioteka-na-stremyannoy",
+      "id": "commons:Стремянная 20 05dif.jpg",
+      "url": "photos/lermontovka-library-biblioteka-na-stremyannoy.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:%D0%A1%D1%82%D1%80%D0%B5%D0%BC%D1%8F%D0%BD%D0%BD%D0%B0%D1%8F_20_05dif.jpg",
+      "author": "Екатерина Борисова",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "caption": "Здание библиотеки на Стремянной, 20; архивный снимок",
+      "alt": "Здание библиотеки на Стремянной, 20; архивный снимок",
+      "checked_at": "2026-10-11T22:30:45.987195+00:00",
+      "taken_year": "2017",
+      "original_thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/%D0%A1%D1%82%D1%80%D0%B5%D0%BC%D1%8F%D0%BD%D0%BD%D0%B0%D1%8F_20_05dif.jpg/960px-%D0%A1%D1%82%D1%80%D0%B5%D0%BC%D1%8F%D0%BD%D0%BD%D0%B0%D1%8F_20_05dif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    {
+      "place_id": "seed:elagin",
+      "id": "commons:0189Cb. Елагин остров. 3-й Южный пруд.jpg",
+      "url": "photos/seed-elagin.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:0189Cb._%D0%95%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B2._3-%D0%B9_%D0%AE%D0%B6%D0%BD%D1%8B%D0%B9_%D0%BF%D1%80%D1%83%D0%B4.jpg",
+      "author": "Александровы АГ",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "caption": "Третий Южный пруд на Елагином острове; снимок 2023 года",
+      "alt": "Третий Южный пруд на Елагином острове; снимок 2023 года",
+      "checked_at": "2026-10-11T22:30:45.987195+00:00",
+      "taken_year": "2023",
+      "original_thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/0189Cb._%D0%95%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B2._3-%D0%B9_%D0%AE%D0%B6%D0%BD%D1%8B%D0%B9_%D0%BF%D1%80%D1%83%D0%B4.jpg/960px-0189Cb._%D0%95%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD_%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B2._3-%D0%B9_%D0%AE%D0%B6%D0%BD%D1%8B%D0%B9_%D0%BF%D1%80%D1%83%D0%B4.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    {
+      "place_id": "seed:annanova",
+      "id": "commons:Санкт‑Петербург, ул. Жуковского, 28 (Восстания, 12). --2024-11-02.jpg",
+      "url": "photos/seed-annanova.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:%D0%A1%D0%B0%D0%BD%D0%BA%D1%82%E2%80%91%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3,_%D1%83%D0%BB._%D0%96%D1%83%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B3%D0%BE,_28_(%D0%92%D0%BE%D1%81%D1%81%D1%82%D0%B0%D0%BD%D0%B8%D1%8F,_12)._--2024-11-02.jpg",
+      "author": "Bestalex",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "caption": "Здание галереи на Жуковского, 28; не интерьер выставки",
+      "alt": "Здание галереи на Жуковского, 28; не интерьер выставки",
+      "checked_at": "2026-10-11T22:30:45.987195+00:00",
+      "taken_year": "2024",
+      "original_thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/%D0%A1%D0%B0%D0%BD%D0%BA%D1%82%E2%80%91%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%2C_%D1%83%D0%BB._%D0%96%D1%83%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B3%D0%BE%2C_28_%28%D0%92%D0%BE%D1%81%D1%81%D1%82%D0%B0%D0%BD%D0%B8%D1%8F%2C_12%29._--2024-11-02.jpg/960px-%D0%A1%D0%B0%D0%BD%D0%BA%D1%82%E2%80%91%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%2C_%D1%83%D0%BB._%D0%96%D1%83%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B3%D0%BE%2C_28_%28%D0%92%D0%BE%D1%81%D1%81%D1%82%D0%B0%D0%BD%D0%B8%D1%8F%2C_12%29._--2024-11-02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    {
+      "place_id": "seed:yuntolovsky",
+      "id": "commons:Белая ночь в Юнтолово.jpg",
+      "url": "photos/seed-yuntolovsky.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:%D0%91%D0%B5%D0%BB%D0%B0%D1%8F_%D0%BD%D0%BE%D1%87%D1%8C_%D0%B2_%D0%AE%D0%BD%D1%82%D0%BE%D0%BB%D0%BE%D0%B2%D0%BE.jpg",
+      "author": "Okolegovna23",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "caption": "Белая ночь в Юнтоловском заказнике; архивный снимок",
+      "alt": "Белая ночь в Юнтоловском заказнике; архивный снимок",
+      "checked_at": "2026-10-11T22:30:45.987195+00:00",
+      "taken_year": "Take",
+      "original_thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/%D0%91%D0%B5%D0%BB%D0%B0%D1%8F_%D0%BD%D0%BE%D1%87%D1%8C_%D0%B2_%D0%AE%D0%BD%D1%82%D0%BE%D0%BB%D0%BE%D0%B2%D0%BE.jpg/960px-%D0%91%D0%B5%D0%BB%D0%B0%D1%8F_%D0%BD%D0%BE%D1%87%D1%8C_%D0%B2_%D0%AE%D0%BD%D1%82%D0%BE%D0%BB%D0%BE%D0%B2%D0%BE.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    {
+      "place_id": "seed:novoorlovsky",
+      "id": "commons:Знак в Новоорловском заказнике.jpg",
+      "url": "photos/seed-novoorlovsky.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:%D0%97%D0%BD%D0%B0%D0%BA_%D0%B2_%D0%9D%D0%BE%D0%B2%D0%BE%D0%BE%D1%80%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%BC_%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%BD%D0%B8%D0%BA%D0%B5.jpg",
+      "author": "Горбунова М.С.",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "caption": "Информационный знак в Новоорловском заказнике",
+      "alt": "Информационный знак в Новоорловском заказнике",
+      "checked_at": "2026-10-11T22:30:45.987195+00:00",
+      "taken_year": "2022",
+      "original_thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/%D0%97%D0%BD%D0%B0%D0%BA_%D0%B2_%D0%9D%D0%BE%D0%B2%D0%BE%D0%BE%D1%80%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%BC_%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%BD%D0%B8%D0%BA%D0%B5.jpg/960px-%D0%97%D0%BD%D0%B0%D0%BA_%D0%B2_%D0%9D%D0%BE%D0%B2%D0%BE%D0%BE%D1%80%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%BC_%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%BD%D0%B8%D0%BA%D0%B5.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    {
+      "place_id": "seed:kochneva",
+      "id": "commons:Ilyiny-Kochneva Mansion, Main Staircase, 2023-07-25 12.jpg",
+      "url": "photos/seed-kochneva.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Ilyiny-Kochneva_Mansion,_Main_Staircase,_2023-07-25_12.jpg",
+      "author": "Giovanni Battista Scotti (1776 – San Pietroburgo, 1830)photo by Kaganer",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "caption": "Деталь главной лестницы Дома Кочневой; снимок 2023 года",
+      "alt": "Деталь главной лестницы Дома Кочневой; снимок 2023 года",
+      "checked_at": "2026-10-11T22:30:45.987195+00:00",
+      "taken_year": "2023",
+      "original_thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Ilyiny-Kochneva_Mansion%2C_Main_Staircase%2C_2023-07-25_12.jpg/960px-Ilyiny-Kochneva_Mansion%2C_Main_Staircase%2C_2023-07-25_12.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    {
+      "place_id": "seed:levashovsky",
+      "id": "commons:Здание Левашовского хлебозавода Санкт-Петербург 2024 04.png",
+      "url": "photos/seed-levashovsky.png",
+      "source_url": "https://commons.wikimedia.org/wiki/File:%D0%97%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5_%D0%9B%D0%B5%D0%B2%D0%B0%D1%88%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D1%85%D0%BB%D0%B5%D0%B1%D0%BE%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4%D0%B0_%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3_2024_04.png",
+      "author": "Никонико962",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "caption": "Левашовский хлебозавод после реставрации; снимок 2024 года",
+      "alt": "Левашовский хлебозавод после реставрации; снимок 2024 года",
+      "checked_at": "2026-10-11T22:30:45.987195+00:00",
+      "taken_year": "2024",
+      "original_thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/%D0%97%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5_%D0%9B%D0%B5%D0%B2%D0%B0%D1%88%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D1%85%D0%BB%D0%B5%D0%B1%D0%BE%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4%D0%B0_%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3_2024_04.png/960px-%D0%97%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5_%D0%9B%D0%B5%D0%B2%D0%B0%D1%88%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D1%85%D0%BB%D0%B5%D0%B1%D0%BE%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4%D0%B0_%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3_2024_04.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    {
+      "place_id": "seed:brusnitsyn",
+      "id": "commons:Культурный квартал Брусницын 02.jpg",
+      "url": "photos/seed-brusnitsyn.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:%D0%9A%D1%83%D0%BB%D1%8C%D1%82%D1%83%D1%80%D0%BD%D1%8B%D0%B9_%D0%BA%D0%B2%D0%B0%D1%80%D1%82%D0%B0%D0%BB_%D0%91%D1%80%D1%83%D1%81%D0%BD%D0%B8%D1%86%D1%8B%D0%BD_02.jpg",
+      "author": "Anastasiya Lvova",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "caption": "Культурный квартал Брусницын; фото 2024 года",
+      "alt": "Культурный квартал Брусницын; фото 2024 года",
+      "checked_at": "2026-10-11T22:30:45.987195+00:00",
+      "taken_year": "2024",
+      "original_thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/%D0%9A%D1%83%D0%BB%D1%8C%D1%82%D1%83%D1%80%D0%BD%D1%8B%D0%B9_%D0%BA%D0%B2%D0%B0%D1%80%D1%82%D0%B0%D0%BB_%D0%91%D1%80%D1%83%D1%81%D0%BD%D0%B8%D1%86%D1%8B%D0%BD_02.jpg/960px-%D0%9A%D1%83%D0%BB%D1%8C%D1%82%D1%83%D1%80%D0%BD%D1%8B%D0%B9_%D0%BA%D0%B2%D0%B0%D1%80%D1%82%D0%B0%D0%BB_%D0%91%D1%80%D1%83%D1%81%D0%BD%D0%B8%D1%86%D1%8B%D0%BD_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    {
+      "place_id": "seed:iva-orangery",
+      "id": "commons:Пальмовая оранжерея (Таврический сад).jpg",
+      "url": "photos/seed-iva-orangery.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:%D0%9F%D0%B0%D0%BB%D1%8C%D0%BC%D0%BE%D0%B2%D0%B0%D1%8F_%D0%BE%D1%80%D0%B0%D0%BD%D0%B6%D0%B5%D1%80%D0%B5%D1%8F_(%D0%A2%D0%B0%D0%B2%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%B0%D0%B4).jpg",
+      "author": "Екатерина Борисова",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "caption": "Здание оранжереи, где находится кофейня; не интерьер кафе",
+      "alt": "Здание оранжереи, где находится кофейня; не интерьер кафе",
+      "checked_at": "2026-10-11T22:30:45.987195+00:00",
+      "taken_year": "2022",
+      "original_thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/%D0%9F%D0%B0%D0%BB%D1%8C%D0%BC%D0%BE%D0%B2%D0%B0%D1%8F_%D0%BE%D1%80%D0%B0%D0%BD%D0%B6%D0%B5%D1%80%D0%B5%D1%8F_%28%D0%A2%D0%B0%D0%B2%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%B0%D0%B4%29.jpg/960px-%D0%9F%D0%B0%D0%BB%D1%8C%D0%BC%D0%BE%D0%B2%D0%B0%D1%8F_%D0%BE%D1%80%D0%B0%D0%BD%D0%B6%D0%B5%D1%80%D0%B5%D1%8F_%28%D0%A2%D0%B0%D0%B2%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%B0%D0%B4%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    {
+      "place_id": "seed:benua",
+      "id": "commons:Сад Бенуа, пруд с островом03.jpg",
+      "url": "photos/seed-benua.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:%D0%A1%D0%B0%D0%B4_%D0%91%D0%B5%D0%BD%D1%83%D0%B0,_%D0%BF%D1%80%D1%83%D0%B4_%D1%81_%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B2%D0%BE%D0%BC03.jpg",
+      "author": "Екатерина Борисова",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "caption": "Пруд в Саду Бенуа; архивное фото",
+      "alt": "Пруд в Саду Бенуа; архивное фото",
+      "checked_at": "2026-10-11T22:30:45.987195+00:00",
+      "taken_year": "2018",
+      "original_thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/%D0%A1%D0%B0%D0%B4_%D0%91%D0%B5%D0%BD%D1%83%D0%B0%2C_%D0%BF%D1%80%D1%83%D0%B4_%D1%81_%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B2%D0%BE%D0%BC03.jpg/960px-%D0%A1%D0%B0%D0%B4_%D0%91%D0%B5%D0%BD%D1%83%D0%B0%2C_%D0%BF%D1%80%D1%83%D0%B4_%D1%81_%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B2%D0%BE%D0%BC03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+  ]
+}

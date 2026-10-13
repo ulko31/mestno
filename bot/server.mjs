@@ -44,6 +44,7 @@ export function createServer({bot=null,call=null,secret='',serveApp=false}={}){
       if(!serveApp||!['GET','HEAD'].includes(req.method))return json(res,404,{error:'not_found'});
       let relative;try{relative=decodeURIComponent(pathname).replace(/^\/+/, '')||'index.html';}catch{return json(res,400,{error:'invalid_path'});}
       const file=path.resolve(root,relative),extension=path.extname(file);
+      if(file===path.join(root,'admin.html')||file===path.join(root,'admin.mjs'))return json(res,404,{error:'not_found'});
       if(!file.startsWith(root+path.sep)||!types[extension]||relative.split('/').some(p=>p.startsWith('.')))return json(res,404,{error:'not_found'});
       let info;try{info=await stat(file);}catch{return json(res,404,{error:'not_found'});}
       if(!info.isFile())return json(res,404,{error:'not_found'});
