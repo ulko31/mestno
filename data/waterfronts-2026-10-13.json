@@ -1,0 +1,902 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-13T11:11:04.803933+00:00",
+  "source_url": "https://mostotrest-spb.krti.gov.spb.ru/embankments",
+  "places": [
+    {
+      "id": "waterfront:anglijskaya-naberezhnaya",
+      "title": "Английская набережная",
+      "address": "Английская набережная, Санкт-Петербург",
+      "city": "Санкт-Петербург",
+      "category": "space",
+      "lat": 59.934049,
+      "lon": 30.293269,
+      "coordinate_source_url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/anglijskaya-naberezhnaya",
+      "coordinate_precision": "publisher_map_marker",
+      "notes": "Английская набережная. Городской маршрут для прогулки у воды. Точка на карте — ориентир для выбора участка, а не весь маршрут. Доступ к спускам и ограничения на выбранном участке проверь перед прогулкой.",
+      "sources": [
+        {
+          "url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/anglijskaya-naberezhnaya",
+          "kind": "official",
+          "label": "Мостотрест · набережная",
+          "retrieved_at": "2026-10-13T11:11:04.803933+00:00"
+        }
+      ],
+      "documents": [
+        {
+          "id": "waterfront:description",
+          "kind": "description",
+          "text": "Английская набережная. Городской маршрут для прогулки у воды. Точка на карте — ориентир для выбора участка, а не весь маршрут. Доступ к спускам и ограничения на выбранном участке проверь перед прогулкой.",
+          "source_url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/anglijskaya-naberezhnaya",
+          "observed_at": "2026-10-13T11:11:04.803933+00:00",
+          "retrieved_at": "2026-10-13T11:11:04.803933+00:00"
+        }
+      ],
+      "features": [],
+      "prices": [],
+      "offers": [],
+      "status": "catalogue",
+      "updated_at": "2026-10-13T11:11:04.803933+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false
+    },
+    {
+      "id": "waterfront:aptekarskaya-naberezhnaya",
+      "title": "Аптекарская набережная",
+      "address": "Аптекарская набережная, Санкт-Петербург",
+      "city": "Санкт-Петербург",
+      "category": "space",
+      "lat": 59.974737,
+      "lon": 30.326213,
+      "coordinate_source_url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/aptekarskaya-naberezhnaya",
+      "coordinate_precision": "publisher_map_marker",
+      "notes": "Аптекарская набережная. Городской маршрут для прогулки у воды. Точка на карте — ориентир для выбора участка, а не весь маршрут. Доступ к спускам и ограничения на выбранном участке проверь перед прогулкой.",
+      "sources": [
+        {
+          "url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/aptekarskaya-naberezhnaya",
+          "kind": "official",
+          "label": "Мостотрест · набережная",
+          "retrieved_at": "2026-10-13T11:11:04.803933+00:00"
+        }
+      ],
+      "documents": [
+        {
+          "id": "waterfront:description",
+          "kind": "description",
+          "text": "Аптекарская набережная. Городской маршрут для прогулки у воды. Точка на карте — ориентир для выбора участка, а не весь маршрут. Доступ к спускам и ограничения на выбранном участке проверь перед прогулкой.",
+          "source_url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/aptekarskaya-naberezhnaya",
+          "observed_at": "2026-10-13T11:11:04.803933+00:00",
+          "retrieved_at": "2026-10-13T11:11:04.803933+00:00"
+        }
+      ],
+      "features": [],
+      "prices": [],
+      "offers": [],
+      "status": "catalogue",
+      "updated_at": "2026-10-13T11:11:04.803933+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false
+    },
+    {
+      "id": "waterfront:zhdanovskaya-naberezhnaya",
+      "title": "Ждановская набережная",
+      "address": "Ждановская набережная, Санкт-Петербург",
+      "city": "Санкт-Петербург",
+      "category": "space",
+      "lat": 59.955369,
+      "lon": 30.281824,
+      "coordinate_source_url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/zhdanovskaya-naberezhnaya",
+      "coordinate_precision": "publisher_map_marker",
+      "notes": "Ждановская набережная. Городской маршрут для прогулки у воды вдоль р. Ждановка. Точка на карте — ориентир для выбора участка, а не весь маршрут. Доступ к спускам и ограничения на выбранном участке проверь перед прогулкой.",
+      "sources": [
+        {
+          "url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/zhdanovskaya-naberezhnaya",
+          "kind": "official",
+          "label": "Мостотрест · набережная",
+          "retrieved_at": "2026-10-13T11:11:04.803933+00:00"
+        }
+      ],
+      "documents": [
+        {
+          "id": "waterfront:description",
+          "kind": "description",
+          "text": "Ждановская набережная. Городской маршрут для прогулки у воды вдоль р. Ждановка. Точка на карте — ориентир для выбора участка, а не весь маршрут. Доступ к спускам и ограничения на выбранном участке проверь перед прогулкой.",
+          "source_url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/zhdanovskaya-naberezhnaya",
+          "observed_at": "2026-10-13T11:11:04.803933+00:00",
+          "retrieved_at": "2026-10-13T11:11:04.803933+00:00"
+        }
+      ],
+      "features": [],
+      "prices": [],
+      "offers": [],
+      "status": "catalogue",
+      "updated_at": "2026-10-13T11:11:04.803933+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false
+    },
+    {
+      "id": "waterfront:mytninskaya-naberezhnaya",
+      "title": "Мытнинская набережная",
+      "address": "Мытнинская набережная, Санкт-Петербург",
+      "city": "Санкт-Петербург",
+      "category": "space",
+      "lat": 59.948699,
+      "lon": 30.306546,
+      "coordinate_source_url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/mytninskaya-naberezhnaya",
+      "coordinate_precision": "publisher_map_marker",
+      "notes": "Мытнинская набережная. Городской маршрут для прогулки у воды. Точка на карте — ориентир для выбора участка, а не весь маршрут. Доступ к спускам и ограничения на выбранном участке проверь перед прогулкой.",
+      "sources": [
+        {
+          "url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/mytninskaya-naberezhnaya",
+          "kind": "official",
+          "label": "Мостотрест · набережная",
+          "retrieved_at": "2026-10-13T11:11:04.803933+00:00"
+        }
+      ],
+      "documents": [
+        {
+          "id": "waterfront:description",
+          "kind": "description",
+          "text": "Мытнинская набережная. Городской маршрут для прогулки у воды. Точка на карте — ориентир для выбора участка, а не весь маршрут. Доступ к спускам и ограничения на выбранном участке проверь перед прогулкой.",
+          "source_url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/mytninskaya-naberezhnaya",
+          "observed_at": "2026-10-13T11:11:04.803933+00:00",
+          "retrieved_at": "2026-10-13T11:11:04.803933+00:00"
+        }
+      ],
+      "features": [],
+      "prices": [],
+      "offers": [],
+      "status": "catalogue",
+      "updated_at": "2026-10-13T11:11:04.803933+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false
+    },
+    {
+      "id": "waterfront:naberezhnaya-admirala-lazareva",
+      "title": "Набережная Адмирала Лазарева",
+      "address": "Набережная Адмирала Лазарева, Санкт-Петербург",
+      "city": "Санкт-Петербург",
+      "category": "space",
+      "lat": 59.965296,
+      "lon": 30.27816,
+      "coordinate_source_url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/naberezhnaya-admirala-lazareva",
+      "coordinate_precision": "publisher_map_marker",
+      "notes": "Набережная Адмирала Лазарева. Городской маршрут для прогулки у воды. Точка на карте — ориентир для выбора участка, а не весь маршрут. Доступ к спускам и ограничения на выбранном участке проверь перед прогулкой.",
+      "sources": [
+        {
+          "url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/naberezhnaya-admirala-lazareva",
+          "kind": "official",
+          "label": "Мостотрест · набережная",
+          "retrieved_at": "2026-10-13T11:11:04.803933+00:00"
+        }
+      ],
+      "documents": [
+        {
+          "id": "waterfront:description",
+          "kind": "description",
+          "text": "Набережная Адмирала Лазарева. Городской маршрут для прогулки у воды. Точка на карте — ориентир для выбора участка, а не весь маршрут. Доступ к спускам и ограничения на выбранном участке проверь перед прогулкой.",
+          "source_url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/naberezhnaya-admirala-lazareva",
+          "observed_at": "2026-10-13T11:11:04.803933+00:00",
+          "retrieved_at": "2026-10-13T11:11:04.803933+00:00"
+        }
+      ],
+      "features": [],
+      "prices": [],
+      "offers": [],
+      "status": "catalogue",
+      "updated_at": "2026-10-13T11:11:04.803933+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false
+    },
+    {
+      "id": "waterfront:naberezhnaya-zimnej-kanavki",
+      "title": "Набережная Зимней канавки",
+      "address": "Набережная Зимней канавки, Санкт-Петербург",
+      "city": "Санкт-Петербург",
+      "category": "space",
+      "lat": 59.941962,
+      "lon": 30.317667,
+      "coordinate_source_url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/naberezhnaya-zimnej-kanavki",
+      "coordinate_precision": "publisher_map_marker",
+      "notes": "Набережная Зимней канавки. Городской маршрут для прогулки у воды. Точка на карте — ориентир для выбора участка, а не весь маршрут. Доступ к спускам и ограничения на выбранном участке проверь перед прогулкой.",
+      "sources": [
+        {
+          "url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/naberezhnaya-zimnej-kanavki",
+          "kind": "official",
+          "label": "Мостотрест · набережная",
+          "retrieved_at": "2026-10-13T11:11:04.803933+00:00"
+        }
+      ],
+      "documents": [
+        {
+          "id": "waterfront:description",
+          "kind": "description",
+          "text": "Набережная Зимней канавки. Городской маршрут для прогулки у воды. Точка на карте — ориентир для выбора участка, а не весь маршрут. Доступ к спускам и ограничения на выбранном участке проверь перед прогулкой.",
+          "source_url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/naberezhnaya-zimnej-kanavki",
+          "observed_at": "2026-10-13T11:11:04.803933+00:00",
+          "retrieved_at": "2026-10-13T11:11:04.803933+00:00"
+        }
+      ],
+      "features": [],
+      "prices": [],
+      "offers": [],
+      "status": "catalogue",
+      "updated_at": "2026-10-13T11:11:04.803933+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false
+    },
+    {
+      "id": "waterfront:naberezhnaya-kryukova-kanala",
+      "title": "Набережная Крюкова канала",
+      "address": "Набережная Крюкова канала, Санкт-Петербург",
+      "city": "Санкт-Петербург",
+      "category": "space",
+      "lat": 59.923942,
+      "lon": 30.296657,
+      "coordinate_source_url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/naberezhnaya-kryukova-kanala",
+      "coordinate_precision": "publisher_map_marker",
+      "notes": "Набережная Крюкова канала. Городской маршрут для прогулки у воды. Точка на карте — ориентир для выбора участка, а не весь маршрут. Доступ к спускам и ограничения на выбранном участке проверь перед прогулкой.",
+      "sources": [
+        {
+          "url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/naberezhnaya-kryukova-kanala",
+          "kind": "official",
+          "label": "Мостотрест · набережная",
+          "retrieved_at": "2026-10-13T11:11:04.803933+00:00"
+        }
+      ],
+      "documents": [
+        {
+          "id": "waterfront:description",
+          "kind": "description",
+          "text": "Набережная Крюкова канала. Городской маршрут для прогулки у воды. Точка на карте — ориентир для выбора участка, а не весь маршрут. Доступ к спускам и ограничения на выбранном участке проверь перед прогулкой.",
+          "source_url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/naberezhnaya-kryukova-kanala",
+          "observed_at": "2026-10-13T11:11:04.803933+00:00",
+          "retrieved_at": "2026-10-13T11:11:04.803933+00:00"
+        }
+      ],
+      "features": [],
+      "prices": [],
+      "offers": [],
+      "status": "catalogue",
+      "updated_at": "2026-10-13T11:11:04.803933+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false
+    },
+    {
+      "id": "waterfront:naberezhnaya-kutuzova",
+      "title": "Набережная Кутузова",
+      "address": "Набережная Кутузова, Санкт-Петербург",
+      "city": "Санкт-Петербург",
+      "category": "space",
+      "lat": 59.949056,
+      "lon": 30.34249,
+      "coordinate_source_url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/naberezhnaya-kutuzova",
+      "coordinate_precision": "publisher_map_marker",
+      "notes": "Набережная Кутузова. Городской маршрут для прогулки у воды. Точка на карте — ориентир для выбора участка, а не весь маршрут. Доступ к спускам и ограничения на выбранном участке проверь перед прогулкой.",
+      "sources": [
+        {
+          "url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/naberezhnaya-kutuzova",
+          "kind": "official",
+          "label": "Мостотрест · набережная",
+          "retrieved_at": "2026-10-13T11:11:04.803933+00:00"
+        }
+      ],
+      "documents": [
+        {
+          "id": "waterfront:description",
+          "kind": "description",
+          "text": "Набережная Кутузова. Городской маршрут для прогулки у воды. Точка на карте — ориентир для выбора участка, а не весь маршрут. Доступ к спускам и ограничения на выбранном участке проверь перед прогулкой.",
+          "source_url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/naberezhnaya-kutuzova",
+          "observed_at": "2026-10-13T11:11:04.803933+00:00",
+          "retrieved_at": "2026-10-13T11:11:04.803933+00:00"
+        }
+      ],
+      "features": [],
+      "prices": [],
+      "offers": [],
+      "status": "catalogue",
+      "updated_at": "2026-10-13T11:11:04.803933+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false
+    },
+    {
+      "id": "waterfront:naberezhnaya-lebyazhego-kanala",
+      "title": "Набережная Лебяжьей канавки",
+      "address": "Набережная Лебяжьей канавки, Санкт-Петербург",
+      "city": "Санкт-Петербург",
+      "category": "space",
+      "lat": 59.943841,
+      "lon": 30.333643,
+      "coordinate_source_url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/naberezhnaya-lebyazhego-kanala",
+      "coordinate_precision": "publisher_map_marker",
+      "notes": "Набережная Лебяжьей канавки. Городской маршрут для прогулки у воды. Точка на карте — ориентир для выбора участка, а не весь маршрут. Доступ к спускам и ограничения на выбранном участке проверь перед прогулкой.",
+      "sources": [
+        {
+          "url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/naberezhnaya-lebyazhego-kanala",
+          "kind": "official",
+          "label": "Мостотрест · набережная",
+          "retrieved_at": "2026-10-13T11:11:04.803933+00:00"
+        }
+      ],
+      "documents": [
+        {
+          "id": "waterfront:description",
+          "kind": "description",
+          "text": "Набережная Лебяжьей канавки. Городской маршрут для прогулки у воды. Точка на карте — ориентир для выбора участка, а не весь маршрут. Доступ к спускам и ограничения на выбранном участке проверь перед прогулкой.",
+          "source_url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/naberezhnaya-lebyazhego-kanala",
+          "observed_at": "2026-10-13T11:11:04.803933+00:00",
+          "retrieved_at": "2026-10-13T11:11:04.803933+00:00"
+        }
+      ],
+      "features": [],
+      "prices": [],
+      "offers": [],
+      "status": "catalogue",
+      "updated_at": "2026-10-13T11:11:04.803933+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false
+    },
+    {
+      "id": "waterfront:naberezhnaya-makarova",
+      "title": "Набережная Макарова",
+      "address": "Набережная Макарова, Санкт-Петербург",
+      "city": "Санкт-Петербург",
+      "category": "space",
+      "lat": 59.946608,
+      "lon": 30.288519,
+      "coordinate_source_url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/naberezhnaya-makarova",
+      "coordinate_precision": "publisher_map_marker",
+      "notes": "Набережная Макарова. Городской маршрут для прогулки у воды. Точка на карте — ориентир для выбора участка, а не весь маршрут. Доступ к спускам и ограничения на выбранном участке проверь перед прогулкой.",
+      "sources": [
+        {
+          "url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/naberezhnaya-makarova",
+          "kind": "official",
+          "label": "Мостотрест · набережная",
+          "retrieved_at": "2026-10-13T11:11:04.803933+00:00"
+        }
+      ],
+      "documents": [
+        {
+          "id": "waterfront:description",
+          "kind": "description",
+          "text": "Набережная Макарова. Городской маршрут для прогулки у воды. Точка на карте — ориентир для выбора участка, а не весь маршрут. Доступ к спускам и ограничения на выбранном участке проверь перед прогулкой.",
+          "source_url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/naberezhnaya-makarova",
+          "observed_at": "2026-10-13T11:11:04.803933+00:00",
+          "retrieved_at": "2026-10-13T11:11:04.803933+00:00"
+        }
+      ],
+      "features": [],
+      "prices": [],
+      "offers": [],
+      "status": "catalogue",
+      "updated_at": "2026-10-13T11:11:04.803933+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false
+    },
+    {
+      "id": "waterfront:naberezhnaya-martynova",
+      "title": "Набережная Мартынова",
+      "address": "Набережная Мартынова, Санкт-Петербург",
+      "city": "Санкт-Петербург",
+      "category": "space",
+      "lat": 59.974847,
+      "lon": 30.255672,
+      "coordinate_source_url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/naberezhnaya-martynova",
+      "coordinate_precision": "publisher_map_marker",
+      "notes": "Набережная Мартынова. Городской маршрут для прогулки у воды вдоль р. Средняя Невка. Точка на карте — ориентир для выбора участка, а не весь маршрут. Доступ к спускам и ограничения на выбранном участке проверь перед прогулкой.",
+      "sources": [
+        {
+          "url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/naberezhnaya-martynova",
+          "kind": "official",
+          "label": "Мостотрест · набережная",
+          "retrieved_at": "2026-10-13T11:11:04.803933+00:00"
+        }
+      ],
+      "documents": [
+        {
+          "id": "waterfront:description",
+          "kind": "description",
+          "text": "Набережная Мартынова. Городской маршрут для прогулки у воды вдоль р. Средняя Невка. Точка на карте — ориентир для выбора участка, а не весь маршрут. Доступ к спускам и ограничения на выбранном участке проверь перед прогулкой.",
+          "source_url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/naberezhnaya-martynova",
+          "observed_at": "2026-10-13T11:11:04.803933+00:00",
+          "retrieved_at": "2026-10-13T11:11:04.803933+00:00"
+        }
+      ],
+      "features": [],
+      "prices": [],
+      "offers": [],
+      "status": "catalogue",
+      "updated_at": "2026-10-13T11:11:04.803933+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false
+    },
+    {
+      "id": "waterfront:naberezhnaya-novo-admiraltejskogo-kanala",
+      "title": "Набережная Ново-Адмиралтейского канала",
+      "address": "Набережная Ново-Адмиралтейского канала, Санкт-Петербург",
+      "city": "Санкт-Петербург",
+      "category": "space",
+      "lat": 59.93028,
+      "lon": 30.284075,
+      "coordinate_source_url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/naberezhnaya-novo-admiraltejskogo-kanala",
+      "coordinate_precision": "publisher_map_marker",
+      "notes": "Набережная Ново-Адмиралтейского канала. Городской маршрут для прогулки у воды. Точка на карте — ориентир для выбора участка, а не весь маршрут. Доступ к спускам и ограничения на выбранном участке проверь перед прогулкой.",
+      "sources": [
+        {
+          "url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/naberezhnaya-novo-admiraltejskogo-kanala",
+          "kind": "official",
+          "label": "Мостотрест · набережная",
+          "retrieved_at": "2026-10-13T11:11:04.803933+00:00"
+        }
+      ],
+      "documents": [
+        {
+          "id": "waterfront:description",
+          "kind": "description",
+          "text": "Набережная Ново-Адмиралтейского канала. Городской маршрут для прогулки у воды. Точка на карте — ориентир для выбора участка, а не весь маршрут. Доступ к спускам и ограничения на выбранном участке проверь перед прогулкой.",
+          "source_url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/naberezhnaya-novo-admiraltejskogo-kanala",
+          "observed_at": "2026-10-13T11:11:04.803933+00:00",
+          "retrieved_at": "2026-10-13T11:11:04.803933+00:00"
+        }
+      ],
+      "features": [],
+      "prices": [],
+      "offers": [],
+      "status": "catalogue",
+      "updated_at": "2026-10-13T11:11:04.803933+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false
+    },
+    {
+      "id": "waterfront:naberezhnaya-reki-ekateringofki",
+      "title": "Набережная реки Екатерингофки",
+      "address": "Набережная реки Екатерингофки, Санкт-Петербург",
+      "city": "Санкт-Петербург",
+      "category": "space",
+      "lat": 59.905279,
+      "lon": 30.253715,
+      "coordinate_source_url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/naberezhnaya-reki-ekateringofki",
+      "coordinate_precision": "publisher_map_marker",
+      "notes": "Набережная реки Екатерингофки. Городской маршрут для прогулки у воды вдоль р. Екатерингофка. Точка на карте — ориентир для выбора участка, а не весь маршрут. Доступ к спускам и ограничения на выбранном участке проверь перед прогулкой.",
+      "sources": [
+        {
+          "url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/naberezhnaya-reki-ekateringofki",
+          "kind": "official",
+          "label": "Мостотрест · набережная",
+          "retrieved_at": "2026-10-13T11:11:04.803933+00:00"
+        }
+      ],
+      "documents": [
+        {
+          "id": "waterfront:description",
+          "kind": "description",
+          "text": "Набережная реки Екатерингофки. Городской маршрут для прогулки у воды вдоль р. Екатерингофка. Точка на карте — ориентир для выбора участка, а не весь маршрут. Доступ к спускам и ограничения на выбранном участке проверь перед прогулкой.",
+          "source_url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/naberezhnaya-reki-ekateringofki",
+          "observed_at": "2026-10-13T11:11:04.803933+00:00",
+          "retrieved_at": "2026-10-13T11:11:04.803933+00:00"
+        }
+      ],
+      "features": [],
+      "prices": [],
+      "offers": [],
+      "status": "catalogue",
+      "updated_at": "2026-10-13T11:11:04.803933+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false
+    },
+    {
+      "id": "waterfront:naberezhnaya-reki-karpovki",
+      "title": "Набережная реки Карповки",
+      "address": "Набережная реки Карповки, Санкт-Петербург",
+      "city": "Санкт-Петербург",
+      "category": "space",
+      "lat": 59.96888,
+      "lon": 30.310559,
+      "coordinate_source_url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/naberezhnaya-reki-karpovki",
+      "coordinate_precision": "publisher_map_marker",
+      "notes": "Набережная реки Карповки. Городской маршрут для прогулки у воды вдоль р. Карповка. Точка на карте — ориентир для выбора участка, а не весь маршрут. Доступ к спускам и ограничения на выбранном участке проверь перед прогулкой.",
+      "sources": [
+        {
+          "url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/naberezhnaya-reki-karpovki",
+          "kind": "official",
+          "label": "Мостотрест · набережная",
+          "retrieved_at": "2026-10-13T11:11:04.803933+00:00"
+        }
+      ],
+      "documents": [
+        {
+          "id": "waterfront:description",
+          "kind": "description",
+          "text": "Набережная реки Карповки. Городской маршрут для прогулки у воды вдоль р. Карповка. Точка на карте — ориентир для выбора участка, а не весь маршрут. Доступ к спускам и ограничения на выбранном участке проверь перед прогулкой.",
+          "source_url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/naberezhnaya-reki-karpovki",
+          "observed_at": "2026-10-13T11:11:04.803933+00:00",
+          "retrieved_at": "2026-10-13T11:11:04.803933+00:00"
+        }
+      ],
+      "features": [],
+      "prices": [],
+      "offers": [],
+      "status": "catalogue",
+      "updated_at": "2026-10-13T11:11:04.803933+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false
+    },
+    {
+      "id": "waterfront:naberezhnaya-reki-mojki",
+      "title": "Набережная реки Мойки",
+      "address": "Набережная реки Мойки, Санкт-Петербург",
+      "city": "Санкт-Петербург",
+      "category": "space",
+      "lat": 59.931946,
+      "lon": 30.3111,
+      "coordinate_source_url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/naberezhnaya-reki-mojki",
+      "coordinate_precision": "publisher_map_marker",
+      "notes": "Набережная реки Мойки. Городской маршрут для прогулки у воды. Точка на карте — ориентир для выбора участка, а не весь маршрут. Доступ к спускам и ограничения на выбранном участке проверь перед прогулкой.",
+      "sources": [
+        {
+          "url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/naberezhnaya-reki-mojki",
+          "kind": "official",
+          "label": "Мостотрест · набережная",
+          "retrieved_at": "2026-10-13T11:11:04.803933+00:00"
+        }
+      ],
+      "documents": [
+        {
+          "id": "waterfront:description",
+          "kind": "description",
+          "text": "Набережная реки Мойки. Городской маршрут для прогулки у воды. Точка на карте — ориентир для выбора участка, а не весь маршрут. Доступ к спускам и ограничения на выбранном участке проверь перед прогулкой.",
+          "source_url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/naberezhnaya-reki-mojki",
+          "observed_at": "2026-10-13T11:11:04.803933+00:00",
+          "retrieved_at": "2026-10-13T11:11:04.803933+00:00"
+        }
+      ],
+      "features": [],
+      "prices": [],
+      "offers": [],
+      "status": "catalogue",
+      "updated_at": "2026-10-13T11:11:04.803933+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false
+    },
+    {
+      "id": "waterfront:naberezhnaya-reki-monastyrki",
+      "title": "Набережная реки Монастырки",
+      "address": "Набережная реки Монастырки, Санкт-Петербург",
+      "city": "Санкт-Петербург",
+      "category": "space",
+      "lat": 59.921639,
+      "lon": 30.385275,
+      "coordinate_source_url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/naberezhnaya-reki-monastyrki",
+      "coordinate_precision": "publisher_map_marker",
+      "notes": "Набережная реки Монастырки. Городской маршрут для прогулки у воды. Точка на карте — ориентир для выбора участка, а не весь маршрут. Доступ к спускам и ограничения на выбранном участке проверь перед прогулкой.",
+      "sources": [
+        {
+          "url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/naberezhnaya-reki-monastyrki",
+          "kind": "official",
+          "label": "Мостотрест · набережная",
+          "retrieved_at": "2026-10-13T11:11:04.803933+00:00"
+        }
+      ],
+      "documents": [
+        {
+          "id": "waterfront:description",
+          "kind": "description",
+          "text": "Набережная реки Монастырки. Городской маршрут для прогулки у воды. Точка на карте — ориентир для выбора участка, а не весь маршрут. Доступ к спускам и ограничения на выбранном участке проверь перед прогулкой.",
+          "source_url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/naberezhnaya-reki-monastyrki",
+          "observed_at": "2026-10-13T11:11:04.803933+00:00",
+          "retrieved_at": "2026-10-13T11:11:04.803933+00:00"
+        }
+      ],
+      "features": [],
+      "prices": [],
+      "offers": [],
+      "status": "catalogue",
+      "updated_at": "2026-10-13T11:11:04.803933+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false
+    },
+    {
+      "id": "waterfront:naberezhnaya-reki-okkervil",
+      "title": "Набережная реки Оккервиль",
+      "address": "Набережная реки Оккервиль, Санкт-Петербург",
+      "city": "Санкт-Петербург",
+      "category": "space",
+      "lat": 59.923798,
+      "lon": 30.463165,
+      "coordinate_source_url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/naberezhnaya-reki-okkervil",
+      "coordinate_precision": "publisher_map_marker",
+      "notes": "Набережная реки Оккервиль. Городской маршрут для прогулки у воды вдоль р. Оккервиль. Точка на карте — ориентир для выбора участка, а не весь маршрут. Доступ к спускам и ограничения на выбранном участке проверь перед прогулкой.",
+      "sources": [
+        {
+          "url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/naberezhnaya-reki-okkervil",
+          "kind": "official",
+          "label": "Мостотрест · набережная",
+          "retrieved_at": "2026-10-13T11:11:04.803933+00:00"
+        }
+      ],
+      "documents": [
+        {
+          "id": "waterfront:description",
+          "kind": "description",
+          "text": "Набережная реки Оккервиль. Городской маршрут для прогулки у воды вдоль р. Оккервиль. Точка на карте — ориентир для выбора участка, а не весь маршрут. Доступ к спускам и ограничения на выбранном участке проверь перед прогулкой.",
+          "source_url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/naberezhnaya-reki-okkervil",
+          "observed_at": "2026-10-13T11:11:04.803933+00:00",
+          "retrieved_at": "2026-10-13T11:11:04.803933+00:00"
+        }
+      ],
+      "features": [],
+      "prices": [],
+      "offers": [],
+      "status": "catalogue",
+      "updated_at": "2026-10-13T11:11:04.803933+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false
+    },
+    {
+      "id": "waterfront:naberezhnaya-reki-pryazhki",
+      "title": "Набережная реки Пряжки",
+      "address": "Набережная реки Пряжки, Санкт-Петербург",
+      "city": "Санкт-Петербург",
+      "category": "space",
+      "lat": 59.922767,
+      "lon": 30.281445,
+      "coordinate_source_url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/naberezhnaya-reki-pryazhki",
+      "coordinate_precision": "publisher_map_marker",
+      "notes": "Набережная реки Пряжки. Городской маршрут для прогулки у воды вдоль р. Пряжка. Точка на карте — ориентир для выбора участка, а не весь маршрут. Доступ к спускам и ограничения на выбранном участке проверь перед прогулкой.",
+      "sources": [
+        {
+          "url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/naberezhnaya-reki-pryazhki",
+          "kind": "official",
+          "label": "Мостотрест · набережная",
+          "retrieved_at": "2026-10-13T11:11:04.803933+00:00"
+        }
+      ],
+      "documents": [
+        {
+          "id": "waterfront:description",
+          "kind": "description",
+          "text": "Набережная реки Пряжки. Городской маршрут для прогулки у воды вдоль р. Пряжка. Точка на карте — ориентир для выбора участка, а не весь маршрут. Доступ к спускам и ограничения на выбранном участке проверь перед прогулкой.",
+          "source_url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/naberezhnaya-reki-pryazhki",
+          "observed_at": "2026-10-13T11:11:04.803933+00:00",
+          "retrieved_at": "2026-10-13T11:11:04.803933+00:00"
+        }
+      ],
+      "features": [],
+      "prices": [],
+      "offers": [],
+      "status": "catalogue",
+      "updated_at": "2026-10-13T11:11:04.803933+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false
+    },
+    {
+      "id": "waterfront:naberezhnaya-reki-smolenki",
+      "title": "Набережная реки Смоленки",
+      "address": "Набережная реки Смоленки, Санкт-Петербург",
+      "city": "Санкт-Петербург",
+      "category": "space",
+      "lat": 59.948672,
+      "lon": 30.261709,
+      "coordinate_source_url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/naberezhnaya-reki-smolenki",
+      "coordinate_precision": "publisher_map_marker",
+      "notes": "Набережная реки Смоленки. Городской маршрут для прогулки у воды вдоль р. Смоленка. Точка на карте — ориентир для выбора участка, а не весь маршрут. Доступ к спускам и ограничения на выбранном участке проверь перед прогулкой.",
+      "sources": [
+        {
+          "url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/naberezhnaya-reki-smolenki",
+          "kind": "official",
+          "label": "Мостотрест · набережная",
+          "retrieved_at": "2026-10-13T11:11:04.803933+00:00"
+        }
+      ],
+      "documents": [
+        {
+          "id": "waterfront:description",
+          "kind": "description",
+          "text": "Набережная реки Смоленки. Городской маршрут для прогулки у воды вдоль р. Смоленка. Точка на карте — ориентир для выбора участка, а не весь маршрут. Доступ к спускам и ограничения на выбранном участке проверь перед прогулкой.",
+          "source_url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/naberezhnaya-reki-smolenki",
+          "observed_at": "2026-10-13T11:11:04.803933+00:00",
+          "retrieved_at": "2026-10-13T11:11:04.803933+00:00"
+        }
+      ],
+      "features": [],
+      "prices": [],
+      "offers": [],
+      "status": "catalogue",
+      "updated_at": "2026-10-13T11:11:04.803933+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false
+    },
+    {
+      "id": "waterfront:naberezhnaya-reki-fontanki",
+      "title": "Набережная реки Фонтанки",
+      "address": "Набережная реки Фонтанки, Санкт-Петербург",
+      "city": "Санкт-Петербург",
+      "category": "space",
+      "lat": 59.922959,
+      "lon": 30.320219,
+      "coordinate_source_url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/naberezhnaya-reki-fontanki",
+      "coordinate_precision": "publisher_map_marker",
+      "notes": "Набережная реки Фонтанки. Городской маршрут для прогулки у воды. Точка на карте — ориентир для выбора участка, а не весь маршрут. Доступ к спускам и ограничения на выбранном участке проверь перед прогулкой.",
+      "sources": [
+        {
+          "url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/naberezhnaya-reki-fontanki",
+          "kind": "official",
+          "label": "Мостотрест · набережная",
+          "retrieved_at": "2026-10-13T11:11:04.803933+00:00"
+        }
+      ],
+      "documents": [
+        {
+          "id": "waterfront:description",
+          "kind": "description",
+          "text": "Набережная реки Фонтанки. Городской маршрут для прогулки у воды. Точка на карте — ориентир для выбора участка, а не весь маршрут. Доступ к спускам и ограничения на выбранном участке проверь перед прогулкой.",
+          "source_url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/naberezhnaya-reki-fontanki",
+          "observed_at": "2026-10-13T11:11:04.803933+00:00",
+          "retrieved_at": "2026-10-13T11:11:04.803933+00:00"
+        }
+      ],
+      "features": [],
+      "prices": [],
+      "offers": [],
+      "status": "catalogue",
+      "updated_at": "2026-10-13T11:11:04.803933+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false
+    },
+    {
+      "id": "waterfront:pesochnaya-naberezhnaya",
+      "title": "Песочная набережная",
+      "address": "Песочная набережная, Санкт-Петербург",
+      "city": "Санкт-Петербург",
+      "category": "space",
+      "lat": 59.972761,
+      "lon": 30.290422,
+      "coordinate_source_url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/pesochnaya-naberezhnaya",
+      "coordinate_precision": "publisher_map_marker",
+      "notes": "Песочная набережная. Городской маршрут для прогулки у воды. Точка на карте — ориентир для выбора участка, а не весь маршрут. Доступ к спускам и ограничения на выбранном участке проверь перед прогулкой.",
+      "sources": [
+        {
+          "url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/pesochnaya-naberezhnaya",
+          "kind": "official",
+          "label": "Мостотрест · набережная",
+          "retrieved_at": "2026-10-13T11:11:04.803933+00:00"
+        }
+      ],
+      "documents": [
+        {
+          "id": "waterfront:description",
+          "kind": "description",
+          "text": "Песочная набережная. Городской маршрут для прогулки у воды. Точка на карте — ориентир для выбора участка, а не весь маршрут. Доступ к спускам и ограничения на выбранном участке проверь перед прогулкой.",
+          "source_url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/pesochnaya-naberezhnaya",
+          "observed_at": "2026-10-13T11:11:04.803933+00:00",
+          "retrieved_at": "2026-10-13T11:11:04.803933+00:00"
+        }
+      ],
+      "features": [],
+      "prices": [],
+      "offers": [],
+      "status": "catalogue",
+      "updated_at": "2026-10-13T11:11:04.803933+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false
+    },
+    {
+      "id": "waterfront:petrovskaya-naberezhnaya",
+      "title": "Петровская набережная",
+      "address": "Петровская набережная, Санкт-Петербург",
+      "city": "Санкт-Петербург",
+      "category": "space",
+      "lat": 59.95319,
+      "lon": 30.333702,
+      "coordinate_source_url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/petrovskaya-naberezhnaya",
+      "coordinate_precision": "publisher_map_marker",
+      "notes": "Петровская набережная. Городской маршрут для прогулки у воды. Точка на карте — ориентир для выбора участка, а не весь маршрут. Доступ к спускам и ограничения на выбранном участке проверь перед прогулкой.",
+      "sources": [
+        {
+          "url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/petrovskaya-naberezhnaya",
+          "kind": "official",
+          "label": "Мостотрест · набережная",
+          "retrieved_at": "2026-10-13T11:11:04.803933+00:00"
+        }
+      ],
+      "documents": [
+        {
+          "id": "waterfront:description",
+          "kind": "description",
+          "text": "Петровская набережная. Городской маршрут для прогулки у воды. Точка на карте — ориентир для выбора участка, а не весь маршрут. Доступ к спускам и ограничения на выбранном участке проверь перед прогулкой.",
+          "source_url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/petrovskaya-naberezhnaya",
+          "observed_at": "2026-10-13T11:11:04.803933+00:00",
+          "retrieved_at": "2026-10-13T11:11:04.803933+00:00"
+        }
+      ],
+      "features": [],
+      "prices": [],
+      "offers": [],
+      "status": "catalogue",
+      "updated_at": "2026-10-13T11:11:04.803933+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false
+    },
+    {
+      "id": "waterfront:smolnaya-naberezhnaya",
+      "title": "Смольная набережная",
+      "address": "Смольная набережная, Санкт-Петербург",
+      "city": "Санкт-Петербург",
+      "category": "space",
+      "lat": 59.952992,
+      "lon": 30.397192,
+      "coordinate_source_url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/smolnaya-naberezhnaya",
+      "coordinate_precision": "publisher_map_marker",
+      "notes": "Смольная набережная. Городской маршрут для прогулки у воды. Точка на карте — ориентир для выбора участка, а не весь маршрут. Доступ к спускам и ограничения на выбранном участке проверь перед прогулкой.",
+      "sources": [
+        {
+          "url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/smolnaya-naberezhnaya",
+          "kind": "official",
+          "label": "Мостотрест · набережная",
+          "retrieved_at": "2026-10-13T11:11:04.803933+00:00"
+        }
+      ],
+      "documents": [
+        {
+          "id": "waterfront:description",
+          "kind": "description",
+          "text": "Смольная набережная. Городской маршрут для прогулки у воды. Точка на карте — ориентир для выбора участка, а не весь маршрут. Доступ к спускам и ограничения на выбранном участке проверь перед прогулкой.",
+          "source_url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/smolnaya-naberezhnaya",
+          "observed_at": "2026-10-13T11:11:04.803933+00:00",
+          "retrieved_at": "2026-10-13T11:11:04.803933+00:00"
+        }
+      ],
+      "features": [],
+      "prices": [],
+      "offers": [],
+      "status": "catalogue",
+      "updated_at": "2026-10-13T11:11:04.803933+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false
+    },
+    {
+      "id": "waterfront:ushakovskaya-naberezhnaya",
+      "title": "Ушаковская набережная",
+      "address": "Ушаковская набережная, Санкт-Петербург",
+      "city": "Санкт-Петербург",
+      "category": "space",
+      "lat": 59.98191,
+      "lon": 30.310289,
+      "coordinate_source_url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/ushakovskaya-naberezhnaya",
+      "coordinate_precision": "publisher_map_marker",
+      "notes": "Ушаковская набережная. Городской маршрут для прогулки у воды. Точка на карте — ориентир для выбора участка, а не весь маршрут. Доступ к спускам и ограничения на выбранном участке проверь перед прогулкой.",
+      "sources": [
+        {
+          "url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/ushakovskaya-naberezhnaya",
+          "kind": "official",
+          "label": "Мостотрест · набережная",
+          "retrieved_at": "2026-10-13T11:11:04.803933+00:00"
+        }
+      ],
+      "documents": [
+        {
+          "id": "waterfront:description",
+          "kind": "description",
+          "text": "Ушаковская набережная. Городской маршрут для прогулки у воды. Точка на карте — ориентир для выбора участка, а не весь маршрут. Доступ к спускам и ограничения на выбранном участке проверь перед прогулкой.",
+          "source_url": "https://mostotrest-spb.krti.gov.spb.ru/embankments/ushakovskaya-naberezhnaya",
+          "observed_at": "2026-10-13T11:11:04.803933+00:00",
+          "retrieved_at": "2026-10-13T11:11:04.803933+00:00"
+        }
+      ],
+      "features": [],
+      "prices": [],
+      "offers": [],
+      "status": "catalogue",
+      "updated_at": "2026-10-13T11:11:04.803933+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false
+    }
+  ],
+  "collection_report": {
+    "index_locations": 49,
+    "requested": 24,
+    "accepted": 24,
+    "with_coordinates": 24,
+    "errors": []
+  }
+}

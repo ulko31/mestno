@@ -54,7 +54,7 @@ test('fresh price over budget excludes, while unknown price produces a labelled 
 });
 test('free game cannot be proved by a positive free entry phrase in the text',()=>{
  const r=searchPlaces([place('a','Есть бильярд, вход бесплатный.')],{query:'бесплатный бильярд',today});
- assert.equal(r.results.length,0);assert.equal(r.alternatives.length,1);
+ assert.equal(r.results.length,0);assert.equal(r.alternatives.length,0);
 });
 test('old reviews remain explicit historical candidates; expired exhibition texts are ignored',()=>{
  const old=place('a','',{documents:[doc('Работала с ноутбуком.',{kind:'review',observed_at:'2025-11-01'})]});

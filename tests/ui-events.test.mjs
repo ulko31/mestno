@@ -5,7 +5,7 @@ import fs from 'node:fs';
 const html=fs.readFileSync(new URL('../dist/index.html',import.meta.url),'utf8');
 const catalogue=JSON.parse(fs.readFileSync(new URL('../dist/places.json',import.meta.url)));
 const RealDate=Date;
-globalThis.Date=class extends RealDate{constructor(...args){super(...(args.length?args:['2026-10-12T12:00:00Z']));}static now(){return +new RealDate('2026-10-12T12:00:00Z');}};
+globalThis.Date=class extends RealDate{constructor(...args){super(...(args.length?args:['2026-10-13T20:00:00Z']));}static now(){return +new RealDate('2026-10-13T20:00:00Z');}};
 class Element {
   constructor(){this.value='';this.checked=false;this.textContent='';this.innerHTML='';this.options=[];this.events={};this.classes=new Set();this.dataset={};
     this.classList={add:name=>this.classes.add(name),remove:name=>this.classes.delete(name),toggle:(name,force)=>{const on=force===undefined?!this.classes.has(name):force;on?this.classes.add(name):this.classes.delete(name);}};
@@ -63,13 +63,12 @@ test('example selection clears stale scenario filters and keeps cafe OR gallery 
   assert.ok(!el('results').innerHTML.includes('Брынза'));
   assert.ok(!el('results').innerHTML.includes('Государственный Эрмитаж'));
 });
-test('unverified free billiards is displayed as an alternative, not an exact result',()=>{
+test('free billiards separates confirmed games and public reports, excluding paid games',()=>{
   query('Бесплатный бильярд');
-  assert.equal(el('results').innerHTML,'');
-  assert.ok(el('empty-state').classes.has('hidden'));
-  assert.ok(!el('alternatives-section').classes.has('hidden'));
-  assert.ok(el('alternative-results').innerHTML.includes('Бар разбитых сердец'));
-  assert.ok(el('alternative-results').innerHTML.includes('пока нет сведений'));
+  assert.ok(el('results').innerHTML.includes('Schmaus'));
+  assert.ok(el('alternative-results').innerHTML.includes('По публикации'));
+  const cards=el('results').innerHTML+el('alternative-results').innerHTML;
+  assert.ok(!cards.includes('Leon Club'));assert.ok(!cards.includes('Альмак'));assert.ok(!cards.includes('MazaPark'));
 });
 
 test('budget shows unknowns by default and supports a known-price-only filter',()=>{

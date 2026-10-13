@@ -1,5 +1,6 @@
 // A menu item, an average bill and an activity ticket have different meanings.
-import {activityKeys} from './experiences.mjs?v=20261012';
+import {activityKeys} from './experiences.mjs?v=20261013';
+import {currentBilliards} from './billiards.mjs?v=20261013';
 const safe=s=>{try{const u=new URL(s);return /^https?:$/.test(u.protocol)&&!u.username&&!u.password?u.href:null;}catch{return null;}};
 export function currentPrice(q,today=new Date()){
   const age=(new Date(today)-new Date(q?.checked_at))/86400000;
@@ -11,12 +12,19 @@ export function currentPrice(q,today=new Date()){
 export function priceFor(place,{today=new Date(),scope='visit',needs=[],context={},offer=null}={}){
   // Never substitute a cheap drink or free entrance for a requested workshop.
   if(offer)return currentPrice(offer.price,today)&&offer.price.scope===scope?offer.price:null;
+  const game=needs.includes('billiards')?currentBilliards(place,{today,context}):null;
+  if(game?.mode==='paid'){
+    // An hourly game tariff is never replaced by the food bill or guessed duration.
+    if(game.game_scope!==scope||!Number.isFinite(game.game_amount))return null;
+    return {amount:game.game_amount,currency:'RUB',scope,kind:scope==='hour'?'hourly':'admission',source_url:game.source_url,checked_at:game.checked_at,label:'Оплата бильярда',note:'Еда и напитки оплачиваются отдельно.'};
+  }
   const activity=needs.some(k=>activityKeys.includes(k)||['billiards','climbing','boxing','ice_skating'].includes(k));
   let quotes=(place.prices||[]).filter(q=>currentPrice(q,today)&&q.scope===scope
+    &&(!needs.includes('cocktails')||!q.excludes_beverages)
     && (!q.visit_day||q.visit_day===context.visitDay)
     && (!q.daypart||q.daypart===context.daypart)
     && (!q.for_needs?.length||q.for_needs.some(k=>needs.includes(k)))
-    && (!activity||!['average_check','menu_order'].includes(q.kind))
+    && (!activity||game&&['free','with_order'].includes(game.mode)||!['average_check','menu_order'].includes(q.kind))
     && (!needs.includes('laptop_work')||q.kind!=='admission'||!['cafe','restaurant','bar'].includes(place.category)));
   if(!place.prices?.length&&Number.isFinite(place.price_max)){
     const legacy={amount:place.price_max,currency:'RUB',scope:place.price_scope,kind:'admission',
@@ -24,7 +32,7 @@ export function priceFor(place,{today=new Date(),scope='visit',needs=[],context=
     if(currentPrice(legacy,today)&&legacy.scope===scope)quotes.push(legacy);
   }
   // A menu example is useful for a coffee/work request; use the reported bill for meals.
-  const preferMenu=needs.includes('laptop_work');
+  const preferMenu=needs.includes('laptop_work')||needs.includes('coffee');
   const rank=q=>q.kind==='average_check'?(preferMenu?2:0):q.kind==='menu_order'?(preferMenu?0:2):1;
   return quotes.sort((a,b)=>rank(a)-rank(b)||a.amount-b.amount)[0]||null;
 }

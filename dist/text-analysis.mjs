@@ -1,5 +1,5 @@
 // Local retrieval over attributed text. This is an explainable text analyser, not an LLM.
-import {offerDocuments} from './experiences.mjs?v=20261012';
+import {offerDocuments} from './experiences.mjs?v=20261013';
 const normalize=s=>String(s||'').toLowerCase().replaceAll('ё','е');
 const safeUrl=s=>{try{const u=new URL(s);return /^https?:$/.test(u.protocol)&&!u.username&&!u.password?u.href:null;}catch{return null;}};
 export function stem(word){
@@ -19,11 +19,18 @@ export function documentsOf(place,today=new Date()){
       && age<=(d.kind==='review'?730:365)
       && (!d.valid_from||new Date(today)>=new Date(d.valid_from))
       && (!d.valid_until||new Date(today)<=new Date(d.valid_until));
-  }).map(d=>({...d,stale:d.kind==='review'&&(new Date(today)-new Date(d.observed_at))/86400000>180}));
+  }).map(d=>({...d,stale:d.kind==='review'&&(d.publication_date_unknown||(new Date(today)-new Date(d.observed_at||d.retrieved_at))/86400000>180)}));
 }
 
 // Only requested concepts are evaluated; additional wording remains searchable in the corpus.
 const patterns={
+  cozy:[/уютн[а-я]*|домашн[а-я]*\s+(?:атмосфер[а-я]*|обстановк[а-я]*)|по[ -]?домашнему/,/неуютн[а-я]*|не\s+уютн[а-я]*/],
+  conversation:[/для\s+(?:встреч[а-я]*\s+с\s+друз[а-я]*|общени[а-я]*|разговор[а-я]*)|неформальн[а-я]*\s+общени[а-я]*|встретиться\s+с\s+друз[а-я]*|поболтать|долг[а-я]*\s+(?:разговор[а-я]*|вечер[а-я]*\s+с\s+друз[а-я]*)|свидани[а-я]*/],
+  coffee:[/(?<![а-я])кофе(?![а-я])|кофейн[а-я]*|капучино|эспрессо/],
+  romantic:[/романтич[а-я]*|для\s+свидани[а-я]*|на\s+свидани[а-я]*|пригласить\s+на\s+свидани[а-я]*|свеч[а-я]*\s+на\s+стол[а-я]*/],
+  cocktails:[/коктейл[а-я]*|настойк[а-я]*|наливк[а-я]*/],
+  warm_lighting:[/тепл[а-я]*\s+(?:свет|освещени[а-я]*)/],vintage_interior:[/винтажн[а-я]*\s+(?:мебел[а-я]*|интерьер[а-я]*)/],
+  food:[/(?<![а-я])ед(?:а|у|ы|е|ой|ою)(?![а-я])|поесть|кухн[а-я]*|пицц[а-я]*|донер[а-я]*|бургер[а-я]*|закуск[а-я]*|завтрак[а-я]*|выпечк[а-я]*|пекарн[а-я]*/],
   laptop_work:[/ноутбук|коворкинг|рабоч(?:ая|ие)\s+(?:зона|места)|для\s+(?:работы|учебы)|приходят\s+(?:работать|поработать|учиться)|удобно\s+(?:работать|учиться)|работал[аи]?\s+за\s+компьютером|писать\s+код/,
     /(?:нельзя|запрещен[а-я]*|не\s+разреш[а-я]*)[^.!?]{0,35}ноутбук|ноутбук[^.!?]{0,35}(?:нельзя|запрещен[а-я]*|не\s+разреш[а-я]*)|поработать\s+не\s+получилось/],
   quiet:[/(?<![а-я])тих[а-я]*|тишин[а-я]*|не\s+шумно|негромк[а-я]*\s+музык[а-я]*|без\s+громк[а-я]*\s+музык[а-я]*/,
@@ -37,7 +44,7 @@ const patterns={
   reading_space:[/почитать|читальн[а-я]*|читател[а-я]*|чтени[а-я]*|читать\s+книги/],
   garden:[/(?<![а-я])сад(?:ом|а|у|е)?(?![а-я])|зелен[а-я]*\s+двор/],
   nature:[/экотроп[а-я]*|лесн[а-я]*\s+(?:троп[а-я]*|маршрут[а-я]*)|природ[а-я]*|заповедник[а-я]*/],
-  waterfront:[/набережн[а-я]*|у\s+воды|вид\s+на\s+(?:реку|залив)|берег[а-я]*\s+(?:реки|залива|озера)/],
+  waterfront:[/набережн[а-я]*|у\s+воды|вид\s+на\s+(?:реку|залив)|берег[а-я]*\s+(?:реки|залива|озера)|(?<![а-я])пруд[а-я]*|водоем[а-я]*/],
   historic_interior:[/историческ[а-я]*\s+(?:интерьер[а-я]*|особняк[а-я]*)|лепнин[а-я]*|старинн[а-я]*|изразцов[а-я]*/],
   art_interior:[/арт[ -]?объект[а-я]*|искусств[а-я]*\s+в\s+интерьер[а-я]*|картины\s+на\s+стенах|художественн[а-я]*\s+интерьер[а-я]*/],
   imaginative_exhibition:[/выставк[а-я]*[^.!?]{0,80}(?:мечт[а-я]*|воображени[а-я]*|сн(?:ы|ов|ах)|о\s+любви)/],
@@ -101,7 +108,7 @@ export function analyseText(place,keys,context={},today=new Date()){
         if(!negative&&/(?:нет|без|не\s+бывает|не\s+проводят)\s/.test(text)&&!(key==='quiet'&&/без\s+громк[а-я]*\s+музык[а-я]*/.test(text)))continue;
         const item={key,value:!negative,source_url:document.source_url,kind:document.kind,observed_at:document.observed_at||document.retrieved_at,
           excerpt:original.trim().split(/\s+/).slice(0,18).join(' ').slice(0,220),conditional:timing.conditional,
-          contextLabel:timing.contextLabel,stale:document.stale};
+          contextLabel:timing.contextLabel,stale:document.stale,publication_date_unknown:document.publication_date_unknown,source_kind:document.source_kind,publisher:document.publisher};
         evidence[key][negative?'negative':'positive'].push(item);
       }
     }

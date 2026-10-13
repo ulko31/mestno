@@ -144,11 +144,10 @@ test('specific sports and roleplaying requests never silently become generic act
  assert.deepEqual(searchPlaces([climb,rink],{query:'Попробовать скалолазание',today}).results.map(x=>x.place.id),['climb']);
  assert.deepEqual(searchPlaces([rpg,board],{query:'Поиграть в D&D',today}).results.map(x=>x.place.id),['rpg']);
 });
-test('pending free-game claim remains a clearly separate alternative',()=>{
+test('an unreviewed free-game tag is excluded until scoped conditions are supplied',()=>{
  const p=place('a',[feature('billiards'),{...feature('free_billiards'),status:'pending_review'}]);
  const r=searchPlaces([p],{query:'Бесплатный бильярд',today});
- assert.equal(r.results.length,0);assert.equal(r.alternatives.length,1);
- assert.ok(!r.alternatives[0].reasons.includes('Игра в бильярд без отдельной оплаты'));
+ assert.equal(r.results.length,0);assert.equal(r.alternatives.length,0);
 });
 test('free workplace never follows from free entry or from a cafe work area',()=>{
  const p={...place('cafe',[feature('laptop_work'),feature('free_entry')]),category:'cafe'};

@@ -1,0 +1,1257 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-13T11:12:56.761320+00:00",
+  "recommendations": [
+    {
+      "id": "public:gotoeatspb:7215",
+      "publisher": "gotoeatspb",
+      "retrieval_url": "https://list.tg/channel/gotoeatspb/7215",
+      "source_url": "https://t.me/gotoeatspb/7215",
+      "published_at": "2026-09-30T14:44:01+00:00",
+      "retrieved_at": "2026-10-13T11:12:56.761320+00:00",
+      "headline": "Кафе из 90-х вернулось с теми самыми пирожками 🍽️ После",
+      "venue_links": [
+        {
+          "title": "Московский просп., 71к3",
+          "url": "https://yandex.ru/maps/-/CXU6jCJ7"
+        }
+      ],
+      "addresses": [
+        "Московский просп., 71к3"
+      ],
+      "signals": [],
+      "summary": "Публикация для проверки адреса и формата.",
+      "free_game_reported": false,
+      "status": "pending_review",
+      "multiple_venues": false,
+      "possible_promotion": false
+    },
+    {
+      "id": "public:gotoeatspb:7224",
+      "publisher": "gotoeatspb",
+      "retrieval_url": "https://list.tg/channel/gotoeatspb/7224",
+      "source_url": "https://t.me/gotoeatspb/7224",
+      "published_at": "2026-10-01T14:33:01+00:00",
+      "retrieved_at": "2026-10-13T11:12:56.761320+00:00",
+      "headline": "Леопардовый смузи, к которому дарят помаду 🐆 Svet Cafe ×",
+      "venue_links": [
+        {
+          "title": "Svet Cafe",
+          "url": "https://t.me/gotoeatspb/3575"
+        },
+        {
+          "title": "Свечной пер., 5",
+          "url": "https://yandex.ru/maps/-/CHGwVWP5"
+        }
+      ],
+      "addresses": [
+        "Свечной пер., 5"
+      ],
+      "signals": [],
+      "summary": "Публикация для проверки адреса и формата.",
+      "free_game_reported": false,
+      "status": "pending_review",
+      "multiple_venues": false,
+      "possible_promotion": false
+    },
+    {
+      "id": "public:gotoeatspb:7228",
+      "publisher": "gotoeatspb",
+      "retrieval_url": "https://list.tg/channel/gotoeatspb/7228",
+      "source_url": "https://t.me/gotoeatspb/7228",
+      "published_at": "2026-10-02T07:22:01+00:00",
+      "retrieved_at": "2026-10-13T11:12:56.761320+00:00",
+      "headline": "Patu 11/08 открыл свои двери 🤩 В особняке Сысоева открылся",
+      "venue_links": [
+        {
+          "title": "Patu 11/08",
+          "url": "https://t.me/gotoeatspb/5746"
+        }
+      ],
+      "addresses": [
+        "9-я линия В.О., 60"
+      ],
+      "signals": [],
+      "summary": "Публикация для проверки адреса и формата.",
+      "free_game_reported": false,
+      "status": "pending_review",
+      "multiple_venues": false,
+      "possible_promotion": false
+    },
+    {
+      "id": "public:gotoeatspb:7233",
+      "publisher": "gotoeatspb",
+      "retrieval_url": "https://list.tg/channel/gotoeatspb/7233",
+      "source_url": "https://t.me/gotoeatspb/7233",
+      "published_at": "2026-10-02T09:44:02+00:00",
+      "retrieved_at": "2026-10-13T11:12:56.761320+00:00",
+      "headline": "Дарю 4 билета на концерт «Кофейная кантата» в Музее-усадьбе Г.Р.",
+      "venue_links": [
+        {
+          "title": "@gotoeatspb",
+          "url": "/channel/gotoeatspb"
+        },
+        {
+          "title": "@piter_estet",
+          "url": "/channel/piter_estet"
+        },
+        {
+          "title": "@coffee_i_paradnaya",
+          "url": "/channel/coffee_i_paradnaya"
+        },
+        {
+          "title": "бот",
+          "url": "https://t.me/poll_winner_bot?start=OTBkODU4MDYtODRiZS00Y2ZlLTg2MTktMmNkZDdmZTMwNTIx"
+        },
+        {
+          "title": "наб. реки Фонтанки, 118",
+          "url": "https://yandex.ru/navi/org/vserossiyskiy_muzey_a_s_pushkina_muzey_usadba_g_r_derzhavina/1112361760?si=e0mavjpb8wub87vcww9m06ptgm"
+        },
+        {
+          "title": "#розыгрыш",
+          "url": "/tag/%D1%80%D0%BE%D0%B7%D1%8B%D0%B3%D1%80%D1%8B%D1%88"
+        }
+      ],
+      "addresses": [
+        "наб. реки Фонтанки, 118"
+      ],
+      "signals": [
+        "coffee"
+      ],
+      "summary": "В публичной рекомендации описаны: кофе.",
+      "free_game_reported": false,
+      "status": "pending_review",
+      "multiple_venues": false,
+      "possible_promotion": false
+    },
+    {
+      "id": "public:gotoeatspb:7235",
+      "publisher": "gotoeatspb",
+      "retrieval_url": "https://list.tg/channel/gotoeatspb/7235",
+      "source_url": "https://t.me/gotoeatspb/7235",
+      "published_at": "2026-10-02T14:22:01+00:00",
+      "retrieved_at": "2026-10-13T11:12:56.761320+00:00",
+      "headline": "Дайджест сентября 🌫️ Подборки: ✨ Куда идти за сэндвичами 🌫️",
+      "venue_links": [
+        {
+          "title": "Куда идти за сэндвичами",
+          "url": "https://t.me/gotoeatspb/7222"
+        },
+        {
+          "title": "Этма — скандинавское бистро с понятной кухней и стильным интерьером",
+          "url": "/channel/gotoeatspb/7019"
+        },
+        {
+          "title": "Текстура — новая гастропекарня на 90 посадочных мест с кофе на севере города",
+          "url": "/channel/gotoeatspb/7053"
+        },
+        {
+          "title": "ABC Coffee Roasters — камерная кофейня-квартира у Мариинского театра с завтраками весь день",
+          "url": "/channel/gotoeatspb/7064"
+        },
+        {
+          "title": "Тихо — новый небольшой бар с классическими коктейлями и настойками",
+          "url": "/channel/gotoeatspb/7130"
+        },
+        {
+          "title": "Haku — новый коктейльный бар с сочетанием азиатских и европейских вкусов",
+          "url": "https://t.me/gotoeatspb/7143"
+        },
+        {
+          "title": "Цыпа — камерное место, где главная роль досталась курице-гриль",
+          "url": "https://t.me/gotoeatspb/7190"
+        },
+        {
+          "title": "CAFÈ ALTO обновил меню: новые завтраки, блюда основного меню и полностью новая коктейльная карта",
+          "url": "https://t.me/gotoeatspb/7042"
+        },
+        {
+          "title": "В Сладко Вкусно появились протеиновые корпусные десерты",
+          "url": "/channel/gotoeatspb/7069"
+        },
+        {
+          "title": "БЮРО на один день вернуло цену 2013 года",
+          "url": "/channel/gotoeatspb/7090"
+        },
+        {
+          "title": "В ЧАО Какао запустили осенний курс зельеварения с напитками, вдохновлёнными Хогвартсом",
+          "url": "/channel/gotoeatspb/7101"
+        },
+        {
+          "title": "В Бутербродной появился Кола-Поплавок с мороженым",
+          "url": "/channel/gotoeatspb/7112"
+        },
+        {
+          "title": "В EGGSELLENT именинникам дарят пончики с чёрной икрой",
+          "url": "/channel/gotoeatspb/7213"
+        }
+      ],
+      "addresses": [],
+      "signals": [
+        "conversation",
+        "coffee",
+        "billiards",
+        "cocktails"
+      ],
+      "summary": "В публичной рекомендации описаны: встреча с друзьями, кофе, бильярд, коктейли и настойки.",
+      "free_game_reported": true,
+      "status": "pending_review",
+      "multiple_venues": true,
+      "possible_promotion": false
+    },
+    {
+      "id": "public:gotoeatspb:7237",
+      "publisher": "gotoeatspb",
+      "retrieval_url": "https://list.tg/channel/gotoeatspb/7237",
+      "source_url": "https://t.me/gotoeatspb/7237",
+      "published_at": "2026-10-03T07:21:01+00:00",
+      "retrieved_at": "2026-10-13T11:12:56.761320+00:00",
+      "headline": "В доме Елисеевых открылись новые бани 🧖🏻‍♀️ В историческом доме",
+      "venue_links": [
+        {
+          "title": "Невский пр., 15",
+          "url": "https://yandex.ru/maps/-/CXaoJU8Q"
+        }
+      ],
+      "addresses": [
+        "Невский пр., 15"
+      ],
+      "signals": [],
+      "summary": "Публикация для проверки адреса и формата.",
+      "free_game_reported": false,
+      "status": "pending_review",
+      "multiple_venues": false,
+      "possible_promotion": false
+    },
+    {
+      "id": "public:gotoeatspb:7241",
+      "publisher": "gotoeatspb",
+      "retrieval_url": "https://list.tg/channel/gotoeatspb/7241",
+      "source_url": "https://t.me/gotoeatspb/7241",
+      "published_at": "2026-10-03T14:27:01+00:00",
+      "retrieved_at": "2026-10-13T11:12:56.761320+00:00",
+      "headline": "Новый ресторан Мурада Бердиева, который пока сложно разгадать 🍸 На",
+      "venue_links": [
+        {
+          "title": "Малая Зеленина ул., 4",
+          "url": "https://yandex.ru/maps/-/CXaXEJy7"
+        }
+      ],
+      "addresses": [
+        "Малая Зеленина ул., 4"
+      ],
+      "signals": [
+        "cocktails"
+      ],
+      "summary": "В публичной рекомендации описаны: коктейли и настойки.",
+      "free_game_reported": false,
+      "status": "pending_review",
+      "multiple_venues": false,
+      "possible_promotion": false
+    },
+    {
+      "id": "public:gotoeatspb:7243",
+      "publisher": "gotoeatspb",
+      "retrieval_url": "https://list.tg/channel/gotoeatspb/7243",
+      "source_url": "https://t.me/gotoeatspb/7243",
+      "published_at": "2026-10-04T07:22:01+00:00",
+      "retrieved_at": "2026-10-13T11:12:56.761320+00:00",
+      "headline": "Кафе в Сосново, где под ламинатом нашли кусочек прошлого 🥟",
+      "venue_links": [
+        {
+          "title": "Озёрная ул., 1Б, пос. Сосново",
+          "url": "https://yandex.ru/maps/-/CXa3bC~7"
+        }
+      ],
+      "addresses": [
+        "Озёрная ул., 1Б, пос. Сосново"
+      ],
+      "signals": [],
+      "summary": "Публикация для проверки адреса и формата.",
+      "free_game_reported": false,
+      "status": "pending_review",
+      "multiple_venues": false,
+      "possible_promotion": false
+    },
+    {
+      "id": "public:gotoeatspb:7261",
+      "publisher": "gotoeatspb",
+      "retrieval_url": "https://list.tg/channel/gotoeatspb/7261",
+      "source_url": "https://t.me/gotoeatspb/7261",
+      "published_at": "2026-10-06T07:32:01+00:00",
+      "retrieved_at": "2026-10-13T11:12:56.761320+00:00",
+      "headline": "Кофейня в старом особняке для осенних завтраков 🌼 На третьем",
+      "venue_links": [
+        {
+          "title": "Большая Конюшенная ул., 9",
+          "url": "https://yandex.ru/maps/-/CXeSvT3O"
+        }
+      ],
+      "addresses": [
+        "Большая Конюшенная ул., 9"
+      ],
+      "signals": [
+        "coffee"
+      ],
+      "summary": "В публичной рекомендации описаны: кофе.",
+      "free_game_reported": false,
+      "status": "pending_review",
+      "multiple_venues": false,
+      "possible_promotion": false
+    },
+    {
+      "id": "public:gotoeatspb:7266",
+      "publisher": "gotoeatspb",
+      "retrieval_url": "https://list.tg/channel/gotoeatspb/7266",
+      "source_url": "https://t.me/gotoeatspb/7266",
+      "published_at": "2026-10-06T14:44:01+00:00",
+      "retrieved_at": "2026-10-13T11:12:56.761320+00:00",
+      "headline": "Найден очень красивый книжный магазин 📚 В Жёлтом дворе собрали",
+      "venue_links": [
+        {
+          "title": "ул. Маяковского, 15",
+          "url": "https://yandex.ru/maps/-/CXek6S6o"
+        }
+      ],
+      "addresses": [
+        "ул. Маяковского, 15"
+      ],
+      "signals": [],
+      "summary": "Публикация для проверки адреса и формата.",
+      "free_game_reported": false,
+      "status": "pending_review",
+      "multiple_venues": false,
+      "possible_promotion": false
+    },
+    {
+      "id": "public:gotoeatspb:7270",
+      "publisher": "gotoeatspb",
+      "retrieval_url": "https://list.tg/channel/gotoeatspb/7270",
+      "source_url": "https://t.me/gotoeatspb/7270",
+      "published_at": "2026-10-07T07:33:01+00:00",
+      "retrieved_at": "2026-10-13T11:12:56.761320+00:00",
+      "headline": "Конфетная фабрика в доме с огромным орлом 🦅 На Малом",
+      "venue_links": [
+        {
+          "title": "Малый просп. П.С., 47",
+          "url": "https://yandex.ru/maps/-/CXeomHLG"
+        }
+      ],
+      "addresses": [
+        "Малый просп. П.С., 47"
+      ],
+      "signals": [],
+      "summary": "Публикация для проверки адреса и формата.",
+      "free_game_reported": false,
+      "status": "pending_review",
+      "multiple_venues": false,
+      "possible_promotion": false
+    },
+    {
+      "id": "public:gotoeatspb:7275",
+      "publisher": "gotoeatspb",
+      "retrieval_url": "https://list.tg/channel/gotoeatspb/7275",
+      "source_url": "https://t.me/gotoeatspb/7275",
+      "published_at": "2026-10-07T14:40:07+00:00",
+      "retrieved_at": "2026-10-13T11:12:56.761320+00:00",
+      "headline": "В Ленобласти становится всё интереснее 🤩 В Новоселье появилось Свое",
+      "venue_links": [
+        {
+          "title": "бул. Белых Ночей, 3, Новоселье",
+          "url": "https://yandex.ru/maps/-/CXepfP3F"
+        }
+      ],
+      "addresses": [
+        "бул. Белых Ночей, 3, Новоселье"
+      ],
+      "signals": [],
+      "summary": "Публикация для проверки адреса и формата.",
+      "free_game_reported": false,
+      "status": "pending_review",
+      "multiple_venues": false,
+      "possible_promotion": false
+    },
+    {
+      "id": "public:eatpeterburg:13434",
+      "publisher": "eatpeterburg",
+      "retrieval_url": "https://list.tg/channel/eatpeterburg/13434",
+      "source_url": "https://t.me/eatpeterburg/13434",
+      "published_at": "2026-08-04T15:33:21+00:00",
+      "retrieved_at": "2026-10-13T11:12:56.761320+00:00",
+      "headline": "То самое летнее меню, где хочется попробовать абсолютно всё Пиццерия",
+      "venue_links": [
+        {
+          "title": "Bruno",
+          "url": "http://brunopizzeria.ru/"
+        },
+        {
+          "title": "Казанская ул., 24",
+          "url": "https://yandex.ru/maps/-/CHCsrQJH"
+        },
+        {
+          "title": "#италия",
+          "url": "/tag/%D0%B8%D1%82%D0%B0%D0%BB%D0%B8%D1%8F"
+        }
+      ],
+      "addresses": [],
+      "signals": [],
+      "summary": "Публикация для проверки адреса и формата.",
+      "free_game_reported": false,
+      "status": "pending_review",
+      "multiple_venues": false,
+      "possible_promotion": false
+    },
+    {
+      "id": "public:eatpeterburg:13443",
+      "publisher": "eatpeterburg",
+      "retrieval_url": "https://list.tg/channel/eatpeterburg/13443",
+      "source_url": "https://t.me/eatpeterburg/13443",
+      "published_at": "2026-08-05T09:33:45+00:00",
+      "retrieved_at": "2026-10-13T11:12:56.761320+00:00",
+      "headline": "Дарю 2 VIP-билета на Пикник Афиши со своей гастро-зоной Победителем",
+      "venue_links": [
+        {
+          "title": "@syslika",
+          "url": "https://t.me/syslika"
+        },
+        {
+          "title": "Елагин остров, 4",
+          "url": "https://yandex.ru/maps/-/CPTvYE59"
+        },
+        {
+          "title": "#розыгрыш",
+          "url": "/tag/%D1%80%D0%BE%D0%B7%D1%8B%D0%B3%D1%80%D1%8B%D1%88"
+        }
+      ],
+      "addresses": [
+        "Елагин остров, 4"
+      ],
+      "signals": [],
+      "summary": "Публикация для проверки адреса и формата.",
+      "free_game_reported": false,
+      "status": "pending_review",
+      "multiple_venues": false,
+      "possible_promotion": false
+    },
+    {
+      "id": "public:eatpeterburg:13445",
+      "publisher": "eatpeterburg",
+      "retrieval_url": "https://list.tg/channel/eatpeterburg/13445",
+      "source_url": "https://t.me/eatpeterburg/13445",
+      "published_at": "2026-08-05T15:35:36+00:00",
+      "retrieved_at": "2026-10-13T11:12:56.761320+00:00",
+      "headline": "Шампанское, чёрная икра и картошка — базовый минимум Заглянула в",
+      "venue_links": [
+        {
+          "title": "POOOL",
+          "url": "https://pooolbistro.ru/"
+        },
+        {
+          "title": "Фонтанная ул., 1",
+          "url": "https://yandex.ru/maps/-/CTC1aB27"
+        },
+        {
+          "title": "#русская",
+          "url": "/tag/%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%B0%D1%8F"
+        }
+      ],
+      "addresses": [],
+      "signals": [],
+      "summary": "Публикация для проверки адреса и формата.",
+      "free_game_reported": false,
+      "status": "pending_review",
+      "multiple_venues": false,
+      "possible_promotion": false
+    },
+    {
+      "id": "public:eatpeterburg:13454",
+      "publisher": "eatpeterburg",
+      "retrieval_url": "https://list.tg/channel/eatpeterburg/13454",
+      "source_url": "https://t.me/eatpeterburg/13454",
+      "published_at": "2026-08-06T17:35:41+00:00",
+      "retrieved_at": "2026-10-13T11:12:56.761320+00:00",
+      "headline": "Первая русская рюмочная на Петроградской стороне Пришла в Министерство Вкусовой",
+      "venue_links": [
+        {
+          "title": "М.В.П.",
+          "url": "https://t.me/mvpbarspb"
+        },
+        {
+          "title": "Ординарная ул., 4",
+          "url": "https://yandex.ru/maps/-/CTGymTkb"
+        },
+        {
+          "title": "#русская",
+          "url": "/tag/%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%B0%D1%8F"
+        },
+        {
+          "title": "#бар",
+          "url": "/tag/%D0%B1%D0%B0%D1%80"
+        }
+      ],
+      "addresses": [],
+      "signals": [],
+      "summary": "Публикация для проверки адреса и формата.",
+      "free_game_reported": false,
+      "status": "pending_review",
+      "multiple_venues": false,
+      "possible_promotion": false
+    },
+    {
+      "id": "public:eatpeterburg:13464",
+      "publisher": "eatpeterburg",
+      "retrieval_url": "https://list.tg/channel/eatpeterburg/13464",
+      "source_url": "https://t.me/eatpeterburg/13464",
+      "published_at": "2026-08-07T16:00:56+00:00",
+      "retrieved_at": "2026-10-13T11:12:56.761320+00:00",
+      "headline": "Ресторан с историей — Goose GooseЭлегантный двухэтажный ресторан итальянской кухни",
+      "venue_links": [
+        {
+          "title": "#ресторан",
+          "url": "/tag/%D1%80%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD"
+        }
+      ],
+      "addresses": [],
+      "signals": [
+        "coffee",
+        "cocktails"
+      ],
+      "summary": "В публичной рекомендации описаны: кофе, коктейли и настойки.",
+      "free_game_reported": false,
+      "status": "pending_review",
+      "multiple_venues": false,
+      "possible_promotion": false
+    },
+    {
+      "id": "public:eatpeterburg:13473",
+      "publisher": "eatpeterburg",
+      "retrieval_url": "https://list.tg/channel/eatpeterburg/13473",
+      "source_url": "https://t.me/eatpeterburg/13473",
+      "published_at": "2026-08-09T13:32:31+00:00",
+      "retrieved_at": "2026-10-13T11:12:56.761320+00:00",
+      "headline": "Арбузные спешлы в ресторанах Петербурга 🍉 House of JadeCrimson Pop",
+      "venue_links": [],
+      "addresses": [],
+      "signals": [
+        "cocktails"
+      ],
+      "summary": "В публичной рекомендации описаны: коктейли и настойки.",
+      "free_game_reported": false,
+      "status": "pending_review",
+      "multiple_venues": true,
+      "possible_promotion": false
+    },
+    {
+      "id": "public:eatpeterburg:13475",
+      "publisher": "eatpeterburg",
+      "retrieval_url": "https://list.tg/channel/eatpeterburg/13475",
+      "source_url": "https://t.me/eatpeterburg/13475",
+      "published_at": "2026-08-10T13:05:34+00:00",
+      "retrieved_at": "2026-10-13T11:12:56.761320+00:00",
+      "headline": "Техника для школы: выбираем надёжные инструменты для учёбы 📱 💻",
+      "venue_links": [
+        {
+          "title": "#рекламаО",
+          "url": "/tag/%D1%80%D0%B5%D0%BA%D0%BB%D0%B0%D0%BC%D0%B0%D0%BE"
+        },
+        {
+          "title": "#рекламаО",
+          "url": "/tag/%D1%80%D0%B5%D0%BA%D0%BB%D0%B0%D0%BC%D0%B0%D0%BE"
+        }
+      ],
+      "addresses": [],
+      "signals": [],
+      "summary": "Публикация для проверки адреса и формата.",
+      "free_game_reported": false,
+      "status": "pending_review",
+      "multiple_venues": false,
+      "possible_promotion": true
+    },
+    {
+      "id": "public:eatpeterburg:13478",
+      "publisher": "eatpeterburg",
+      "retrieval_url": "https://list.tg/channel/eatpeterburg/13478",
+      "source_url": "https://t.me/eatpeterburg/13478",
+      "published_at": "2026-08-10T14:08:21+00:00",
+      "retrieved_at": "2026-10-13T11:12:56.761320+00:00",
+      "headline": "Дарю депозит в ресторан «Regions»Хотите поужинать в ресторане современной высокой",
+      "venue_links": [
+        {
+          "title": "@eatpeterburg",
+          "url": "/channel/eatpeterburg"
+        },
+        {
+          "title": "@mezhgunami",
+          "url": "/channel/mezhgunami"
+        },
+        {
+          "title": "@chaoticeroticism17",
+          "url": "https://telegram.me/chaoticeroticism17"
+        }
+      ],
+      "addresses": [],
+      "signals": [],
+      "summary": "Публикация для проверки адреса и формата.",
+      "free_game_reported": false,
+      "status": "pending_review",
+      "multiple_venues": false,
+      "possible_promotion": true
+    },
+    {
+      "id": "public:eatpeterburg:13480",
+      "publisher": "eatpeterburg",
+      "retrieval_url": "https://list.tg/channel/eatpeterburg/13480",
+      "source_url": "https://t.me/eatpeterburg/13480",
+      "published_at": "2026-08-10T16:07:02+00:00",
+      "retrieved_at": "2026-10-13T11:12:56.761320+00:00",
+      "headline": "Завтрак недели: на великолепной террасе ТраппистаВ двухэтажной брассери подают разнообразные",
+      "venue_links": [
+        {
+          "title": "#завтрак",
+          "url": "/tag/%D0%B7%D0%B0%D0%B2%D1%82%D1%80%D0%B0%D0%BA"
+        }
+      ],
+      "addresses": [],
+      "signals": [
+        "coffee"
+      ],
+      "summary": "В публичной рекомендации описаны: кофе.",
+      "free_game_reported": false,
+      "status": "pending_review",
+      "multiple_venues": false,
+      "possible_promotion": false
+    },
+    {
+      "id": "public:eatpeterburg:13953",
+      "publisher": "eatpeterburg",
+      "retrieval_url": "https://list.tg/channel/eatpeterburg/13953",
+      "source_url": "https://t.me/eatpeterburg/13953",
+      "published_at": "2026-10-08T15:35:42+00:00",
+      "retrieved_at": "2026-10-13T11:12:56.761320+00:00",
+      "headline": "Осень в меню и окнах Stroganoff Bar & Grill Загородный",
+      "venue_links": [
+        {
+          "title": "Stroganoff Bar & Grill",
+          "url": "https://stroganoffgroup.ru/restaurants/stroganoff-bar-grill"
+        },
+        {
+          "title": "Приморское ш., 418",
+          "url": "https://yandex.ru/maps/-/CXe8AX7Z"
+        },
+        {
+          "title": "#мясо",
+          "url": "/tag/%D0%BC%D1%8F%D1%81%D0%BE"
+        },
+        {
+          "title": "#ресторан",
+          "url": "/tag/%D1%80%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD"
+        }
+      ],
+      "addresses": [],
+      "signals": [],
+      "summary": "Публикация для проверки адреса и формата.",
+      "free_game_reported": false,
+      "status": "pending_review",
+      "multiple_venues": false,
+      "possible_promotion": false
+    },
+    {
+      "id": "public:eatpeterburg:13962",
+      "publisher": "eatpeterburg",
+      "retrieval_url": "https://list.tg/channel/eatpeterburg/13962",
+      "source_url": "https://t.me/eatpeterburg/13962",
+      "published_at": "2026-10-09T15:25:38+00:00",
+      "retrieved_at": "2026-10-13T11:12:56.761320+00:00",
+      "headline": "Откуда начинается история Chang Проекту исполняется 10 лет, и за",
+      "venue_links": [
+        {
+          "title": "Chang",
+          "url": "https://changcafe.ru/"
+        },
+        {
+          "title": "Большая Конюшенная ул.,9",
+          "url": "https://yandex.ru/maps/org/chang/63905696250?si=9zm6gycbzrab91jn9nrtqtamdw"
+        }
+      ],
+      "addresses": [],
+      "signals": [
+        "conversation"
+      ],
+      "summary": "В публичной рекомендации описаны: встреча с друзьями.",
+      "free_game_reported": false,
+      "status": "pending_review",
+      "multiple_venues": false,
+      "possible_promotion": false
+    },
+    {
+      "id": "public:eatpeterburg:13971",
+      "publisher": "eatpeterburg",
+      "retrieval_url": "https://list.tg/channel/eatpeterburg/13971",
+      "source_url": "https://t.me/eatpeterburg/13971",
+      "published_at": "2026-10-11T08:31:02+00:00",
+      "retrieved_at": "2026-10-13T11:12:56.761320+00:00",
+      "headline": "Сезонные спешлы в ресторанах Петербурга 🍄 Рассказываю, что и где",
+      "venue_links": [
+        {
+          "title": "Мама Тата",
+          "url": "http://mama-tata.ru/"
+        },
+        {
+          "title": "Бол. просп. Петроградской стороны, 56",
+          "url": "https://yandex.ru/maps/org/mama_tata/96913437057/"
+        },
+        {
+          "title": "Караванная ул., 8",
+          "url": "https://yandex.ru/maps/org/mama_tata/85057608446"
+        },
+        {
+          "title": "Восстания ул., 55",
+          "url": "https://yandex.eu/maps/-/CHcee4Zt"
+        },
+        {
+          "title": "The Buddy Cafe",
+          "url": "https://www.instagram.com/the_buddy_cafe?stkn=MTB6dzJnemRxeXZ2Zw%3D%3D"
+        },
+        {
+          "title": "ул. Ломоносова, 14",
+          "url": "https://yandex.ru/maps/-/CDRLjU8P"
+        },
+        {
+          "title": "STUDIO",
+          "url": "https://www.instagram.com/studiopizza.saintp?stkn=Mzdja2k1ZTE1YzVl"
+        },
+        {
+          "title": "Греческий просп., 13",
+          "url": "https://yandex.ru/maps/-/CPAaySOn"
+        },
+        {
+          "title": "Маргаретти",
+          "url": "https://pizzamargaretti.ru/"
+        },
+        {
+          "title": "Ефимова ул., 2",
+          "url": "https://yandex.ru/maps/-/CTfIfPYv"
+        },
+        {
+          "title": "Пр. Героев, 31",
+          "url": "https://yandex.ru/maps/-/CHqGeSi3"
+        },
+        {
+          "title": "Ильюшина ул., 14",
+          "url": "https://yandex.ru/maps/-/CPULMP8u"
+        },
+        {
+          "title": "HVOY",
+          "url": "https://www.instagram.com/we_lodge?stkn=MWQ0NHI4azRnODQ5OA%3D%3D"
+        },
+        {
+          "title": "д. Медный Завод",
+          "url": "https://yandex.ru/maps/-/CXqcmJoY"
+        },
+        {
+          "title": "Goose Goose",
+          "url": "/channel/eatpeterburg/13464"
+        },
+        {
+          "title": "Бол. Конюшенная ул., 27",
+          "url": "https://yandex.ru/maps/-/CHFSUG8U"
+        },
+        {
+          "title": "#ресторан",
+          "url": "/tag/%D1%80%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD"
+        },
+        {
+          "title": "#подборка",
+          "url": "/tag/%D0%BF%D0%BE%D0%B4%D0%B1%D0%BE%D1%80%D0%BA%D0%B0"
+        }
+      ],
+      "addresses": [],
+      "signals": [
+        "cozy"
+      ],
+      "summary": "В публичной рекомендации описаны: уютная обстановка.",
+      "free_game_reported": false,
+      "status": "pending_review",
+      "multiple_venues": true,
+      "possible_promotion": false
+    },
+    {
+      "id": "public:infopeterburg:17947",
+      "publisher": "infopeterburg",
+      "retrieval_url": "https://list.tg/channel/infopeterburg/17947",
+      "source_url": "https://t.me/infopeterburg/17947",
+      "published_at": "2026-08-10T04:55:04+00:00",
+      "retrieved_at": "2026-10-13T11:12:56.761320+00:00",
+      "headline": "Фестиваль песчаных скульптур в Петропавловке ⏰ Пн-Вс 10:00-21:00Десятки скульпторов превратили",
+      "venue_links": [],
+      "addresses": [
+        "Петропавловская крепость"
+      ],
+      "signals": [],
+      "summary": "Публикация для проверки адреса и формата.",
+      "free_game_reported": false,
+      "status": "pending_review",
+      "multiple_venues": false,
+      "possible_promotion": false
+    },
+    {
+      "id": "public:infopeterburg:17953",
+      "publisher": "infopeterburg",
+      "retrieval_url": "https://list.tg/channel/infopeterburg/17953",
+      "source_url": "https://t.me/infopeterburg/17953",
+      "published_at": "2026-08-10T12:07:40+00:00",
+      "retrieved_at": "2026-10-13T11:12:56.761320+00:00",
+      "headline": "Дарю 6 билетов на концерт NILETTO под открытым небом ⏰",
+      "venue_links": [
+        {
+          "title": "@gopeterburg",
+          "url": "/channel/gopeterburg"
+        },
+        {
+          "title": "@freepeterburg",
+          "url": "/channel/freepeterburg"
+        },
+        {
+          "title": "@infopeterburg14",
+          "url": "https://telegram.me/infopeterburg14"
+        }
+      ],
+      "addresses": [
+        "Кожевенная линия, 30"
+      ],
+      "signals": [],
+      "summary": "Публикация для проверки адреса и формата.",
+      "free_game_reported": false,
+      "status": "pending_review",
+      "multiple_venues": false,
+      "possible_promotion": false
+    },
+    {
+      "id": "public:infopeterburg:17955",
+      "publisher": "infopeterburg",
+      "retrieval_url": "https://list.tg/channel/infopeterburg/17955",
+      "source_url": "https://t.me/infopeterburg/17955",
+      "published_at": "2026-08-10T17:40:09+00:00",
+      "retrieved_at": "2026-10-13T11:12:56.761320+00:00",
+      "headline": "Поедем бесплатно в Монрепо ⏰ 13 августа 9:00-20:00Парк поражает своей",
+      "venue_links": [],
+      "addresses": [
+        "Выборг, парк Монрепо"
+      ],
+      "signals": [],
+      "summary": "Публикация для проверки адреса и формата.",
+      "free_game_reported": false,
+      "status": "pending_review",
+      "multiple_venues": false,
+      "possible_promotion": false
+    },
+    {
+      "id": "public:infopeterburg:17960",
+      "publisher": "infopeterburg",
+      "retrieval_url": "https://list.tg/channel/infopeterburg/17960",
+      "source_url": "https://t.me/infopeterburg/17960",
+      "published_at": "2026-08-11T04:30:29+00:00",
+      "retrieved_at": "2026-10-13T11:12:56.761320+00:00",
+      "headline": "Экотропа по берегу Финского заливаЖивописная тропа, которая проходит через заросли",
+      "venue_links": [],
+      "addresses": [
+        "Бугаиная тропа"
+      ],
+      "signals": [],
+      "summary": "Публикация для проверки адреса и формата.",
+      "free_game_reported": false,
+      "status": "pending_review",
+      "multiple_venues": false,
+      "possible_promotion": false
+    },
+    {
+      "id": "public:infopeterburg:18484",
+      "publisher": "infopeterburg",
+      "retrieval_url": "https://list.tg/channel/infopeterburg/18484",
+      "source_url": "https://t.me/infopeterburg/18484",
+      "published_at": "2026-10-07T15:25:21+00:00",
+      "retrieved_at": "2026-10-13T11:12:56.761320+00:00",
+      "headline": "Идем на главный рейв этой осени! ⏰ 7 ноября Осенний",
+      "venue_links": [
+        {
+          "title": "ул. Красного Текстильщика, 10-12АШ",
+          "url": "https://yandex.ru/maps/org/k_30/44580225927/?ll=30.395926%2C59.938541&z=14.13"
+        }
+      ],
+      "addresses": [
+        "ул. Красного Текстильщика, 10-12АШ"
+      ],
+      "signals": [],
+      "summary": "Публикация для проверки адреса и формата.",
+      "free_game_reported": false,
+      "status": "pending_review",
+      "multiple_venues": false,
+      "possible_promotion": false
+    },
+    {
+      "id": "public:infopeterburg:18486",
+      "publisher": "infopeterburg",
+      "retrieval_url": "https://list.tg/channel/infopeterburg/18486",
+      "source_url": "https://t.me/infopeterburg/18486",
+      "published_at": "2026-10-08T05:12:01+00:00",
+      "retrieved_at": "2026-10-13T11:12:56.761320+00:00",
+      "headline": "Всеми любимое винтажное событие — Garage Sail ⏰ 9-11 октября,",
+      "venue_links": [
+        {
+          "title": "📍 Севкабель Порт",
+          "url": "https://wowfestival.ru/"
+        }
+      ],
+      "addresses": [
+        "Севкабель Порт"
+      ],
+      "signals": [
+        "dance"
+      ],
+      "summary": "В публичной рекомендации описаны: танцы.",
+      "free_game_reported": false,
+      "status": "pending_review",
+      "multiple_venues": false,
+      "possible_promotion": false
+    },
+    {
+      "id": "public:infopeterburg:18488",
+      "publisher": "infopeterburg",
+      "retrieval_url": "https://list.tg/channel/infopeterburg/18488",
+      "source_url": "https://t.me/infopeterburg/18488",
+      "published_at": "2026-10-08T14:49:48+00:00",
+      "retrieved_at": "2026-10-13T11:12:56.761320+00:00",
+      "headline": "Дарю 6 билетов на концерт «короля шансона» Михаила Шуфутинского ⏰",
+      "venue_links": [
+        {
+          "title": "@freepeterburg",
+          "url": "/channel/freepeterburg"
+        },
+        {
+          "title": "@infopeterburg",
+          "url": "/channel/infopeterburg"
+        },
+        {
+          "title": "@coolyclub",
+          "url": "/channel/coolyclub"
+        },
+        {
+          "title": "бот",
+          "url": "https://t.me/poll_winner_bot?start=YzlmZTM5NmYtMmVmYi00NDI5LWJkM2QtYmJjMWIyZmQxY2Rl"
+        },
+        {
+          "title": "Футбольная аллея, д. 8",
+          "url": "https://yandex.ru/navi/org/arena/1186279196?si=e0mavjpb8wub87vcww9m06ptgm"
+        },
+        {
+          "title": "#розыгрыш",
+          "url": "/tag/%D1%80%D0%BE%D0%B7%D1%8B%D0%B3%D1%80%D1%8B%D1%88"
+        }
+      ],
+      "addresses": [
+        "Футбольная аллея, д. 8"
+      ],
+      "signals": [],
+      "summary": "Публикация для проверки адреса и формата.",
+      "free_game_reported": false,
+      "status": "pending_review",
+      "multiple_venues": false,
+      "possible_promotion": false
+    },
+    {
+      "id": "public:infopeterburg:18490",
+      "publisher": "infopeterburg",
+      "retrieval_url": "https://list.tg/channel/infopeterburg/18490",
+      "source_url": "https://t.me/infopeterburg/18490",
+      "published_at": "2026-10-09T05:04:01+00:00",
+      "retrieved_at": "2026-10-13T11:12:56.761320+00:00",
+      "headline": "Большой гайд по Выборгу Выборг — одно их моих любимых",
+      "venue_links": [
+        {
+          "title": "Государственный историко-архитектурный и природный музей-заповедник Парк Монрепо",
+          "url": "https://yandex.ru/maps/-/CHQJyT0J"
+        },
+        {
+          "title": "Анненские укрепления",
+          "url": "https://yandex.ru/maps/-/CLVevV4O"
+        },
+        {
+          "title": "Площадь Старой Ратуши",
+          "url": "https://yandex.ru/maps/-/CDcErE4z"
+        },
+        {
+          "title": "Выборгский замок",
+          "url": "https://yandex.ru/maps/-/CHtFmCno"
+        },
+        {
+          "title": "Башня святого Олафа",
+          "url": "https://yandex.ru/maps/-/CLVenOiu"
+        },
+        {
+          "title": "Музей кренделя",
+          "url": "https://yandex.ru/maps/-/CCUO4UBLhA"
+        },
+        {
+          "title": "Дом Горожанина",
+          "url": "https://yandex.ru/maps/-/CLVie-me"
+        },
+        {
+          "title": "Часовая башня",
+          "url": "https://yandex.ru/maps/-/CLVe70Ix"
+        },
+        {
+          "title": "Собор Петра и Павла",
+          "url": "https://yandex.ru/maps/-/CLVezFni"
+        },
+        {
+          "title": "Рыцарский дом, костел Святого Гиацинта",
+          "url": "https://yandex.ru/maps/-/CDdzJM5t"
+        },
+        {
+          "title": "Башня Ратуши",
+          "url": "https://yandex.ru/maps/-/CLViE48U"
+        },
+        {
+          "title": "Эрмитаж-Выборг",
+          "url": "https://yandex.ru/maps/-/CLViIHj8"
+        },
+        {
+          "title": "Библиотека Алвара Аалто",
+          "url": "https://yandex.ru/maps/-/CLViMR4g"
+        },
+        {
+          "title": "Усадьба Киискиля",
+          "url": "https://yandex.ru/maps/org/usadba_kiiskilya/217197115764"
+        },
+        {
+          "title": "подробнее",
+          "url": "https://kiiskila.ru/"
+        },
+        {
+          "title": "Ресторан August Wahl",
+          "url": "https://yandex.ru/maps/-/CHQJBVyo"
+        },
+        {
+          "title": "Выборгский трамвай",
+          "url": "https://yandex.ru/maps/-/CHQJ5MNb"
+        },
+        {
+          "title": "Hello, Bread",
+          "url": "https://yandex.ru/maps/-/CLVeaT0y"
+        },
+        {
+          "title": "Kellari",
+          "url": "https://yandex.ru/maps/-/CLVeiAy~"
+        },
+        {
+          "title": "Таверна",
+          "url": "https://yandex.ru/maps/-/CLVe4Dip"
+        },
+        {
+          "title": "Хочу тебя",
+          "url": "https://yandex.ru/maps/-/CLVe4E-d"
+        },
+        {
+          "title": "#маршрут",
+          "url": "/tag/%D0%BC%D0%B0%D1%80%D1%88%D1%80%D1%83%D1%82"
+        },
+        {
+          "title": "#загородом",
+          "url": "/tag/%D0%B7%D0%B0%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%BE%D0%BC"
+        }
+      ],
+      "addresses": [
+        "Государственный историко-архитектурный и природный музей-заповедник Парк Монрепо",
+        "Анненские укрепления",
+        "Площадь Старой Ратуши",
+        "Выборгский замок",
+        "Башня святого Олафа",
+        "Музей кренделя",
+        "Дом Горожанина",
+        "Часовая башня",
+        "Собор Петра и Павла",
+        "Рыцарский дом, костел Святого Гиацинта",
+        "Башня Ратуши",
+        "Эрмитаж-Выборг",
+        "Библиотека Алвара Аалто",
+        "Усадьба Киискиля",
+        "Ресторан August Wahl",
+        "Выборгский трамвай",
+        "Hello, Bread",
+        "Kellari",
+        "Таверна",
+        "Хочу тебя"
+      ],
+      "signals": [],
+      "summary": "Публикация для проверки адреса и формата.",
+      "free_game_reported": false,
+      "status": "pending_review",
+      "multiple_venues": true,
+      "possible_promotion": false
+    },
+    {
+      "id": "public:infopeterburg:18496",
+      "publisher": "infopeterburg",
+      "retrieval_url": "https://list.tg/channel/infopeterburg/18496",
+      "source_url": "https://t.me/infopeterburg/18496",
+      "published_at": "2026-10-10T05:07:29+00:00",
+      "retrieved_at": "2026-10-13T11:12:56.761320+00:00",
+      "headline": "Лейблу PRIVATE PERSONS исполняется 10 лет ⏰ 10 октября Целая",
+      "venue_links": [
+        {
+          "title": "ул. Красного Текстильщика, 10-12АШ",
+          "url": "https://yandex.ru/maps/org/k_30/44580225927/?ll=30.395926%2C59.938541&z=14.13"
+        }
+      ],
+      "addresses": [
+        "ул. Красного Текстильщика, 10-12АШ"
+      ],
+      "signals": [],
+      "summary": "Публикация для проверки адреса и формата.",
+      "free_game_reported": false,
+      "status": "pending_review",
+      "multiple_venues": false,
+      "possible_promotion": false
+    },
+    {
+      "id": "public:infopeterburg:18498",
+      "publisher": "infopeterburg",
+      "retrieval_url": "https://list.tg/channel/infopeterburg/18498",
+      "source_url": "https://t.me/infopeterburg/18498",
+      "published_at": "2026-10-10T16:35:16+00:00",
+      "retrieved_at": "2026-10-13T11:12:56.761320+00:00",
+      "headline": "Атмосферный Музей печати 🪶 ⏰ Чт-Вт 11:00-18:00 В разное время",
+      "venue_links": [
+        {
+          "title": "наб. реки Мойки, 32",
+          "url": "https://yandex.ru/maps/-/C2uXr1a"
+        }
+      ],
+      "addresses": [
+        "наб. реки Мойки, 32"
+      ],
+      "signals": [],
+      "summary": "Публикация для проверки адреса и формата.",
+      "free_game_reported": false,
+      "status": "pending_review",
+      "multiple_venues": false,
+      "possible_promotion": false
+    },
+    {
+      "id": "public:infopeterburg:18503",
+      "publisher": "infopeterburg",
+      "retrieval_url": "https://list.tg/channel/infopeterburg/18503",
+      "source_url": "https://t.me/infopeterburg/18503",
+      "published_at": "2026-10-11T05:23:01+00:00",
+      "retrieved_at": "2026-10-13T11:12:56.761320+00:00",
+      "headline": "Кинопоказы на Vokzal 1853 Какая замечательная подборка в духе приближающегося",
+      "venue_links": [
+        {
+          "title": "набережная Обводного канала, 118С",
+          "url": "https://yandex.ru/maps/-/CTVHySJ7"
+        },
+        {
+          "title": "#кино",
+          "url": "/tag/%D0%BA%D0%B8%D0%BD%D0%BE"
+        },
+        {
+          "title": "#бесплатно",
+          "url": "/tag/%D0%B1%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D0%BE"
+        }
+      ],
+      "addresses": [
+        "набережная Обводного канала, 118С"
+      ],
+      "signals": [],
+      "summary": "Публикация для проверки адреса и формата.",
+      "free_game_reported": false,
+      "status": "pending_review",
+      "multiple_venues": true,
+      "possible_promotion": false
+    },
+    {
+      "id": "public:gotoeatspb:6988",
+      "publisher": "gotoeatspb",
+      "retrieval_url": "https://list.tg/channel/gotoeatspb/6988",
+      "source_url": "https://t.me/gotoeatspb/6988",
+      "published_at": "2026-09-06T07:22:02+00:00",
+      "retrieved_at": "2026-10-13T11:12:56.761320+00:00",
+      "headline": "Новый рестик с бильярдом для долгих вечеров с друзьями 🎱",
+      "venue_links": [
+        {
+          "title": "Рестик Франс",
+          "url": "/channel/frans_restik"
+        },
+        {
+          "title": "ул. Пестеля, 27",
+          "url": "https://yandex.ru/maps/-/CTTEfCN8"
+        }
+      ],
+      "addresses": [
+        "ул. Пестеля, 27"
+      ],
+      "signals": [
+        "conversation",
+        "billiards"
+      ],
+      "summary": "В публичной рекомендации описаны: встреча с друзьями, бильярд.",
+      "free_game_reported": true,
+      "status": "pending_review",
+      "multiple_venues": false,
+      "possible_promotion": false
+    },
+    {
+      "id": "public:gotoeatspb:7019",
+      "publisher": "gotoeatspb",
+      "retrieval_url": "https://list.tg/channel/gotoeatspb/7019",
+      "source_url": "https://t.me/gotoeatspb/7019",
+      "published_at": "2026-09-08T11:10:34+00:00",
+      "retrieved_at": "2026-10-13T11:12:56.761320+00:00",
+      "headline": "Скандиванское бистро где главный герой во всех смыслах еда 🫥",
+      "venue_links": [
+        {
+          "title": "Этма",
+          "url": "https://www.instagram.com/etma.bistro?igsi=MWU3dXRzdmRqbGd4ZA=="
+        },
+        {
+          "title": "наб. Чёрной речки, 35",
+          "url": "https://yandex.ru/maps/-/CTRfnK4E"
+        }
+      ],
+      "addresses": [
+        "наб. Чёрной речки, 35"
+      ],
+      "signals": [
+        "conversation",
+        "cocktails"
+      ],
+      "summary": "В публичной рекомендации описаны: встреча с друзьями, коктейли и настойки.",
+      "free_game_reported": false,
+      "status": "pending_review",
+      "multiple_venues": false,
+      "possible_promotion": false
+    }
+  ],
+  "collection_report": {
+    "pages_read": 9,
+    "posts": 37,
+    "posts_with_address": 25,
+    "errors": [
+      {
+        "url": "https://list.tg/channel/gotoeatspb/3575",
+        "error": "HTTPError",
+        "http_status": 404
+      },
+      {
+        "url": "https://list.tg/channel/gotoeatspb/5746",
+        "error": "HTTPError",
+        "http_status": 404
+      },
+      {
+        "url": "https://list.tg/channel/gotoeatspb/7222",
+        "error": "HTTPError",
+        "http_status": 404
+      }
+    ]
+  }
+}

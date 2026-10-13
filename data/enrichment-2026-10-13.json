@@ -1,0 +1,1291 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-13T11:21:42.890937+00:00",
+  "places": [
+    {
+      "id": "osm:node:9969325421",
+      "title": "Aster · улица Маяковского, 23",
+      "address": "улица Маяковского, 23",
+      "city": "Санкт-Петербург",
+      "category": "cafe",
+      "sources": [
+        {
+          "url": "https://astercafe.ru/",
+          "label": "Источник описания",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T11:21:42.890937+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "curated:description",
+          "kind": "description",
+          "text": "Астер: кофе, собственная выпечка, завтраки и вино. Формат кафе-пекарни для чашки кофе и встречи. В часы полной посадки возможна очередь.",
+          "source_url": "https://astercafe.ru/",
+          "observed_at": "2026-10-13T11:21:42.890937+00:00",
+          "retrieved_at": "2026-10-13T11:21:42.890937+00:00"
+        }
+      ],
+      "prices": [
+        {
+          "id": "aster:coffee",
+          "amount": 370,
+          "currency": "RUB",
+          "scope": "visit",
+          "kind": "menu_order",
+          "label": "Капучино из меню",
+          "note": "Цена меньшего капучино; без выпечки и доплат за другое молоко.",
+          "source_url": "https://astercafe.ru/astermenu",
+          "checked_at": "2026-10-13T11:21:42.890937+00:00",
+          "for_needs": [
+            "coffee"
+          ]
+        }
+      ],
+      "notes": "Астер: кофе, собственная выпечка, завтраки и вино. Формат кафе-пекарни для чашки кофе и встречи. В часы полной посадки возможна очередь.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T11:21:42.890937+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "lat": 59.9396912,
+      "lon": 30.3555078
+    },
+    {
+      "id": "curated:aster-rimsky",
+      "title": "Aster · проспект Римского-Корсакова, 22",
+      "address": "проспект Римского-Корсакова, 22",
+      "city": "Санкт-Петербург",
+      "category": "cafe",
+      "sources": [
+        {
+          "url": "https://astercafe.ru/",
+          "label": "Источник описания",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T11:21:42.890937+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "curated:description",
+          "kind": "description",
+          "text": "Астер: кофе, собственная выпечка, завтраки и вино. Формат кафе-пекарни для чашки кофе и встречи. В часы полной посадки возможна очередь.",
+          "source_url": "https://astercafe.ru/",
+          "observed_at": "2026-10-13T11:21:42.890937+00:00",
+          "retrieved_at": "2026-10-13T11:21:42.890937+00:00"
+        }
+      ],
+      "prices": [
+        {
+          "id": "aster:coffee",
+          "amount": 370,
+          "currency": "RUB",
+          "scope": "visit",
+          "kind": "menu_order",
+          "label": "Капучино из меню",
+          "note": "Цена меньшего капучино; без выпечки и доплат за другое молоко.",
+          "source_url": "https://astercafe.ru/astermenu",
+          "checked_at": "2026-10-13T11:21:42.890937+00:00",
+          "for_needs": [
+            "coffee"
+          ]
+        }
+      ],
+      "notes": "Астер: кофе, собственная выпечка, завтраки и вино. Формат кафе-пекарни для чашки кофе и встречи. В часы полной посадки возможна очередь.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T11:21:42.890937+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "id": "curated:aster-rybatskaya",
+      "title": "Aster · Рыбацкая улица, 2",
+      "address": "Рыбацкая улица, 2",
+      "city": "Санкт-Петербург",
+      "category": "cafe",
+      "sources": [
+        {
+          "url": "https://astercafe.ru/",
+          "label": "Источник описания",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T11:21:42.890937+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "curated:description",
+          "kind": "description",
+          "text": "Астер: кофе, собственная выпечка, завтраки и вино. Формат кафе-пекарни для чашки кофе и встречи. В часы полной посадки возможна очередь.",
+          "source_url": "https://astercafe.ru/",
+          "observed_at": "2026-10-13T11:21:42.890937+00:00",
+          "retrieved_at": "2026-10-13T11:21:42.890937+00:00"
+        }
+      ],
+      "prices": [
+        {
+          "id": "aster:coffee",
+          "amount": 370,
+          "currency": "RUB",
+          "scope": "visit",
+          "kind": "menu_order",
+          "label": "Капучино из меню",
+          "note": "Цена меньшего капучино; без выпечки и доплат за другое молоко.",
+          "source_url": "https://astercafe.ru/astermenu",
+          "checked_at": "2026-10-13T11:21:42.890937+00:00",
+          "for_needs": [
+            "coffee"
+          ]
+        }
+      ],
+      "notes": "Астер: кофе, собственная выпечка, завтраки и вино. Формат кафе-пекарни для чашки кофе и встречи. В часы полной посадки возможна очередь.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T11:21:42.890937+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "id": "osm:node:305880722",
+      "title": "Больше кофе! · грот",
+      "address": "Александровский парк, 3Г",
+      "city": "Санкт-Петербург",
+      "category": "cafe",
+      "sources": [
+        {
+          "url": "https://bolshecoffee.ru/about",
+          "label": "Источник описания",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T11:21:42.890937+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "curated:description",
+          "kind": "description",
+          "text": "Кофе в парке: семейная уютная кофейня в гроте.",
+          "source_url": "https://bolshecoffee.ru/about",
+          "observed_at": "2026-10-13T11:21:42.890937+00:00",
+          "retrieved_at": "2026-10-13T11:21:42.890937+00:00"
+        }
+      ],
+      "prices": [],
+      "notes": "Кофе в парке: семейная уютная кофейня в гроте.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T11:21:42.890937+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "lat": 59.9545047,
+      "lon": 30.3205088
+    },
+    {
+      "id": "osm:node:11283851463",
+      "title": "Кофе на кухне",
+      "address": "набережная реки Фонтанки, 17",
+      "city": "Санкт-Петербург",
+      "category": "cafe",
+      "sources": [
+        {
+          "url": "https://bolshecoffee.ru/about",
+          "label": "Источник описания",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T11:21:42.890937+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "curated:description",
+          "kind": "description",
+          "text": "Кофейня с кофе и завтраками у Фонтанки.",
+          "source_url": "https://bolshecoffee.ru/about",
+          "observed_at": "2026-10-13T11:21:42.890937+00:00",
+          "retrieved_at": "2026-10-13T11:21:42.890937+00:00"
+        }
+      ],
+      "prices": [],
+      "notes": "Кофейня с кофе и завтраками у Фонтанки.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T11:21:42.890937+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "lat": 59.9359495,
+      "lon": 30.3431963
+    },
+    {
+      "id": "osm:node:4341597190",
+      "title": "Знакомьтесь, Джо!",
+      "address": "Литейный проспект, 57",
+      "city": "Санкт-Петербург",
+      "category": "cafe",
+      "sources": [
+        {
+          "url": "https://bolshecoffee.ru/about",
+          "label": "Источник описания",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T11:21:42.890937+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "curated:description",
+          "kind": "description",
+          "text": "Уютный островок с кофе в книжном «Подписные издания».",
+          "source_url": "https://bolshecoffee.ru/about",
+          "observed_at": "2026-10-13T11:21:42.890937+00:00",
+          "retrieved_at": "2026-10-13T11:21:42.890937+00:00"
+        }
+      ],
+      "prices": [],
+      "notes": "Уютный островок с кофе в книжном «Подписные издания».",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T11:21:42.890937+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "lat": 59.9345191,
+      "lon": 30.3476926
+    },
+    {
+      "id": "curated:mer-kaffe",
+      "title": "Mer Kaffe",
+      "address": "Большой проспект Васильевского острова, 18",
+      "city": "Санкт-Петербург",
+      "category": "cafe",
+      "sources": [
+        {
+          "url": "https://bolshecoffee.ru/about",
+          "label": "Источник описания",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T11:21:42.890937+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "curated:description",
+          "kind": "description",
+          "text": "Кофейня сети «Больше кофе», кофе и завтраки.",
+          "source_url": "https://bolshecoffee.ru/about",
+          "observed_at": "2026-10-13T11:21:42.890937+00:00",
+          "retrieved_at": "2026-10-13T11:21:42.890937+00:00"
+        }
+      ],
+      "prices": [],
+      "notes": "Кофейня сети «Больше кофе», кофе и завтраки.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T11:21:42.890937+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "id": "curated:ordinary-people",
+      "title": "Обычные люди",
+      "address": "Рыбацкая улица, 4",
+      "city": "Санкт-Петербург",
+      "category": "cafe",
+      "sources": [
+        {
+          "url": "https://bolshecoffee.ru/about",
+          "label": "Источник описания",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T11:21:42.890937+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "curated:description",
+          "kind": "description",
+          "text": "Кофейня сети «Больше кофе», кофе и завтраки.",
+          "source_url": "https://bolshecoffee.ru/about",
+          "observed_at": "2026-10-13T11:21:42.890937+00:00",
+          "retrieved_at": "2026-10-13T11:21:42.890937+00:00"
+        }
+      ],
+      "prices": [],
+      "notes": "Кофейня сети «Больше кофе», кофе и завтраки.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T11:21:42.890937+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "id": "osm:node:5346583331",
+      "title": "Bolshecoffee Roasters · Марата",
+      "address": "улица Марата, 22–24",
+      "city": "Санкт-Петербург",
+      "category": "cafe",
+      "sources": [
+        {
+          "url": "https://bolshecoffee.ru/about",
+          "label": "Источник описания",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T11:21:42.890937+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "curated:description",
+          "kind": "description",
+          "text": "Кофейня с кофе собственной обжарки.",
+          "source_url": "https://bolshecoffee.ru/about",
+          "observed_at": "2026-10-13T11:21:42.890937+00:00",
+          "retrieved_at": "2026-10-13T11:21:42.890937+00:00"
+        }
+      ],
+      "prices": [],
+      "notes": "Кофейня с кофе собственной обжарки.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T11:21:42.890937+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "lat": 59.9279779,
+      "lon": 30.353584
+    },
+    {
+      "id": "curated:kofeynoe",
+      "title": "Кофейное",
+      "address": "Невский проспект, 69",
+      "city": "Санкт-Петербург",
+      "category": "cafe",
+      "sources": [
+        {
+          "url": "https://bolshecoffee.ru/about",
+          "label": "Источник описания",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T11:21:42.890937+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "curated:description",
+          "kind": "description",
+          "text": "Кофейня сети «Больше кофе», кофе и завтраки.",
+          "source_url": "https://bolshecoffee.ru/about",
+          "observed_at": "2026-10-13T11:21:42.890937+00:00",
+          "retrieved_at": "2026-10-13T11:21:42.890937+00:00"
+        }
+      ],
+      "prices": [],
+      "notes": "Кофейня сети «Больше кофе», кофе и завтраки.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T11:21:42.890937+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "id": "curated:bolshe-yard",
+      "title": "Bolshecoffee Roasters Yard",
+      "address": "Херсонская улица, 43/12",
+      "city": "Санкт-Петербург",
+      "category": "cafe",
+      "sources": [
+        {
+          "url": "https://bolshecoffee.ru/about",
+          "label": "Источник описания",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T11:21:42.890937+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "curated:description",
+          "kind": "description",
+          "text": "Кофейня сети «Больше кофе» с кофе собственной обжарки.",
+          "source_url": "https://bolshecoffee.ru/about",
+          "observed_at": "2026-10-13T11:21:42.890937+00:00",
+          "retrieved_at": "2026-10-13T11:21:42.890937+00:00"
+        }
+      ],
+      "prices": [],
+      "notes": "Кофейня сети «Больше кофе» с кофе собственной обжарки.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T11:21:42.890937+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "id": "seed:smena",
+      "title": "Смена",
+      "address": "Басков переулок, 20",
+      "city": "Санкт-Петербург",
+      "category": "cafe",
+      "sources": [
+        {
+          "url": "https://smenacafeyo.tilda.ws/",
+          "label": "Источник описания",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T11:21:42.890937+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "curated:description",
+          "kind": "description",
+          "text": "Кафе с кофе и завтраками, ориентированное на общение и встречи с друзьями. Столики не бронируют; наличие места зависит от посадки.",
+          "source_url": "https://smenacafeyo.tilda.ws/",
+          "observed_at": "2026-10-13T11:21:42.890937+00:00",
+          "retrieved_at": "2026-10-13T11:21:42.890937+00:00"
+        }
+      ],
+      "prices": [],
+      "notes": "Кафе с кофе и завтраками, ориентированное на общение и встречи с друзьями. Столики не бронируют; наличие места зависит от посадки.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T11:21:42.890937+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "id": "seed:bookcoffee",
+      "title": "Книги и кофе",
+      "address": "Гагаринская улица, 20",
+      "city": "Санкт-Петербург",
+      "category": "cafe",
+      "sources": [
+        {
+          "url": "https://www.bookcoffee.ru/",
+          "label": "Источник описания",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T11:21:42.890937+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "curated:description",
+          "kind": "description",
+          "text": "Арт-кафе с кофе, книгами и гостиной. В камерном зале проходят встречи; во время мероприятий формат посещения меняется.",
+          "source_url": "https://www.bookcoffee.ru/",
+          "observed_at": "2026-10-13T11:21:42.890937+00:00",
+          "retrieved_at": "2026-10-13T11:21:42.890937+00:00"
+        }
+      ],
+      "prices": [],
+      "notes": "Арт-кафе с кофе, книгами и гостиной. В камерном зале проходят встречи; во время мероприятий формат посещения меняется.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T11:21:42.890937+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "id": "seed:artist",
+      "title": "Artist · арт-кафе",
+      "address": "13-я линия Васильевского острова, 70, 3-й этаж",
+      "city": "Санкт-Петербург",
+      "category": "cafe",
+      "sources": [
+        {
+          "url": "https://artist.artmuza.spb.ru/",
+          "label": "Источник описания",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T11:21:42.890937+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "curated:description",
+          "kind": "description",
+          "text": "Кафе в АРТМУЗЕ с небольшим залом и кофе. Встречу можно совместить с осмотром искусства.",
+          "source_url": "https://artist.artmuza.spb.ru/",
+          "observed_at": "2026-10-13T11:21:42.890937+00:00",
+          "retrieved_at": "2026-10-13T11:21:42.890937+00:00"
+        }
+      ],
+      "prices": [],
+      "notes": "Кафе в АРТМУЗЕ с небольшим залом и кофе. Встречу можно совместить с осмотром искусства.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T11:21:42.890937+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "id": "osm:node:10007159717",
+      "title": "Хоровод",
+      "address": "улица Некрасова, 58",
+      "city": "Санкт-Петербург",
+      "category": "bar",
+      "sources": [
+        {
+          "url": "https://afbrew.co/horovod",
+          "label": "Источник описания",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T11:21:42.890937+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "curated:description",
+          "kind": "description",
+          "text": "Неорюмочная AF Brew: настойки, дистилляты и локальный алкоголь, закуски. Для вечера с друзьями; наличие танцев само по себе не заявлено.",
+          "source_url": "https://afbrew.co/horovod",
+          "observed_at": "2026-10-13T11:21:42.890937+00:00",
+          "retrieved_at": "2026-10-13T11:21:42.890937+00:00"
+        }
+      ],
+      "prices": [],
+      "notes": "Неорюмочная AF Brew: настойки, дистилляты и локальный алкоголь, закуски. Для вечера с друзьями; наличие танцев само по себе не заявлено.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T11:21:42.890937+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "lat": 59.9384381,
+      "lon": 30.367685
+    },
+    {
+      "id": "osm:node:2940654937",
+      "title": "Redrum",
+      "address": "улица Некрасова, 3",
+      "city": "Санкт-Петербург",
+      "category": "bar",
+      "sources": [
+        {
+          "url": "https://afbrew.co/",
+          "label": "Источник описания",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T11:21:42.890937+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "redrum:events",
+          "kind": "description",
+          "text": "По выходным проходят диджей-сеты.",
+          "source_url": "https://afbrew.co/",
+          "observed_at": "2026-10-13T11:21:42.890937+00:00",
+          "retrieved_at": "2026-10-13T11:21:42.890937+00:00"
+        },
+        {
+          "id": "curated:description",
+          "kind": "description",
+          "text": "Крафтовый бар с кухней и пивом. По выходным заявлены диджей-сеты; вечер с музыкой отличается от спокойной беседы.",
+          "source_url": "https://afbrew.co/",
+          "observed_at": "2026-10-13T11:21:42.890937+00:00",
+          "retrieved_at": "2026-10-13T11:21:42.890937+00:00"
+        }
+      ],
+      "prices": [],
+      "notes": "Крафтовый бар с кухней и пивом. По выходным заявлены диджей-сеты; вечер с музыкой отличается от спокойной беседы.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T11:21:42.890937+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "lat": 59.938936,
+      "lon": 30.356996
+    },
+    {
+      "id": "osm:node:11301408979",
+      "title": "Звонок",
+      "address": "улица Некрасова, 34",
+      "city": "Санкт-Петербург",
+      "category": "bar",
+      "sources": [
+        {
+          "url": "https://www.restoclub.ru/spb/place/zvonok",
+          "label": "Источник описания",
+          "kind": "editorial",
+          "retrieved_at": "2026-10-13T11:21:42.890937+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "curated:description",
+          "kind": "editorial",
+          "text": "Рюмочная с настойками, русскими закусками, картинами и коврами. Формат бара для встречи с друзьями.",
+          "source_url": "https://www.restoclub.ru/spb/place/zvonok",
+          "observed_at": "2026-10-13T11:21:42.890937+00:00",
+          "retrieved_at": "2026-10-13T11:21:42.890937+00:00"
+        }
+      ],
+      "prices": [
+        {
+          "id": "zvonok:bill",
+          "amount": 800,
+          "currency": "RUB",
+          "scope": "visit",
+          "kind": "average_check",
+          "label": "Опубликованный средний чек без напитков",
+          "note": "Напитки не включены, бюджет барного заказа рассчитывается отдельно.",
+          "source_url": "https://www.restoclub.ru/spb/place/zvonok/menu",
+          "checked_at": "2026-10-13T11:21:42.890937+00:00",
+          "excludes_beverages": true
+        }
+      ],
+      "notes": "Рюмочная с настойками, русскими закусками, картинами и коврами. Формат бара для встречи с друзьями.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T11:21:42.890937+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "lat": 59.9389019,
+      "lon": 30.359064
+    },
+    {
+      "id": "curated:schmaus",
+      "title": "Schmaus Döner und Bar",
+      "address": "Ижорская улица, 3",
+      "city": "Санкт-Петербург",
+      "category": "bar",
+      "sources": [
+        {
+          "url": "https://schmaus.ru/",
+          "label": "Источник описания",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T11:21:42.890937+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "curated:description",
+          "kind": "description",
+          "text": "Уютный бар для неформального общения и встречи с друзьями. Донеры, закуски, напитки; бильярд заявлен бесплатно.",
+          "source_url": "https://schmaus.ru/",
+          "observed_at": "2026-10-13T11:21:42.890937+00:00",
+          "retrieved_at": "2026-10-13T11:21:42.890937+00:00"
+        }
+      ],
+      "prices": [],
+      "notes": "Уютный бар для неформального общения и встречи с друзьями. Донеры, закуски, напитки; бильярд заявлен бесплатно.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T11:21:42.890937+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "lat": 59.958487,
+      "lon": 30.299287,
+      "billiards_terms": [
+        {
+          "id": "schmaus:game",
+          "mode": "free",
+          "game_amount": 0,
+          "verified": true,
+          "source_url": "https://schmaus.ru/",
+          "checked_at": "2026-10-13T11:21:42.890937+00:00"
+        }
+      ],
+      "coordinate_source_url": "https://yandex.ru/maps/org/schmaus_d_ner_und_bar/236763518834/"
+    },
+    {
+      "id": "curated:restik-frans",
+      "title": "Рестик Франс",
+      "address": "улица Пестеля, 27",
+      "city": "Санкт-Петербург",
+      "category": "bar",
+      "sources": [
+        {
+          "url": "https://borisstars.ru/news/14251",
+          "label": "Источник описания",
+          "kind": "editorial",
+          "retrieved_at": "2026-10-13T11:21:42.890937+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "frans:social",
+          "kind": "editorial",
+          "text": "Автор рекомендует бар для встреч с друзьями, еды и партии в бильярд.",
+          "source_url": "https://list.tg/channel/gotoeatspb/6988",
+          "observed_at": "2026-09-06T07:22:02+00:00",
+          "retrieved_at": "2026-10-13T11:21:42.890937+00:00",
+          "source_kind": "social",
+          "paraphrased": true
+        },
+        {
+          "id": "frans:digest",
+          "kind": "editorial",
+          "text": "В свежем дайджесте заявлена игра в бильярд без отдельной оплаты.",
+          "source_url": "https://list.tg/channel/gotoeatspb/7235",
+          "observed_at": "2026-10-02T14:22:01+00:00",
+          "retrieved_at": "2026-10-13T11:21:42.890937+00:00",
+          "source_kind": "social",
+          "paraphrased": true
+        },
+        {
+          "id": "curated:description",
+          "kind": "editorial",
+          "text": "Бар с едой и бильярдом для вечера с друзьями. Публикации расходятся с фактическими часами работы; перед визитом проверь режим.",
+          "source_url": "https://borisstars.ru/news/14251",
+          "observed_at": "2026-10-13T11:21:42.890937+00:00",
+          "retrieved_at": "2026-10-13T11:21:42.890937+00:00"
+        }
+      ],
+      "prices": [],
+      "notes": "Бар с едой и бильярдом для вечера с друзьями. Публикации расходятся с фактическими часами работы; перед визитом проверь режим.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T11:21:42.890937+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "lat": null,
+      "lon": null,
+      "billiards_terms": [
+        {
+          "id": "frans:reported-game",
+          "mode": "free",
+          "game_amount": 0,
+          "verified": false,
+          "queue": true,
+          "source_url": "https://list.tg/channel/gotoeatspb/7235",
+          "checked_at": "2026-10-02T14:22:01+00:00",
+          "note": "Минимальный заказ в публикации не указан."
+        }
+      ]
+    },
+    {
+      "id": "curated:opetit-clair",
+      "title": "Opetit Clair de Lune",
+      "address": "Большая Конюшенная улица, 9, 3-й этаж",
+      "city": "Санкт-Петербург",
+      "category": "cafe",
+      "sources": [
+        {
+          "url": "https://list.tg/channel/gotoeatspb/7261",
+          "label": "Go to eat · публичная рекомендация",
+          "kind": "social",
+          "retrieved_at": "2026-10-13T11:21:42.890937+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "opetit:social",
+          "kind": "editorial",
+          "text": "Публикация описывает кофе и винтажный интерьер для осеннего визита, вино и музыку вечером.",
+          "source_url": "https://list.tg/channel/gotoeatspb/7261",
+          "observed_at": "2026-10-06T07:32:01+00:00",
+          "retrieved_at": "2026-10-13T11:21:42.890937+00:00",
+          "source_kind": "social",
+          "paraphrased": true
+        },
+        {
+          "id": "curated:description",
+          "kind": "editorial",
+          "text": "Кофе и выпечка в особняке: винтажная мебель, тёплый свет, старый паркет. Вечером — вино и музыка; обстановка меняется по времени.",
+          "source_url": "https://list.tg/channel/gotoeatspb/7261",
+          "observed_at": "2026-10-13T11:21:42.890937+00:00",
+          "retrieved_at": "2026-10-13T11:21:42.890937+00:00",
+          "source_kind": "social"
+        }
+      ],
+      "prices": [],
+      "notes": "Кофе и выпечка в особняке: винтажная мебель, тёплый свет, старый паркет. Вечером — вино и музыка; обстановка меняется по времени.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T11:21:42.890937+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "id": "curated:chang-konyush",
+      "title": "Chang · Большая Конюшенная",
+      "address": "Большая Конюшенная улица, 9",
+      "city": "Санкт-Петербург",
+      "category": "restaurant",
+      "sources": [
+        {
+          "url": "https://list.tg/channel/eatpeterburg/13962",
+          "label": "Где поесть в Питере · посещение автора",
+          "kind": "social",
+          "retrieved_at": "2026-10-13T11:21:42.890937+00:00"
+        },
+        {
+          "url": "https://changcafe.ru/",
+          "label": "Источник описания",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T11:21:42.890937+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "chang:visit",
+          "kind": "review",
+          "text": "Автор посетила ресторан с зеленью в интерьере и рекомендует его для встречи с друзьями; отмечает плотную посадку.",
+          "source_url": "https://list.tg/channel/eatpeterburg/13962",
+          "observed_at": "2026-10-09T15:25:38+00:00",
+          "retrieved_at": "2026-10-13T11:21:42.890937+00:00",
+          "source_kind": "social",
+          "paraphrased": true
+        },
+        {
+          "id": "curated:description",
+          "kind": "editorial",
+          "text": "Тайский ресторан: зелень в интерьере, встречи с друзьями и еда. Дневной обед и вечерняя встреча описаны в отзыве автора.",
+          "source_url": "https://list.tg/channel/eatpeterburg/13962",
+          "observed_at": "2026-10-13T11:21:42.890937+00:00",
+          "retrieved_at": "2026-10-13T11:21:42.890937+00:00",
+          "source_kind": "social"
+        }
+      ],
+      "prices": [],
+      "notes": "Тайский ресторан: зелень в интерьере, встречи с друзьями и еда. Дневной обед и вечерняя встреча описаны в отзыве автора.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T11:21:42.890937+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "lat": null,
+      "lon": null
+    },
+    {
+      "id": "osm:relation:1582734",
+      "title": "Таврический сад",
+      "address": "Шпалерная улица, 47",
+      "city": "Санкт-Петербург",
+      "category": "park",
+      "sources": [
+        {
+          "url": "https://visit-petersburg.ru/leisure/places/tp-196735-tavricheskiy-sad/",
+          "label": "Источник описания",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T11:21:42.890937+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "curated:description",
+          "kind": "description",
+          "text": "Парк с искусственными водоёмами и прудами, дорожками и местами для прогулки у воды.",
+          "source_url": "https://visit-petersburg.ru/leisure/places/tp-196735-tavricheskiy-sad/",
+          "observed_at": "2026-10-13T11:21:42.890937+00:00",
+          "retrieved_at": "2026-10-13T11:21:42.890937+00:00"
+        }
+      ],
+      "prices": [],
+      "notes": "Парк с искусственными водоёмами и прудами, дорожками и местами для прогулки у воды.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T11:21:42.890937+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "lat": 59.946101,
+      "lon": 30.3728761
+    },
+    {
+      "id": "osm:relation:2207279",
+      "title": "Юсуповский сад",
+      "address": "Садовая улица, 54",
+      "city": "Санкт-Петербург",
+      "category": "park",
+      "sources": [
+        {
+          "url": "https://visit-petersburg.ru/en/leisure/places/tp-197946-yusupovskiy-sad/",
+          "label": "Источник описания",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T11:21:42.890937+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "curated:description",
+          "kind": "description",
+          "text": "Небольшой сад с большим прудом; прогулка по дорожкам вокруг воды.",
+          "source_url": "https://visit-petersburg.ru/en/leisure/places/tp-197946-yusupovskiy-sad/",
+          "observed_at": "2026-10-13T11:21:42.890937+00:00",
+          "retrieved_at": "2026-10-13T11:21:42.890937+00:00"
+        }
+      ],
+      "prices": [],
+      "notes": "Небольшой сад с большим прудом; прогулка по дорожкам вокруг воды.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T11:21:42.890937+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "lat": 59.922983,
+      "lon": 30.3131185
+    },
+    {
+      "id": "osm:relation:2569945",
+      "title": "Приморский парк Победы",
+      "address": "Крестовский остров, Приморский парк Победы",
+      "city": "Санкт-Петербург",
+      "category": "park",
+      "sources": [
+        {
+          "url": "https://pppark.ru/about",
+          "label": "Источник описания",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T11:21:42.890937+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "curated:description",
+          "kind": "description",
+          "text": "Парк с прудами. На втором Северном пруду обитает стая лебедей; выбрать прогулку у воды можно отдельно от аттракционов.",
+          "source_url": "https://pppark.ru/about",
+          "observed_at": "2026-10-13T11:21:42.890937+00:00",
+          "retrieved_at": "2026-10-13T11:21:42.890937+00:00"
+        }
+      ],
+      "prices": [],
+      "notes": "Парк с прудами. На втором Северном пруду обитает стая лебедей; выбрать прогулку у воды можно отдельно от аттракционов.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T11:21:42.890937+00:00",
+      "discovery_priority": 5,
+      "is_landmark": false,
+      "lat": 59.9704787,
+      "lon": 30.2464642
+    },
+    {
+      "id": "seed:leon",
+      "title": "Leon Club",
+      "address": "улица Оптиков, 4",
+      "category": "billiards",
+      "city": "Санкт-Петербург",
+      "lat": null,
+      "lon": null,
+      "notes": "Бильярдный клуб с пулом и другими видами игры. Пул оплачивается за стол по времени; еда в ресторане отдельно.",
+      "sources": [
+        {
+          "url": "https://leonclub.ru/biliard",
+          "kind": "official",
+          "label": "Источник условий",
+          "retrieved_at": "2026-10-13T11:27:04.856433+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "curated:description",
+          "kind": "description",
+          "text": "Бильярдный клуб с пулом и другими видами игры. Пул оплачивается за стол по времени; еда в ресторане отдельно.",
+          "source_url": "https://leonclub.ru/biliard",
+          "observed_at": "2026-10-13T11:27:04.856433+00:00",
+          "retrieved_at": "2026-10-13T11:27:04.856433+00:00"
+        }
+      ],
+      "prices": [],
+      "offers": [],
+      "billiards_terms": [
+        {
+          "id": "leon:pool",
+          "mode": "paid",
+          "game_from": 300,
+          "game_to": 750,
+          "game_scope": "hour",
+          "verified": true,
+          "checked_at": "2026-10-13T11:27:04.856433+00:00",
+          "source_url": "https://leonclub.ru/biliard",
+          "note": "Диапазон для столов пула 8–12; цена зависит от дня и времени. Еда и напитки отдельно."
+        }
+      ],
+      "updated_at": "2026-10-13T11:27:04.856433+00:00",
+      "status": "catalogue",
+      "is_landmark": false,
+      "discovery_priority": 5
+    },
+    {
+      "id": "seed:almak",
+      "title": "Альмак",
+      "address": "Новолитовская улица, 15А",
+      "category": "billiards",
+      "city": "Санкт-Петербург",
+      "lat": null,
+      "lon": null,
+      "notes": "Клуб с бильярдом, спорт-баром и кухней. Игра в пул оплачивается отдельно по времени; заказ еды не включает игру.",
+      "sources": [
+        {
+          "url": "https://almakclub.ru/price",
+          "kind": "official",
+          "label": "Источник условий",
+          "retrieved_at": "2026-10-13T11:27:04.856433+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "curated:description",
+          "kind": "description",
+          "text": "Клуб с бильярдом, спорт-баром и кухней. Игра в пул оплачивается отдельно по времени; заказ еды не включает игру.",
+          "source_url": "https://almakclub.ru/price",
+          "observed_at": "2026-10-13T11:27:04.856433+00:00",
+          "retrieved_at": "2026-10-13T11:27:04.856433+00:00"
+        }
+      ],
+      "prices": [],
+      "offers": [],
+      "billiards_terms": [
+        {
+          "id": "almak:pool",
+          "mode": "paid",
+          "game_from": 490,
+          "game_to": 750,
+          "game_scope": "hour",
+          "verified": true,
+          "checked_at": "2026-10-13T11:27:04.856433+00:00",
+          "source_url": "https://almakclub.ru/price",
+          "note": "Пул: тариф за стол, зависит от дня и времени. При брони нескольких столов возможен депозит на кухню."
+        }
+      ],
+      "updated_at": "2026-10-13T11:27:04.856433+00:00",
+      "status": "catalogue",
+      "is_landmark": false,
+      "discovery_priority": 5
+    },
+    {
+      "id": "curated:mazapark-bukh",
+      "title": "MazaPark · Бухарестская",
+      "address": "Бухарестская улица, 30/32",
+      "category": "activity",
+      "city": "Санкт-Петербург",
+      "lat": null,
+      "lon": null,
+      "notes": "Бильярд в парке развлечений включён в единый платный билет. Отдельной почасовой оплаты нет, но это не бесплатный бонус к еде.",
+      "sources": [
+        {
+          "url": "https://mazapark.ru/spb-bukharestskaya/",
+          "kind": "official",
+          "label": "Источник условий",
+          "retrieved_at": "2026-10-13T11:27:04.856433+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "curated:description",
+          "kind": "description",
+          "text": "Бильярд в парке развлечений включён в единый платный билет. Отдельной почасовой оплаты нет, но это не бесплатный бонус к еде.",
+          "source_url": "https://mazapark.ru/spb-bukharestskaya/",
+          "observed_at": "2026-10-13T11:27:04.856433+00:00",
+          "retrieved_at": "2026-10-13T11:27:04.856433+00:00"
+        }
+      ],
+      "prices": [],
+      "offers": [],
+      "billiards_terms": [
+        {
+          "id": "maza:ticket",
+          "mode": "ticket",
+          "verified": true,
+          "checked_at": "2026-10-13T11:27:04.856433+00:00",
+          "source_url": "https://mazapark.ru/spb-bukharestskaya/",
+          "note": "Для игры нужен билет в парк; еда и напитки не входят. При занятых столах доступ зависит от очереди."
+        }
+      ],
+      "updated_at": "2026-10-13T11:27:04.856433+00:00",
+      "status": "catalogue",
+      "is_landmark": false,
+      "discovery_priority": 5
+    },
+    {
+      "id": "curated:coop-garage",
+      "title": "Co-op Garage",
+      "address": "Гороховая улица, 47, строение 2",
+      "category": "bar",
+      "city": "Санкт-Петербург",
+      "lat": null,
+      "lon": null,
+      "notes": "В публичной подборке рекомендовано заведение с едой и бильярдом. Автор сообщает, что партия без отдельной оплаты; условий минимального заказа нет.",
+      "sources": [
+        {
+          "url": "https://mxstat.ru/channel/infopeterburg",
+          "kind": "social",
+          "label": "Пойдем сегодня Петербург · поисковая индексация",
+          "retrieved_at": "2026-10-13T11:27:04.856433+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "curated:description",
+          "kind": "editorial",
+          "text": "В публичной подборке рекомендовано заведение с едой и бильярдом. Автор сообщает, что партия без отдельной оплаты; условий минимального заказа нет.",
+          "source_url": "https://mxstat.ru/channel/infopeterburg",
+          "observed_at": "2026-09-14",
+          "retrieved_at": "2026-10-13T11:27:04.856433+00:00",
+          "source_kind": "social"
+        }
+      ],
+      "prices": [],
+      "offers": [],
+      "billiards_terms": [
+        {
+          "id": "social:free-game",
+          "mode": "free",
+          "game_amount": 0,
+          "verified": false,
+          "checked_at": "2026-09-14",
+          "source_url": "https://mxstat.ru/channel/infopeterburg",
+          "retrieval_mode": "search_index",
+          "note": "Условия названы в подборке 14 сентября; подтверждения заведения пока нет."
+        }
+      ],
+      "updated_at": "2026-10-13T11:27:04.856433+00:00",
+      "status": "catalogue",
+      "is_landmark": false,
+      "discovery_priority": 5
+    },
+    {
+      "id": "osm:node:5144360618",
+      "title": "Gypsies & Jews",
+      "address": null,
+      "category": "bar",
+      "city": "Санкт-Петербург",
+      "lat": 59.9278304,
+      "lon": 30.3379172,
+      "notes": "В публичной подборке рекомендовано заведение с едой и бильярдом. Автор сообщает, что партия без отдельной оплаты; условий минимального заказа нет.",
+      "sources": [
+        {
+          "url": "https://mxstat.ru/channel/infopeterburg",
+          "kind": "social",
+          "label": "Пойдем сегодня Петербург · поисковая индексация",
+          "retrieved_at": "2026-10-13T11:27:04.856433+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "curated:description",
+          "kind": "editorial",
+          "text": "В публичной подборке рекомендовано заведение с едой и бильярдом. Автор сообщает, что партия без отдельной оплаты; условий минимального заказа нет.",
+          "source_url": "https://mxstat.ru/channel/infopeterburg",
+          "observed_at": "2026-09-14",
+          "retrieved_at": "2026-10-13T11:27:04.856433+00:00",
+          "source_kind": "social"
+        }
+      ],
+      "prices": [],
+      "offers": [],
+      "billiards_terms": [
+        {
+          "id": "social:free-game",
+          "mode": "free",
+          "game_amount": 0,
+          "verified": false,
+          "checked_at": "2026-09-14",
+          "source_url": "https://mxstat.ru/channel/infopeterburg",
+          "retrieval_mode": "search_index",
+          "note": "Условия названы в подборке 14 сентября; подтверждения заведения пока нет."
+        }
+      ],
+      "updated_at": "2026-10-13T11:27:04.856433+00:00",
+      "status": "catalogue",
+      "is_landmark": false,
+      "discovery_priority": 5
+    },
+    {
+      "id": "osm:node:11119811496",
+      "title": "Lines",
+      "address": "26-я линия Васильевского острова, 7",
+      "category": "cafe",
+      "city": "Санкт-Петербург",
+      "lat": 59.930697,
+      "lon": 30.2622692,
+      "notes": "В публичной подборке рекомендовано заведение с едой и бильярдом. Автор сообщает, что партия без отдельной оплаты; условий минимального заказа нет.",
+      "sources": [
+        {
+          "url": "https://mxstat.ru/channel/infopeterburg",
+          "kind": "social",
+          "label": "Пойдем сегодня Петербург · поисковая индексация",
+          "retrieved_at": "2026-10-13T11:27:04.856433+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "curated:description",
+          "kind": "editorial",
+          "text": "В публичной подборке рекомендовано заведение с едой и бильярдом. Автор сообщает, что партия без отдельной оплаты; условий минимального заказа нет.",
+          "source_url": "https://mxstat.ru/channel/infopeterburg",
+          "observed_at": "2026-09-14",
+          "retrieved_at": "2026-10-13T11:27:04.856433+00:00",
+          "source_kind": "social"
+        }
+      ],
+      "prices": [],
+      "offers": [],
+      "billiards_terms": [
+        {
+          "id": "social:free-game",
+          "mode": "free",
+          "game_amount": 0,
+          "verified": false,
+          "checked_at": "2026-09-14",
+          "source_url": "https://mxstat.ru/channel/infopeterburg",
+          "retrieval_mode": "search_index",
+          "note": "Условия названы в подборке 14 сентября; подтверждения заведения пока нет."
+        }
+      ],
+      "updated_at": "2026-10-13T11:27:04.856433+00:00",
+      "status": "catalogue",
+      "is_landmark": false,
+      "discovery_priority": 5
+    },
+    {
+      "id": "seed:broken-hearts",
+      "title": "Бар разбитых сердец",
+      "address": "набережная канала Грибоедова, 30–32Ч",
+      "category": "bar",
+      "city": "Санкт-Петербург",
+      "lat": null,
+      "lon": null,
+      "notes": "Бар с бильярдом, коктейлями и настойками. Актуальный сайт указывает набережную Грибоедова; бесплатная игра упомянута в подборке автора, а не подтверждена условиями заведения.",
+      "sources": [
+        {
+          "url": "https://razbitye-serdtsa.clients.site/",
+          "kind": "official",
+          "label": "Источник условий",
+          "retrieved_at": "2026-10-13T11:27:04.856433+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "curated:description",
+          "kind": "description",
+          "text": "Бар с бильярдом, коктейлями и настойками. Актуальный сайт указывает набережную Грибоедова; бесплатная игра упомянута в подборке автора, а не подтверждена условиями заведения.",
+          "source_url": "https://razbitye-serdtsa.clients.site/",
+          "observed_at": "2026-10-13T11:27:04.856433+00:00",
+          "retrieved_at": "2026-10-13T11:27:04.856433+00:00"
+        }
+      ],
+      "prices": [],
+      "offers": [],
+      "billiards_terms": [
+        {
+          "id": "social:free-game",
+          "mode": "free",
+          "game_amount": 0,
+          "verified": false,
+          "checked_at": "2026-09-14",
+          "source_url": "https://mxstat.ru/channel/infopeterburg",
+          "retrieval_mode": "search_index",
+          "note": "Рекомендация относится к Грибоедова, 30–32Ч. Условия заказа нужно подтвердить; сведения о старом адресе не объединены."
+        }
+      ],
+      "updated_at": "2026-10-13T11:27:04.856433+00:00",
+      "status": "catalogue",
+      "is_landmark": false,
+      "discovery_priority": 5
+    }
+  ]
+}
