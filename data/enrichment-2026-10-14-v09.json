@@ -1,0 +1,674 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-13T23:35:00Z",
+  "source_licenses": {},
+  "places": [
+    {
+      "lat": null,
+      "lon": null,
+      "id": "seed:coffee3",
+      "title": "Coffee 3",
+      "address": "набережная реки Карповки, 5АК",
+      "city": "Санкт-Петербург",
+      "category": "cafe",
+      "sources": [
+        {
+          "url": "https://cafecoffee3.ru/",
+          "label": "Описание и условия",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T23:35:00Z"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v09:description",
+          "kind": "description",
+          "text": "Кофе, десерты и итальянская кухня. Для неторопливого отдыха с друзьями есть столы с удобными диванами и отдельный чилаут с подушками и панорамным видом на крыши. Для работы с ноутбуком предусмотрена другая зона коворкинга. Бронирование с пятницы по воскресенье ограничено двумя часами.",
+          "source_url": "https://cafecoffee3.ru/",
+          "observed_at": "2026-10-13T23:35:00Z",
+          "retrieved_at": "2026-10-13T23:35:00Z",
+          "paraphrased": true
+        }
+      ],
+      "notes": "Кофе, десерты и итальянская кухня. Для неторопливого отдыха с друзьями есть столы с удобными диванами и отдельный чилаут с подушками и панорамным видом на крыши. Для работы с ноутбуком предусмотрена другая зона коворкинга. Бронирование с пятницы по воскресенье ограничено двумя часами.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T23:35:00Z",
+      "is_landmark": false,
+      "discovery_priority": 4,
+      "prices": [
+        {
+          "id": "v09:average",
+          "amount": 2000,
+          "currency": "RUB",
+          "scope": "visit",
+          "kind": "average_check",
+          "label": "Опубликованный средний чек",
+          "note": "Ориентир, итог зависит от заказа.",
+          "source_url": "https://cafecoffee3.ru/",
+          "checked_at": "2026-10-13T23:35:00Z"
+        }
+      ],
+      "notes_are_summary": true
+    },
+    {
+      "lat": null,
+      "lon": null,
+      "id": "seed:brynza-karavannaya",
+      "title": "Брынза · Караванная улица, 24",
+      "address": "Караванная улица, 24",
+      "city": "Санкт-Петербург",
+      "category": "cafe",
+      "sources": [
+        {
+          "url": "https://cafebrynza.ru/addressa/kafe-dlya-raboty-s-noutbukom/",
+          "label": "Описание и условия",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T23:35:00Z"
+        }
+      ],
+      "features": [
+        {
+          "key": "laptop_work",
+          "value": true,
+          "status": "pending_review",
+          "source_url": "https://cafebrynza.ru/addressa/kafe-dlya-raboty-s-noutbukom/",
+          "checked_at": "2026-10-13T23:35:00Z",
+          "scope": null,
+          "note": "Общая статья сети не подтверждает условия этого зала."
+        },
+        {
+          "key": "wifi",
+          "value": true,
+          "status": "pending_review",
+          "source_url": "https://cafebrynza.ru/addressa/kafe-dlya-raboty-s-noutbukom/",
+          "checked_at": "2026-10-13T23:35:00Z",
+          "scope": null,
+          "note": "Общая статья сети не подтверждает условия этого зала."
+        },
+        {
+          "key": "power_outlets",
+          "value": true,
+          "status": "pending_review",
+          "source_url": "https://cafebrynza.ru/addressa/kafe-dlya-raboty-s-noutbukom/",
+          "checked_at": "2026-10-13T23:35:00Z",
+          "scope": null,
+          "note": "Общая статья сети не подтверждает условия этого зала."
+        },
+        {
+          "key": "child_friendly",
+          "value": true,
+          "status": "pending_review",
+          "source_url": "https://cafebrynza.ru/addressa/kafe-dlya-raboty-s-noutbukom/",
+          "checked_at": "2026-10-13T23:35:00Z",
+          "scope": null,
+          "note": "Общая статья сети не подтверждает условия этого зала."
+        },
+        {
+          "key": "quiet",
+          "value": true,
+          "status": "pending_review",
+          "source_url": "https://cafebrynza.ru/addressa/kafe-dlya-raboty-s-noutbukom/",
+          "checked_at": "2026-10-13T23:35:00Z",
+          "scope": "weekday_morning",
+          "note": "Общая статья сети не подтверждает условия этого зала."
+        }
+      ],
+      "documents": [
+        {
+          "id": "v09:description",
+          "kind": "description",
+          "text": "Чебуреки, супы, салаты и десерты. Условия работы с ноутбуком конкретного зала и времени не подтверждены. Формат повседневного кафе, интерьер для душевных посиделок пока не проверен.",
+          "source_url": "https://cafebrynza.ru/addressa/kafe-dlya-raboty-s-noutbukom/",
+          "observed_at": "2026-10-13T23:35:00Z",
+          "retrieved_at": "2026-10-13T23:35:00Z",
+          "paraphrased": true
+        }
+      ],
+      "notes": "Чебуреки, супы, салаты и десерты. Условия работы с ноутбуком конкретного зала и времени не подтверждены. Формат повседневного кафе, интерьер для душевных посиделок пока не проверен.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T23:35:00Z",
+      "is_landmark": false,
+      "discovery_priority": 0,
+      "notes_are_summary": true
+    },
+    {
+      "lat": null,
+      "lon": null,
+      "id": "seed:brynza-moskovsky",
+      "title": "Брынза · Московский проспект, 86",
+      "address": "Московский проспект, 86",
+      "city": "Санкт-Петербург",
+      "category": "cafe",
+      "sources": [
+        {
+          "url": "https://cafebrynza.ru/addressa/kafe-dlya-raboty-s-noutbukom/",
+          "label": "Описание и условия",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T23:35:00Z"
+        }
+      ],
+      "features": [
+        {
+          "key": "laptop_work",
+          "value": true,
+          "status": "pending_review",
+          "source_url": "https://cafebrynza.ru/addressa/kafe-dlya-raboty-s-noutbukom/",
+          "checked_at": "2026-10-13T23:35:00Z",
+          "scope": null,
+          "note": "Общая статья сети не подтверждает условия этого зала."
+        },
+        {
+          "key": "wifi",
+          "value": true,
+          "status": "pending_review",
+          "source_url": "https://cafebrynza.ru/addressa/kafe-dlya-raboty-s-noutbukom/",
+          "checked_at": "2026-10-13T23:35:00Z",
+          "scope": null,
+          "note": "Общая статья сети не подтверждает условия этого зала."
+        },
+        {
+          "key": "power_outlets",
+          "value": true,
+          "status": "pending_review",
+          "source_url": "https://cafebrynza.ru/addressa/kafe-dlya-raboty-s-noutbukom/",
+          "checked_at": "2026-10-13T23:35:00Z",
+          "scope": null,
+          "note": "Общая статья сети не подтверждает условия этого зала."
+        },
+        {
+          "key": "child_friendly",
+          "value": true,
+          "status": "pending_review",
+          "source_url": "https://cafebrynza.ru/addressa/kafe-dlya-raboty-s-noutbukom/",
+          "checked_at": "2026-10-13T23:35:00Z",
+          "scope": null,
+          "note": "Общая статья сети не подтверждает условия этого зала."
+        },
+        {
+          "key": "quiet",
+          "value": true,
+          "status": "pending_review",
+          "source_url": "https://cafebrynza.ru/addressa/kafe-dlya-raboty-s-noutbukom/",
+          "checked_at": "2026-10-13T23:35:00Z",
+          "scope": "weekday_morning",
+          "note": "Общая статья сети не подтверждает условия этого зала."
+        }
+      ],
+      "documents": [
+        {
+          "id": "v09:description",
+          "kind": "description",
+          "text": "Чебуреки, супы, салаты и десерты. Условия работы с ноутбуком конкретного зала и времени не подтверждены. Формат повседневного кафе, интерьер для душевных посиделок пока не проверен.",
+          "source_url": "https://cafebrynza.ru/addressa/kafe-dlya-raboty-s-noutbukom/",
+          "observed_at": "2026-10-13T23:35:00Z",
+          "retrieved_at": "2026-10-13T23:35:00Z",
+          "paraphrased": true
+        }
+      ],
+      "notes": "Чебуреки, супы, салаты и десерты. Условия работы с ноутбуком конкретного зала и времени не подтверждены. Формат повседневного кафе, интерьер для душевных посиделок пока не проверен.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T23:35:00Z",
+      "is_landmark": false,
+      "discovery_priority": 0,
+      "notes_are_summary": true
+    },
+    {
+      "lat": null,
+      "lon": null,
+      "id": "seed:smena",
+      "title": "Смена",
+      "address": "Басков переулок, 20",
+      "city": "Санкт-Петербург",
+      "category": "cafe",
+      "sources": [
+        {
+          "url": "https://smenacafeyo.tilda.ws/",
+          "label": "Описание и условия",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T23:35:00Z"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v09:description",
+          "kind": "description",
+          "text": "Кофе и еда, место ориентировано на общение и встречи с друзьями. На сайте говорят о совместных радостях и грусти. Столики не бронируют; наличие места зависит от посадки.",
+          "source_url": "https://smenacafeyo.tilda.ws/",
+          "observed_at": "2026-10-13T23:35:00Z",
+          "retrieved_at": "2026-10-13T23:35:00Z",
+          "paraphrased": true
+        }
+      ],
+      "notes": "Кофе и еда, место ориентировано на общение и встречи с друзьями. На сайте говорят о совместных радостях и грусти. Столики не бронируют; наличие места зависит от посадки.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T23:35:00Z",
+      "is_landmark": false,
+      "discovery_priority": 4,
+      "notes_are_summary": true
+    },
+    {
+      "lat": null,
+      "lon": null,
+      "id": "curated:le-moniteur",
+      "title": "Le Moniteur",
+      "address": "Кадетская линия, 31",
+      "city": "Санкт-Петербург",
+      "category": "cafe",
+      "sources": [
+        {
+          "url": "https://cafelemoniteur.com/",
+          "label": "Описание и условия",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T23:35:00Z"
+        },
+        {
+          "url": "https://www.restoclub.ru/spb/place/le-moniteur",
+          "label": "Описание интерьера",
+          "kind": "editorial",
+          "retrieved_at": "2026-10-13T23:35:00Z"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v09:menu",
+          "kind": "description",
+          "text": "Кофейня с кофе, домашними десертами и тортами для встреч.",
+          "source_url": "https://cafelemoniteur.com/",
+          "observed_at": "2026-10-13T23:35:00Z",
+          "retrieved_at": "2026-10-13T23:35:00Z"
+        }
+      ],
+      "notes": "Кофе, домашние десерты и торты для встреч. По городской карточке — камерная винтажная кофейня с книжными полками. Свободный стол уточни.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T23:35:00Z",
+      "is_landmark": false,
+      "discovery_priority": 4,
+      "notes_are_summary": true
+    },
+    {
+      "lat": 59.9270907,
+      "lon": 30.3157044,
+      "id": "osm:node:4527471492",
+      "title": "Charlie",
+      "address": "набережная канала Грибоедова, 54",
+      "city": "Санкт-Петербург",
+      "category": "restaurant",
+      "sources": [
+        {
+          "url": "https://www.charlierestaurant.ru/",
+          "label": "Описание и условия",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T23:35:00Z"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v09:description",
+          "kind": "description",
+          "text": "Кофе, завтраки, авторская кухня и вино. Первый зал — столики на двоих у окон; второй — для камерных ужинов. В третьем — тёплый свет, бархатные шторы и лепнина. Есть зал, оформленный по мотивам уютного французского кафе. Для спокойной встречи стоит выбрать зал, а не ориентироваться только на название ресторана.",
+          "source_url": "https://www.charlierestaurant.ru/",
+          "observed_at": "2026-10-13T23:35:00Z",
+          "retrieved_at": "2026-10-13T23:35:00Z",
+          "paraphrased": true
+        }
+      ],
+      "notes": "Кофе, завтраки, авторская кухня и вино. Первый зал — столики на двоих у окон; второй — для камерных ужинов. В третьем — тёплый свет, бархатные шторы и лепнина. Есть зал, оформленный по мотивам уютного французского кафе. Для спокойной встречи стоит выбрать зал, а не ориентироваться только на название ресторана.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T23:35:00Z",
+      "is_landmark": false,
+      "discovery_priority": 4,
+      "notes_are_summary": true
+    },
+    {
+      "lat": 59.9415232,
+      "lon": 30.3616887,
+      "id": "osm:node:11850541910",
+      "title": "Joli Grand Bistrot",
+      "address": "улица Восстания, 45Б",
+      "city": "Санкт-Петербург",
+      "category": "restaurant",
+      "sources": [
+        {
+          "url": "https://atelierfamily.ru/joli-grand-bistrot",
+          "label": "Описание и условия",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T23:35:00Z"
+        },
+        {
+          "url": "https://aledo-pro.ru/projects/view/348/",
+          "label": "Описание интерьера от участника проекта",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T23:35:00Z"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v09:menu",
+          "kind": "description",
+          "text": "Бистро с завтраками, выпечкой, десертами, винами и цветочной лавкой. Основное меню с 13:00; с 12:30 до 13:00 подают напитки, десерты и выпечку.",
+          "source_url": "https://atelierfamily.ru/joli-grand-bistrot",
+          "observed_at": "2026-10-13T23:35:00Z",
+          "retrieved_at": "2026-10-13T23:35:00Z"
+        },
+        {
+          "id": "v09:interior",
+          "kind": "description",
+          "text": "Интерьер разработан как сад: живые растения, атриумный зал с естественным светом и тёплое освещение столов.",
+          "source_url": "https://aledo-pro.ru/projects/view/348/",
+          "observed_at": "2026-10-13T23:35:00Z",
+          "retrieved_at": "2026-10-13T23:35:00Z",
+          "published_year": 2022,
+          "paraphrased": true
+        }
+      ],
+      "notes": "Бистро с завтраками, выпечкой, десертами, винами и цветочной лавкой. Интерьер разработан как сад: живые растения, атриумный зал с естественным светом и тёплое освещение столов. Основное меню с 13:00; с 12:30 до 13:00 подают напитки, десерты и выпечку.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T23:35:00Z",
+      "is_landmark": false,
+      "discovery_priority": 4,
+      "notes_are_summary": true
+    },
+    {
+      "id": "curated:doris-local",
+      "title": "Doris Local",
+      "address": "Невский проспект, 150, двор с фонтаном",
+      "city": "Санкт-Петербург",
+      "category": "cafe",
+      "sources": [
+        {
+          "url": "https://www.restoclub.ru/spb/place/doris-local",
+          "label": "Описание обстановки",
+          "kind": "editorial",
+          "retrieved_at": "2026-10-13T23:35:00Z"
+        },
+        {
+          "url": "https://doriscoffee.ru/kofeini",
+          "label": "Адрес и условия заведения",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T23:35:00Z"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v09:description",
+          "kind": "editorial",
+          "text": "Кофе, чай, десерты и завтраки. Светлая кофейня с большими окнами, камином, цветами и винтажной посудой. Вход во двор с фонтаном. Расписание встреч требует отдельной проверки; тишина во время событий не подтверждена.",
+          "source_url": "https://www.restoclub.ru/spb/place/doris-local",
+          "observed_at": "2026-10-13T23:35:00Z",
+          "retrieved_at": "2026-10-13T23:35:00Z",
+          "paraphrased": true
+        }
+      ],
+      "notes": "Кофе, чай, десерты и завтраки. Светлая кофейня с большими окнами, камином, цветами и винтажной посудой. Вход во двор с фонтаном. Расписание встреч требует отдельной проверки; тишина во время событий не подтверждена.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T23:35:00Z",
+      "is_landmark": false,
+      "discovery_priority": 4,
+      "prices": [
+        {
+          "id": "v09:average",
+          "amount": 500,
+          "currency": "RUB",
+          "scope": "visit",
+          "kind": "average_check",
+          "label": "Опубликованный средний чек",
+          "note": "Ориентир, итог зависит от заказа.",
+          "source_url": "https://www.restoclub.ru/spb/place/doris-local",
+          "checked_at": "2026-10-13T23:35:00Z"
+        }
+      ],
+      "notes_are_summary": true
+    },
+    {
+      "id": "curated:doris-fragments",
+      "title": "Doris Fragments",
+      "address": "Тележная улица, 8–10",
+      "city": "Санкт-Петербург",
+      "category": "cafe",
+      "sources": [
+        {
+          "url": "https://doriscoffee.ru/kofeini",
+          "label": "Описание и условия",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T23:35:00Z"
+        },
+        {
+          "url": "https://www.tbank.ru/reviews/company/doris-fragments/105986/point-of-sale/39533714/",
+          "label": "Пересказ отзыва; дата не указана",
+          "kind": "review",
+          "retrieved_at": "2026-10-13T23:35:00Z"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v09:public-review",
+          "kind": "review",
+          "text": "Посетитель описывает уют и сочетание советских и французских деталей интерьера.",
+          "source_url": "https://www.tbank.ru/reviews/company/doris-fragments/105986/point-of-sale/39533714/",
+          "retrieved_at": "2026-10-13T23:35:00Z",
+          "publication_date_unknown": true,
+          "paraphrased": true
+        },
+        {
+          "id": "v09:description",
+          "kind": "description",
+          "text": "Кофейня с завтраками. Есть отдельная зона для мероприятий. Бронь большого стола по выходным — депозит 5000 ₽ на два часа, это условие стола, а не бюджет на одного человека. Атмосфера описана также в недатированном отзыве посетителя.",
+          "source_url": "https://doriscoffee.ru/kofeini",
+          "observed_at": "2026-10-13T23:35:00Z",
+          "retrieved_at": "2026-10-13T23:35:00Z",
+          "paraphrased": true
+        }
+      ],
+      "notes": "Кофейня с завтраками. Есть отдельная зона для мероприятий. Бронь большого стола по выходным — депозит 5000 ₽ на два часа, это условие стола, а не бюджет на одного человека. Атмосфера описана также в недатированном отзыве посетителя.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T23:35:00Z",
+      "is_landmark": false,
+      "discovery_priority": 4,
+      "notes_are_summary": true
+    },
+    {
+      "id": "curated:civil-sovetskaya",
+      "title": "Civil · 8-я Советская",
+      "address": "8-я Советская улица, 4",
+      "city": "Санкт-Петербург",
+      "category": "cafe",
+      "sources": [
+        {
+          "url": "https://www.restorating.ru/spb/catalogue/civil",
+          "label": "Описание обстановки",
+          "kind": "editorial",
+          "retrieved_at": "2026-10-13T23:35:00Z"
+        },
+        {
+          "url": "https://dogfriendlymap.ru/civilcoffeebar",
+          "label": "Посещение с собакой и адрес",
+          "kind": "editorial",
+          "retrieved_at": "2026-10-13T23:35:00Z"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v09:description",
+          "kind": "editorial",
+          "text": "Кофе, десерты и завтраки. Просторный зал в лофт-стиле: панорамные окна, цветы и старинный шкаф. Для встречи доступен формат кофейни, условия работы с ноутбуком не подтверждены. В каталогах встречаются разные суммы среднего чека; актуальный бюджет не подтверждён.",
+          "source_url": "https://www.restorating.ru/spb/catalogue/civil",
+          "observed_at": "2026-10-13T23:35:00Z",
+          "retrieved_at": "2026-10-13T23:35:00Z",
+          "paraphrased": true
+        }
+      ],
+      "notes": "Кофе, десерты и завтраки. Просторный зал в лофт-стиле: панорамные окна, цветы и старинный шкаф. Для встречи доступен формат кофейни, условия работы с ноутбуком не подтверждены. В каталогах встречаются разные суммы среднего чека; актуальный бюджет не подтверждён.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T23:35:00Z",
+      "is_landmark": false,
+      "discovery_priority": 4,
+      "notes_are_summary": true
+    },
+    {
+      "id": "curated:cherchez-pushkin",
+      "title": "Cherchez La Tarte · Пушкин",
+      "address": "Пушкин, Лицейский переулок, 1/4",
+      "city": "Санкт-Петербург",
+      "category": "cafe",
+      "sources": [
+        {
+          "url": "https://cherchez.ru/",
+          "label": "Описание и условия",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T23:35:00Z"
+        },
+        {
+          "url": "https://studiocache.co.uk/projects/cherchez-la-tarte/",
+          "label": "Описание интерьера от авторов проекта",
+          "kind": "official",
+          "retrieved_at": "2026-10-13T23:35:00Z"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v09:description",
+          "kind": "description",
+          "text": "Десерты и завтраки весь день, кофейня-кондитерская. Небольшое светлое кафе площадью 60 м², дизайнерский интерьер Studio Caché с отсылками к дворцовой архитектуре, старинными кондитерскими формами и декоративной люстрой. Это Пушкин, поездку из центра нужно планировать отдельно.",
+          "source_url": "https://cherchez.ru/",
+          "observed_at": "2026-10-13T23:35:00Z",
+          "retrieved_at": "2026-10-13T23:35:00Z",
+          "paraphrased": true
+        }
+      ],
+      "notes": "Десерты и завтраки весь день, кофейня-кондитерская. Небольшое светлое кафе площадью 60 м², дизайнерский интерьер Studio Caché с отсылками к дворцовой архитектуре, старинными кондитерскими формами и декоративной люстрой. Это Пушкин, поездку из центра нужно планировать отдельно.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T23:35:00Z",
+      "is_landmark": false,
+      "discovery_priority": 4,
+      "notes_are_summary": true
+    },
+    {
+      "id": "curated:cherchez-karpovka",
+      "title": "Cherchez Bistrot · Карповка",
+      "address": "набережная реки Карповки, 31",
+      "city": "Санкт-Петербург",
+      "category": "cafe",
+      "sources": [
+        {
+          "url": "https://www.restorating.ru/spb/catalogue/cherchez-la-tarte-2",
+          "label": "Описание обстановки",
+          "kind": "editorial",
+          "retrieved_at": "2026-10-13T23:35:00Z"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v09:description",
+          "kind": "editorial",
+          "text": "Кафе-кондитерская с десертами, завтраками, французской кухней и вином. Светлое пространство с дизайнерским интерьером Studio Cache, изящными люстрами и минималистичной мебелью.",
+          "source_url": "https://www.restorating.ru/spb/catalogue/cherchez-la-tarte-2",
+          "observed_at": "2026-10-13T23:35:00Z",
+          "retrieved_at": "2026-10-13T23:35:00Z",
+          "paraphrased": true
+        }
+      ],
+      "notes": "Кафе-кондитерская с десертами, завтраками, французской кухней и вином. Светлое пространство с дизайнерским интерьером Studio Cache, изящными люстрами и минималистичной мебелью.",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T23:35:00Z",
+      "is_landmark": false,
+      "discovery_priority": 4,
+      "prices": [
+        {
+          "id": "v09:average",
+          "amount": 1750,
+          "currency": "RUB",
+          "scope": "visit",
+          "kind": "average_check",
+          "label": "Опубликованный средний чек",
+          "note": "Ориентир, итог зависит от заказа.",
+          "source_url": "https://www.restorating.ru/spb/catalogue/cherchez-la-tarte-2",
+          "checked_at": "2026-10-13T23:35:00Z"
+        }
+      ],
+      "notes_are_summary": true
+    },
+    {
+      "id": "curated:mezhdu-nami",
+      "title": "Между нами",
+      "address": "4-я Советская улица, 8",
+      "city": "Санкт-Петербург",
+      "category": "cafe",
+      "sources": [
+        {
+          "url": "https://www.restoclub.ru/spb/place/mezhdu-nami",
+          "label": "Описание обстановки",
+          "kind": "editorial",
+          "retrieved_at": "2026-10-13T23:35:00Z"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v09:description",
+          "kind": "editorial",
+          "text": "Кофе и завтраки весь день: сырники, бенедикт и тосты. Просторная светлая кофейня: лепные розетки, открытый кирпич и розовая кофемашина. Проект продолжает кофейню «Бланш».",
+          "source_url": "https://www.restoclub.ru/spb/place/mezhdu-nami",
+          "observed_at": "2026-10-13T23:35:00Z",
+          "retrieved_at": "2026-10-13T23:35:00Z",
+          "paraphrased": true
+        }
+      ],
+      "notes": "Кофе и завтраки весь день: сырники, бенедикт и тосты. Просторная светлая кофейня: лепные розетки, открытый кирпич и розовая кофемашина. Проект продолжает кофейню «Бланш».",
+      "status": "catalogue",
+      "updated_at": "2026-10-13T23:35:00Z",
+      "is_landmark": false,
+      "discovery_priority": 4,
+      "notes_are_summary": true
+    },
+    {
+      "id": "osm:node:9969325421",
+      "title": "Aster · улица Маяковского, 23",
+      "city": "Санкт-Петербург",
+      "address": "улица Маяковского, 23",
+      "category": "cafe",
+      "lat": 59.9396912,
+      "lon": 30.3555078,
+      "sources": [
+        {
+          "url": "https://astercafe.ru/",
+          "kind": "official",
+          "label": "Адрес и меню",
+          "retrieved_at": "2026-10-13T23:35:00Z"
+        },
+        {
+          "url": "https://aledo-pro.ru/projects/view/198/",
+          "kind": "official",
+          "label": "Освещение и интерьер от участника проекта",
+          "retrieved_at": "2026-10-13T23:35:00Z"
+        }
+      ],
+      "features": [],
+      "notes": "Кофе, завтраки, своя выпечка и вино. Светлое кафе с дизайнерским интерьером: фактурная штукатурка, кирпичный пол и мебель разных эпох. Тёплое точечное освещение столиков создаёт камерную обстановку. Работа с ноутбуком не подтверждена для этого зала.",
+      "updated_at": "2026-10-13T23:35:00Z",
+      "discovery_priority": 4,
+      "documents": [
+        {
+          "id": "v09:interior",
+          "kind": "description",
+          "text": "Светлое кафе с дизайнерским интерьером: фактурная штукатурка, кирпичный пол и мебель разных эпох. Тёплое точечное освещение столиков создаёт камерную обстановку.",
+          "source_url": "https://aledo-pro.ru/projects/view/198/",
+          "retrieved_at": "2026-10-13T23:35:00Z",
+          "observed_at": "2026-10-13T23:35:00Z",
+          "published_year": 2021,
+          "paraphrased": true
+        }
+      ],
+      "notes_are_summary": true
+    }
+  ]
+}

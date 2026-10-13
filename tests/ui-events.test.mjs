@@ -5,7 +5,7 @@ import fs from 'node:fs';
 const html=fs.readFileSync(new URL('../dist/index.html',import.meta.url),'utf8');
 const catalogue=JSON.parse(fs.readFileSync(new URL('../dist/places.json',import.meta.url)));
 const RealDate=Date;
-globalThis.Date=class extends RealDate{constructor(...args){super(...(args.length?args:['2026-10-13T20:00:00Z']));}static now(){return +new RealDate('2026-10-13T20:00:00Z');}};
+globalThis.Date=class extends RealDate{constructor(...args){super(...(args.length?args:['2026-10-14T12:00:00Z']));}static now(){return +new RealDate('2026-10-14T12:00:00Z');}};
 class Element {
   constructor(){this.value='';this.checked=false;this.textContent='';this.innerHTML='';this.options=[];this.events={};this.classes=new Set();this.dataset={};
     this.classList={add:name=>this.classes.add(name),remove:name=>this.classes.delete(name),toggle:(name,force)=>{const on=force===undefined?!this.classes.has(name):force;on?this.classes.add(name):this.classes.delete(name);}};
@@ -27,7 +27,7 @@ const el=id=>elements.get(id);
 const query=text=>{el('query').value=text;el('category').value='';el('budget').value='';el('search-form').emit('submit');};
 
 test('real page boots with the complete mood and companion choices',()=>{
-  assert.equal(el('mood').options.length,7);
+  assert.equal(el('mood').options.length,8);
   assert.ok(el('company').options.some(o=>o.value==='first_date'));
   assert.ok(el('company').options.some(o=>o.value==='new_people'));
   assert.match(el('result-count').textContent,/^\d+ (?:из|вариантов)/);
@@ -52,6 +52,13 @@ test('free text finds work cafes from the actual catalogue',()=>{
   assert.ok(!el('results').innerHTML.includes('cover-coworking'));
   assert.ok(el('intent-tags').innerHTML.includes('Можно работать с ноутбуком'));
 });
+test('heart-to-heart catch-up reaches the real UI and shows distinct interpretation',()=>{
+  query('Душевно посидеть с подругой в кафе');
+  assert.equal(el('mood').value,'soulful');assert.equal(el('company').value,'friends');
+  assert.ok(el('intent-tags').innerHTML.includes('Неспешная встреча с друзьями'));
+  assert.ok(el('results').innerHTML.includes('Le Moniteur'));assert.ok(el('results').innerHTML.includes('Doris Local'));
+  assert.ok(!el('results').innerHTML.includes('Брынза'));assert.ok(!el('intent-warning').textContent.includes('душевно'));
+});
 test('example selection clears stale scenario filters and keeps cafe OR gallery candidates',()=>{
   el('category').value='coworking';el('mood').value='party';el('company').value='children';el('budget').value='1';
   const target={dataset:{query:'Помечтать на выставке или в атмосферном кафе'}};
@@ -72,19 +79,19 @@ test('free billiards separates confirmed games and public reports, excluding pai
 });
 
 test('budget shows unknowns by default and supports a known-price-only filter',()=>{
-  query('Поработать с ноутбуком в кафе или библиотеке');
+  query('Уютное кафе попить кофе с подругой');
   el('category').value='cafe';el('budget').value='1000';el('mood').value='calm';el('budget').emit('change');
   assert.ok(el('empty-state').classes.has('hidden'));
   assert.ok(!el('alternative-results').innerHTML.includes('Coffee 3'));
-  assert.ok(el('alternative-results').innerHTML.includes('Бэнч'));
-  assert.ok(el('alternative-results').innerHTML.includes('Заказ от'));
-  assert.ok(el('alternative-results').innerHTML.includes('Брынза'));
-  el('known-price-only').checked=false;el('known-price-only').emit('change');
-  assert.ok(el('alternative-results').innerHTML.includes('Брынза'));
+  assert.ok(el('alternative-results').innerHTML.includes('Doris Local'));
+  assert.ok(el('alternative-results').innerHTML.includes('Средний чек — ориентир'));
+  assert.ok(el('alternative-results').innerHTML.includes('Opetit'));
   assert.ok(el('alternative-results').innerHTML.includes('бюджет до 1000 ₽ не подтверждён'));
   el('known-price-only').checked=true;el('known-price-only').emit('change');
-  assert.ok(!el('alternative-results').innerHTML.includes('Брынза'));
+  assert.ok(!el('alternative-results').innerHTML.includes('Opetit'));
+  assert.ok(el('alternative-results').innerHTML.includes('Doris Local'));
   el('known-price-only').checked=false;el('known-price-only').emit('change');
+  assert.ok(el('alternative-results').innerHTML.includes('Opetit'));
   assert.ok(!el('results').innerHTML.includes('До 1000 ₽'));
   el('mood').value='';
 });

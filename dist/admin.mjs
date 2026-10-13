@@ -1,11 +1,11 @@
-import {categories,featureLabels,safeUrl,validateCatalogue} from './search.mjs?v=20261013b';
-import {loadKudaGo,loadKudaGoReviews,mergeCatalogues} from './providers.mjs?v=20261013b';
-import {loadKudaGoEvents} from './events-provider.mjs?v=20261013b';
-import {priceFor,priceLabel} from './pricing.mjs?v=20261013b';
-import {offerWhen,activityKeys} from './experiences.mjs?v=20261013b';
-import {photoUrl} from './photo-assets.mjs?v=20261013b';
-import {recommendationDraft} from './source-intake.mjs?v=20261013b';
-import {preparePlace,prepareOffer,preparePhoto,applyAdminDrafts,ADMIN_DRAFT_KEY} from './admin-model.mjs?v=20261013b';
+import {categories,featureLabels,safeUrl,validateCatalogue} from './search.mjs?v=20261014';
+import {loadKudaGo,loadKudaGoReviews,mergeCatalogues} from './providers.mjs?v=20261014';
+import {loadKudaGoEvents} from './events-provider.mjs?v=20261014';
+import {priceFor,priceLabel} from './pricing.mjs?v=20261014';
+import {offerWhen,activityKeys} from './experiences.mjs?v=20261014';
+import {photoUrl} from './photo-assets.mjs?v=20261014';
+import {recommendationDraft} from './source-intake.mjs?v=20261014';
+import {preparePlace,prepareOffer,preparePhoto,applyAdminDrafts,ADMIN_DRAFT_KEY} from './admin-model.mjs?v=20261014';
 const $=id=>document.getElementById(id);
 const escape=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const load=(key,fallback)=>{try{return JSON.parse(localStorage.getItem(key))??fallback;}catch{return fallback;}};
@@ -143,7 +143,7 @@ $('api-load').addEventListener('click',async()=>{
 });
 
 try{
-  const response=await fetch('places.json?v=20261013b');if(!response.ok)throw new Error('Не удалось загрузить каталог.');state.baseline=validateCatalogue(await response.json());
+  const response=await fetch('places.json?v=20261014');if(!response.ok)throw new Error('Не удалось загрузить каталог.');state.baseline=validateCatalogue(await response.json());
   const cached=load('kuda.catalogue',null);try{state.imported=cached?mergeCatalogues(state.baseline,validateCatalogue(cached)):structuredClone(state.baseline);}catch{state.imported=structuredClone(state.baseline);}
   try{state.catalogue=applyAdminDrafts(state.imported,state.drafts);}catch{state.drafts={schema_version:1,places:[]};state.catalogue=state.imported;status('Повреждённые черновики не применены.');}
   for(const [key,label] of Object.entries(categories)){const o=document.createElement('option');o.value=key;o.textContent=label;$('place-category').append(o);}

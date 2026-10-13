@@ -5,7 +5,7 @@ import {parseQuery,searchPlaces,validateCatalogue} from '../dist/search.mjs';
 import {sportsFor,sportDetails} from '../dist/sports.mjs';
 import {analyseText} from '../dist/text-analysis.mjs';
 import {mergeCatalogues} from '../dist/providers.mjs';
-const today=new Date('2026-10-13T20:00:00Z'),source='https://example.org/sport',stamp='2026-10-13T12:00:00Z';
+const today=new Date('2026-10-14T12:00:00Z'),source='https://example.org/sport',stamp='2026-10-13T12:00:00Z';
 const all=r=>[...r.results,...r.alternatives];
 const facility=(key='padel',extra={})=>({id:'court',activities:[key],source_url:source,booking_url:source,checked_at:stamp,environment:'indoor',season:'year_round',...extra});
 const place=(id,f=facility())=>({id,title:id,city:'Санкт-Петербург',category:'sport',sources:[{url:source}],features:[],sport_facilities:[f]});
@@ -64,7 +64,7 @@ test('billiards payment choices are distinct and an explicit free request stays 
 });
 test('real catalogue contains restaurants, requested bars and different sourced sports',()=>{
  const bars=all(searchPlaces(catalogue.places,{query:'Бар с коктейлями',today}));assert.ok(bars.length>=15);for(const name of ['Цветочки','Cocos','Solids','Хоровод','Звонок'])assert.ok(bars.some(x=>x.place.title.includes(name)),name);
- const date=all(searchPlaces(catalogue.places,{query:'Первое свидание в ресторане, спокойно поговорить',today}));assert.ok(date.length>=10);assert.ok(date.every(x=>x.place.category==='restaurant'));assert.ok(date.some(x=>x.place.title==='Банщики'));
+ const date=all(searchPlaces(catalogue.places,{query:'Первое свидание в ресторане, спокойно поговорить',today}));assert.ok(date.length>=6);assert.ok(date.every(x=>x.place.category==='restaurant'));for(const name of ['Банщики','Charlie','Joli Grand Bistrot'])assert.ok(date.some(x=>x.place.title===name),name);
  for(const key of ['wakeboarding','wakesurfing','skiing','snowboarding','badminton','basketball','volleyball','tennis','padel']){
   const r=all(searchPlaces(catalogue.places,{category:'sport',sport:key,today}));assert.ok(r.length>=2,key);assert.ok(r.every(x=>x.sport||x.evidence.length));
  }

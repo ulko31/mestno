@@ -1,13 +1,14 @@
-import {categories, moods, companies, featureLabels, safeUrl, hasFeature, parseQuery, searchPlaces, validateCatalogue} from './search.mjs?v=20261013b';
-import {mergeCatalogues} from './providers.mjs?v=20261013b';
-import {documentsOf} from './text-analysis.mjs?v=20261013b';
-import {priceFor,priceLabel} from './pricing.mjs?v=20261013b';
-import {currentOffers,offerWhen} from './experiences.mjs?v=20261013b';
-import {linkedPlace,placeLink} from './place-links.mjs?v=20261013b';
-import {photoUrl} from './photo-assets.mjs?v=20261013b';
-import {applyAdminDrafts,ADMIN_DRAFT_KEY} from './admin-model.mjs?v=20261013b';
-import {billiardsInfo} from './billiards.mjs?v=20261013b';
-import {sportLabels,sportsFor,sportDetails} from './sports.mjs?v=20261013b';
+import {visitLabels} from './atmosphere.mjs?v=20261014';
+import {categories, moods, companies, featureLabels, safeUrl, hasFeature, parseQuery, searchPlaces, validateCatalogue} from './search.mjs?v=20261014';
+import {mergeCatalogues} from './providers.mjs?v=20261014';
+import {documentsOf} from './text-analysis.mjs?v=20261014';
+import {priceFor,priceLabel} from './pricing.mjs?v=20261014';
+import {currentOffers,offerWhen} from './experiences.mjs?v=20261014';
+import {linkedPlace,placeLink} from './place-links.mjs?v=20261014';
+import {photoUrl} from './photo-assets.mjs?v=20261014';
+import {applyAdminDrafts,ADMIN_DRAFT_KEY} from './admin-model.mjs?v=20261014';
+import {billiardsInfo} from './billiards.mjs?v=20261014';
+import {sportLabels,sportsFor,sportDetails} from './sports.mjs?v=20261014';
 const $ = id => document.getElementById(id);
 const escape = s => String(s ?? '').replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const load = (key, fallback) => {try{return JSON.parse(localStorage.getItem(key)) ?? fallback;}catch{return fallback;}};
@@ -54,6 +55,7 @@ function syncTextContext(){
 }
 function renderInterpretation(result){
   const labels=[];
+  if(result.intent)labels.push(visitLabels[result.intent]);
   if(result.mood)labels.push(moods[result.mood]);
   if(result.company)labels.push(companies[result.company]);
   labels.push(...result.needs.map(k=>featureLabels[k]||k));
@@ -178,7 +180,7 @@ $('retry-query').addEventListener('click',()=>{
 $('load-more').addEventListener('click',()=>{state.visible+=12;renderSearch();});
 
 try {
-  const response=await fetch('places.json?v=20261013b');if(!response.ok)throw new Error('Не удалось загрузить каталог');
+  const response=await fetch('places.json?v=20261014');if(!response.ok)throw new Error('Не удалось загрузить каталог');
   state.baseline=validateCatalogue(await response.json());
   const cached=load('kuda.catalogue',null);try{state.catalogue=cached?mergeCatalogues(state.baseline,validateCatalogue(cached)):state.baseline;}catch{state.catalogue=state.baseline;}
   try{state.catalogue=applyAdminDrafts(state.catalogue,load(ADMIN_DRAFT_KEY,null));}catch{toast('Черновики редактора не удалось прочитать. Опубликованный каталог доступен.');}

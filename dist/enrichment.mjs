@@ -1,5 +1,5 @@
-import {mergeCatalogues} from './providers.mjs?v=20261013b';
-import {validateCatalogue} from './search.mjs?v=20261013b';
+import {mergeCatalogues} from './providers.mjs?v=20261014';
+import {validateCatalogue} from './search.mjs?v=20261014';
 export function applyEnrichment(catalogue,incoming){
   validateCatalogue(incoming);const current=structuredClone(validateCatalogue(catalogue)),r=incoming.collection_report;
   // A complete official snapshot may remove cancelled or withdrawn library events.
@@ -12,7 +12,7 @@ export function applyEnrichment(catalogue,incoming){
   for(const next of incoming.places){
     const p=result.places.find(x=>x.id===next.id);if(!p)continue;
     if(next.updated_at&&new Date(next.updated_at)>=new Date(p.updated_at||0)){
-      for(const key of ['title','notes','address','category','website','updated_at','discovery_priority','coordinate_source_url','coordinate_precision'])if(next[key]!==undefined&&next[key]!==null)p[key]=next[key];
+      for(const key of ['title','notes','notes_are_summary','address','category','website','updated_at','discovery_priority','coordinate_source_url','coordinate_precision'])if(next[key]!==undefined&&next[key]!==null)p[key]=next[key];
       const primary=next.sources[0];p.sources=[primary,...p.sources.filter(s=>s.url!==primary.url)];
     }
   }

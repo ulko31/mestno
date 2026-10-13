@@ -1,5 +1,5 @@
 const safe=s=>{try{const u=new URL(s);return /^https?:$/.test(u.protocol)&&!u.username&&!u.password;}catch{return false;}};
-import {sportKeys} from './sports.mjs?v=20261013b';
+import {sportKeys} from './sports.mjs?v=20261014';
 export const activityKeys=['workshops','pottery','painting','cooking','improv','book_club','board_games','rpg','war_games','speaking_club','english_club','french_club','spanish_club','korean_club','german_club','italian_club','sign_club','meetups','dance','sports',...sportKeys,'candles','perfume','mosaic','tufting','resin','crafts'];
 export function cityDate(value=new Date()){
   return new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Moscow',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date(value));

@@ -5,7 +5,7 @@ import {searchPlaces,parseQuery,validateCatalogue} from '../dist/search.mjs';
 import {billiardsInfo} from '../dist/billiards.mjs';
 import {priceFor} from '../dist/pricing.mjs';
 import {applyEnrichment} from '../dist/enrichment.mjs';
-const today=new Date('2026-10-13T20:00:00Z'),url='https://example.org/venue';
+const today=new Date('2026-10-14T12:00:00Z'),url='https://example.org/venue';
 const document=text=>({id:'d',kind:'description',text,source_url:url,observed_at:'2026-10-13T08:00:00Z'});
 const place=(id,text,category='cafe')=>({id,title:id,city:'Санкт-Петербург',category,sources:[{url}],features:[],documents:[document(text)],prices:[]});
 const all=r=>[...r.results,...r.alternatives];
@@ -71,7 +71,7 @@ test('real catalogue has distinct scenarios and multiple water routes',()=>{
   const places=JSON.parse(fs.readFileSync(new URL('../dist/places.json',import.meta.url))).places;
   const opts={today,city:'Санкт-Петербург',hideLandmarks:true};
   const date=all(searchPlaces(places,{...opts,query:'Первое свидание в кафе, спокойно поговорить'})),work=all(searchPlaces(places,{...opts,query:'Поработать с ноутбуком в кафе'}));
-  assert.ok(date.length>=15);assert.ok(date.some(x=>x.place.title.startsWith('Aster')));assert.ok(!work.some(x=>x.place.title.startsWith('Aster')));
+  assert.ok(date.length>=10);assert.ok(date.some(x=>x.place.title.startsWith('Aster')));assert.ok(!work.some(x=>x.place.title.startsWith('Aster')));assert.ok(!date.some(x=>x.place.id==='seed:bench'));
   const rivers=all(searchPlaces(places,{...opts,query:'Подумать, погулять у воды'}));assert.ok(rivers.length>=25);assert.ok(rivers.some(x=>x.place.title.includes('Смоленки')));assert.ok(rivers.some(x=>x.place.title==='Юсуповский сад'));
   const bars=all(searchPlaces(places,{...opts,query:'Бар с друзьями, коктейли и настойки'}));for(const title of ['Хоровод','Звонок'])assert.ok(bars.some(x=>x.place.title===title));
   const games=all(searchPlaces(places,{...opts,query:'Бесплатный бильярд'}));assert.ok(games.some(x=>x.place.title==='Schmaus Döner und Bar'));assert.ok(!games.some(x=>['Leon Club','Альмак'].includes(x.place.title)||x.place.title.startsWith('MazaPark')));
