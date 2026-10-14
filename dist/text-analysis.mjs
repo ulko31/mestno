@@ -1,6 +1,7 @@
+import {groupPatterns} from './group-plans.mjs?v=20261014b';
 // Local retrieval over attributed text. This is an explainable text analyser, not an LLM.
-import {offerDocuments} from './experiences.mjs?v=20261014';
-import {sportPatterns} from './sports.mjs?v=20261014';
+import {offerDocuments} from './experiences.mjs?v=20261014b';
+import {sportPatterns} from './sports.mjs?v=20261014b';
 const normalize=s=>String(s||'').toLowerCase().replaceAll('ё','е');
 const safeUrl=s=>{try{const u=new URL(s);return /^https?:$/.test(u.protocol)&&!u.username&&!u.password?u.href:null;}catch{return null;}};
 export function stem(word){
@@ -25,6 +26,12 @@ export function documentsOf(place,today=new Date()){
 
 // Only requested concepts are evaluated; additional wording remains searchable in the corpus.
 const patterns={
+  group_games:[/настольн[а-я]*\s+игр[а-я]*|мафи[яюие]|квиз[а-я]*|караоке|боулинг[а-я]*|картинг[а-я]*|пиксельн[а-я]*\s+(?:пол[а-я]*|игр[а-я]*|комнат[а-я]*)|светов[а-я]*\s+пол[а-я]*|playstation|видеоигр[а-я]*|бильярд[а-я]*/],
+  ...Object.fromEntries(groupPatterns.map(([key,re])=>[key,[re,new RegExp('(?:нет|без)\\s+(?:'+re.source+')')]])),
+  shared_activity:[/настольн[а-я]*\s+игр[а-я]*|мафи[яюие]|квиз[а-я]*|караоке|боулинг[а-я]*|картинг[а-я]*|пиксельн[а-я]*\s+(?:пол[а-я]*|игр[а-я]*|комнат[а-я]*)|интерактивн[а-я]*\s+игр[а-я]*|светов[а-я]*\s+пол[а-я]*|playstation|видеоигр[а-я]*|бильярд[а-я]*|мастер[ -]?класс[а-я]*/],
+  group_friendly:[/больш[а-я]*\s+компани[а-я]*|для\s+вашей\s+компани[а-я]*|только\s+ваш[а-я]*\s+компани[а-я]*|корпоратив[а-я]*|тимбилдинг[а-я]*|с\s+коллег[а-я]*|для\s+коллектив[а-я]*|закуск[а-я]*[^.!?]{0,65}на\s+компани[а-я]*/],
+  private_room:[/(?:отдельн[а-я]*|приватн[а-я]*)\s+(?:комнат[а-я]*|зал[а-я]*|студи[а-я]*)|(?:пространств[а-я]*|студи[а-я]*|площадк[а-я]*)[^.!?]{0,50}(?:только\s+для\s+вашей|целиком[^.!?]{0,20}вашей)\s+компани[а-я]*/],
+  poker_no_stakes:[/(?=[^.!?]*покер)(?=[^.!?]*без\s+(?:денежных\s+)?ставок)(?=[^.!?]*без\s+(?:денежных|ценных)\s+призов)/],
   fireplace:[/камин[а-я]*/],
   daylight:[/естественн[а-я]*\s+свет[а-я]*|много\s+света|светл[а-я]*\s+(?:зал[а-я]*|кафе|пространств[а-я]*|кофейн[а-я]*)|(?:больш[а-я]*|панорамн[а-я]*)\s+окн[а-я]*/],
   designed_interior:[/дизайнерск[а-я]*\s+интерьер[а-я]*|интерьер[а-я]*\s+(?:разработа[а-я]*|от\s+(?:бюро|студии))/],
@@ -39,7 +46,7 @@ const patterns={
   cocktails:[/коктейл[а-я]*|настойк[а-я]*|наливк[а-я]*/],
   party_scene:[/вечеринк[а-я]*|тусовк[а-я]*|потусить|потусоваться/],
   warm_lighting:[/тепл[а-я]*\s+(?:(?:мягк[а-я]*|точечн[а-я]*)\s+)?(?:свет|освещени[а-я]*)/],vintage_interior:[/винтажн[а-я]*\s+(?:мебел[а-я]*|интерьер[а-я]*|кофейн[а-я]*)|ретро[ -]?мебел[а-я]*/],
-  food:[/(?<![а-я])ед(?:а|у|ы|е|ой|ою)(?![а-я])|поесть|кухн[а-я]*|пицц[а-я]*|донер[а-я]*|бургер[а-я]*|закуск[а-я]*|завтрак[а-я]*|выпечк[а-я]*|пекарн[а-я]*/],
+  food:[/(?<![а-я])ед(?:а|у|ы|е|ой|ою)(?![а-я])|поесть|ужин[а-я]*|обед[а-я]*|блюд[а-я]*|кухн[а-я]*|пицц[а-я]*|донер[а-я]*|бургер[а-я]*|закуск[а-я]*|завтрак[а-я]*|выпечк[а-я]*|пекарн[а-я]*/],
   laptop_work:[/ноутбук|коворкинг|рабоч(?:ая|ие)\s+(?:зона|места)|для\s+(?:работы|учебы)|приходят\s+(?:работать|поработать|учиться)|удобно\s+(?:работать|учиться)|работал[аи]?\s+за\s+компьютером|писать\s+код/,
     /(?:нельзя|запрещен[а-я]*|не\s+разреш[а-я]*)[^.!?]{0,35}ноутбук|ноутбук[^.!?]{0,35}(?:нельзя|запрещен[а-я]*|не\s+разреш[а-я]*)|поработать\s+не\s+получилось/],
   quiet:[/(?<![а-я])тих[а-я]*|тишин[а-я]*|не\s+шумно|негромк[а-я]*\s+музык[а-я]*|без\s+громк[а-я]*\s+музык[а-я]*/,
@@ -116,7 +123,7 @@ export function analyseText(place,keys,context={},today=new Date()){
         const negative=Boolean(rule[1]?.test(concept));
         if(!negative&&!rule[0].test(concept))continue;
         // Generic negation must not produce an affirmative statement.
-        if(!negative&&/(?:нет|без|не\s+бывает|не\s+проводят)\s/.test(text)&&!(key==='quiet'&&/без\s+громк[а-я]*\s+музык[а-я]*/.test(text)))continue;
+        if(!negative&&key!=='poker_no_stakes'&&/(?:нет|без|не\s+бывает|не\s+проводят)\s/.test(text)&&!(key==='quiet'&&/без\s+громк[а-я]*\s+музык[а-я]*/.test(text)))continue;
         const item={key,value:!negative,source_url:document.source_url,kind:document.kind,observed_at:document.observed_at||document.retrieved_at,
           excerpt:original.trim().split(/\s+/).slice(0,18).join(' ').slice(0,220),conditional:timing.conditional,
           contextLabel:timing.contextLabel,stale:document.stale,publication_date_unknown:document.publication_date_unknown,source_kind:document.source_kind,publisher:document.publisher};

@@ -1,14 +1,15 @@
-import {visitLabels} from './atmosphere.mjs?v=20261014';
-import {categories, moods, companies, featureLabels, safeUrl, hasFeature, parseQuery, searchPlaces, validateCatalogue} from './search.mjs?v=20261014';
-import {mergeCatalogues} from './providers.mjs?v=20261014';
-import {documentsOf} from './text-analysis.mjs?v=20261014';
-import {priceFor,priceLabel} from './pricing.mjs?v=20261014';
-import {currentOffers,offerWhen} from './experiences.mjs?v=20261014';
-import {linkedPlace,placeLink} from './place-links.mjs?v=20261014';
-import {photoUrl} from './photo-assets.mjs?v=20261014';
-import {applyAdminDrafts,ADMIN_DRAFT_KEY} from './admin-model.mjs?v=20261014';
-import {billiardsInfo} from './billiards.mjs?v=20261014';
-import {sportLabels,sportsFor,sportDetails} from './sports.mjs?v=20261014';
+import {participationLabel} from './group-plans.mjs?v=20261014b';
+import {visitLabels} from './atmosphere.mjs?v=20261014b';
+import {categories, moods, companies, featureLabels, safeUrl, hasFeature, parseQuery, searchPlaces, validateCatalogue} from './search.mjs?v=20261014b';
+import {mergeCatalogues} from './providers.mjs?v=20261014b';
+import {documentsOf} from './text-analysis.mjs?v=20261014b';
+import {priceFor,priceLabel} from './pricing.mjs?v=20261014b';
+import {currentOffers,offerWhen} from './experiences.mjs?v=20261014b';
+import {linkedPlace,placeLink} from './place-links.mjs?v=20261014b';
+import {photoUrl} from './photo-assets.mjs?v=20261014b';
+import {applyAdminDrafts,ADMIN_DRAFT_KEY} from './admin-model.mjs?v=20261014b';
+import {billiardsInfo} from './billiards.mjs?v=20261014b';
+import {sportLabels,sportsFor,sportDetails} from './sports.mjs?v=20261014b';
 const $ = id => document.getElementById(id);
 const escape = s => String(s ?? '').replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const load = (key, fallback) => {try{return JSON.parse(localStorage.getItem(key)) ?? fallback;}catch{return fallback;}};
@@ -24,6 +25,7 @@ function card({place:p, distance=null, reasons=[],warnings=[],evidence=[],offer=
   const map='https://yandex.ru/maps/?text='+encodeURIComponent([p.title,p.address,p.city].filter(Boolean).join(', '));
   if(price===undefined)price=priceFor(p,{offer});
   if(!billiards&&(p.billiards_terms?.length||tags.includes('billiards')||p.category==='billiards'))billiards=billiardsInfo(p);
+  const groupInfo=offer?`<p class="participation">${escape(participationLabel(offer))}</p>`:'';
   const gameInfo=billiards?`<p class="game-cost"><strong>${escape(billiards.label)}</strong>${billiards.term?`<br><a href="${escape(safeUrl(billiards.term.source_url))}" target="_blank" rel="noopener noreferrer">Условия игры ↗</a> · ${escape(String(billiards.term.checked_at).slice(0,10))}`:''}${billiards.warnings.length?`<br>${escape(billiards.warnings.join(' '))}`:''}</p>`:'';
   if(!sport)sport=sportDetails(sportsFor(p)[0]);
   const sportInfo=sport?`<p class="sport-info"><strong>${escape(sport.label)}</strong> · ${escape(sport.environment)}${sport.cost?`<br>${escape(sport.cost)}`:''}${sport.conditions.length||sport.warnings.length?`<br>${escape([...sport.conditions,...sport.warnings].join(' '))}`:''}<br><a href="${escape(safeUrl(sport.booking_url))}" target="_blank" rel="noopener noreferrer">Площадка и запись ↗</a> · ${escape(String(sport.checked_at).slice(0,10))}</p>`:'';
@@ -36,7 +38,7 @@ function card({place:p, distance=null, reasons=[],warnings=[],evidence=[],offer=
   const otherWarnings=warnings.filter(w=>!billiards?.warnings.includes(w)&&!sport?.warnings.includes(w));
   const checks=otherWarnings.length?`<div class="conditions-to-check"><strong>Перед визитом уточни</strong><ul>${otherWarnings.map(w=>`<li>${escape(w)}</li>`).join('')}</ul></div>`:'';
   const proof=evidence.length?`<details class="text-evidence"><summary>На чём основан подбор</summary>${evidence.map(e=>`<p><span>${e.source_kind==='social'?'Публичная рекомендация':e.kind==='review'?'Отзыв посетителя':e.kind==='editorial'?'Обзор места':'Описание места'} · ${e.publication_date_unknown?'дата публикации не указана':escape(String(e.observed_at).slice(0,10))}</span><br>«${escape(e.excerpt)}» <a href="${escape(safeUrl(e.source_url))}" target="_blank" rel="noopener noreferrer">Источник ↗</a></p>`).join('')}</details>`:'';
-  return `<article class="place-card"><div class="card-cover cover-${escape(categories[p.category]?p.category:'other')}"><span class="cover-shape" aria-hidden="true"></span>${image}<span class="category-label">${escape(categories[p.category]||'Место')}</span><button class="favorite-button ${state.favorites.has(p.id)?'is-saved':''}" data-favorite="${escape(p.id)}" aria-label="${state.favorites.has(p.id)?'Убрать из избранного':'Сохранить'}: ${escape(p.title)}" aria-pressed="${state.favorites.has(p.id)}">${state.favorites.has(p.id)?'♥':'♡'}</button></div><div class="card-content"><h3>${escape(p.title)}</h3><p class="address">${escape(p.address || 'Точный адрес уточни в источнике')}${distance!==null?` · ${distance.toFixed(1)} км по прямой`:''}</p><div class="badges">${tags.map(key=>`<span class="badge">${escape(featureLabels[key])}</span>`).join('')}<span class="badge ${price?'price-badge':'unknown'}">${escape(unknown)}</span></div>${priceInfo}${gameInfo}${sportInfo}${format}<p class="card-note">${reasons.length?escape(reasons.join(' · '))+'. ':''}${escape(p.notes || 'Условия посещения требуют проверки.')}</p>${checks}${proof}${photoCredit}<div class="card-sources">${refs}</div><div class="card-bottom">${detail?'':`<button class="text-button" data-open-place="${escape(p.id)}" data-open-offer="${escape(offer?.id||'')}">Карточка ↗</button>`}<a class="map-link" href="${escape(map)}" target="_blank" rel="noopener noreferrer">На карте ↗</a><button class="visited-button ${state.visited.has(p.id)?'is-visited':''}" data-visited="${escape(p.id)}">${state.visited.has(p.id)?'Посещено ✓':'Уже была / был'}</button></div></div></article>`;
+  return `<article class="place-card"><div class="card-cover cover-${escape(categories[p.category]?p.category:'other')}"><span class="cover-shape" aria-hidden="true"></span>${image}<span class="category-label">${escape(categories[p.category]||'Место')}</span><button class="favorite-button ${state.favorites.has(p.id)?'is-saved':''}" data-favorite="${escape(p.id)}" aria-label="${state.favorites.has(p.id)?'Убрать из избранного':'Сохранить'}: ${escape(p.title)}" aria-pressed="${state.favorites.has(p.id)}">${state.favorites.has(p.id)?'♥':'♡'}</button></div><div class="card-content"><h3>${escape(p.title)}</h3><p class="address">${escape(p.address || 'Точный адрес уточни в источнике')}${distance!==null?` · ${distance.toFixed(1)} км по прямой`:''}</p><div class="badges">${tags.map(key=>`<span class="badge">${escape(featureLabels[key])}</span>`).join('')}<span class="badge ${price?'price-badge':'unknown'}">${escape(unknown)}</span></div>${priceInfo}${groupInfo}${gameInfo}${sportInfo}${format}<p class="card-note">${reasons.length?escape(reasons.join(' · '))+'. ':''}${escape(p.notes || 'Условия посещения требуют проверки.')}</p>${checks}${proof}${photoCredit}<div class="card-sources">${refs}</div><div class="card-bottom">${detail?'':`<button class="text-button" data-open-place="${escape(p.id)}" data-open-offer="${escape(offer?.id||'')}">Карточка ↗</button>`}<a class="map-link" href="${escape(map)}" target="_blank" rel="noopener noreferrer">На карте ↗</a><button class="visited-button ${state.visited.has(p.id)?'is-visited':''}" data-visited="${escape(p.id)}">${state.visited.has(p.id)?'Посещено ✓':'Уже была / был'}</button></div></div></article>`;
 }
 
 function options() {
@@ -56,6 +58,9 @@ function syncTextContext(){
 function renderInterpretation(result){
   const labels=[];
   if(result.intent)labels.push(visitLabels[result.intent]);
+  if(result.partySize)labels.push('Компания: '+result.partySize+' человек');
+  if(result.parsed.afterWork)labels.push('После работы');
+  if(result.parsed.simultaneous)labels.push('Играть одновременно');
   if(result.mood)labels.push(moods[result.mood]);
   if(result.company)labels.push(companies[result.company]);
   labels.push(...result.needs.map(k=>featureLabels[k]||k));
@@ -72,6 +77,7 @@ function renderInterpretation(result){
   $('intent-tags').innerHTML=[...new Set(labels)].map(label=>`<span>${escape(label)}</span>`).join('');
   const warnings=[];
   warnings.push(...result.filterConflicts);
+  if(result.parsed.pokerRequested)warnings.push('Для покера учитывается только явно подтверждённая игра без денежных ставок и ценных призов. Непроверенные клубы не подставляются.');
   if(result.needs.includes('laptop_work')&&['first_date','date','friends'].includes(result.company))warnings.push('В тексте запрошена работа с ноутбуком. Для встречи без работы выбери пример «Кофе с подругой» или «Первое свидание».');
   if(result.unhandled.length)warnings.push('Не удалось учесть: «'+result.unhandled.join(' ')+'». Подбор ниже — по понятой части запроса.');
   $('intent-warning').textContent=warnings.join(' ');$('intent-warning').classList.toggle('hidden',!warnings.length);
@@ -180,7 +186,7 @@ $('retry-query').addEventListener('click',()=>{
 $('load-more').addEventListener('click',()=>{state.visible+=12;renderSearch();});
 
 try {
-  const response=await fetch('places.json?v=20261014');if(!response.ok)throw new Error('Не удалось загрузить каталог');
+  const response=await fetch('places.json?v=20261014b');if(!response.ok)throw new Error('Не удалось загрузить каталог');
   state.baseline=validateCatalogue(await response.json());
   const cached=load('kuda.catalogue',null);try{state.catalogue=cached?mergeCatalogues(state.baseline,validateCatalogue(cached)):state.baseline;}catch{state.catalogue=state.baseline;}
   try{state.catalogue=applyAdminDrafts(state.catalogue,load(ADMIN_DRAFT_KEY,null));}catch{toast('Черновики редактора не удалось прочитать. Опубликованный каталог доступен.');}

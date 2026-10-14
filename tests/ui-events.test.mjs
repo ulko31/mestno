@@ -158,3 +158,17 @@ test('sports dropdown reaches the actual page and reset clears old sport and pay
  assert.ok(cards.includes('Kingwinch'));assert.ok(cards.includes('Открытая вода'));assert.ok(!cards.includes('Динамит'));
  el('clear-filters').emit('click');assert.equal(el('sport-type').value,'');
 });
+test('the after-work quick request selects colleagues without laptop work',()=>{
+  const target={dataset:{query:'После работы с коллегами'}};
+  documentEvents.click({target:{closest:selector=>selector==='[data-query]'?target:null}});
+  assert.equal(el('company').value,'colleagues');assert.ok(el('intent-tags').innerHTML.includes('После работы'));
+  assert.ok(el('results').innerHTML.includes('Mafia VIP'));assert.ok(!el('intent-tags').innerHTML.includes('Можно работать с ноутбуком'));
+});
+test('group game examples do not substitute a culinary workshop and show party interpretation',()=>{
+  const target={dataset:{query:'Поиграть с друзьями'}};
+  documentEvents.click({target:{closest:selector=>selector==='[data-query]'?target:null}});
+  assert.ok(el('results').innerHTML.includes('Pixel Quest'));assert.ok(!el('results').innerHTML.includes('FoodLoft'));
+  query('Отдельная комната для компании из 8 человек');
+  assert.ok(el('intent-tags').innerHTML.includes('Компания: 8 человек'));assert.ok(el('results').innerHTML.includes('FoodLoft'));
+  assert.ok(el('results').innerHTML.includes('до 15 человек'));
+});

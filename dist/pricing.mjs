@@ -1,6 +1,6 @@
 // A menu item, an average bill and an activity ticket have different meanings.
-import {activityKeys} from './experiences.mjs?v=20261014';
-import {currentBilliards} from './billiards.mjs?v=20261014';
+import {activityKeys} from './experiences.mjs?v=20261014b';
+import {currentBilliards} from './billiards.mjs?v=20261014b';
 const safe=s=>{try{const u=new URL(s);return /^https?:$/.test(u.protocol)&&!u.username&&!u.password?u.href:null;}catch{return null;}};
 export function currentPrice(q,today=new Date()){
   const age=(new Date(today)-new Date(q?.checked_at))/86400000;
@@ -9,9 +9,21 @@ export function currentPrice(q,today=new Date()){
     && (!q.valid_from||new Date(today)>=new Date(q.valid_from))
     && (!q.valid_until||new Date(today)<=new Date(q.valid_until));
 }
-export function priceFor(place,{today=new Date(),scope='visit',needs=[],context={},offer=null}={}){
+export function priceFor(place,{today=new Date(),scope='visit',needs=[],context={},offer=null,partySize=null}={}){
   // Never substitute a cheap drink or free entrance for a requested workshop.
-  if(offer)return currentPrice(offer.price,today)&&offer.price.scope===scope?offer.price:null;
+  if(offer){
+    const band=Number.isInteger(partySize)&&(offer.party_tariffs||[]).find(t=>partySize>=t.min_size&&partySize<=t.max_size);
+    if(band&&scope==='visit'){
+      const total=Math.max(band.per_person*partySize,band.minimum_total)*(1+band.service_percent/100);
+      const q={amount:Math.ceil(total/partySize),currency:'RUB',scope:'visit',kind:'from',source_url:band.source_url,checked_at:band.checked_at,
+        label:'Расчёт нижней границы на человека для вашей компании',note:`Для ${partySize} человек: минимум заказа ${band.minimum_total.toLocaleString('ru-RU')} ₽, обслуживание ${band.service_percent}%. Дополнительные заказы увеличат итог.`};
+      return currentPrice(q,today)?q:null;
+    }
+    const q=offer.price;
+    if(!currentPrice(q,today)||q.scope!==scope||q.visit_day&&q.visit_day!==context.visitDay)return null;
+    if(q.unit==='group')return Number.isInteger(partySize)&&partySize>0?{...q,amount:Math.ceil(q.amount/partySize),kind:'from',unit:'person',label:'Доля базового тарифа на человека',note:`Тариф ${q.amount.toLocaleString('ru-RU')} ₽ за компанию из ${partySize} человек. Дополнительные услуги оплачиваются отдельно.`}:null;
+    return q;
+  }
   const game=needs.includes('billiards')?currentBilliards(place,{today,context}):null;
   if(game?.mode==='paid'){
     // An hourly game tariff is never replaced by the food bill or guessed duration.

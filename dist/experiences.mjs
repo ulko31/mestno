@@ -1,6 +1,7 @@
+import {groupActivities,supportsActivity,fitsParty} from './group-plans.mjs?v=20261014b';
 const safe=s=>{try{const u=new URL(s);return /^https?:$/.test(u.protocol)&&!u.username&&!u.password;}catch{return false;}};
-import {sportKeys} from './sports.mjs?v=20261014';
-export const activityKeys=['workshops','pottery','painting','cooking','improv','book_club','board_games','rpg','war_games','speaking_club','english_club','french_club','spanish_club','korean_club','german_club','italian_club','sign_club','meetups','dance','sports',...sportKeys,'candles','perfume','mosaic','tufting','resin','crafts'];
+import {sportKeys} from './sports.mjs?v=20261014b';
+export const activityKeys=['shared_activity','group_games',...Object.keys(groupActivities),'workshops','pottery','painting','cooking','improv','book_club','board_games','rpg','war_games','speaking_club','english_club','french_club','spanish_club','korean_club','german_club','italian_club','sign_club','meetups','dance','sports',...sportKeys,'candles','perfume','mosaic','tufting','resin','crafts'];
 export function cityDate(value=new Date()){
   return new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Moscow',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date(value));
 }
@@ -22,16 +23,19 @@ export function currentOffers(place,today=new Date()){
       && (!e.valid_until||new Date(e.valid_until)>=new Date(today));
   });
 }
-export function offersFor(place,{needs=[],company='',query='',today=new Date()}={}){
+export function offersFor(place,{needs=[],company='',query='',today=new Date(),partySize=null,simultaneous=false}={}){
   const day=requestedDate(query,today);
   return currentOffers(place,today).filter(e=>{
+    if(needs.includes('private_room')&&e.exclusive_space!==true)return false;
+    if(!fitsParty(e,{partySize,simultaneous}))return false;
     if(e.audience==='children'&&company!=='children'&&!needs.includes('child_friendly'))return false;
     if(company==='new_people'&&(e.format!=='open_group'||e.audience==='children'))return false;
     const requested=needs.filter(k=>activityKeys.includes(k));
-    if(requested.some(k=>!(e.activities||[]).includes(k)))return false;
+    if(requested.some(k=>!supportsActivity(e,k)))return false;
     if(day&&e.starts_at&&(e.is_continuous?day<cityDate(e.starts_at)||day>cityDate(e.ends_at):cityDate(e.starts_at)!==day))return false;
     return true;
   }).sort((a,b)=>{
+    if(partySize){const fit=(Number.isFinite(a.party_max)?a.party_max:Infinity)-(Number.isFinite(b.party_max)?b.party_max:Infinity);if(Number.isFinite(fit)&&fit)return fit;}
     const dated=Number(Boolean(b.starts_at))-Number(Boolean(a.starts_at));
     if(dated)return dated;
     return (new Date(a.starts_at||'9999-01-01')-new Date(b.starts_at||'9999-01-01'))

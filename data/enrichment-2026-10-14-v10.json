@@ -1,0 +1,340 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-14T00:12:33.507069+00:00",
+  "source_licenses": {},
+  "places": [
+    {
+      "id": "curated:foodloft-beringa",
+      "title": "FoodLoft · своя компания",
+      "address": "улица Беринга, 23, корпус 2, литера А",
+      "city": "Санкт-Петербург",
+      "category": "activity",
+      "website": "https://foodloft.ru/master-class",
+      "sources": [
+        {
+          "url": "https://foodloft.ru/master-class",
+          "kind": "official",
+          "label": "Формат, вместимость и условия",
+          "retrieved_at": "2026-10-14T00:12:33.507069+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v10:description",
+          "kind": "description",
+          "text": "Кулинарный мастер-класс и ужин для вашей компании: закрытая студия на 7–50 гостей, до четырёх часов. Есть минимальный заказ от 40 000 ₽ для меньшей компании и обслуживание 10%. Поэтому 4500 ₽ за человека не всегда достаточно. Для 25 гостей тариф нужно уточнить: границы на странице пересекаются.",
+          "source_url": "https://foodloft.ru/master-class",
+          "observed_at": "2026-10-14T00:12:33.507069+00:00",
+          "retrieved_at": "2026-10-14T00:12:33.507069+00:00",
+          "paraphrased": true
+        }
+      ],
+      "notes": "Кулинарный мастер-класс и ужин для вашей компании: закрытая студия на 7–50 гостей, до четырёх часов. Есть минимальный заказ от 40 000 ₽ для меньшей компании и обслуживание 10%. Поэтому 4500 ₽ за человека не всегда достаточно. Для 25 гостей тариф нужно уточнить: границы на странице пересекаются.",
+      "notes_are_summary": true,
+      "offers": [
+        {
+          "id": "v10:foodloft",
+          "title": "Приготовить ужин своей компанией",
+          "source_url": "https://foodloft.ru/master-class",
+          "booking_url": "https://foodloft.ru/master-class",
+          "activities": [
+            "cooking",
+            "workshops"
+          ],
+          "description": "Готовите вместе с шефом и ужинаете; студия целиком только для вашей компании.",
+          "format": "private",
+          "audience": "adults",
+          "checked_at": "2026-10-14T00:12:33.507069+00:00",
+          "schedule_note": "По бронированию · выбери время у организатора",
+          "party_min": 7,
+          "party_max": 50,
+          "exclusive_space": true,
+          "duration_note": "до 4 часов",
+          "party_tariffs": [
+            {
+              "min_size": 7,
+              "max_size": 24,
+              "per_person": 4500,
+              "minimum_total": 40000,
+              "service_percent": 10,
+              "source_url": "https://foodloft.ru/master-class",
+              "checked_at": "2026-10-14T00:12:33.507069+00:00"
+            },
+            {
+              "min_size": 26,
+              "max_size": 50,
+              "per_person": 5000,
+              "minimum_total": 50000,
+              "service_percent": 10,
+              "source_url": "https://foodloft.ru/master-class",
+              "checked_at": "2026-10-14T00:12:33.507069+00:00"
+            }
+          ]
+        }
+      ],
+      "status": "catalogue",
+      "updated_at": "2026-10-14T00:12:33.507069+00:00",
+      "is_landmark": false,
+      "discovery_priority": 4
+    },
+    {
+      "id": "curated:mafiavip-nevsky",
+      "title": "Mafia VIP · Невский проспект, 166",
+      "address": "Невский проспект, 166",
+      "city": "Санкт-Петербург",
+      "category": "activity",
+      "website": "https://vipmafia.ru/faq",
+      "sources": [
+        {
+          "url": "https://vipmafia.ru/faq",
+          "kind": "official",
+          "label": "Формат, вместимость и условия",
+          "retrieved_at": "2026-10-14T00:12:33.507069+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v10:description",
+          "kind": "description",
+          "text": "Мафия для своей команды из 8–12 человек. Есть зона ожидания с диванами, настольные игры, PlayStation, еда и напитки. Указанные 1000 ₽ с человека — предоплата, не подтверждённая полная стоимость визита.",
+          "source_url": "https://vipmafia.ru/faq",
+          "observed_at": "2026-10-14T00:12:33.507069+00:00",
+          "retrieved_at": "2026-10-14T00:12:33.507069+00:00",
+          "paraphrased": true
+        }
+      ],
+      "notes": "Мафия для своей команды из 8–12 человек. Есть зона ожидания с диванами, настольные игры, PlayStation, еда и напитки. Указанные 1000 ₽ с человека — предоплата, не подтверждённая полная стоимость визита.",
+      "notes_are_summary": true,
+      "offers": [
+        {
+          "id": "v10:mafia-nevsky",
+          "title": "Мафия своей командой",
+          "source_url": "https://vipmafia.ru/faq",
+          "booking_url": "https://vipmafia.ru/faq",
+          "activities": [
+            "mafia",
+            "board_games"
+          ],
+          "description": "Игра с ведущим; команду собираете сами. Одна игра примерно 30–40 минут, минимальное бронирование — два часа.",
+          "format": "private",
+          "audience": "adults",
+          "checked_at": "2026-10-14T00:12:33.507069+00:00",
+          "schedule_note": "По бронированию · выбери время у организатора",
+          "party_min": 8,
+          "party_max": 12,
+          "simultaneous_max": 12,
+          "duration_note": "бронь от 2 часов"
+        }
+      ],
+      "status": "catalogue",
+      "updated_at": "2026-10-14T00:12:33.507069+00:00",
+      "is_landmark": false,
+      "discovery_priority": 4
+    },
+    {
+      "id": "curated:mafiavip-marata",
+      "title": "Mafia VIP · улица Марата, 78",
+      "address": "улица Марата, 78",
+      "city": "Санкт-Петербург",
+      "category": "activity",
+      "website": "https://vipmafia.ru/faq",
+      "sources": [
+        {
+          "url": "https://vipmafia.ru/faq",
+          "kind": "official",
+          "label": "Формат, вместимость и условия",
+          "retrieved_at": "2026-10-14T00:12:33.507069+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v10:description",
+          "kind": "description",
+          "text": "Мафия для своей команды из 8–12 человек. Есть зона ожидания с диванами, настольные игры, PlayStation, еда и напитки. Указанные 1000 ₽ с человека — предоплата, не подтверждённая полная стоимость визита.",
+          "source_url": "https://vipmafia.ru/faq",
+          "observed_at": "2026-10-14T00:12:33.507069+00:00",
+          "retrieved_at": "2026-10-14T00:12:33.507069+00:00",
+          "paraphrased": true
+        }
+      ],
+      "notes": "Мафия для своей команды из 8–12 человек. Есть зона ожидания с диванами, настольные игры, PlayStation, еда и напитки. Указанные 1000 ₽ с человека — предоплата, не подтверждённая полная стоимость визита.",
+      "notes_are_summary": true,
+      "offers": [
+        {
+          "id": "v10:mafia-marata",
+          "title": "Мафия своей командой",
+          "source_url": "https://vipmafia.ru/faq",
+          "booking_url": "https://vipmafia.ru/faq",
+          "activities": [
+            "mafia",
+            "board_games"
+          ],
+          "description": "Игра с ведущим; команду собираете сами. Одна игра примерно 30–40 минут, минимальное бронирование — два часа.",
+          "format": "private",
+          "audience": "adults",
+          "checked_at": "2026-10-14T00:12:33.507069+00:00",
+          "schedule_note": "По бронированию · выбери время у организатора",
+          "party_min": 8,
+          "party_max": 12,
+          "simultaneous_max": 12,
+          "duration_note": "бронь от 2 часов"
+        }
+      ],
+      "status": "catalogue",
+      "updated_at": "2026-10-14T00:12:33.507069+00:00",
+      "is_landmark": false,
+      "discovery_priority": 4
+    },
+    {
+      "id": "curated:pixelquest-ligovsky",
+      "title": "Pixel Quest · Лиговский",
+      "address": "Лиговский проспект, 271, 2-й этаж",
+      "city": "Санкт-Петербург",
+      "category": "activity",
+      "website": "https://spb.pixelquest.ru/price",
+      "sources": [
+        {
+          "url": "https://spb.pixelquest.ru/price",
+          "kind": "official",
+          "label": "Формат, вместимость и условия",
+          "retrieved_at": "2026-10-14T00:12:33.507069+00:00"
+        },
+        {
+          "url": "https://spb.pixelquest.ru/corporate",
+          "label": "Корпоративный формат и вместимость",
+          "kind": "official",
+          "retrieved_at": "2026-10-14T00:12:33.507069+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v10:description",
+          "kind": "description",
+          "text": "Пиксельные игры на световом полу, а не обычный квест. Есть форматы для двоих, компании и корпоратива. Вместимость лаунджа — до 15 гостей сидя; одновременно на полу играют до шести взрослых. Это разные ограничения, для большой компании нужна смена игроков.",
+          "source_url": "https://spb.pixelquest.ru/price",
+          "observed_at": "2026-10-14T00:12:33.507069+00:00",
+          "retrieved_at": "2026-10-14T00:12:33.507069+00:00",
+          "paraphrased": true
+        }
+      ],
+      "notes": "Пиксельные игры на световом полу, а не обычный квест. Есть форматы для двоих, компании и корпоратива. Вместимость лаунджа — до 15 гостей сидя; одновременно на полу играют до шести взрослых. Это разные ограничения, для большой компании нужна смена игроков.",
+      "notes_are_summary": true,
+      "offers": [
+        {
+          "id": "v10:pixel-pair",
+          "title": "Пиксельные игры для двоих",
+          "source_url": "https://spb.pixelquest.ru/price",
+          "booking_url": "https://spb.pixelquest.ru/price",
+          "activities": [
+            "arcade"
+          ],
+          "description": "Интерактивные игры на световом полу. Тариф для одного или двух игроков.",
+          "format": "private",
+          "audience": "adults",
+          "checked_at": "2026-10-14T00:12:33.507069+00:00",
+          "schedule_note": "По бронированию · выбери время у организатора",
+          "party_min": 1,
+          "party_max": 2,
+          "simultaneous_max": 2,
+          "duration_note": "50 минут"
+        },
+        {
+          "id": "v10:pixel-arena",
+          "title": "Пиксельные игры своей компанией",
+          "source_url": "https://spb.pixelquest.ru/price",
+          "booking_url": "https://spb.pixelquest.ru/price",
+          "activities": [
+            "arcade"
+          ],
+          "description": "До десяти взрослых гостей; на полу одновременно играют шестеро, остальные меняются.",
+          "format": "private",
+          "audience": "adults",
+          "checked_at": "2026-10-14T00:12:33.507069+00:00",
+          "schedule_note": "По бронированию · выбери время у организатора",
+          "party_min": 3,
+          "party_max": 10,
+          "simultaneous_max": 6,
+          "duration_note": "50 минут"
+        },
+        {
+          "id": "v10:pixel-company",
+          "title": "Игры и отдельный лаундж",
+          "source_url": "https://spb.pixelquest.ru/corporate",
+          "booking_url": "https://spb.pixelquest.ru/corporate",
+          "activities": [
+            "arcade",
+            "video_games",
+            "board_games"
+          ],
+          "description": "Формат для друзей и коллег: интерактивные игры и своя комната отдыха. На полу одновременно играют до шести взрослых.",
+          "format": "private",
+          "audience": "adults",
+          "checked_at": "2026-10-14T00:12:33.507069+00:00",
+          "schedule_note": "По бронированию · выбери время у организатора",
+          "party_min": 1,
+          "party_max": 15,
+          "simultaneous_max": 6,
+          "exclusive_space": true,
+          "duration_note": "базовый пакет 2 часа",
+          "capacity_note": "До 15 гостей сидя; при большей компании игроки меняются",
+          "price": {
+            "amount": 12000,
+            "currency": "RUB",
+            "scope": "visit",
+            "kind": "from",
+            "unit": "group",
+            "visit_day": "weekday",
+            "source_url": "https://spb.pixelquest.ru/corporate",
+            "checked_at": "2026-10-14T00:12:33.507069+00:00",
+            "label": "Базовый пакет «Лайт» в будни за всю компанию"
+          }
+        }
+      ],
+      "status": "catalogue",
+      "updated_at": "2026-10-14T00:12:33.507069+00:00",
+      "is_landmark": false,
+      "discovery_priority": 4
+    },
+    {
+      "lat": 59.9206902,
+      "lon": 30.3455477,
+      "id": "osm:node:10007134917",
+      "title": "UVA",
+      "address": "Социалистическая улица, 21",
+      "city": "Санкт-Петербург",
+      "category": "restaurant",
+      "website": "https://www.restoclub.ru/spb/place/uva",
+      "sources": [
+        {
+          "url": "https://www.restoclub.ru/spb/place/uva",
+          "kind": "editorial",
+          "label": "Формат, вместимость и условия",
+          "retrieved_at": "2026-10-14T00:12:33.507069+00:00"
+        }
+      ],
+      "features": [],
+      "documents": [
+        {
+          "id": "v10:description",
+          "kind": "editorial",
+          "text": "Итальянский ресторан с пастой, пиццей и закусками для заказа в стол на компанию. Подходит по формату совместного застолья; вместимость конкретного стола нужно согласовать. В каталогах средний чек различается, поэтому актуальный бюджет уточняется.",
+          "source_url": "https://www.restoclub.ru/spb/place/uva",
+          "observed_at": "2026-10-14T00:12:33.507069+00:00",
+          "retrieved_at": "2026-10-14T00:12:33.507069+00:00",
+          "paraphrased": true
+        }
+      ],
+      "notes": "Итальянский ресторан с пастой, пиццей и закусками для заказа в стол на компанию. Подходит по формату совместного застолья; вместимость конкретного стола нужно согласовать. В каталогах средний чек различается, поэтому актуальный бюджет уточняется.",
+      "notes_are_summary": true,
+      "offers": [],
+      "status": "catalogue",
+      "updated_at": "2026-10-14T00:12:33.507069+00:00",
+      "is_landmark": false,
+      "discovery_priority": 4
+    }
+  ]
+}

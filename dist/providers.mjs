@@ -1,4 +1,4 @@
-import {normalize, safeUrl, validateCatalogue} from './search.mjs?v=20261014';
+import {normalize, safeUrl, validateCatalogue} from './search.mjs?v=20261014b';
 
 export const apiCities={spb:'Санкт-Петербург',msk:'Москва',ekb:'Екатеринбург',kzn:'Казань',nsk:'Новосибирск',nnv:'Нижний Новгород'};
 export const KUDAGO_API='https://kudago.com/public-api/v1.4/';

@@ -26,6 +26,22 @@ class PublicSourcesTest(unittest.TestCase):
  def test_roundup_is_a_queue_and_not_a_single_verified_venue(self):
   r=social.parse_posts(bubble('Дайджест сентября: уютные кафе. 📍 адрес 1 📍 адрес 2'),'gotoeatspb',TODAY)[0]
   self.assertTrue(r['multiple_venues']);self.assertEqual(r['status'],'pending_review')
+ def test_roundup_signals_are_scoped_to_each_venue_not_copied_between_them(self):
+  text='Куда пойти большой компанией<br>Тёплое кафе<br>Уютная кофейня, кофе.<br>📍Литейный, 1<br>Pixel Quest<br>Игры на пиксельном полу.<br>📍Лиговский, 271'
+  r=social.parse_posts(bubble(text),'gotoeatspb',TODAY)[0];a,b=r['venue_candidates']
+  self.assertEqual(a['title_candidate'],'Тёплое кафе');self.assertIn('cozy',a['signals']);self.assertNotIn('arcade',a['signals'])
+  self.assertIn('arcade',b['signals']);self.assertNotIn('cozy',b['signals']);self.assertTrue(r['company_context']['large_group'])
+  self.assertEqual(b['capacity_status'],'unknown');self.assertEqual(b['status'],'pending_review')
+ def test_pin_marker_is_an_address_candidate_not_verified_coordinates(self):
+  r=social.parse_posts(bubble('Мафия для коллег. 📌Марата, 78'),'gotoeatspb',TODAY)[0]
+  self.assertTrue(r['addresses']);self.assertNotIn('lat',r);self.assertIn('mafia',r['signals'])
+ def test_poker_mention_requires_separate_non_monetary_review(self):
+  r=social.parse_posts(bubble('Новый покерный клуб.'),'gotoeatspb',TODAY)[0]
+  self.assertEqual(r['restricted_activity_review'],'non_monetary_format_not_confirmed');self.assertNotIn('poker',r['signals'])
+ def test_collection_report_does_not_claim_a_complete_archive(self):
+  with patch.object(social,'fetch',return_value=bubble('Кофе')):
+   r=social.collect(['gotoeatspb'],max_pages=1)
+  self.assertFalse(r['collection_report']['full_archive']);self.assertEqual(r['collection_report']['posts'],1)
  def test_waterfront_coordinates_are_taken_from_the_published_map(self):
   opts=urllib.parse.quote(json.dumps({'center':['59.948672','30.261709'],'x':'59.948672','y':'30.261709'}))
   html='<h1>Набережная реки Смоленки</h1><div id="map-opts" data-o="'+opts+'"></div><p>Водная преграда: р. Смоленка Общая длина: 123 м</p>'

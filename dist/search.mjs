@@ -1,11 +1,12 @@
-import {visitIntent,acceptsVisit,ambienceFit,ambienceKeys,visitWeights} from './atmosphere.mjs?v=20261014';
-import {analyseText, keywordMatches} from './text-analysis.mjs?v=20261014';
-import {priceFor,priceIsEstimate} from './pricing.mjs?v=20261014';
-import {currentOffers,offersFor,requestedDate,activityKeys} from './experiences.mjs?v=20261014';
-import {photoUrl} from './photo-assets.mjs?v=20261014';
-import {billiardsInfo} from './billiards.mjs?v=20261014';
-import {sportKeys,sportLabels,sportPatterns,sportsFor,sportDetails} from './sports.mjs?v=20261014';
-export {sportLabels} from './sports.mjs?v=20261014';
+import {groupActivities,groupPatterns,sharedActivities,gameActivities,supportsActivity,partyWarnings} from './group-plans.mjs?v=20261014b';
+import {visitIntent,acceptsVisit,ambienceFit,ambienceKeys,visitWeights} from './atmosphere.mjs?v=20261014b';
+import {analyseText, keywordMatches} from './text-analysis.mjs?v=20261014b';
+import {priceFor,priceIsEstimate} from './pricing.mjs?v=20261014b';
+import {currentOffers,offersFor,requestedDate,activityKeys} from './experiences.mjs?v=20261014b';
+import {photoUrl} from './photo-assets.mjs?v=20261014b';
+import {billiardsInfo} from './billiards.mjs?v=20261014b';
+import {sportKeys,sportLabels,sportPatterns,sportsFor,sportDetails} from './sports.mjs?v=20261014b';
+export {sportLabels} from './sports.mjs?v=20261014b';
 
 export const categories = {
   coworking: 'Коворкинги', library: 'Библиотеки', cafe: 'Кафе', restaurant: 'Рестораны', bar: 'Бары',
@@ -17,10 +18,11 @@ export const moods = {
   reflective: 'Подумать', dreamy: 'Помечтать', inspired: 'Вдохновиться', active: 'Размяться и переключиться'
 };
 export const companies = {
-  alone: 'Одна / один', friends: 'С друзьями', date: 'С партнёром', first_date: 'Первое свидание',
+  alone: 'Одна / один', friends: 'С друзьями', colleagues:'С коллегами', date: 'С партнёром', first_date: 'Первое свидание',
   new_people: 'Познакомиться с людьми', parents: 'С родителями', children: 'С детьми'
 };
 export const featureLabels = {
+  ...groupActivities,group_games:'Есть игры для компании',shared_activity:'Есть совместное занятие',group_friendly:'Есть формат для компании',private_room:'Пространство только для вашей компании',
   billiards: 'Есть бильярд', free_billiards: 'Игра в бильярд без отдельной оплаты',
   coworking: 'Есть рабочая зона', laptop_work: 'Можно работать с ноутбуком',
   free_coworking: 'Рабочее место без оплаты', free_workspace: 'Рабочее место без оплаты',
@@ -101,12 +103,24 @@ export function parseQuery(text) {
   const q = normalize(text);
   let rest = q;
   const needs = new Set(), excludedCategories = new Set(), requestedCategories = new Set(), excludedFeatures = new Set();
-  let mood = '', company = '', daypart = '', visitDay = '', outdoors = false, billiardsPayment='';
+  let mood = '', company = '', daypart = '', visitDay = '', outdoors = false, billiardsPayment='',partySize=null,largeGroup=false,afterWork=false,sharedActivity=false,gamesRequested=false,simultaneous=false,pokerRequested=false;
   const consume = (pattern, action) => {
     let found = false;
     rest = rest.replace(pattern, match=>{found=true;action?.(match);return ' ';});
     return found;
   };
+  consume(/после\s+(?:работы|рабочего\s+дня)/g,()=>{afterWork=true;daypart='evening';});
+  consume(/(?:с\s+)?коллег[а-я]*|(?:с\s+)?командой|тимбилдинг[а-я]*/g,()=>{company='colleagues';});
+  consume(/больш[а-я]*\s+компани[а-я]*/g,()=>{largeGroup=true;if(!company)company='friends';});
+  consume(/нас\s+\d{1,4}(?!\d)(?:\s+человек)?|(?:на|для)\s+\d{1,4}\s+человек|компани[а-я]*\s+(?:из\s+)?\d{1,4}\s+человек|(?<!\d)\d{1,4}\s+человек/g,match=>{const n=Number(match.match(/\d+/)[0]);if(n>=1&&n<=1000)partySize=n;});
+  consume(/одновременно|всем\s+вместе/g,()=>{simultaneous=true;});
+  consume(/необычн[а-я]*\s+свидани[а-я]*/g,()=>{company='date';sharedActivity=true;});
+  consume(/поиграть|игров[а-я]*\s+вечер[а-я]*/g,()=>{gamesRequested=true;});
+  consume(/интересно\s+провести\s+время|развлечься|нов[а-я]*\s+опыт|попробовать\s+что[ -]то\s+нов[а-я]*/g,()=>{sharedActivity=true;});
+  consume(/(?:снять|забронировать|нужна)\s+отдельн[а-я]*\s+комнат[а-я]*|отдельн[а-я]*\s+комнат[а-я]*|только\s+наша\s+компания/g,()=>needs.add('private_room'));
+  consume(/покер[а-я]*(?:\s+без\s+(?:денежных\s+)?ставок)?(?:\s+и\s+ценных\s+призов)?/g,()=>{needs.add('poker_no_stakes');pokerRequested=true;});
+  for(const [key,pattern] of groupPatterns)consume(new RegExp('(?:без|не(?:\\s+хочу)?)\\s+(?:'+pattern.source+')','g'),()=>excludedFeatures.add(key));
+  for(const [key,pattern] of groupPatterns)consume(new RegExp(pattern.source,'g'),()=>needs.add(key));
   const optionalFree = consume(/(?:не\s+обязательно\s+бесплат[а-я]*|не\s+бесплат[а-я]*)/g);
   consume(/(?:без|кроме|не(?:\s+(?:хочу|нужен|нужны|надо))?)\s+(?:(?:в|на)\s+)?(коворкинг[а-я]*|библиотек[а-я]*|антикафе|кафе|кофейн[а-я]*|ресторан[а-я]*|бар(?:а|ов|ы|е)?|клуб[а-я]*)/g, match=>{
     for (const [pattern,values] of categoryPatterns) if(new RegExp(pattern.source).test(match)) values.forEach(x=>excludedCategories.add(x));
@@ -197,6 +211,9 @@ export function parseQuery(text) {
   for (const [pattern,values] of categoryPatterns) consume(pattern, match=>{values.forEach(x=>requestedCategories.add(x));if(/выставк/.test(match))needs.add('exhibitions');});
   const exhibitionAlternative=needs.has('exhibitions')&&/или|либо/.test(q)&&[...requestedCategories].some(c=>!['gallery','museum','space'].includes(c));
   if(exhibitionAlternative)needs.delete('exhibitions');
+  if(gamesRequested&&![...needs].some(k=>activityKeys.includes(k)||k==='billiards'))needs.add('group_games');
+  if(sharedActivity&&![...needs].some(k=>activityKeys.includes(k)||k==='billiards'))needs.add('shared_activity');
+  if(largeGroup)needs.add('group_friendly');
   if(needs.has('quiet') && !mood)mood='calm';
   if(needs.has('cozy') && !mood)mood='calm';
   const ignored = new Set(['куда','сходить','место','места','местечко','хочу','хочется','нужно','нужна','нужен','можно','где',
@@ -208,7 +225,7 @@ export function parseQuery(text) {
   rest=rest.replace(/атмосферн[а-я]*|уютн[а-я]*|интересн[а-я]*|необычн[а-я]*|нов(?:ое|ый|ые|ом|ую)(?![а-я])/g,' ');
   const keywords = rest.split(/[^a-zа-я0-9]+/).filter(t=>t.length>2&&!ignored.has(t)&&! /^\d+$/.test(t));
   return {q,needs:[...needs],excludedFeatures:[...excludedFeatures],requestedCategories:[...requestedCategories],
-    excludedCategories:[...excludedCategories],budget,priceScope,mood,company,outdoors,daypart,visitDay,billiardsPayment,exhibitionAlternative,keywords:[...new Set(keywords)]};
+    excludedCategories:[...excludedCategories],budget,priceScope,mood,company,outdoors,daypart,visitDay,billiardsPayment,exhibitionAlternative,partySize,largeGroup,afterWork,sharedActivity,gamesRequested,simultaneous,pokerRequested,keywords:[...new Set(keywords)]};
 }
 
 const profiles = {
@@ -222,6 +239,7 @@ const profiles = {
   active: ['sports','billiards']
 };
 const companyProfiles = {
+  colleagues:{restaurant:4,bar:3,cafe:3,activity:6,sport:4,anticafe:5,billiards:4,space:3},
   first_date:{cafe:5,restaurant:4,bar:4,gallery:4,park:3,anticafe:3,space:2,activity:3,sport:2,billiards:2},
   date:{cafe:3,restaurant:5,gallery:3,park:3,activity:2,space:2},
   friends:{cafe:3,restaurant:3,bar:4,anticafe:5,activity:4,sport:3,billiards:4,club:3,space:3,park:2},
@@ -237,10 +255,11 @@ export function searchPlaces(places, opts = {}) {
   const mood = opts.mood !== undefined ? (opts.mood==='quiet'?'calm':opts.mood) : query.mood;
   const company = opts.company !== undefined ? opts.company : query.company;
   const context = {daypart:query.daypart,visitDay:query.visitDay};
+  const partySize=query.partySize||(['date','first_date'].includes(company)&&(query.needs.some(k=>activityKeys.includes(k))||query.needs.includes('private_room'))?2:null);
   const billiardsPayment=opts.billiardsPayment||query.billiardsPayment||'';
   const selectedSport=sportKeys.includes(opts.sport)?opts.sport:'';
   const needs = [...new Set([...query.needs,...(opts.features || []),
-    ...(company==='children'?['child_friendly']:[]),...(company==='new_people'?['social_events']:[]),...(opts.category==='billiards'||billiardsPayment?['billiards']:[]),...(billiardsPayment==='free'?['free_billiards']:[]),...(opts.category==='sport'?['sports']:[]),...(selectedSport?['sports',selectedSport]:[])])];
+    ...(company==='colleagues'&&!['calm','soulful'].includes(mood)&&!query.needs.some(k=>['coffee','tea'].includes(k))&&!/поговор[а-я]*|поболт[а-я]*|встрет[а-я]*/.test(query.q)?['group_friendly']:[]),...(company==='children'?['child_friendly']:[]),...(company==='new_people'?['social_events']:[]),...(opts.category==='billiards'||billiardsPayment?['billiards']:[]),...(billiardsPayment==='free'?['free_billiards']:[]),...(opts.category==='sport'?['sports']:[]),...(selectedSport?['sports',selectedSport]:[])])];
   const budget = opts.budget !== undefined && opts.budget !== null && opts.budget !== '' ? Number(opts.budget) : query.budget;
   const priceScope = opts.priceScope || query.priceScope;
   const visited = new Set(opts.visited || []);
@@ -248,9 +267,9 @@ export function searchPlaces(places, opts = {}) {
   const gaps = Object.fromEntries(needs.map(k=>[k,0]));
   const profile = mood==='calm'&&needs.includes('laptop_work')?['quiet','reading_space','chamber_space']:profiles[mood];
   const intent=visitIntent({query,needs,mood,company,category:opts.category,activityKeys});
-  const conversationVisit=['friend_catchup','coffee'].includes(intent)||intent==='date'&&['calm','soulful'].includes(mood);
+  const conversationVisit=['friend_catchup','colleague_catchup','coffee'].includes(intent)||intent==='date'&&['calm','soulful'].includes(mood);
   const weights=visitWeights(intent),scenarioKeys=Object.keys(weights);
-  const atmosphereSearch=needs.includes('cozy')||profile?.includes('cozy')||['friend_catchup','date','coffee'].includes(intent);
+  const atmosphereSearch=needs.includes('cozy')||profile?.includes('cozy')||['friend_catchup','colleague_catchup','date','coffee'].includes(intent);
   let unknownPrice = 0, unknownCoordinates = 0, unknownAtmosphere = 0;
   const visitDate=requestedDate(opts.query,opts.today);
   for (const p of places) {
@@ -275,14 +294,14 @@ export function searchPlaces(places, opts = {}) {
     if (company==='first_date' && !companyProfiles.first_date[p.category]) continue;
     const explicitOffer=company==='new_people'||needs.some(k=>activityKeys.includes(k)&&k!=='sports'&&!sportKeys.includes(k));
     const wantsOffer=explicitOffer||(!facility&&participates&&['activity','sport'].includes(p.category)&&!needs.includes('laptop_work'));
-    const matchingOffers=wantsOffer?offersFor(p,{needs,company,query:opts.query,today:opts.today}):[];
+    const matchingOffers=wantsOffer?offersFor(p,{needs,company,query:opts.query,today:opts.today,partySize,simultaneous:query.simultaneous}):[];
     // An available private workshop and an unrelated public meetup are not the same offer.
-    if(explicitOffer&&p.offers?.length&&!matchingOffers.length)continue;
+    if((explicitOffer||partySize&&wantsOffer)&&p.offers?.length&&!matchingOffers.length)continue;
     let offer=matchingOffers[0]||null;
     if(needs.includes('free_entry'))offer=matchingOffers.find(e=>priceFor(p,{offer:e,today:opts.today})?.amount===0)||offer;
-    if(offer&&budget!==null){const within=matchingOffers.find(e=>{const q=priceFor(p,{offer:e,today:opts.today,scope:priceScope,needs,context});return q&&q.amount<=budget;});if(within)offer=within;}
+    if(offer&&budget!==null){const within=matchingOffers.find(e=>{const q=priceFor(p,{offer:e,today:opts.today,scope:priceScope,needs,context,partySize});return q&&q.amount<=budget;});if(within)offer=within;}
     const searchable=offer?{...p,offers:[offer],documents:(p.documents||[]).filter(d=>!String(d.id).startsWith('offer:'))}:p;
-    const analysis=analyseText(searchable,[...new Set([...needs,...(profile||[]),...scenarioKeys,...(atmosphereSearch?ambienceKeys:[]),...query.excludedFeatures,'exhibitions','quiet','food','coffee'])],context,opts.today);
+    const analysis=analyseText(searchable,[...new Set([...needs,...(profile||[]),...scenarioKeys,...(needs.some(k=>['group_games','shared_activity'].includes(k))?[...sharedActivities]:[]),...(atmosphereSearch?ambienceKeys:[]),...query.excludedFeatures,'exhibitions','quiet','food','coffee'])],context,opts.today);
     const rawResolve=key=>{
       const ev=analysis.evidence[key]||{positive:[],negative:[]};
       if(key==='free_billiards'&&billiards?.term){
@@ -290,20 +309,21 @@ export function searchPlaces(places, opts = {}) {
         if(['paid','ticket'].includes(billiards.mode))return {supported:false,strong:false,hardNegative:true,conflict:false,positive:[],negative:[]};
       }
       if(offer&&key==='free_entry'&&priceFor(p,{offer,today:opts.today})?.amount===0)return {supported:true,strong:true,hardNegative:false,conflict:false,positive:[],negative:[]};
-      if(offer&&((offer.activities||[]).includes(key)||key==='social_events'&&offer.format==='open_group')){
+      if(offer&&(supportsActivity(offer,key)||key==='social_events'&&offer.format==='open_group'||key==='group_friendly'&&offer.format==='private'||key==='private_room'&&offer.exclusive_space===true)){
         return {supported:true,strong:true,hardNegative:false,conflict:false,positive:ev.positive.filter(e=>e.source_url===offer.source_url),negative:[]};
       }
       const hardNegative=hasFeature(p,key,false,opts.today,context)||ev.negative.some(e=>e.kind!=='review'&&!e.conditional&&!e.stale);
-      const documented=meetsFeature(p,key,opts.today,context)||Boolean(facility&&(key==='sports'||facility.activities.includes(key)));
+      const documented=meetsFeature(p,key,opts.today,context)||['shared_activity','group_games'].includes(key)&&[...(key==='group_games'?gameActivities:sharedActivities)].some(k=>meetsFeature(p,k,opts.today,context))||Boolean(facility&&(key==='sports'||facility.activities.includes(key)));
       // Prices and free use require explicit facts with the correct scope, never inference from prose.
       const positive=key.startsWith('free_')?[]:ev.positive;
       const conflict=positive.length>0&&ev.negative.length>0 || documented&&ev.negative.length>0;
       const strong=!hardNegative&&!conflict&&(documented||positive.some(e=>e.kind!=='review'&&!e.conditional&&!e.stale));
       return {supported:!hardNegative&&(documented||positive.length>0),strong,hardNegative,conflict,positive,negative:ev.negative};
     };
+    if(partySize&&!analysis.documents.length&&!offer&&!facility)continue;
     const ambience=ambienceFit(rawResolve);
     const resolve=key=>key==='cozy'&&ambience.derived?{...rawResolve(key),...ambience}:rawResolve(key);
-    if(intent==='friend_catchup'&&!ambience.supported&&!resolve('conversation').supported&&!resolve('slow_pace').supported)continue;
+    if(['friend_catchup','colleague_catchup'].includes(intent)&&!ambience.supported&&!resolve('conversation').supported&&!resolve('slow_pace').supported)continue;
     if(intent==='date'&&conversationVisit&&['cafe','restaurant','bar','anticafe'].includes(p.category)
       &&!ambience.supported&&!resolve('conversation').supported&&!resolve('romantic').supported)continue;
     if (query.excludedFeatures.some(key=>resolve(key).supported)) continue;
@@ -314,7 +334,7 @@ export function searchPlaces(places, opts = {}) {
     const conditions=Object.fromEntries(needs.map(key=>[key,resolve(key)]));
     if(needs.some(key=>conditions[key].hardNegative))continue;
     const supportedNeeds=needs.filter(key=>conditions[key].supported);
-    const coreActivities=new Set(['laptop_work','billiards',...sportKeys,'exhibitions','waterfront','coffee','tea','desserts','food','cocktails',...activityKeys,...(company==='new_people'?['social_events']:[])]);
+    const coreActivities=new Set(['laptop_work','billiards',...sportKeys,'exhibitions','waterfront','coffee','tea','desserts','food','cocktails','private_room',...activityKeys,...(company==='new_people'?['social_events']:[])]);
     if(needs.some(key=>coreActivities.has(key)&&!conditions[key].supported))continue;
     const missing=needs.filter(key=>!conditions[key].strong);
     missing.forEach(key=>gaps[key]++);
@@ -332,7 +352,7 @@ export function searchPlaces(places, opts = {}) {
     });
     if(profile&&!moodBoost.length)warnings.push('Атмосферу для «'+moods[mood]+'» нужно уточнить');
     else if(profile&&!moodBoost.some(key=>resolve(key).strong))warnings.push('Атмосфера описана в отзывах или зависит от времени');
-    const price=priceFor(p,{today:opts.today,scope:priceScope,needs,context,offer});
+    const price=priceFor(p,{today:opts.today,scope:priceScope,needs,context,offer,partySize});
     if(needs.includes('free_entry')&&price?.amount>0)continue;
     let unknownBudget=false;
     if (budget!==null && Number.isFinite(budget)) {
@@ -340,6 +360,8 @@ export function searchPlaces(places, opts = {}) {
       else if(price.amount>budget)continue;
       else if(priceIsEstimate(price))warnings.push(price.kind==='menu_order'?'Бюджет рассчитан по примеру заказа; итог зависит от выбранных блюд и количества заказов':price.kind==='from'?'Указана начальная цена; выбранная программа может стоить дороже':'Средний чек — ориентир, итог зависит от заказа');
     }
+    warnings.push(...partyWarnings(offer,partySize,!needs.includes('private_room')||needs.some(k=>activityKeys.includes(k))));
+    if(query.largeGroup&&!partySize&&!Number.isFinite(offer?.party_max))warnings.push('Размер большой компании и вместимость нужно согласовать при бронировании');
     if(offer?.requirements)warnings.push(offer.requirements);
     if(billiards)warnings.push(...billiards.warnings);
     if(sport)warnings.push(...sport.warnings);
@@ -367,26 +389,28 @@ export function searchPlaces(places, opts = {}) {
     const evidence=[...supportedNeeds,...moodBoost,...(intent?scenarioKeys:[])].flatMap(key=>{
       const ev=resolve(key);return ev.conflict?[...ev.positive.slice(0,1),...ev.negative.slice(0,1)]:ev.positive;
     }).filter((e,i,all)=>all.findIndex(x=>x.source_url===e.source_url&&x.excerpt===e.excerpt)===i).slice(0,2);
-    const item={place:p,score,distance,reasons,matches,warnings:[...new Set(warnings)],evidence,offer,price,billiards,sport};
+    const activityKind=offer?.activities?.find(k=>k!=='workshops'&&sharedActivities.has(k))||[...sharedActivities].find(k=>resolve(k).supported)||'';
+    if(activityKind&&needs.some(k=>['group_games','shared_activity'].includes(k)))reasons.push('Формат: '+(featureLabels[activityKind]||activityKind).toLowerCase());
+    const item={place:p,activityKind,score,distance,reasons,matches,warnings:[...new Set(warnings)],evidence,offer,price,billiards,sport};
     if(unknownBudget&&opts.includeUnknownPrices===false)unknownPriceResults.push(item);
     else if(!warnings.length)results.push(item);else alternatives.push(item);
   }
   const sort=(a,b)=>(budget!==null?Number(Boolean(b.price))-Number(Boolean(a.price)):0)||b.score-a.score || a.place.title.localeCompare(b.place.title,'ru');
   results.sort(sort);alternatives.sort(sort);unknownPriceResults.sort(sort);
-  const varied=mood==='melancholy'&&!opts.category&&!query.requestedCategories.length&&!query.needs.length
+  const varied=(needs.includes('shared_activity')||needs.includes('group_games'))&&!opts.category||mood==='melancholy'&&!opts.category&&!query.requestedCategories.length&&!query.needs.length
     ||(opts.category==='sport'||needs.includes('sports'))&&!needs.some(k=>sportKeys.includes(k));
-  if(varied){diversify(results);diversify(alternatives);}
+  if(varied){const byActivity=needs.some(k=>['group_games','shared_activity'].includes(k));diversify(results,byActivity);diversify(alternatives,byActivity);}
   const unhandled = query.keywords.filter(t=>![...results,...alternatives,...unknownPriceResults].some(r=>r.matches.includes(t)));
   const filterConflicts=opts.category&&query.requestedCategories.length&&!query.requestedCategories.includes(opts.category)
     ? ['В запросе: '+query.requestedCategories.map(k=>categories[k]).join(' / ')+'. В фильтре: '+categories[opts.category]+'.']:[];
   if(opts.billiardsPayment&&query.billiardsPayment&&opts.billiardsPayment!==query.billiardsPayment)filterConflicts.push('Оплата бильярда в тексте и в фильтре различается. Измени условие или выбери «Любая — смотреть условия».');
   if(selectedSport&&query.needs.some(k=>sportKeys.includes(k))&&!query.needs.includes(selectedSport))filterConflicts.push('Вид спорта в тексте и в фильтре различается. Измени запрос или выбери «Любой вид спорта».');
-  return {results,alternatives,unknownPriceResults,needs,budget,priceScope,gaps,unknownPrice,unknownCoordinates,unknownAtmosphere,parsed:query,mood,company,unhandled,filterConflicts,visitDate,billiardsPayment,intent};
+  return {results,alternatives,unknownPriceResults,needs,budget,priceScope,gaps,unknownPrice,unknownCoordinates,unknownAtmosphere,parsed:query,mood,company,unhandled,filterConflicts,visitDate,billiardsPayment,intent,partySize};
 }
 
 // Broad requests benefit from different formats; explicit activities and categories keep their ranking.
-function diversify(items){
-  const format=x=>x.sport?x.sport.label.split(' · ')[0]:['park','space'].includes(x.place.category)?'walk':['cafe','bar','restaurant'].includes(x.place.category)?'food':x.place.category;
+function diversify(items,byActivity=false){
+  const format=x=>byActivity&&x.activityKind?x.activityKind:x.sport?x.sport.label.split(' · ')[0]:['park','space'].includes(x.place.category)?'walk':['cafe','bar','restaurant'].includes(x.place.category)?'food':x.place.category;
   const pools=new Map();for(const item of items){const key=format(item);if(!pools.has(key))pools.set(key,[]);pools.get(key).push(item);}
   if(pools.size<2)return;
   const out=[];while(out.length<items.length){for(const pool of pools.values())if(pool.length)out.push(pool.shift());}
@@ -407,6 +431,8 @@ export function validateCatalogue(payload) {
     if(p.billiards_terms!==undefined&&(!Array.isArray(p.billiards_terms)||p.billiards_terms.length>30||p.billiards_terms.some(t=>!t||!safeUrl(t.source_url)||!['free','with_order','paid','ticket','unknown'].includes(t.mode)||t.game_amount!==undefined&&(!Number.isFinite(t.game_amount)||t.game_amount<0)||t.min_order!==undefined&&t.min_order!==null&&(!Number.isFinite(t.min_order)||t.min_order<0))))throw new Error('Условия бильярда должны содержать источник, вид оплаты и неотрицательные суммы.');
     if(p.prices!==undefined&&(!Array.isArray(p.prices)||p.prices.length>30||p.prices.some(q=>!q||!Number.isFinite(q.amount)||q.amount<0||!safeUrl(q.source_url)||q.currency!=='RUB'||!['visit','hour'].includes(q.scope))))throw new Error('Некорректные цены: нужны сумма, источник и единица.');
     if(p.offers!==undefined&&(!Array.isArray(p.offers)||p.offers.length>100||p.offers.some(e=>!e||typeof e.id!=='string'||typeof e.title!=='string'||!safeUrl(e.source_url)||!safeUrl(e.booking_url)||!Array.isArray(e.activities)||!['open_group','private','individual','unknown'].includes(e.format))))throw new Error('Некорректный формат занятия или события.');
+    if(p.offers?.some(e=>['party_min','party_max','simultaneous_max'].some(k=>e[k]!==undefined&&(!Number.isInteger(e[k])||e[k]<1||e[k]>1000))||e.party_min&&e.party_max&&e.party_min>e.party_max))throw new Error('Некорректная вместимость программы.');
+    if(p.offers?.some(e=>e.party_tariffs!==undefined&&(!Array.isArray(e.party_tariffs)||e.party_tariffs.some(t=>!safeUrl(t.source_url)||!Number.isInteger(t.min_size)||!Number.isInteger(t.max_size)||t.min_size<1||t.max_size<t.min_size||['per_person','minimum_total','service_percent'].some(k=>!Number.isFinite(t[k])||t[k]<0)))))throw new Error('Некорректный расчёт группового тарифа.');
     if(p.photos!==undefined&&(!Array.isArray(p.photos)||p.photos.length>20||p.photos.some(f=>!f||!photoUrl(f.url)||!safeUrl(f.source_url)||!f.author||!f.license||!safeUrl(f.license_url))))throw new Error('Фотографии должны содержать источник, автора и разрешение.');
     if(p.documents!==undefined&&(!Array.isArray(p.documents)||p.documents.length>100||p.documents.some(d=>
       !d||typeof d.text!=='string'||d.text.length>24000||!safeUrl(d.source_url)||!['description','review','editorial'].includes(d.kind))))
